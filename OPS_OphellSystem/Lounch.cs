@@ -16,5 +16,18 @@ namespace OPS_OphellSystem
         {
             InitializeComponent();
         }
+
+        void testeBancoDeDados()
+        {
+            DataTable dtDados = new DataTable();
+            utilitarios.RealizaConexaoBd("INSERT INTO testecrud(teste)VALUES('texto de teste')");
+            dtDados = utilitarios.RealizaConexaoBd("SELECT teste FROM testecrud WHERE id='2'");
+            label1.Text = dtDados.Rows[0]["teste"].ToString();
+        }
+
+        private void Lounch_Load(object sender, EventArgs e)
+        {
+            testeBancoDeDados();
+        }
     }
 }

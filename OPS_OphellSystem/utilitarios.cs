@@ -10,23 +10,27 @@ namespace OPS_OphellSystem
 {
     static class utilitarios
     {
-        static DataTable RealizaConexaoBd(string sqlString)
+        public static DataTable RealizaConexaoBd(string sqlString)
         {
             try
             {
+                string caminhoSistema = AppDomain.CurrentDomain.BaseDirectory;
                 DataTable dtDados = new DataTable();
-                String strConn = @"Data Source=C:\OphellSB\DB\OpehellBase.db";
+                String strConn = @"Data Source="+ caminhoSistema  +"DB\\OpehellBase.db";
                 SQLiteConnection conn = new SQLiteConnection(strConn);
                 SQLiteDataAdapter da = new SQLiteDataAdapter(sqlString, strConn);
                 da.Fill(dtDados);
-
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
                 return dtDados;
 
             }
             catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
-            }
+            }            
         }
     }
 }
