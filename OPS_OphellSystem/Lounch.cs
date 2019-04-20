@@ -1,4 +1,5 @@
 ﻿using System;
+using Syncfusion.Windows.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,22 +13,72 @@ namespace OPS_OphellSystem
 {
     public partial class Lounch : Form
     {
+        #region "Classes"
+
+        #endregion
+
+        #region "Variaveis"
+        Menu telaMenu;
+        #endregion
+
+        #region "Metodos"
         public Lounch()
         {
             InitializeComponent();
         }
-
-        void testeBancoDeDados()
+        private void Placeholders()
         {
-            DataTable dtDados = new DataTable();
-            utilitarios.RealizaConexaoBd("INSERT INTO testecrud(teste)VALUES('texto de teste')");
-            dtDados = utilitarios.RealizaConexaoBd("SELECT teste FROM testecrud WHERE id='2'");
-            label1.Text = dtDados.Rows[0]["teste"].ToString();
-        }
+            try
+            {
+                BannerTextInfo placeholderOperador = bnTxtOperador.GetBannerText(txtOperador);
+                placeholderOperador.Text = "Operador";
+                placeholderOperador.Visible = true;
+                placeholderOperador.Color = Color.Black;
+                placeholderOperador.Mode = BannerTextMode.FocusMode;
 
+                BannerTextInfo placeholderSenha = bnTxtOperador.GetBannerText(txtSenha);
+                placeholderSenha.Text = "Senha";
+                placeholderSenha.Visible = true;
+                placeholderSenha.Color = Color.Black;
+                placeholderSenha.Mode = BannerTextMode.FocusMode;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void AbrirTelaMenu()
+        {            
+            if(telaMenu == null)
+            {
+                telaMenu = new Menu();
+            }
+            this.Hide();
+            telaMenu.ShowDialog();
+            this.Show();
+        }
+        #endregion
+
+        #region "Funcoes"
+
+        #endregion
+
+        #region "Eventos"
         private void Lounch_Load(object sender, EventArgs e)
         {
-            testeBancoDeDados();
+            Placeholders();
         }
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            AbrirTelaMenu();
+        }
+        #endregion
+
+
     }
 }
