@@ -83,6 +83,11 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
             get { return _telefone; }
             set { _telefone = value; }
         }
+        public string Bairro
+        {
+            get { return _bairro; }
+            set { _bairro = value; }
+        }
         #endregion
 
         #region "Meodos"
@@ -105,7 +110,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
                 {
                     utilitarios.RealizaConexaoBd("UPDATE Clientes SET cnpj_clt='" + _cnpj + "',nome_fantasia_clt='" + _fantasia + "',razao_social_clt='" + _razao +
                     "',status_clt='" + _status + "',endereco_clt='" + _endereco + "',telefone_clt='" + _telefone + "',nome_contato='" + _nomeContato +
-                    "',email_contato_clt='" + _emailContato + "'WHERE id_clt='" + _idCliente + "'");
+                    "',email_contato_clt='" + _emailContato + "',numero_clt='" + _numero + "' WHERE id_clt='" + _idCliente + "'");
                 }
             }
             catch (Exception ex)

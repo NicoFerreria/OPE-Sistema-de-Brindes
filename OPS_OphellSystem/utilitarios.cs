@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
+using System.IO;
 
 namespace OPS_OphellSystem
 {
@@ -15,8 +16,13 @@ namespace OPS_OphellSystem
             try
             {
                 string caminhoSistema = AppDomain.CurrentDomain.BaseDirectory;
+                string caminhoBD = caminhoSistema + "DB\\oph.db";
+                if(File.Exists(caminhoBD) == false)
+                {
+                    throw new System.Exception("O arquivo de bando de Dados não foi encontrado!");                    
+                }
                 DataTable dtDados = new DataTable();
-                String strConn = @"Data Source="+ caminhoSistema  +"DB\\OpehellBase.db";
+                String strConn = @"Data Source="+ caminhoBD;
                 SQLiteConnection conn = new SQLiteConnection(strConn);
                 SQLiteDataAdapter da = new SQLiteDataAdapter(sqlString, strConn);
                 da.Fill(dtDados);
