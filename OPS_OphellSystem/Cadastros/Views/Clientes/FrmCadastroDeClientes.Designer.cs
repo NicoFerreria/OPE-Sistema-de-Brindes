@@ -128,7 +128,7 @@
             // 
             // txtObservacao
             // 
-            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtObservacao.BorderColor = System.Drawing.Color.Gray;
             this.txtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtObservacao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -142,7 +142,7 @@
             // 
             // txtNomeContato
             // 
-            this.txtNomeContato.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtNomeContato.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtNomeContato.BorderColor = System.Drawing.Color.Gray;
             this.txtNomeContato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeContato.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -155,7 +155,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtEmail.BorderColor = System.Drawing.Color.Gray;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -168,7 +168,7 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtTelefone.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtTelefone.BorderColor = System.Drawing.Color.Gray;
             this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefone.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -181,7 +181,7 @@
             // 
             // txtCidade
             // 
-            this.txtCidade.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCidade.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtCidade.BorderColor = System.Drawing.Color.Gray;
             this.txtCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCidade.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -194,7 +194,7 @@
             // 
             // txtCep
             // 
-            this.txtCep.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCep.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtCep.BorderColor = System.Drawing.Color.Gray;
             this.txtCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCep.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -207,7 +207,7 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtBairro.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtBairro.BorderColor = System.Drawing.Color.Gray;
             this.txtBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBairro.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -220,7 +220,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtNumero.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtNumero.BorderColor = System.Drawing.Color.Gray;
             this.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -233,7 +233,7 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtEndereco.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtEndereco.BorderColor = System.Drawing.Color.Gray;
             this.txtEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEndereco.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -246,7 +246,7 @@
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtRazaoSocial.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtRazaoSocial.BorderColor = System.Drawing.Color.Gray;
             this.txtRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRazaoSocial.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -259,7 +259,7 @@
             // 
             // txtNomeFantaisa
             // 
-            this.txtNomeFantaisa.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtNomeFantaisa.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtNomeFantaisa.BorderColor = System.Drawing.Color.Gray;
             this.txtNomeFantaisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeFantaisa.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -272,7 +272,7 @@
             // 
             // txtCnpj
             // 
-            this.txtCnpj.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCnpj.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtCnpj.BorderColor = System.Drawing.Color.Gray;
             this.txtCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCnpj.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -282,10 +282,11 @@
             this.txtCnpj.Size = new System.Drawing.Size(272, 26);
             this.txtCnpj.TabIndex = 2;
             this.txtCnpj.UseBorderColorOnFocus = true;
+            this.txtCnpj.TextChanged += new System.EventHandler(this.txtCnpj_TextChanged);
             // 
             // txtIdCliente
             // 
-            this.txtIdCliente.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtIdCliente.BeforeTouchSize = new System.Drawing.Size(216, 27);
             this.txtIdCliente.Location = new System.Drawing.Point(16, 32);
             this.txtIdCliente.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtIdCliente.Name = "txtIdCliente";

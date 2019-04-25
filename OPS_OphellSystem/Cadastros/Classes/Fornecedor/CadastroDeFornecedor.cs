@@ -4,24 +4,24 @@ using System.Data;
 
 namespace OPS_OphellSystem.Cadastros.Classes.Clientes
 {
-    public class CadastroDeClientes : PessoaJuridica
+    public class CadastroDeFornecedor : PessoaJuridica
     {
         #region "Classes"
         #endregion
 
         #region "Variaveis"
-        private int _idCliente;
+        private int _idFornecedor;
         private string _nomeContato;
         private string _emailContato;
         private string _observacoes;
-        private int _status;
+        private string _status;
         #endregion
 
         #region "Propriedades"
-        public int IDCliente
+        public int IDFornecedor
         {
-            get { return _idCliente; }
-            set { _idCliente = value; }
+            get { return _idFornecedor; }
+            set { _idFornecedor = value; }
         }
         public string NomeContato
         {
@@ -38,7 +38,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
             get { return _observacoes; }
             set { _observacoes = value; }
         }
-        public int StatusCliente
+        public string StatusFornecedor
         {
             get { return _status; }
             set { _status = value; }
@@ -91,7 +91,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
         #endregion
 
         #region "Meodos"
-        public void GravarCliente()
+        public void GravarFornecedor()
         {
             try
             {
@@ -101,18 +101,16 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
                     return;
                 }
 
-                dtDados = utilitarios.RealizaConexaoBd("SELECT id_clt FROM Cliente WHERE cnpj_clt='" + _cnpj + "'");
-                if (_idCliente <= 0)
+                dtDados = utilitarios.RealizaConexaoBd("SELECT id_clt FROM Fornecedor WHERE cnpj_fornec='" + _cnpj + "'");
+                if (_idFornecedor <= 0)
                 {
-                    utilitarios.RealizaConexaoBd("INSERT INTO Cliente(cnpj_clt,nome_fantasia_clt,razao_social_clt,status_clt,endereco_clt,telefone_clt,nome_contato_clt" +
-                        ",email_contato_clt,numero_clt)VALUES('" + _cnpj + "','" + _fantasia + "','" + _razao + "','" + _status + "','" + _endereco + "','" + _telefone +
-                        "','" + _nomeContato + "','" + _emailContato + "','"+_numero +"')");
+                    utilitarios.RealizaConexaoBd("INSERT INTO Fornecedor (cnpj_fornec)VALUES('" + _cnpj + "')");
                 }
                 else
                 {
-                    utilitarios.RealizaConexaoBd("UPDATE Clientes SET cnpj_clt='" + _cnpj + "',nome_fantasia_clt='" + _fantasia + "',razao_social_clt='" + _razao +
-                    "',status_clt='" + _status + "',endereco_clt='" + _endereco + "',telefone_clt='" + _telefone + "',nome_contato='" + _nomeContato +
-                    "',email_contato_clt='" + _emailContato + "',numero_clt='" + _numero + "' WHERE id_clt='" + _idCliente + "'");
+                    utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj_fornec='" + _cnpj + "',nome_fantasia_fornec='" + _fantasia + "',razao_social_fornec='" + _razao +
+                    "',status_fornec='" + _status + "',endereco_fornec='" + _endereco + "',telefone_fornec='" + _telefone + "',nome_contato='" + _nomeContato +
+                    "',email_contato_forec='" + _emailContato + "',numero_fornec='" + _numero + "' WHERE id_fornec='" + _idFornecedor + "'");
                 }
             }
             catch (Exception ex)
@@ -120,11 +118,11 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
                 throw new System.Exception(ex.Message);
             }
         }
-        public void DesativarAtivarCliente()
+        public void DesativarAtivarFornecedor()
         {
             try
             {
-                utilitarios.RealizaConexaoBd("UPDATE Cliente SET status_clt='" + _status + "' WHERE id_clt='" + _idCliente + "'");
+                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET status_clt='" + _status + "' WHERE id_fornec='" + _idFornecedor + "'");
             }
             catch (Exception ex)
             {
@@ -136,11 +134,11 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
 
         #region "Funcoes"
         /// <summary>
-        /// Retorna DataTable com os dados do Cliente
+        /// Retorna DataTable com os dados do Fornecedor
         /// </summary>
         /// <param name="opcaoBusca">Tipo de filtro da busca</param>
         /// <returns></returns>
-        public DataTable BuscaCliente(string opcaoBusca)
+        public DataTable BuscaFornecedor(string opcaoBusca)
         {
             try
             {
