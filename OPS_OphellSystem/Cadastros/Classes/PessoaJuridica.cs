@@ -10,7 +10,8 @@
         protected int _numero;
         protected string _cidade;
         protected int _cep;
-        protected int _telefone;       
+        protected int _telefone;
+        protected string _bairro;
         #endregion
 
         #region "Propriedades"

@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cadastros\Classes\Clientes\CadastroDeClientes.cs" />
+    <Compile Include="Cadastros\Classes\Fornecedor\CadastroDeFornecedor.cs" />
     <Compile Include="Cadastros\Classes\PessoaJuridica.cs" />
     <Compile Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.cs">
       <SubType>Form</SubType>
@@ -86,6 +87,7 @@
     <Compile Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.Designer.cs">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeradorBD.cs" />
     <Compile Include="Lounch.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -35,8 +35,10 @@
             this.btnLogin = new Syncfusion.Windows.Forms.ButtonAdv();
             this.bnTxtOperador = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
             this.btnSair = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.pgbLoadSistema = new Syncfusion.Windows.Forms.Tools.ProgressBarAdv();
             ((System.ComponentModel.ISupportInitialize)(this.txtOperador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgbLoadSistema)).BeginInit();
             this.SuspendLayout();
             // 
             // txtOperador
@@ -116,13 +118,40 @@
             this.btnSair.TabIndex = 4;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // pgbLoadSistema
+            // 
+            this.pgbLoadSistema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.pgbLoadSistema.BackMultipleColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Empty};
+            this.pgbLoadSistema.BackSegments = false;
+            this.pgbLoadSistema.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pgbLoadSistema.CustomText = null;
+            this.pgbLoadSistema.CustomWaitingRender = false;
+            this.pgbLoadSistema.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pgbLoadSistema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.pgbLoadSistema.ForegroundImage = null;
+            this.pgbLoadSistema.Location = new System.Drawing.Point(0, 296);
+            this.pgbLoadSistema.MultipleColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Empty};
+            this.pgbLoadSistema.Name = "pgbLoadSistema";
+            this.pgbLoadSistema.SegmentWidth = 12;
+            this.pgbLoadSistema.Size = new System.Drawing.Size(584, 29);
+            this.pgbLoadSistema.TabIndex = 5;
+            this.pgbLoadSistema.Text = "progressBarAdv1";
+            this.pgbLoadSistema.ThemesEnabled = false;
+            this.pgbLoadSistema.Value = 0;
+            this.pgbLoadSistema.Visible = false;
+            this.pgbLoadSistema.WaitingGradientWidth = 400;
+            // 
             // Lounch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(584, 300);
+            this.ClientSize = new System.Drawing.Size(584, 325);
+            this.Controls.Add(this.pgbLoadSistema);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtSenha);
@@ -133,8 +162,10 @@
             this.Text = "Login";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Lounch_Load);
+            this.Shown += new System.EventHandler(this.Lounch_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.txtOperador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgbLoadSistema)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,6 +178,7 @@
         private Syncfusion.Windows.Forms.ButtonAdv btnLogin;
         private Syncfusion.Windows.Forms.BannerTextProvider bnTxtOperador;
         private Syncfusion.Windows.Forms.ButtonAdv btnSair;
+        private Syncfusion.Windows.Forms.Tools.ProgressBarAdv pgbLoadSistema;
     }
 }
 

@@ -37,9 +37,12 @@
             // tStrpCadastroClientes
             // 
             this.tStrpCadastroClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.tStrpCadastroClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tStrpCadastroClientes.GripMargin = new System.Windows.Forms.Padding(0);
             this.tStrpCadastroClientes.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tStrpCadastroClientes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tStrpBtnCadastroClientes});
+            this.tStrpCadastroClientes.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.tStrpCadastroClientes.Location = new System.Drawing.Point(0, 0);
             this.tStrpCadastroClientes.MaximumSize = new System.Drawing.Size(0, 40);
             this.tStrpCadastroClientes.MinimumSize = new System.Drawing.Size(0, 40);
