@@ -40,11 +40,11 @@ namespace OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos
                     throw new System.Exception("Descrição inválida!");
                 }
 
-                dtDados = utilitarios.RealizaConexaoBd("SELECT id_prod FROM Produto WHERE codigo_cad='" + CodigoCategoria + "'");
+                dtDados = utilitarios.RealizaConexaoBd("SELECT id_prod FROM Produto WHERE codigo_prod='" + CodigoCategoria + "'");
                 if (dtDados.Rows.Count <= 0)
                 {
-                    utilitarios.RealizaConexaoBd("INSERT INTO Produto(categoria_prod,desc_prod,cor_prod,obs_prod,status_prod)VALUES" +
-                        "('" + Categoria + "','" + Descricao + "','" + Cor + "','" + Observacao + "','" + Status + "')");
+                    utilitarios.RealizaConexaoBd("INSERT INTO Produto(codigo_prod,categoria_prod,desc_prod,cor_prod,obs_prod,status_prod)VALUES" +
+                        "('" + CodigoCategoria + "','" + Categoria + "','" + Descricao + "','" + Cor + "','" + Observacao + "','" + Status + "')");
                 }
                 else
                 {
@@ -66,7 +66,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos
             {
                 DataTable dtDados = new DataTable();
                 dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Produto WHERE codigo_prod='" + CodigoCategoria + "'");
-                if(dtDados.Rows.Count > 0)
+                if (dtDados.Rows.Count > 0)
                 {
                     this.ID = int.Parse(dtDados.Rows[0]["id_prod"].ToString());
                     this.Categoria = dtDados.Rows[0]["categoria_prod"].ToString();
@@ -91,7 +91,8 @@ namespace OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos
                 DataTable dtDados = new DataTable();
                 dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Produto");
                 return dtDados;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }
