@@ -45,8 +45,13 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Syncfusion.Core.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Data.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Grid.Base, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Grid.Windows, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.GridCommon.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfInput.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfListView.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Shared.Base, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Shared.Windows, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.SpellChecker.Base, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -66,6 +71,7 @@
     </Reference>
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -78,9 +84,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastros\Classes\CategoriasDeProdutos\CadastroDeCategorias.cs" />
     <Compile Include="Cadastros\Classes\Clientes\CadastroDeClientes.cs" />
     <Compile Include="Cadastros\Classes\Fornecedor\CadastroDeFornecedor.cs" />
     <Compile Include="Cadastros\Classes\PessoaJuridica.cs" />
+    <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.Designer.cs">
+      <DependentUpon>FrmBuscaCategoriaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmCadastroDeCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmCadastroDeCategorias.Designer.cs">
+      <DependentUpon>FrmCadastroDeCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +122,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utilitarios.cs" />
+    <EmbeddedResource Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.resx">
+      <DependentUpon>FrmBuscaCategoriaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Views\CategoriasDeProdutos\FrmCadastroDeCategorias.resx">
+      <DependentUpon>FrmCadastroDeCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.resx">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +162,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Voltar32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gravar32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NovoProduto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtos32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

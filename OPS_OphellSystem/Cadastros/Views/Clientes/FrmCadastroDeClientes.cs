@@ -232,11 +232,18 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             NovoCliente();
         }
-        #endregion
-
-        private void txtCnpj_TextChanged(object sender, EventArgs e)
+        private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            utilitarios.PermitirApenasNumeros(sender, e);
         }
+        private void txtCep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utilitarios.PermitirApenasNumeros(sender, e);
+        }
+        private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utilitarios.PermitirApenasNumeros(sender, e);
+        }
+        #endregion
     }
 }

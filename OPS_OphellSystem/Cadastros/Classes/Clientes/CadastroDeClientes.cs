@@ -159,6 +159,9 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
                     case "Status":
                         dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE status_clt='" + _status + "'");
                         break;
+                    case "Todos":
+                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente");
+                        break;
                 }
 
                 return dtDados;

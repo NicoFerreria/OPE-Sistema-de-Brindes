@@ -44,11 +44,13 @@ namespace OPS_OphellSystem
                         {
                             campos = new string[,]
                             {
-                                { "id_produ","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE"},
-                                {"cod_produ","INTEGER NOT NULL" },
-                                {"desc_produ","TEXT NOT NULL" },
-                                {"valor","INTEGER" },
-                                {"qtde_produ","INTEGER" }
+                                { "id_prod","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE"},
+                                {"codigo_prod","INTEGER NOT NULL" },
+                                {"categoria_prod","TEXT NOT NULL" },
+                                {"desc_prod","TEXT NOT NULL" },
+                                {"status_prod","INTEGER NOT NULL DEFAULT 0" },
+                                {"cor_prod","TEXT NOT NULL" },
+                                {"obs_prod","TEXT" }
                             };
                         }
                         break;

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tStrpCadastroClientes = new System.Windows.Forms.ToolStrip();
             this.tStrpBtnCadastroClientes = new System.Windows.Forms.ToolStripButton();
+            this.btnCadastroCategoria = new System.Windows.Forms.ToolStripButton();
             this.tStrpCadastroClientes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@
             this.tStrpCadastroClientes.GripMargin = new System.Windows.Forms.Padding(0);
             this.tStrpCadastroClientes.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tStrpCadastroClientes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tStrpBtnCadastroClientes});
+            this.tStrpBtnCadastroClientes,
+            this.btnCadastroCategoria});
             this.tStrpCadastroClientes.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.tStrpCadastroClientes.Location = new System.Drawing.Point(0, 0);
             this.tStrpCadastroClientes.MaximumSize = new System.Drawing.Size(0, 40);
@@ -59,7 +61,19 @@
             this.tStrpBtnCadastroClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tStrpBtnCadastroClientes.Name = "tStrpBtnCadastroClientes";
             this.tStrpBtnCadastroClientes.Size = new System.Drawing.Size(40, 37);
+            this.tStrpBtnCadastroClientes.ToolTipText = "Cadastro de Clientes";
             this.tStrpBtnCadastroClientes.Click += new System.EventHandler(this.tStrpBtnCadastroClientes_Click);
+            // 
+            // btnCadastroCategoria
+            // 
+            this.btnCadastroCategoria.AutoSize = false;
+            this.btnCadastroCategoria.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCadastroCategoria.Image = global::OPS_OphellSystem.Properties.Resources.produtos32x32;
+            this.btnCadastroCategoria.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCadastroCategoria.Name = "btnCadastroCategoria";
+            this.btnCadastroCategoria.Size = new System.Drawing.Size(40, 37);
+            this.btnCadastroCategoria.ToolTipText = "Cadastro de Categrias de Produtos";
+            this.btnCadastroCategoria.Click += new System.EventHandler(this.btnCadastroCategoria_Click);
             // 
             // Menu
             // 
@@ -86,5 +100,6 @@
 
         private System.Windows.Forms.ToolStrip tStrpCadastroClientes;
         private System.Windows.Forms.ToolStripButton tStrpBtnCadastroClientes;
+        private System.Windows.Forms.ToolStripButton btnCadastroCategoria;
     }
 }

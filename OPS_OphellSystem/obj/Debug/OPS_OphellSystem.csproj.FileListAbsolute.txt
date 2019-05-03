@@ -23,3 +23,5 @@ C:\OphellSB\OPS_OphellSystem.pdb
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Lounch.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Clientes.FrmCadastroDeClientes.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Menu.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmBuscaCategoriaProduto.resources
