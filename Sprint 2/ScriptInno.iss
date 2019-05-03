@@ -2,24 +2,28 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "OPH"
-#define MyAppVersion "0.01"
-#define MyAppPublisher "OPHELL"
+#define MyAppVersion "0.0.1"
+#define MyAppPublisher "OPHELL COMPANY"
 #define MyAppExeName "OPS_OphellSystem.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{EEC085B1-3790-4268-831B-DA4B01C9FF45}
+AppId={{C1F999A5-8A93-4771-A94F-7E6F034379F5}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
-DefaultDirName=C:\OPHSystem
+DefaultDirName={autopf}\{#MyAppName}
 DisableDirPage=yes
 DisableProgramGroupPage=yes
-; Uncomment the following line to run in non administrative install mode (install for current user only.)
-;PrivilegesRequired=lowest
-OutputBaseFilename=mysetup
+; The [Icons] "quicklaunchicon" entry uses {userappdata} but its [Tasks] entry has a proper IsAdminInstallMode Check.
+UsedUserAreasWarning=no
+; Remove the following line to run in administrative install mode (install for all users.)
+PrivilegesRequired=lowest
+PrivilegesRequiredOverridesAllowed=commandline
+OutputDir=C:\Users\Nicolas\Desktop
+OutputBaseFilename=OPH
 SetupIconFile=C:\Users\Nicolas\Pictures\Icones Sistema\Icones\icons8_user_shield.ico
 Compression=lzma
 SolidCompression=yes
@@ -30,6 +34,7 @@ Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortugue
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 6.1; Check: not IsAdminInstallMode
 
 [Files]
 Source: "C:\OphellSB\OPS_OphellSystem.exe"; DestDir: "{app}"; Flags: ignoreversion
@@ -39,6 +44,7 @@ Source: "C:\OphellSB\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs c
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: quicklaunchicon
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
