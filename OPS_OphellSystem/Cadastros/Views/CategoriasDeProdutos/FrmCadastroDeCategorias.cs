@@ -94,7 +94,7 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                 txtObservacao.Text = string.Empty;
                 btnGravar.Enabled = true;
                 tgBtnStatus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-                txtCodigoCategria.Focus()
+                txtCodigoCategria.Focus();
             }
             catch (Exception ex)
             {
