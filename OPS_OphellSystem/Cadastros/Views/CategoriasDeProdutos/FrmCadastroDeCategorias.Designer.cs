@@ -116,6 +116,7 @@
             // 
             this.cmbCor.BackColor = System.Drawing.Color.White;
             this.cmbCor.BeforeTouchSize = new System.Drawing.Size(200, 27);
+            this.cmbCor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCor.FlatBorderColor = System.Drawing.Color.Black;
             this.cmbCor.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.Flat;
             this.cmbCor.Location = new System.Drawing.Point(24, 160);

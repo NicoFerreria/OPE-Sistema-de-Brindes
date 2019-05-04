@@ -16,6 +16,7 @@ CREATE TABLE 'Cliente' (
 	'numero_clt' INTEGER,
 	'telefone_clt' INTEGER,
 	'nome_contato_clt' TEXT,
+	'complemento_clt' TEXT,
 	'email_contato_clt' TEXT
 )
 

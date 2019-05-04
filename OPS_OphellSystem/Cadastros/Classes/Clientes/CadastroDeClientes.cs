@@ -15,6 +15,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
         private string _emailContato;
         private string _observacoes;
         private int _status;
+        private string _complemento;
         #endregion
 
         #region "Propriedades"
@@ -88,6 +89,11 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
             get { return _bairro; }
             set { _bairro = value; }
         }
+        public string Complemento
+        {
+            get { return _complemento; }
+            set { _complemento = value; }
+        }
         #endregion
 
         #region "Meodos"
@@ -105,14 +111,14 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
                 if (_idCliente <= 0)
                 {
                     utilitarios.RealizaConexaoBd("INSERT INTO Cliente(cnpj_clt,nome_fantasia_clt,razao_social_clt,status_clt,endereco_clt,telefone_clt,nome_contato_clt" +
-                        ",email_contato_clt,numero_clt)VALUES('" + _cnpj + "','" + _fantasia + "','" + _razao + "','" + _status + "','" + _endereco + "','" + _telefone +
-                        "','" + _nomeContato + "','" + _emailContato + "','"+_numero +"')");
+                        ",email_contato_clt,numero_clt,complemento_clt)VALUES('" + _cnpj + "','" + _fantasia + "','" + _razao + "','" + _status + "','" + _endereco + "','" + _telefone +
+                        "','" + _nomeContato + "','" + _emailContato + "','" + _numero + "','" + _complemento + "')");
                 }
                 else
                 {
                     utilitarios.RealizaConexaoBd("UPDATE Clientes SET cnpj_clt='" + _cnpj + "',nome_fantasia_clt='" + _fantasia + "',razao_social_clt='" + _razao +
                     "',status_clt='" + _status + "',endereco_clt='" + _endereco + "',telefone_clt='" + _telefone + "',nome_contato='" + _nomeContato +
-                    "',email_contato_clt='" + _emailContato + "',numero_clt='" + _numero + "' WHERE id_clt='" + _idCliente + "'");
+                    "',email_contato_clt='" + _emailContato + "',numero_clt='" + _numero + "',complemento_clt='" + _complemento + "' WHERE id_clt='" + _idCliente + "'");
                 }
             }
             catch (Exception ex)

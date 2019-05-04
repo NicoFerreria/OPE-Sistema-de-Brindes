@@ -42,6 +42,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             try
             {
+                //utilitarios.ValidaCnpj("114447770001","00"); 
                 if (ValidaCampos() == false) return;
 
                 cadastroCLiente.CNPJ = int.Parse(txtCnpj.Text);
@@ -55,6 +56,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 cadastroCLiente.NomeContato = txtNomeContato.Text;
                 cadastroCLiente.EmailContato = txtEmail.Text;
                 cadastroCLiente.Telefone = int.Parse(txtTelefone.Text);
+                cadastroCLiente.Complemento = txtComplemento.Text;
                 cadastroCLiente.StatusCliente = tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive ? 0 : 1;
                 cadastroCLiente.GravarCliente();
 
@@ -244,6 +246,12 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             utilitarios.PermitirApenasNumeros(sender, e);
         }
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utilitarios.PermitirApenasNumeros(sender, e);
+        }
         #endregion
+
+
     }
 }
