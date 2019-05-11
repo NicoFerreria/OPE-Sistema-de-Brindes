@@ -25,3 +25,14 @@ C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\o
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Menu.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmBuscaCategoriaProduto.resources
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmBuscaCategoriaProduto.resources
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias.resources
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Clientes.FrmCadastroDeClientes.resources
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Lounch.resources
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Menu.resources
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Properties.Resources.resources
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.csproj.GenerateResource.cache
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.csproj.CoreCompileInputs.cache
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.csproj.CopyComplete
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.exe
+C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.pdb
