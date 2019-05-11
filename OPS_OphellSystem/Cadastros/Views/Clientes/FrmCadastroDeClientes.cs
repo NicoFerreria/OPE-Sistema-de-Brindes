@@ -46,18 +46,19 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 if (ValidaCampos() == false) return;
 
                 cadastroCLiente.CNPJ = int.Parse(txtCnpj.Text);
-                cadastroCLiente.Fantasia = txtNomeFantaisa.Text;
-                cadastroCLiente.Razao = txtRazaoSocial.Text;
+                cadastroCLiente.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text);
+                cadastroCLiente.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
                 cadastroCLiente.CEP = int.Parse(txtCep.Text);
-                cadastroCLiente.Endereco = txtEndereco.Text;
+                cadastroCLiente.Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text);
                 cadastroCLiente.Numero = int.Parse(txtNumero.Text);
-                cadastroCLiente.Bairro = txtBairro.Text;
-                cadastroCLiente.Cidade = txtCidade.Text;
-                cadastroCLiente.NomeContato = txtNomeContato.Text;
+                cadastroCLiente.Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text);
+                cadastroCLiente.Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text);
+                cadastroCLiente.NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text);
                 cadastroCLiente.EmailContato = txtEmail.Text;
                 cadastroCLiente.Telefone = int.Parse(txtTelefone.Text);
-                cadastroCLiente.Complemento = txtComplemento.Text;
+                cadastroCLiente.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
                 cadastroCLiente.StatusCliente = tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive ? 0 : 1;
+                cadastroCLiente.Observacoes = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
                 cadastroCLiente.GravarCliente();
 
                 MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
