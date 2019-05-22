@@ -4,6 +4,7 @@ using System.Data;
 using System.IO;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace OPS_OphellSystem
 {
@@ -171,6 +172,22 @@ namespace OPS_OphellSystem
                 return 0;
             }
             catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+        public static string RemoveCaracteresEspeciais(string texto)
+        {
+            try
+            {
+                string input = texto;
+                string pattern = @"(?i)[^0-9a-záéíóúàèìòùâêîôûãõç\s]";
+                string replacement = "";
+                Regex rgx = new Regex(pattern);
+                string result = rgx.Replace(input, replacement);
+
+                return result;
+            }catch(Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }
