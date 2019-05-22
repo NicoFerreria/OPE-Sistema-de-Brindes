@@ -99,10 +99,28 @@ namespace OPS_OphellSystem
         {
             try
             {
-
-
-
-                return true;
+                
+                int[] pesosPrimeiroDigito = new int[] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+                int primeiroDigito = CalculaDigitoVarificadorCNPJ(CNPJ, pesosPrimeiroDigito);
+                CNPJ = CNPJ + primeiroDigito.ToString();
+                int[] pesosSegundoDigito = new int[] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+                int segundoDigito = CalculaDigitoVarificadorCNPJ(CNPJ, pesosSegundoDigito);
+                
+                if(primeiroDigito == int.Parse(DV[0].ToString()))
+                {
+                    if(segundoDigito == int.Parse(DV[1].ToString()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }                
             }
             catch (Exception Ex)
             {
@@ -120,7 +138,7 @@ namespace OPS_OphellSystem
                 throw new System.Exception(ex.Message);
             }
         }
-        private static int CalculaDigitoVarificadorCNPJ(string CNPJ, bool calculaSegundoDigito = false)
+        private static int CalculaDigitoVarificadorCNPJ(string CNPJ,int[] pesos)
         {
             try
             {
@@ -130,29 +148,13 @@ namespace OPS_OphellSystem
                 int resultSoma = 0;
                 int quociente = 0;
                 int restoDivisao = 0;
-                int primeiroDigitoVerificador = 0;
-                //Calcula primeiro digito verificador
-                matriz = new int[,]
-                {
-                    {int.Parse(CNPJ[0].ToString()), 5 },
-                    {int.Parse(CNPJ[1].ToString()), 4 },
-                    {int.Parse(CNPJ[2].ToString()), 3 },
-                    {int.Parse(CNPJ[3].ToString()), 2 },
-                    {int.Parse(CNPJ[4].ToString()), 9 },
-                    {int.Parse(CNPJ[5].ToString()), 8 },
-                    {int.Parse(CNPJ[6].ToString()), 7 },
-                    {int.Parse(CNPJ[7].ToString()), 6 },
-                    {int.Parse(CNPJ[8].ToString()), 5 },
-                    {int.Parse(CNPJ[9].ToString()), 4 },
-                    {int.Parse(CNPJ[10].ToString()), 3 },
-                    {int.Parse(CNPJ[11].ToString()), 2 }                    
-                };
+                int digitoVerificador = 0;
 
-                resultMultiplicacao = new int[matriz.GetLength(0)];
+                resultMultiplicacao = new int[pesos.Length];
                 //Multiplica os valores da primeira Matriz
-                for (int i = 0; i < matriz.GetLength(0); i++)
+                for (int i = 0; i < pesos.Length; i++)
                 {
-                    resultMultiplicacao[i] = matriz[i, 0] * matriz[i, 1];
+                    resultMultiplicacao[i] = pesos[i] * int.Parse(CNPJ[i].ToString());
                 }
 
                 //Soma os resultados da multiplicação
@@ -166,10 +168,10 @@ namespace OPS_OphellSystem
 
                 if (restoDivisao > 2)
                 {
-                    primeiroDigitoVerificador = 11 - restoDivisao;
+                    digitoVerificador = 11 - restoDivisao;
                 }
 
-                return 0;
+                return digitoVerificador;
             }
             catch (Exception ex)
             {

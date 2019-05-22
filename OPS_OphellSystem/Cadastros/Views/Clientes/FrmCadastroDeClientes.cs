@@ -45,7 +45,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 //utilitarios.ValidaCnpj("114447770001","00"); 
                 if (ValidaCampos() == false) return;
 
-                cadastroCLiente.CNPJ = int.Parse(txtCnpj.Text);
+                cadastroCLiente.CNPJ = int.Parse(txtCnpj.Text + txtDigitoVerificador.Text);
                 cadastroCLiente.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text);
                 cadastroCLiente.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
                 cadastroCLiente.CEP = int.Parse(txtCep.Text);
@@ -58,7 +58,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 cadastroCLiente.Telefone = int.Parse(txtTelefone.Text);
                 cadastroCLiente.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
                 cadastroCLiente.StatusCliente = tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive ? 0 : 1;
-                cadastroCLiente.Observacoes = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
+                cadastroCLiente.Observacoes = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);                
                 cadastroCLiente.GravarCliente();
 
                 MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -137,13 +137,42 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                     txtCnpj.Focus();
                     return false;
                 }
-                if (int.TryParse(txtCnpj.Text, out int rsult) == false)
+                if (double.TryParse(txtCnpj.Text, out double rsult) == false)
                 {
                     MessageBox.Show("CNPJ informado está em um formato incorreto!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtCnpj.Focus();
                     return false;
                 }
-
+                if(txtCnpj.Text.Length < 12)
+                {
+                    MessageBox.Show("CNPJ inválido! Verifique a quantidade de dítos.", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtCnpj.Focus();
+                    return false;
+                }
+                if(txtDigitoVerificador.Text == "")
+                {
+                    MessageBox.Show("Dígito verificador do CNPJ está em branco","OPH",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    txtDigitoVerificador.Focus();
+                    return false;
+                }
+                if(int.TryParse(txtDigitoVerificador.Text, out int result) == false)
+                {
+                    MessageBox.Show("Dígito verificador do CNPJ é inválido!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtDigitoVerificador.Focus();
+                    return false;
+                }
+                if(txtDigitoVerificador.Text.Length < 2)
+                {
+                    MessageBox.Show("Dígito verificador do CNPJ inválido! Verifique a quantidade de dígitos.", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtDigitoVerificador.Focus();
+                    return false;
+                }
+                if(utilitarios.ValidaCnpj(txtCnpj.Text,txtDigitoVerificador.Text) == false)
+                {
+                    MessageBox.Show("CNPJ inválido!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtCnpj.Focus();
+                    return false;
+                }
                 if (txtNomeFantaisa.Text == "")
                 {
                     MessageBox.Show("Pro favor preencha o campo Nome Fantasia!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -162,7 +191,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                     txtCep.Focus();
                     return false;
                 }
-                if (int.TryParse(txtCep.Text, out int result) == false)
+                if (int.TryParse(txtCep.Text, out int retono) == false)
                 {
                     MessageBox.Show("CEP informado está no formato incorreto!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtCep.Focus();

@@ -41,6 +41,8 @@
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo5 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             this.grdLayoutBase = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.grpDadosCliente = new System.Windows.Forms.GroupBox();
+            this.lblComplemento = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtComplemento = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblTxtTelefone = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtTelefone = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblTxtEmail = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -73,10 +75,12 @@
             this.btnPesquisarCliente = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
-            this.txtComplemento = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblComplemento = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDigitoVerificador = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblTxtDigitoVerificador = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grdLayoutBase)).BeginInit();
             this.grpDadosCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComplemento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeContato)).BeginInit();
@@ -91,7 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObservacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnAtivarDesativarCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtComplemento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDigitoVerificador)).BeginInit();
             this.SuspendLayout();
             // 
             // grdLayoutBase
@@ -107,6 +111,9 @@
             this.grpDadosCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDadosCliente.BackColor = System.Drawing.Color.White;
+            this.grpDadosCliente.Controls.Add(this.lblTxtDigitoVerificador);
+            this.grpDadosCliente.Controls.Add(this.txtDigitoVerificador);
+            this.grpDadosCliente.Controls.Add(this.label1);
             this.grpDadosCliente.Controls.Add(this.lblComplemento);
             this.grpDadosCliente.Controls.Add(this.txtComplemento);
             this.grpDadosCliente.Controls.Add(this.lblTxtTelefone);
@@ -146,6 +153,26 @@
             this.grpDadosCliente.TabStop = false;
             this.grpDadosCliente.Text = "Dados Gerais";
             // 
+            // lblComplemento
+            // 
+            this.lblComplemento.DY = -24;
+            this.lblComplemento.LabeledControl = this.txtComplemento;
+            this.lblComplemento.Location = new System.Drawing.Point(384, 248);
+            this.lblComplemento.Name = "lblComplemento";
+            this.lblComplemento.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblComplemento.Size = new System.Drawing.Size(108, 20);
+            this.lblComplemento.TabIndex = 27;
+            this.lblComplemento.Text = "Complemento";
+            // 
+            // txtComplemento
+            // 
+            this.txtComplemento.BeforeTouchSize = new System.Drawing.Size(32, 26);
+            this.txtComplemento.Location = new System.Drawing.Point(384, 272);
+            this.txtComplemento.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(100, 26);
+            this.txtComplemento.TabIndex = 26;
+            // 
             // lblTxtTelefone
             // 
             this.lblTxtTelefone.DY = -24;
@@ -159,7 +186,7 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtTelefone.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtTelefone.BorderColor = System.Drawing.Color.Gray;
             this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefone.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -184,7 +211,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtEmail.BorderColor = System.Drawing.Color.Gray;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -208,7 +235,7 @@
             // 
             // txtNomeContato
             // 
-            this.txtNomeContato.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtNomeContato.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtNomeContato.BorderColor = System.Drawing.Color.Gray;
             this.txtNomeContato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeContato.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -232,7 +259,7 @@
             // 
             // txtCidade
             // 
-            this.txtCidade.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtCidade.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtCidade.BorderColor = System.Drawing.Color.Gray;
             this.txtCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCidade.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -256,7 +283,7 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtBairro.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtBairro.BorderColor = System.Drawing.Color.Gray;
             this.txtBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBairro.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -280,7 +307,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtNumero.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtNumero.BorderColor = System.Drawing.Color.Gray;
             this.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -305,7 +332,7 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtEndereco.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtEndereco.BorderColor = System.Drawing.Color.Gray;
             this.txtEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEndereco.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -329,7 +356,7 @@
             // 
             // txtCep
             // 
-            this.txtCep.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtCep.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtCep.BorderColor = System.Drawing.Color.Gray;
             this.txtCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCep.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -354,7 +381,7 @@
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtRazaoSocial.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtRazaoSocial.BorderColor = System.Drawing.Color.Gray;
             this.txtRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRazaoSocial.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -378,7 +405,7 @@
             // 
             // txtNomeFantaisa
             // 
-            this.txtNomeFantaisa.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtNomeFantaisa.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtNomeFantaisa.BorderColor = System.Drawing.Color.Gray;
             this.txtNomeFantaisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeFantaisa.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -402,14 +429,15 @@
             // 
             // txtCnpj
             // 
-            this.txtCnpj.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtCnpj.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtCnpj.BorderColor = System.Drawing.Color.Gray;
             this.txtCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCnpj.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtCnpj.Location = new System.Drawing.Point(128, 48);
+            this.txtCnpj.MaxLength = 12;
             this.txtCnpj.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(272, 26);
+            this.txtCnpj.Size = new System.Drawing.Size(120, 26);
             this.txtCnpj.TabIndex = 2;
             this.txtCnpj.UseBorderColorOnFocus = true;
             this.txtCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCnpj_KeyPress);
@@ -427,7 +455,7 @@
             // 
             // txtIdCliente
             // 
-            this.txtIdCliente.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtIdCliente.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtIdCliente.Location = new System.Drawing.Point(16, 48);
             this.txtIdCliente.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtIdCliente.Name = "txtIdCliente";
@@ -449,7 +477,7 @@
             // 
             // txtObservacao
             // 
-            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(248, 26);
+            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(32, 26);
             this.txtObservacao.BorderColor = System.Drawing.Color.Gray;
             this.txtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtObservacao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -630,25 +658,39 @@
             // 
             this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             // 
-            // txtComplemento
+            // label1
             // 
-            this.txtComplemento.BeforeTouchSize = new System.Drawing.Size(248, 26);
-            this.txtComplemento.Location = new System.Drawing.Point(384, 272);
-            this.txtComplemento.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(100, 26);
-            this.txtComplemento.TabIndex = 26;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(256, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 20);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "-";
             // 
-            // lblComplemento
+            // txtDigitoVerificador
             // 
-            this.lblComplemento.DY = -24;
-            this.lblComplemento.LabeledControl = this.txtComplemento;
-            this.lblComplemento.Location = new System.Drawing.Point(384, 248);
-            this.lblComplemento.Name = "lblComplemento";
-            this.lblComplemento.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblComplemento.Size = new System.Drawing.Size(108, 20);
-            this.lblComplemento.TabIndex = 27;
-            this.lblComplemento.Text = "Complemento";
+            this.txtDigitoVerificador.BeforeTouchSize = new System.Drawing.Size(32, 26);
+            this.txtDigitoVerificador.BorderColor = System.Drawing.Color.Gray;
+            this.txtDigitoVerificador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDigitoVerificador.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtDigitoVerificador.Location = new System.Drawing.Point(272, 48);
+            this.txtDigitoVerificador.MaxLength = 2;
+            this.txtDigitoVerificador.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtDigitoVerificador.Name = "txtDigitoVerificador";
+            this.txtDigitoVerificador.Size = new System.Drawing.Size(32, 26);
+            this.txtDigitoVerificador.TabIndex = 29;
+            this.txtDigitoVerificador.UseBorderColorOnFocus = true;
+            // 
+            // lblTxtDigitoVerificador
+            // 
+            this.lblTxtDigitoVerificador.DY = -24;
+            this.lblTxtDigitoVerificador.LabeledControl = this.txtDigitoVerificador;
+            this.lblTxtDigitoVerificador.Location = new System.Drawing.Point(272, 24);
+            this.lblTxtDigitoVerificador.Name = "lblTxtDigitoVerificador";
+            this.lblTxtDigitoVerificador.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTxtDigitoVerificador.Size = new System.Drawing.Size(32, 20);
+            this.lblTxtDigitoVerificador.TabIndex = 30;
+            this.lblTxtDigitoVerificador.Text = "DV";
             // 
             // FrmCadastroDeClientes
             // 
@@ -677,6 +719,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdLayoutBase)).EndInit();
             this.grpDadosCliente.ResumeLayout(false);
             this.grpDadosCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComplemento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeContato)).EndInit();
@@ -691,7 +734,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObservacao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnAtivarDesativarCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtComplemento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDigitoVerificador)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -734,5 +777,8 @@
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblId;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtComplemento;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblComplemento;
+        private System.Windows.Forms.Label label1;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtDigitoVerificador;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblTxtDigitoVerificador;
     }
 }
