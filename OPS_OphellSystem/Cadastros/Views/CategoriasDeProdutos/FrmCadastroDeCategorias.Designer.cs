@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection1 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection1 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer1 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection1 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection2 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection2 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer2 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection2 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             this.grpDadosCategoria = new System.Windows.Forms.GroupBox();
             this.lblCodigoCategoria = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtCodigoCategria = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -114,6 +114,8 @@
             // 
             // cmbCor
             // 
+            this.cmbCor.AllowNewText = false;
+            this.cmbCor.AutoComplete = false;
             this.cmbCor.BackColor = System.Drawing.Color.White;
             this.cmbCor.BeforeTouchSize = new System.Drawing.Size(200, 27);
             this.cmbCor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -232,26 +234,26 @@
             // 
             // tgBtnStatus
             // 
-            activeStateCollection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            activeStateCollection1.BorderColor = System.Drawing.Color.Black;
-            activeStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            activeStateCollection1.Text = "Desativar";
-            this.tgBtnStatus.ActiveState = activeStateCollection1;
+            activeStateCollection2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            activeStateCollection2.BorderColor = System.Drawing.Color.Black;
+            activeStateCollection2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            activeStateCollection2.Text = "Desativar";
+            this.tgBtnStatus.ActiveState = activeStateCollection2;
             this.tgBtnStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tgBtnStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tgBtnStatus.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            inactiveStateCollection1.BorderColor = System.Drawing.Color.Black;
-            inactiveStateCollection1.ForeColor = System.Drawing.Color.White;
-            inactiveStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            inactiveStateCollection1.Text = "Ativar";
-            this.tgBtnStatus.InactiveState = inactiveStateCollection1;
+            inactiveStateCollection2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            inactiveStateCollection2.BorderColor = System.Drawing.Color.Black;
+            inactiveStateCollection2.ForeColor = System.Drawing.Color.White;
+            inactiveStateCollection2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            inactiveStateCollection2.Text = "Ativar";
+            this.tgBtnStatus.InactiveState = inactiveStateCollection2;
             this.tgBtnStatus.Location = new System.Drawing.Point(768, 24);
             this.tgBtnStatus.MinimumSize = new System.Drawing.Size(52, 20);
             this.tgBtnStatus.Name = "tgBtnStatus";
-            this.tgBtnStatus.Renderer = toggleButtonRenderer1;
+            this.tgBtnStatus.Renderer = toggleButtonRenderer2;
             this.tgBtnStatus.Size = new System.Drawing.Size(114, 24);
-            this.tgBtnStatus.Slider = sliderCollection1;
+            this.tgBtnStatus.Slider = sliderCollection2;
             this.tgBtnStatus.TabIndex = 10;
             this.tgBtnStatus.Text = "toggleButton1";
             this.tgBtnStatus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;

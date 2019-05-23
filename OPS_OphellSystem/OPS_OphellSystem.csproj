@@ -109,6 +109,18 @@
     <Compile Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.Designer.cs">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\Views\Fornecedores\FrmCadastroDeFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Views\Fornecedores\FrmCadastroDeFornecedores.Designer.cs">
+      <DependentUpon>FrmCadastroDeFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Views\Operadores\FrmCadastroDeOperadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Views\Operadores\FrmCadastroDeOperadores.Designer.cs">
+      <DependentUpon>FrmCadastroDeOperadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeradorBD.cs" />
     <Compile Include="Lounch.cs">
       <SubType>Form</SubType>
@@ -133,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.resx">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Views\Fornecedores\FrmCadastroDeFornecedores.resx">
+      <DependentUpon>FrmCadastroDeFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Views\Operadores\FrmCadastroDeOperadores.resx">
+      <DependentUpon>FrmCadastroDeOperadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lounch.resx">
       <DependentUpon>Lounch.cs</DependentUpon>
@@ -166,6 +184,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_user_shield.ico" />
+    <None Include="Resources\icons8_add_user_male_32px.png" />
+    <None Include="Resources\Operadores32x32.png" />
+    <None Include="Resources\Fornecedores32x32.png" />
+    <None Include="Resources\icons8_new_company_32px_2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Voltar32x32.png" />

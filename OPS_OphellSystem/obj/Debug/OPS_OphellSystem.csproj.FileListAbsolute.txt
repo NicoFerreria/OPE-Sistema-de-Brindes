@@ -36,3 +36,5 @@ C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\
 C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.csproj.CopyComplete
 C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.exe
 C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.pdb
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Fornecedores.FrmCadastroDeFornecedores.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Operadores.FrmCadastroDeOperadores.resources

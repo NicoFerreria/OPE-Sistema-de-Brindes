@@ -32,6 +32,8 @@
             this.tStrpCadastroClientes = new System.Windows.Forms.ToolStrip();
             this.tStrpBtnCadastroClientes = new System.Windows.Forms.ToolStripButton();
             this.btnCadastroCategoria = new System.Windows.Forms.ToolStripButton();
+            this.btnCadastrarFornecedores = new System.Windows.Forms.ToolStripButton();
+            this.btnCadastroOperadores = new System.Windows.Forms.ToolStripButton();
             this.tStrpCadastroClientes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +45,9 @@
             this.tStrpCadastroClientes.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tStrpCadastroClientes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tStrpBtnCadastroClientes,
-            this.btnCadastroCategoria});
+            this.btnCadastroCategoria,
+            this.btnCadastrarFornecedores,
+            this.btnCadastroOperadores});
             this.tStrpCadastroClientes.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.tStrpCadastroClientes.Location = new System.Drawing.Point(0, 0);
             this.tStrpCadastroClientes.MaximumSize = new System.Drawing.Size(0, 40);
@@ -75,6 +79,28 @@
             this.btnCadastroCategoria.ToolTipText = "Cadastro de Categrias de Produtos";
             this.btnCadastroCategoria.Click += new System.EventHandler(this.btnCadastroCategoria_Click);
             // 
+            // btnCadastrarFornecedores
+            // 
+            this.btnCadastrarFornecedores.AutoSize = false;
+            this.btnCadastrarFornecedores.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCadastrarFornecedores.Image = global::OPS_OphellSystem.Properties.Resources.Fornecedores32x32;
+            this.btnCadastrarFornecedores.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCadastrarFornecedores.Name = "btnCadastrarFornecedores";
+            this.btnCadastrarFornecedores.Size = new System.Drawing.Size(40, 37);
+            this.btnCadastrarFornecedores.Text = "toolStripButton1";
+            this.btnCadastrarFornecedores.Click += new System.EventHandler(this.btnCadastrarFornecedores_Click);
+            // 
+            // btnCadastroOperadores
+            // 
+            this.btnCadastroOperadores.AutoSize = false;
+            this.btnCadastroOperadores.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCadastroOperadores.Image = global::OPS_OphellSystem.Properties.Resources.Operadores32x32;
+            this.btnCadastroOperadores.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCadastroOperadores.Name = "btnCadastroOperadores";
+            this.btnCadastroOperadores.Size = new System.Drawing.Size(40, 37);
+            this.btnCadastroOperadores.Text = "toolStripButton1";
+            this.btnCadastroOperadores.Click += new System.EventHandler(this.btnCadastroOperadores_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,5 +127,7 @@
         private System.Windows.Forms.ToolStrip tStrpCadastroClientes;
         private System.Windows.Forms.ToolStripButton tStrpBtnCadastroClientes;
         private System.Windows.Forms.ToolStripButton btnCadastroCategoria;
+        private System.Windows.Forms.ToolStripButton btnCadastrarFornecedores;
+        private System.Windows.Forms.ToolStripButton btnCadastroOperadores;
     }
 }

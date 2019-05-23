@@ -17,6 +17,7 @@ namespace OPS_OphellSystem
         #region "Variaveis"
         private static string caminhoSistema = AppDomain.CurrentDomain.BaseDirectory;
         public static string caminhoBD = caminhoSistema + "DB\\oph.sqlite";
+        public static string diretorioBD = caminhoSistema + "DB";
         #endregion
 
         #region "Metodos"

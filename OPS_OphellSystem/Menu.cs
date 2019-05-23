@@ -13,39 +13,92 @@ namespace OPS_OphellSystem
 {
     public partial class Menu : Form
     {
+        #region "Classes"
+        #endregion
+
+        #region "Variaveis"
+        Cadastros.Views.Clientes.FrmCadastroDeClientes cadastroClientes;
+        Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias cadastroCategorias;
+        Cadastros.Views.Fornecedores.FrmCadastroDeFornecedores cadastroFornecedores;
+        Cadastros.Views.Operadores.FrmCadastroDeOperadores cadastroOperadores;
+        #endregion
+
+        #region "Metodos"
         public Menu()
         {
             InitializeComponent();
         }
-        Cadastros.Views.Clientes.FrmCadastroDeClientes cadastroClientes;
-        Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias cadastroCategorias;
         public void AbrirCadastroClientes()
         {
-            if(cadastroClientes == null)
+            if (cadastroClientes == null)
             {
                 cadastroClientes = new Cadastros.Views.Clientes.FrmCadastroDeClientes();
             }
             cadastroClientes.MdiParent = this;
             cadastroClientes.Dock = DockStyle.Fill;
             cadastroClientes.Show();
-            
+
         }
         public void AbrirCadastroDeCategoria()
         {
             try
             {
-                if(cadastroCategorias == null)
+                if (cadastroCategorias == null)
                 {
                     cadastroCategorias = new Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias();
                 }
                 cadastroCategorias.MdiParent = this;
                 cadastroCategorias.Dock = DockStyle.Fill;
                 cadastroCategorias.Show();
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void AbrirCadastroDeFornecedores()
+        {
+            try
+            {
+                if (cadastroFornecedores == null)
+                {
+                    cadastroFornecedores = new Cadastros.Views.Fornecedores.FrmCadastroDeFornecedores();
+                }
+
+                cadastroFornecedores.MdiParent = this;
+                cadastroFornecedores.Dock = DockStyle.Fill;
+                cadastroFornecedores.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void AbrirCadastroDeOperadores()
+        {
+            try
+            {
+                if (cadastroOperadores == null)
+                {
+                    cadastroOperadores = new Cadastros.Views.Operadores.FrmCadastroDeOperadores();
+                }
+
+                cadastroOperadores.MdiParent = this;
+                cadastroOperadores.Dock = DockStyle.Fill;
+                cadastroOperadores.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+        #region "Funções"
+        #endregion
+
+        #region "Eventos"
         private void tStrpBtnCadastroClientes_Click(object sender, EventArgs e)
         {
             AbrirCadastroClientes();
@@ -54,5 +107,16 @@ namespace OPS_OphellSystem
         {
             AbrirCadastroDeCategoria();
         }
+        private void btnCadastrarFornecedores_Click(object sender, EventArgs e)
+        {
+            AbrirCadastroDeFornecedores();
+        }
+        private void btnCadastroOperadores_Click(object sender, EventArgs e)
+        {
+            AbrirCadastroDeOperadores();
+        }
+        #endregion
+
+
     }
 }

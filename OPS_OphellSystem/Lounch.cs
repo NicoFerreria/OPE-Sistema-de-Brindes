@@ -60,6 +60,10 @@ namespace OPS_OphellSystem
                 string[] comando = gerador.ObterComandosSql();
                 if (File.Exists(utilitarios.caminhoBD) == false)
                 {
+                    if(Directory.Exists(utilitarios.diretorioBD) == false)
+                    {
+                        Directory.CreateDirectory(utilitarios.diretorioBD);
+                    }
                     pgbLoadSistema.Visible = true;
                     pgbLoadSistema.Minimum = 0;
                     pgbLoadSistema.Maximum = comando.Length;                    

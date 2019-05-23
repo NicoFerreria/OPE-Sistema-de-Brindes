@@ -3,7 +3,8 @@ CREATE TABLE 'Usuario' (
 	'nome_vend'	TEXT NOT NULL,
 	'login'	TEXT NOT NULL,
 	'contas'	INTEGER,
-	'senha_login'	TEXT NOT NULL
+	'senha_login'	TEXT NOT NULL,
+	'perfil'	TEXT NOT NULL
 )
 
 CREATE TABLE 'Cliente' (

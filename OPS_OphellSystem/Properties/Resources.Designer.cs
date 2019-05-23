@@ -73,6 +73,16 @@ namespace OPS_OphellSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fornecedores32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Fornecedores32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gravar32x32 {
             get {
                 object obj = ResourceManager.GetObject("Gravar32x32", resourceCulture);
@@ -83,9 +93,39 @@ namespace OPS_OphellSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_user_male_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_add_user_male_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_new_company_32px_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_new_company_32px_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NovoProduto {
             get {
                 object obj = ResourceManager.GetObject("NovoProduto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Operadores32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Operadores32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
