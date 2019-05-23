@@ -34,6 +34,7 @@
             this.btnCadastroCategoria = new System.Windows.Forms.ToolStripButton();
             this.btnCadastrarFornecedores = new System.Windows.Forms.ToolStripButton();
             this.btnCadastroOperadores = new System.Windows.Forms.ToolStripButton();
+            this.bntCadastroDeCondicaoPagamento = new System.Windows.Forms.ToolStripButton();
             this.tStrpCadastroClientes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             this.tStrpBtnCadastroClientes,
             this.btnCadastroCategoria,
             this.btnCadastrarFornecedores,
-            this.btnCadastroOperadores});
+            this.btnCadastroOperadores,
+            this.bntCadastroDeCondicaoPagamento});
             this.tStrpCadastroClientes.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.tStrpCadastroClientes.Location = new System.Drawing.Point(0, 0);
             this.tStrpCadastroClientes.MaximumSize = new System.Drawing.Size(0, 40);
@@ -101,6 +103,17 @@
             this.btnCadastroOperadores.Text = "toolStripButton1";
             this.btnCadastroOperadores.Click += new System.EventHandler(this.btnCadastroOperadores_Click);
             // 
+            // bntCadastroDeCondicaoPagamento
+            // 
+            this.bntCadastroDeCondicaoPagamento.AutoSize = false;
+            this.bntCadastroDeCondicaoPagamento.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bntCadastroDeCondicaoPagamento.Image = global::OPS_OphellSystem.Properties.Resources.CondicoesDePagamento;
+            this.bntCadastroDeCondicaoPagamento.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bntCadastroDeCondicaoPagamento.Name = "bntCadastroDeCondicaoPagamento";
+            this.bntCadastroDeCondicaoPagamento.Size = new System.Drawing.Size(40, 37);
+            this.bntCadastroDeCondicaoPagamento.Text = "toolStripButton1";
+            this.bntCadastroDeCondicaoPagamento.Click += new System.EventHandler(this.bntCadastroDeCondicaoPagamento_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,5 +142,6 @@
         private System.Windows.Forms.ToolStripButton btnCadastroCategoria;
         private System.Windows.Forms.ToolStripButton btnCadastrarFornecedores;
         private System.Windows.Forms.ToolStripButton btnCadastroOperadores;
+        private System.Windows.Forms.ToolStripButton bntCadastroDeCondicaoPagamento;
     }
 }

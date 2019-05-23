@@ -21,6 +21,7 @@ namespace OPS_OphellSystem
         Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias cadastroCategorias;
         Cadastros.Views.Fornecedores.FrmCadastroDeFornecedores cadastroFornecedores;
         Cadastros.Views.Operadores.FrmCadastroDeOperadores cadastroOperadores;
+        Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento cadastroDeCondicoesPagamento;
         #endregion
 
         #region "Metodos"
@@ -92,7 +93,17 @@ namespace OPS_OphellSystem
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void AbrirCadastroDePagamentos()
+        {
+            if(cadastroDeCondicoesPagamento == null)
+            {
+                cadastroDeCondicoesPagamento = new Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento();
+            }
 
+            cadastroDeCondicoesPagamento.MdiParent = this;
+            cadastroDeCondicoesPagamento.Dock = DockStyle.Fill;
+            cadastroDeCondicoesPagamento.Show();
+        }
         #endregion
 
         #region "Funções"
@@ -114,6 +125,10 @@ namespace OPS_OphellSystem
         private void btnCadastroOperadores_Click(object sender, EventArgs e)
         {
             AbrirCadastroDeOperadores();
+        }
+        private void bntCadastroDeCondicaoPagamento_Click(object sender, EventArgs e)
+        {
+            AbrirCadastroDePagamentos();
         }
         #endregion
 

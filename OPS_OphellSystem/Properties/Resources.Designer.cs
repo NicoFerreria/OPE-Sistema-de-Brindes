@@ -73,6 +73,16 @@ namespace OPS_OphellSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CondicoesDePagamento {
+            get {
+                object obj = ResourceManager.GetObject("CondicoesDePagamento", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fornecedores32x32 {
             get {
                 object obj = ResourceManager.GetObject("Fornecedores32x32", resourceCulture);
@@ -106,6 +116,16 @@ namespace OPS_OphellSystem.Properties {
         internal static System.Drawing.Bitmap icons8_new_company_32px_2 {
             get {
                 object obj = ResourceManager.GetObject("icons8_new_company_32px_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Novo32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Novo32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

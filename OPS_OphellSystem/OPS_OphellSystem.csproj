@@ -109,6 +109,12 @@
     <Compile Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.Designer.cs">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.Designer.cs">
+      <DependentUpon>FrmCadastroDeCondicoesDePagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros\Views\Fornecedores\FrmCadastroDeFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.resx">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.resx">
+      <DependentUpon>FrmCadastroDeCondicoesDePagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Views\Fornecedores\FrmCadastroDeFornecedores.resx">
       <DependentUpon>FrmCadastroDeFornecedores.cs</DependentUpon>
@@ -184,6 +193,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_user_shield.ico" />
+    <None Include="Resources\CondicoesDePagamento.png" />
+    <None Include="Resources\Novo32x32.png" />
     <None Include="Resources\icons8_add_user_male_32px.png" />
     <None Include="Resources\Operadores32x32.png" />
     <None Include="Resources\Fornecedores32x32.png" />
@@ -204,6 +215,7 @@
   <ItemGroup>
     <None Include="Resources\produtos32x32.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
