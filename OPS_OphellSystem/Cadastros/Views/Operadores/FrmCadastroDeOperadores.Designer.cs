@@ -51,7 +51,7 @@
             this.btnNovoOperador = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.toggleButton1 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.tgBtnStaus = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.pnlDadosGerais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmaSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).BeginInit();
@@ -60,7 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSobrenome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tgBtnStaus)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDadosGerais
@@ -305,6 +305,7 @@
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(40, 40);
             this.btnGravar.TabIndex = 2;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnVoltar
             // 
@@ -322,31 +323,32 @@
             this.btnVoltar.TabIndex = 1;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // toggleButton1
+            // tgBtnStaus
             // 
             activeStateCollection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
             activeStateCollection1.BorderColor = System.Drawing.Color.Black;
             activeStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             activeStateCollection1.Text = "Desativar";
-            this.toggleButton1.ActiveState = activeStateCollection1;
-            this.toggleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toggleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toggleButton1.ForeColor = System.Drawing.Color.Black;
+            this.tgBtnStaus.ActiveState = activeStateCollection1;
+            this.tgBtnStaus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tgBtnStaus.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tgBtnStaus.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             inactiveStateCollection1.BorderColor = System.Drawing.Color.Black;
             inactiveStateCollection1.ForeColor = System.Drawing.Color.White;
             inactiveStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
             inactiveStateCollection1.Text = "Ativar";
-            this.toggleButton1.InactiveState = inactiveStateCollection1;
-            this.toggleButton1.Location = new System.Drawing.Point(792, 16);
-            this.toggleButton1.MinimumSize = new System.Drawing.Size(52, 20);
-            this.toggleButton1.Name = "toggleButton1";
-            this.toggleButton1.Renderer = toggleButtonRenderer1;
-            this.toggleButton1.Size = new System.Drawing.Size(114, 25);
-            this.toggleButton1.Slider = sliderCollection1;
-            this.toggleButton1.TabIndex = 4;
-            this.toggleButton1.Text = "toggleButton1";
-            this.toggleButton1.VisualStyle = Syncfusion.Windows.Forms.Tools.ToggleButtonStyle.Default;
+            this.tgBtnStaus.InactiveState = inactiveStateCollection1;
+            this.tgBtnStaus.Location = new System.Drawing.Point(792, 16);
+            this.tgBtnStaus.MinimumSize = new System.Drawing.Size(52, 20);
+            this.tgBtnStaus.Name = "tgBtnStaus";
+            this.tgBtnStaus.Renderer = toggleButtonRenderer1;
+            this.tgBtnStaus.Size = new System.Drawing.Size(114, 25);
+            this.tgBtnStaus.Slider = sliderCollection1;
+            this.tgBtnStaus.TabIndex = 4;
+            this.tgBtnStaus.Text = "toggleButton1";
+            this.tgBtnStaus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+            this.tgBtnStaus.VisualStyle = Syncfusion.Windows.Forms.Tools.ToggleButtonStyle.Default;
             // 
             // FrmCadastroDeOperadores
             // 
@@ -354,7 +356,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(1024, 286);
-            this.Controls.Add(this.toggleButton1);
+            this.Controls.Add(this.tgBtnStaus);
             this.Controls.Add(this.btnNovoOperador);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.btnVoltar);
@@ -363,6 +365,7 @@
             this.Name = "FrmCadastroDeOperadores";
             this.Text = "FrmCadastroDeOperadores";
             this.Load += new System.EventHandler(this.FrmCadastroDeOperadores_Load);
+            this.Shown += new System.EventHandler(this.FrmCadastroDeOperadores_Shown);
             this.pnlDadosGerais.ResumeLayout(false);
             this.pnlDadosGerais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmaSenha)).EndInit();
@@ -372,7 +375,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSobrenome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tgBtnStaus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,6 +400,6 @@
         private Syncfusion.Windows.Forms.ButtonAdv btnVoltar;
         private Syncfusion.Windows.Forms.ButtonAdv btnGravar;
         private Syncfusion.Windows.Forms.ButtonAdv btnNovoOperador;
-        private Syncfusion.Windows.Forms.Tools.ToggleButton toggleButton1;
+        private Syncfusion.Windows.Forms.Tools.ToggleButton tgBtnStaus;
     }
 }

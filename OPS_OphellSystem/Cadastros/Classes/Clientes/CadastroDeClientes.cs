@@ -114,20 +114,33 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
                 }
 
                 dtDados = utilitarios.RealizaConexaoBd("SELECT id_clt FROM Cliente WHERE cnpj_clt='" + _cnpj + "'");
-                if (_idCliente <= 0)
+                if (dtDados.Rows.Count <= 0)
                 {
                     utilitarios.RealizaConexaoBd("INSERT INTO Cliente(cnpj_clt,nome_fantasia_clt,razao_social_clt,status_clt,endereco_clt,telefone_clt,nome_contato_clt" +
                         ",email_contato_clt,numero_clt,complemento_clt)VALUES('" + _cnpj + "','" + _fantasia + "','" + _razao + "','" + _status + "','" + _endereco + "','" + _telefone +
                         "','" + _nomeContato + "','" + _emailContato + "','" + _numero + "','" + _complemento + "')");
+                    dtDados = utilitarios.RealizaConexaoBd("SELECT id_clt FROM Cliente WHERE cnpj_clt='" + _cnpj + "'");
+                    _idCliente = int.Parse(dtDados.Rows[0]["id_clt"].ToString());
                 }
                 else
                 {
-                    utilitarios.RealizaConexaoBd("UPDATE Clientes SET cnpj_clt='" + _cnpj + "',nome_fantasia_clt='" + _fantasia + "',razao_social_clt='" + _razao +
-                    "',status_clt='" + _status + "',endereco_clt='" + _endereco + "',telefone_clt='" + _telefone + "',nome_contato='" + _nomeContato +
-                    "',email_contato_clt='" + _emailContato + "',numero_clt='" + _numero + "',complemento_clt='" + _complemento + "' WHERE id_clt='" + _idCliente + "'");
+                    AtualizarCliente();
                 }
             }
             catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+        public void AtualizarCliente()
+        {
+            try
+            {
+                utilitarios.RealizaConexaoBd("UPDATE Clientes SET cnpj_clt='" + _cnpj + "',nome_fantasia_clt='" + _fantasia + "',razao_social_clt='" + _razao +
+                    "',status_clt='" + _status + "',endereco_clt='" + _endereco + "',telefone_clt='" + _telefone + "',nome_contato='" + _nomeContato +
+                    "',email_contato_clt='" + _emailContato + "',numero_clt='" + _numero + "',complemento_clt='" + _complemento + "' WHERE id_clt='" + _idCliente + "'");
+            }
+            catch(Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }

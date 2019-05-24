@@ -71,7 +71,9 @@ namespace OPS_OphellSystem
                                 {"telefone_forn","INTEGER" },
                                 {"nome_contato_forn","TEXT" },
                                 {"complemento_forn","TEXT" },
-                                {"email_contato_forn","Text" }
+                                {"email_contato_forn","Text" },
+                                {"observacao_forn","TEXT" },
+                                {"terceiro","INTEGER NOT NULL DEFAULT 0" }
                             };
                             break;
                         }

@@ -33,51 +33,51 @@
             Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection1 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
             Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer1 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection1 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtCodigo = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.pnlDadosGerais = new System.Windows.Forms.Panel();
+            this.lblCmbTipo = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.cmbTipo = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
+            this.lblTxtDescricao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtDescricao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblCodigo = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.lblTxtDescricao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.lblCmbTipo = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtCodigo = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.tgBtnStatus = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.btnNovaCondicaoDePagamento = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
+            this.pnlDadosGerais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescricao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStatus)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlDadosGerais
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.lblCmbTipo);
-            this.panel1.Controls.Add(this.lblTxtDescricao);
-            this.panel1.Controls.Add(this.lblCodigo);
-            this.panel1.Controls.Add(this.txtDescricao);
-            this.panel1.Controls.Add(this.cmbTipo);
-            this.panel1.Controls.Add(this.txtCodigo);
-            this.panel1.Location = new System.Drawing.Point(16, 56);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 584);
-            this.panel1.TabIndex = 0;
+            this.pnlDadosGerais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlDadosGerais.BackColor = System.Drawing.Color.White;
+            this.pnlDadosGerais.Controls.Add(this.lblCmbTipo);
+            this.pnlDadosGerais.Controls.Add(this.lblTxtDescricao);
+            this.pnlDadosGerais.Controls.Add(this.lblCodigo);
+            this.pnlDadosGerais.Controls.Add(this.txtDescricao);
+            this.pnlDadosGerais.Controls.Add(this.cmbTipo);
+            this.pnlDadosGerais.Controls.Add(this.txtCodigo);
+            this.pnlDadosGerais.Location = new System.Drawing.Point(16, 56);
+            this.pnlDadosGerais.Name = "pnlDadosGerais";
+            this.pnlDadosGerais.Size = new System.Drawing.Size(984, 584);
+            this.pnlDadosGerais.TabIndex = 0;
             // 
-            // txtCodigo
+            // lblCmbTipo
             // 
-            this.txtCodigo.BeforeTouchSize = new System.Drawing.Size(100, 27);
-            this.txtCodigo.BorderColor = System.Drawing.Color.Gray;
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodigo.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(16, 32);
-            this.txtCodigo.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 26);
-            this.txtCodigo.TabIndex = 0;
-            this.txtCodigo.UseBorderColorOnFocus = true;
+            this.lblCmbTipo.DY = -24;
+            this.lblCmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCmbTipo.LabeledControl = this.cmbTipo;
+            this.lblCmbTipo.Location = new System.Drawing.Point(488, 8);
+            this.lblCmbTipo.Name = "lblCmbTipo";
+            this.lblCmbTipo.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblCmbTipo.Size = new System.Drawing.Size(39, 20);
+            this.lblCmbTipo.TabIndex = 5;
+            this.lblCmbTipo.Text = "Tipo";
             // 
             // cmbTipo
             // 
@@ -93,9 +93,21 @@
             this.cmbTipo.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbTipo.TabIndex = 1;
             // 
+            // lblTxtDescricao
+            // 
+            this.lblTxtDescricao.DY = -24;
+            this.lblTxtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxtDescricao.LabeledControl = this.txtDescricao;
+            this.lblTxtDescricao.Location = new System.Drawing.Point(128, 8);
+            this.lblTxtDescricao.Name = "lblTxtDescricao";
+            this.lblTxtDescricao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTxtDescricao.Size = new System.Drawing.Size(80, 20);
+            this.lblTxtDescricao.TabIndex = 4;
+            this.lblTxtDescricao.Text = "Descrição";
+            // 
             // txtDescricao
             // 
-            this.txtDescricao.BeforeTouchSize = new System.Drawing.Size(100, 27);
+            this.txtDescricao.BeforeTouchSize = new System.Drawing.Size(100, 26);
             this.txtDescricao.BorderColor = System.Drawing.Color.Gray;
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescricao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -119,29 +131,19 @@
             this.lblCodigo.TabIndex = 3;
             this.lblCodigo.Text = "Código";
             // 
-            // lblTxtDescricao
+            // txtCodigo
             // 
-            this.lblTxtDescricao.DY = -24;
-            this.lblTxtDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxtDescricao.LabeledControl = this.txtDescricao;
-            this.lblTxtDescricao.Location = new System.Drawing.Point(128, 8);
-            this.lblTxtDescricao.Name = "lblTxtDescricao";
-            this.lblTxtDescricao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTxtDescricao.Size = new System.Drawing.Size(80, 20);
-            this.lblTxtDescricao.TabIndex = 4;
-            this.lblTxtDescricao.Text = "Descrição";
-            // 
-            // lblCmbTipo
-            // 
-            this.lblCmbTipo.DY = -24;
-            this.lblCmbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCmbTipo.LabeledControl = this.cmbTipo;
-            this.lblCmbTipo.Location = new System.Drawing.Point(488, 8);
-            this.lblCmbTipo.Name = "lblCmbTipo";
-            this.lblCmbTipo.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblCmbTipo.Size = new System.Drawing.Size(39, 20);
-            this.lblCmbTipo.TabIndex = 5;
-            this.lblCmbTipo.Text = "Tipo";
+            this.txtCodigo.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCodigo.BorderColor = System.Drawing.Color.Gray;
+            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCodigo.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(16, 32);
+            this.txtCodigo.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 26);
+            this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.UseBorderColorOnFocus = true;
             // 
             // tgBtnStatus
             // 
@@ -167,6 +169,7 @@
             this.tgBtnStatus.Slider = sliderCollection1;
             this.tgBtnStatus.TabIndex = 4;
             this.tgBtnStatus.Text = "toggleButton1";
+            this.tgBtnStatus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             this.tgBtnStatus.VisualStyle = Syncfusion.Windows.Forms.Tools.ToggleButtonStyle.Default;
             // 
             // btnNovaCondicaoDePagamento
@@ -198,6 +201,7 @@
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(40, 40);
             this.btnGravar.TabIndex = 2;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnVoltar
             // 
@@ -225,16 +229,16 @@
             this.Controls.Add(this.btnNovaCondicaoDePagamento);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlDadosGerais);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCadastroDeCondicoesDePagamento";
             this.Text = "FrmCadastroDeCondicoesDePagamento";
             this.Shown += new System.EventHandler(this.FrmCadastroDeCondicoesDePagamento_Shown);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
+            this.pnlDadosGerais.ResumeLayout(false);
+            this.pnlDadosGerais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescricao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStatus)).EndInit();
             this.ResumeLayout(false);
 
@@ -242,7 +246,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlDadosGerais;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtCodigo;
         private Syncfusion.Windows.Forms.Tools.ComboBoxAdv cmbTipo;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtDescricao;

@@ -24,6 +24,40 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
                 this.Hide();
             }
         }
+        private void NovoCadastro()
+        {
+            txtId.Text = "";
+            txtNome.Text = "";
+            txtSobrenome.Text = "";
+            txtContas.Text = "";
+            txtSenha.Text = "";
+            txtConfirmaSenha.Text = "";
+            cmbPerfil.SelectedIndex = 0;
+            tgBtnStaus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+        }
+        private void NovoFormulario()
+        {
+            try
+            {
+                CarregaCombos();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void CarregaCombos()
+        {
+            try
+            {
+                cmbPerfil.Items.Clear();
+                cmbPerfil.Items.Add("VENDEDOR");
+                cmbPerfil.SelectedIndex = 0;
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region "Eventos"
@@ -36,5 +70,16 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
             Fechar();
         }
         #endregion
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            NovoCadastro();
+        }
+
+        private void FrmCadastroDeOperadores_Shown(object sender, EventArgs e)
+        {
+            NovoFormulario();
+        }
     }
 }

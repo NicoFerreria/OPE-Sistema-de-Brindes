@@ -89,7 +89,8 @@
             this.btnCadastrarFornecedores.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCadastrarFornecedores.Name = "btnCadastrarFornecedores";
             this.btnCadastrarFornecedores.Size = new System.Drawing.Size(40, 37);
-            this.btnCadastrarFornecedores.Text = "toolStripButton1";
+            this.btnCadastrarFornecedores.Text = "Cadastro de Fornecedores";
+            this.btnCadastrarFornecedores.ToolTipText = "Cadastro de Fornecedores";
             this.btnCadastrarFornecedores.Click += new System.EventHandler(this.btnCadastrarFornecedores_Click);
             // 
             // btnCadastroOperadores
@@ -100,7 +101,7 @@
             this.btnCadastroOperadores.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCadastroOperadores.Name = "btnCadastroOperadores";
             this.btnCadastroOperadores.Size = new System.Drawing.Size(40, 37);
-            this.btnCadastroOperadores.Text = "toolStripButton1";
+            this.btnCadastroOperadores.Text = "Cadastro de Usuarios";
             this.btnCadastroOperadores.Click += new System.EventHandler(this.btnCadastroOperadores_Click);
             // 
             // bntCadastroDeCondicaoPagamento
@@ -111,7 +112,7 @@
             this.bntCadastroDeCondicaoPagamento.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bntCadastroDeCondicaoPagamento.Name = "bntCadastroDeCondicaoPagamento";
             this.bntCadastroDeCondicaoPagamento.Size = new System.Drawing.Size(40, 37);
-            this.bntCadastroDeCondicaoPagamento.Text = "toolStripButton1";
+            this.bntCadastroDeCondicaoPagamento.Text = "Cadastro de Condições de Pagamentos";
             this.bntCadastroDeCondicaoPagamento.Click += new System.EventHandler(this.bntCadastroDeCondicaoPagamento_Click);
             // 
             // Menu

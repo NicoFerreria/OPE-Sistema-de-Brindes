@@ -119,19 +119,35 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
                 }
 
                 dtDados = utilitarios.RealizaConexaoBd("SELECT id_forn FROM Fornecedor WHERE cnpj_forn='" + _cnpj + "'");
-                if (_idFornecedor <= 0)
+                if (dtDados.Rows.Count  <= 0)
                 {
-                    utilitarios.RealizaConexaoBd("INSERT INTO Fornecedor (cnpj_forn)VALUES('" + _cnpj + "')");
+                    utilitarios.RealizaConexaoBd("INSERT INTO Fornecedor (cnpj_forn,nome_fantasia_forn,razao_social_forn)VALUES('" + _cnpj + "','" + _fantasia + 
+                        "','" + _razao + "')");
+
+                    dtDados = utilitarios.RealizaConexaoBd("SELECT id_forn FROM Fornecedor WHERE cnpj_forn='" + _cnpj + "'");
+                    _idFornecedor = int.Parse(dtDados.Rows[0]["id_forn"].ToString());
+                    AtualizaFornecedor();
                 }
                 else
                 {
-                    utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj_forn='" + _cnpj + "',nome_fantasia_forn='" + _fantasia + "',razao_social_forn='" + _razao +
-                    "',status_forn='" + _status + "',endereco_forn='" + _endereco + "',telefone_forn='" + _telefone + "',nome_contato_forn='" + _nomeContato +
-                    "',email_contato_forn='" + _emailContato + "',numero_forn='" + _numero + "',complemento_forn='" + _complemento +
-                    "',observacao_forn='" + _observacoes + "',terceiro='" + _terceiro + " 'WHERE id_forn='" + _idFornecedor + "'");
+                    AtualizaFornecedor();
                 }
             }
             catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+        public void AtualizaFornecedor()
+        {
+            try
+            {
+                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj_forn='" + _cnpj + "',nome_fantasia_forn='" + _fantasia + "',razao_social_forn='" + _razao +
+                    "',status_forn='" + _status + "',endereco_forn='" + _endereco + "',telefone_forn='" + _telefone + "',nome_contato_forn='" + _nomeContato +
+                    "',email_contato_forn='" + _emailContato + "',numero_forn='" + _numero + "',complemento_forn='" + _complemento +
+                    "',observacao_forn='" + _observacoes + "',terceiro='" + _terceiro + " 'WHERE id_forn='" + _idFornecedor + "'");
+            }
+            catch(Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }

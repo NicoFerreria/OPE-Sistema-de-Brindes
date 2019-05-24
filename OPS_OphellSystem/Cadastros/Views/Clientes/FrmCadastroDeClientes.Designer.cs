@@ -550,6 +550,7 @@
             this.tgBtnAtivarDesativarCliente.Size = new System.Drawing.Size(114, 24);
             this.tgBtnAtivarDesativarCliente.Slider = sliderCollection1;
             this.tgBtnAtivarDesativarCliente.TabIndex = 17;
+            this.tgBtnAtivarDesativarCliente.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             toolTipInfo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             toolTipInfo4.Body.Size = new System.Drawing.Size(20, 20);
             toolTipInfo4.Body.Text = "Ativar ou Desativar Cliente";
