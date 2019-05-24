@@ -37,8 +37,10 @@ namespace OPS_OphellSystem
                             {"numero_clt","INTEGER" },
                             {"telefone_clt","INTEGER" },
                             {"nome_contato_clt","TEXT" },
-                            {"comlemento_clt","TEXT" },
-                            {"email_contato_clt","TEXT" }
+                            {"complemento_clt","TEXT" },
+                            {"email_contato_clt","TEXT" },
+                            {"observacao_forn","TEXT" },
+                            {"terceiro","INTEGER NOT NULL DEFAULT 0" }
                         };
                         break;
                     case "Produto":
@@ -55,6 +57,24 @@ namespace OPS_OphellSystem
                             };
                         }
                         break;
+                    case "Fornecedor":
+                        {
+                            campos = new string[,]
+                            {
+                                {"id_forn","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
+                                {"cnpj_forn", "INTEGER NOT NULL UNIQUE" },
+                                {"nome_fantasia_forn","TEXT NOT NULL" },
+                                {"razao_social_forn","TEXT NOT NULL" },
+                                {"status_forn","INTEGER NOT NULL DEFAULT 0" },
+                                {"endereco_forn","TEXT" },
+                                {"numero_forn","INTEGER" },
+                                {"telefone_forn","INTEGER" },
+                                {"nome_contato_forn","TEXT" },
+                                {"complemento_forn","TEXT" },
+                                {"email_contato_forn","Text" }
+                            };
+                            break;
+                        }
                 }
 
                 return campos;
@@ -72,7 +92,8 @@ namespace OPS_OphellSystem
                 {
                     "Usuario",
                     "Cliente",
-                    "Produto"
+                    "Produto",
+                    "Fornecedor"
                 };
 
                 return tabelas;

@@ -5,7 +5,7 @@
         #region "Variaveis"
         protected string _fantasia;
         protected string _razao;
-        protected int _cnpj;
+        protected long _cnpj;
         protected string _endereco;
         protected int _numero;
         protected string _cidade;

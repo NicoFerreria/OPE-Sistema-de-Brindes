@@ -45,7 +45,8 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 //utilitarios.ValidaCnpj("114447770001","00"); 
                 if (ValidaCampos() == false) return;
 
-                cadastroCLiente.CNPJ = int.Parse(txtCnpj.Text + txtDigitoVerificador.Text);
+                cadastroCLiente.CNPJ = long.Parse(txtCnpj.Text + txtDigitoVerificador.Text);
+                cadastroCLiente.DigitoVerificador = int.Parse(txtDigitoVerificador.Text);
                 cadastroCLiente.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text);
                 cadastroCLiente.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
                 cadastroCLiente.CEP = int.Parse(txtCep.Text);
@@ -84,6 +85,8 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 txtNomeContato.Text = "";
                 txtEmail.Text = "";
                 txtTelefone.Text = "";
+                txtObservacao.Text = "";
+                txtDigitoVerificador.Text = "";
                 tgBtnAtivarDesativarCliente.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
                 txtCnpj.Focus();
 
@@ -279,6 +282,13 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
             utilitarios.PermitirApenasNumeros(sender, e);
+        }
+        private void txtCnpj_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCnpj.Text.Length == 12)
+            {
+                txtDigitoVerificador.Focus();
+            }
         }
         #endregion
 

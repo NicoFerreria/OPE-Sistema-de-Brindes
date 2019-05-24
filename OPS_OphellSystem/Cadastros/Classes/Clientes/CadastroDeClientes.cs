@@ -16,6 +16,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
         private string _observacoes;
         private int _status;
         private string _complemento;
+        private int _digitoVerificador;
         #endregion
 
         #region "Propriedades"
@@ -44,7 +45,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
             get { return _status; }
             set { _status = value; }
         }
-        public int CNPJ
+        public long CNPJ
         {
             get { return _cnpj; }
             set { _cnpj = value; }
@@ -93,6 +94,11 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
         {
             get { return _complemento; }
             set { _complemento = value; }
+        }
+        public int DigitoVerificador
+        {
+            get { return _digitoVerificador; }
+            set { _digitoVerificador = value; }
         }
         #endregion
 
@@ -185,9 +191,13 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
         {
             try
             {
-                if (ValidaCnpj(123) == false)
+                if (utilitarios.ValidaCnpj(_cnpj.ToString(), _digitoVerificador.ToString()) == false)
                 {
-                    return false;
+                    throw new System.Exception("CNPJ inválido! Confira se este é um CNPJ válido.");
+                }
+                if (_cnpj.ToString().Length < 14 || _cnpj.ToString().Length > 14)
+                {
+                    throw new System.Exception("CNPJ está com a quantidade de dígitos inferior ou superior a 14!");
                 }
                 if (_fantasia == "" || _fantasia == null)
                 {

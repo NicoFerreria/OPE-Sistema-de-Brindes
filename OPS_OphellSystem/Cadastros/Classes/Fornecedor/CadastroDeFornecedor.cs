@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Data;
 
-
-namespace OPS_OphellSystem.Cadastros.Classes.Clientes
+namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
 {
     public class CadastroDeFornecedor : PessoaJuridica
     {
@@ -14,7 +13,10 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
         private string _nomeContato;
         private string _emailContato;
         private string _observacoes;
-        private string _status;
+        private int _status;
+        private string _complemento;
+        private int _terceiro;
+        private int _digitoVerificador;
         #endregion
 
         #region "Propriedades"
@@ -38,12 +40,12 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
             get { return _observacoes; }
             set { _observacoes = value; }
         }
-        public string StatusFornecedor
+        public int StatusFornecedor
         {
             get { return _status; }
             set { _status = value; }
         }
-        public int CNPJ
+        public long CNPJ
         {
             get { return _cnpj; }
             set { _cnpj = value; }
@@ -88,6 +90,21 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
             get { return _bairro; }
             set { _bairro = value; }
         }
+        public string Complemento
+        {
+            get { return _complemento; }
+            set { _complemento = value; }
+        }
+        public int Terceiro
+        {
+            get { return _terceiro; }
+            set { _terceiro = value; }
+        }
+        public int DifitoVerificador
+        {
+            get { return _digitoVerificador; }
+            set { _digitoVerificador = value; }
+        }
         #endregion
 
         #region "Meodos"
@@ -101,16 +118,17 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
                     return;
                 }
 
-                dtDados = utilitarios.RealizaConexaoBd("SELECT id_clt FROM Fornecedor WHERE cnpj_fornec='" + _cnpj + "'");
+                dtDados = utilitarios.RealizaConexaoBd("SELECT id_forn FROM Fornecedor WHERE cnpj_forn='" + _cnpj + "'");
                 if (_idFornecedor <= 0)
                 {
-                    utilitarios.RealizaConexaoBd("INSERT INTO Fornecedor (cnpj_fornec)VALUES('" + _cnpj + "')");
+                    utilitarios.RealizaConexaoBd("INSERT INTO Fornecedor (cnpj_forn)VALUES('" + _cnpj + "')");
                 }
                 else
                 {
-                    utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj_fornec='" + _cnpj + "',nome_fantasia_fornec='" + _fantasia + "',razao_social_fornec='" + _razao +
-                    "',status_fornec='" + _status + "',endereco_fornec='" + _endereco + "',telefone_fornec='" + _telefone + "',nome_contato='" + _nomeContato +
-                    "',email_contato_forec='" + _emailContato + "',numero_fornec='" + _numero + "' WHERE id_fornec='" + _idFornecedor + "'");
+                    utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj_forn='" + _cnpj + "',nome_fantasia_forn='" + _fantasia + "',razao_social_forn='" + _razao +
+                    "',status_forn='" + _status + "',endereco_forn='" + _endereco + "',telefone_forn='" + _telefone + "',nome_contato_forn='" + _nomeContato +
+                    "',email_contato_forn='" + _emailContato + "',numero_forn='" + _numero + "',complemento_forn='" + _complemento +
+                    "',observacao_forn='" + _observacoes + "',terceiro='" + _terceiro + " 'WHERE id_forn='" + _idFornecedor + "'");
                 }
             }
             catch (Exception ex)
@@ -122,7 +140,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
         {
             try
             {
-                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET status_clt='" + _status + "' WHERE id_fornec='" + _idFornecedor + "'");
+                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET status_forn='" + _status + "' WHERE id_forn='" + _idFornecedor + "'");
             }
             catch (Exception ex)
             {
@@ -146,16 +164,16 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
                 switch (opcaoBusca)
                 {
                     case "CNPJ":
-                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE cpj_clt='" + _cnpj + "'");
+                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE cpj_forn='" + _cnpj + "'");
                         break;
                     case "Nome Fantasia":
-                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE nome_fantasia_clt='" + _fantasia + "'");
+                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE nome_fantasia_forn='" + _fantasia + "'");
                         break;
                     case "Razão Social":
-                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE razao_social_clt='" + _razao + "'");
+                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE razao_social_forn='" + _razao + "'");
                         break;
                     case "Status":
-                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE status_clt='" + _status + "'");
+                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE status_forn='" + _status + "'");
                         break;
                 }
 
@@ -166,17 +184,17 @@ namespace OPS_OphellSystem.Cadastros.Classes.Clientes
                 throw new System.Exception(ex.Message);
             }
         }
-        private bool ValidaCnpj(int CNPJ)
-        {
-            return true;
-        }
         private bool ValidaDados()
         {
             try
             {
-                if (ValidaCnpj(123) == false)
+                if (utilitarios.ValidaCnpj(_cnpj.ToString(), _digitoVerificador.ToString()) == false)
                 {
-                    return false;
+                    throw new System.Exception("CNPJ inválido! Confira se este é um CNPJ válido.");
+                }
+                if (_cnpj.ToString().Length < 14 || _cnpj.ToString().Length > 14)
+                {
+                    throw new System.Exception("CNPJ está com a quantidade de dígitos inferior ou superior a 14!");
                 }
                 if (_fantasia == "" || _fantasia == null)
                 {
