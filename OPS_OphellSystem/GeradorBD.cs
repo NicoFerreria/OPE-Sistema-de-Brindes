@@ -18,11 +18,14 @@ namespace OPS_OphellSystem
                     case "Usuario":
                         campos = new string[,]
                          {
-                           {"Id_vendedor","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE"},
-                           {"nome_vend","TEXT NOT NULL" },
-                           {"login","TEXT NOT NULL" },
+                           {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE"},
+                           {"nome","TEXT NOT NULL" },
+                           {"sobrenome","TEXT NOT NULL" },
                            {"contas","INTEGER" },
-                           {"senha_login","TEXT NOT NULL" }
+                           {"senha_login","TEXT NOT NULL" },
+                           {"perfil","TEXT NOT NULL" },
+                           {"status","INTEGER NOT NULL DEFAULT 1" },
+                           {"cpf","INTEGER NOT NULL" }
                          };
                         break;
                     case "Cliente":
@@ -32,7 +35,7 @@ namespace OPS_OphellSystem
                             {"cnpj_clt","INTEGER NOT NULL UNIQUE" },
                             {"nome_fantasia_clt","TEXT NOT NULL" },
                             {"razao_social_clt","TEXT NOT NULL" },
-                            {"status_clt","INTEGER NOT NULL DEFAULT 0" },
+                            {"status_clt","INTEGER NOT NULL DEFAULT 1" },
                             {"endereco_clt","TEXT" },
                             {"numero_clt","INTEGER" },
                             {"telefone_clt","INTEGER" },
@@ -40,7 +43,7 @@ namespace OPS_OphellSystem
                             {"complemento_clt","TEXT" },
                             {"email_contato_clt","TEXT" },
                             {"observacao_forn","TEXT" },
-                            {"terceiro","INTEGER NOT NULL DEFAULT 0" }
+                            {"terceiro","INTEGER NOT NULL DEFAULT 1" }
                         };
                         break;
                     case "Produto":
@@ -51,7 +54,7 @@ namespace OPS_OphellSystem
                                 {"codigo_prod","INTEGER NOT NULL" },
                                 {"categoria_prod","TEXT NOT NULL" },
                                 {"desc_prod","TEXT NOT NULL" },
-                                {"status_prod","INTEGER NOT NULL DEFAULT 0" },
+                                {"status_prod","INTEGER NOT NULL DEFAULT 1" },
                                 {"cor_prod","TEXT NOT NULL" },
                                 {"obs_prod","TEXT" }
                             };
@@ -65,7 +68,7 @@ namespace OPS_OphellSystem
                                 {"cnpj_forn", "INTEGER NOT NULL UNIQUE" },
                                 {"nome_fantasia_forn","TEXT NOT NULL" },
                                 {"razao_social_forn","TEXT NOT NULL" },
-                                {"status_forn","INTEGER NOT NULL DEFAULT 0" },
+                                {"status_forn","INTEGER NOT NULL DEFAULT 1" },
                                 {"endereco_forn","TEXT" },
                                 {"numero_forn","INTEGER" },
                                 {"telefone_forn","INTEGER" },

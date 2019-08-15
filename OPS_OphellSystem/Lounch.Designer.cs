@@ -30,15 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lounch));
+            Syncfusion.Windows.Forms.MetroColorTable metroColorTable1 = new Syncfusion.Windows.Forms.MetroColorTable();
             this.txtOperador = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.txtSenha = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.btnLogin = new Syncfusion.Windows.Forms.ButtonAdv();
             this.bnTxtOperador = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
             this.btnSair = new Syncfusion.Windows.Forms.ButtonAdv();
             this.pgbLoadSistema = new Syncfusion.Windows.Forms.Tools.ProgressBarAdv();
+            this.mCmbOperadores = new Syncfusion.Windows.Forms.Tools.MultiColumnComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtOperador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgbLoadSistema)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mCmbOperadores)).BeginInit();
             this.SuspendLayout();
             // 
             // txtOperador
@@ -143,6 +146,35 @@
             this.pgbLoadSistema.Visible = false;
             this.pgbLoadSistema.WaitingGradientWidth = 400;
             // 
+            // mCmbOperadores
+            // 
+            this.mCmbOperadores.BeforeTouchSize = new System.Drawing.Size(161, 21);
+            this.mCmbOperadores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mCmbOperadores.Location = new System.Drawing.Point(12, 213);
+            this.mCmbOperadores.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.mCmbOperadores.Name = "mCmbOperadores";
+            metroColorTable1.ArrowChecked = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(149)))), ((int)(((byte)(152)))));
+            metroColorTable1.ArrowCheckedBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ArrowInActive = System.Drawing.Color.White;
+            metroColorTable1.ArrowNormal = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            metroColorTable1.ArrowNormalBackGround = System.Drawing.Color.Empty;
+            metroColorTable1.ArrowNormalBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ArrowPushed = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(90)))));
+            metroColorTable1.ArrowPushedBackGround = System.Drawing.Color.Empty;
+            metroColorTable1.ArrowPushedBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ScrollerBackground = System.Drawing.Color.White;
+            metroColorTable1.ThumbChecked = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(149)))), ((int)(((byte)(152)))));
+            metroColorTable1.ThumbCheckedBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ThumbInActive = System.Drawing.Color.White;
+            metroColorTable1.ThumbNormal = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            metroColorTable1.ThumbNormalBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ThumbPushed = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(90)))));
+            metroColorTable1.ThumbPushedBorder = System.Drawing.Color.Empty;
+            metroColorTable1.ThumbPushedBorderColor = System.Drawing.Color.Empty;
+            this.mCmbOperadores.ScrollMetroColorTable = metroColorTable1;
+            this.mCmbOperadores.Size = new System.Drawing.Size(161, 21);
+            this.mCmbOperadores.TabIndex = 8;
+            // 
             // Lounch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +183,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(584, 325);
+            this.Controls.Add(this.mCmbOperadores);
             this.Controls.Add(this.pgbLoadSistema);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLogin);
@@ -166,6 +199,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtOperador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgbLoadSistema)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mCmbOperadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,6 +213,7 @@
         private Syncfusion.Windows.Forms.BannerTextProvider bnTxtOperador;
         private Syncfusion.Windows.Forms.ButtonAdv btnSair;
         private Syncfusion.Windows.Forms.Tools.ProgressBarAdv pgbLoadSistema;
+        private Syncfusion.Windows.Forms.Tools.MultiColumnComboBox mCmbOperadores;
     }
 }
 

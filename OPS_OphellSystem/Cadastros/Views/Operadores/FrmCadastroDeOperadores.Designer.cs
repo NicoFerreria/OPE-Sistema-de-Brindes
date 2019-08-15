@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection1 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection1 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer1 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection1 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection3 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection3 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer3 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection3 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             this.pnlDadosGerais = new System.Windows.Forms.Panel();
             this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtConfirmaSenha = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -52,6 +52,8 @@
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.tgBtnStaus = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.txtCpf = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblCpf = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.pnlDadosGerais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmaSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).BeginInit();
@@ -61,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStaus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCpf)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDadosGerais
@@ -68,6 +71,8 @@
             this.pnlDadosGerais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDadosGerais.BackColor = System.Drawing.Color.White;
+            this.pnlDadosGerais.Controls.Add(this.lblCpf);
+            this.pnlDadosGerais.Controls.Add(this.txtCpf);
             this.pnlDadosGerais.Controls.Add(this.autoLabel3);
             this.pnlDadosGerais.Controls.Add(this.lblTxtSenha);
             this.pnlDadosGerais.Controls.Add(this.lblPerfil);
@@ -101,7 +106,7 @@
             // 
             // txtConfirmaSenha
             // 
-            this.txtConfirmaSenha.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtConfirmaSenha.BeforeTouchSize = new System.Drawing.Size(242, 26);
             this.txtConfirmaSenha.BorderColor = System.Drawing.Color.Gray;
             this.txtConfirmaSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmaSenha.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -130,7 +135,7 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtSenha.BeforeTouchSize = new System.Drawing.Size(242, 26);
             this.txtSenha.BorderColor = System.Drawing.Color.Gray;
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSenha.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -185,7 +190,7 @@
             // 
             // txtContas
             // 
-            this.txtContas.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtContas.BeforeTouchSize = new System.Drawing.Size(242, 26);
             this.txtContas.BorderColor = System.Drawing.Color.Gray;
             this.txtContas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContas.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -211,7 +216,7 @@
             // 
             // txtSobrenome
             // 
-            this.txtSobrenome.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtSobrenome.BeforeTouchSize = new System.Drawing.Size(242, 26);
             this.txtSobrenome.BorderColor = System.Drawing.Color.Gray;
             this.txtSobrenome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSobrenome.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -237,7 +242,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtNome.BeforeTouchSize = new System.Drawing.Size(242, 26);
             this.txtNome.BorderColor = System.Drawing.Color.Gray;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -263,7 +268,7 @@
             // 
             // txtId
             // 
-            this.txtId.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtId.BeforeTouchSize = new System.Drawing.Size(242, 26);
             this.txtId.BorderColor = System.Drawing.Color.Gray;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -325,30 +330,56 @@
             // 
             // tgBtnStaus
             // 
-            activeStateCollection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            activeStateCollection1.BorderColor = System.Drawing.Color.Black;
-            activeStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            activeStateCollection1.Text = "Desativar";
-            this.tgBtnStaus.ActiveState = activeStateCollection1;
+            activeStateCollection3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            activeStateCollection3.BorderColor = System.Drawing.Color.Black;
+            activeStateCollection3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            activeStateCollection3.Text = "Desativar";
+            this.tgBtnStaus.ActiveState = activeStateCollection3;
             this.tgBtnStaus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tgBtnStaus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tgBtnStaus.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            inactiveStateCollection1.BorderColor = System.Drawing.Color.Black;
-            inactiveStateCollection1.ForeColor = System.Drawing.Color.White;
-            inactiveStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            inactiveStateCollection1.Text = "Ativar";
-            this.tgBtnStaus.InactiveState = inactiveStateCollection1;
+            inactiveStateCollection3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            inactiveStateCollection3.BorderColor = System.Drawing.Color.Black;
+            inactiveStateCollection3.ForeColor = System.Drawing.Color.White;
+            inactiveStateCollection3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            inactiveStateCollection3.Text = "Ativar";
+            this.tgBtnStaus.InactiveState = inactiveStateCollection3;
             this.tgBtnStaus.Location = new System.Drawing.Point(792, 16);
             this.tgBtnStaus.MinimumSize = new System.Drawing.Size(52, 20);
             this.tgBtnStaus.Name = "tgBtnStaus";
-            this.tgBtnStaus.Renderer = toggleButtonRenderer1;
+            this.tgBtnStaus.Renderer = toggleButtonRenderer3;
             this.tgBtnStaus.Size = new System.Drawing.Size(114, 25);
-            this.tgBtnStaus.Slider = sliderCollection1;
+            this.tgBtnStaus.Slider = sliderCollection3;
             this.tgBtnStaus.TabIndex = 4;
             this.tgBtnStaus.Text = "toggleButton1";
             this.tgBtnStaus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             this.tgBtnStaus.VisualStyle = Syncfusion.Windows.Forms.Tools.ToggleButtonStyle.Default;
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.BeforeTouchSize = new System.Drawing.Size(242, 26);
+            this.txtCpf.BorderColor = System.Drawing.Color.Gray;
+            this.txtCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCpf.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(470, 88);
+            this.txtCpf.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(242, 26);
+            this.txtCpf.TabIndex = 14;
+            this.txtCpf.UseBorderColorOnFocus = true;
+            // 
+            // lblCpf
+            // 
+            this.lblCpf.DY = -24;
+            this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpf.LabeledControl = this.txtCpf;
+            this.lblCpf.Location = new System.Drawing.Point(470, 64);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblCpf.Size = new System.Drawing.Size(40, 20);
+            this.lblCpf.TabIndex = 15;
+            this.lblCpf.Text = "CPF";
             // 
             // FrmCadastroDeOperadores
             // 
@@ -376,6 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStaus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCpf)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -401,5 +433,7 @@
         private Syncfusion.Windows.Forms.ButtonAdv btnGravar;
         private Syncfusion.Windows.Forms.ButtonAdv btnNovoOperador;
         private Syncfusion.Windows.Forms.Tools.ToggleButton tgBtnStaus;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtCpf;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblCpf;
     }
 }

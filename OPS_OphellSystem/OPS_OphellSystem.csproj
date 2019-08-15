@@ -90,6 +90,7 @@
     <Compile Include="Cadastros\Classes\CategoriasDeProdutos\CadastroDeCategorias.cs" />
     <Compile Include="Cadastros\Classes\Clientes\CadastroDeClientes.cs" />
     <Compile Include="Cadastros\Classes\Fornecedor\CadastroDeFornecedor.cs" />
+    <Compile Include="Cadastros\Classes\Operadores\CadastroDeOperadores.cs" />
     <Compile Include="Cadastros\Classes\PessoaJuridica.cs" />
     <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.cs">
       <SubType>Form</SubType>

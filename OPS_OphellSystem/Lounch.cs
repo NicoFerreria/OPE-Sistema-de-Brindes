@@ -3,6 +3,8 @@ using Syncfusion.Windows.Forms;
 using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
+using OPS_OphellSystem.Cadastros.Classes.Operadores;
+using System.Collections.Generic;
 
 namespace OPS_OphellSystem
 {
@@ -83,6 +85,50 @@ namespace OPS_OphellSystem
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void CarregaComboOperadores()
+        {
+            try
+            {
+                CadastroDeOperadores operador = new CadastroDeOperadores();
+                string[,] dadosOperador = new string [operador.GetAllOperadoresAtivos().Count,3];
+                List<string[,]> tabela = new List<string[,]>();
+
+                mCmbOperadores.Items.Clear();
+                mCmbOperadores.DataSource = null;
+                mCmbOperadores.Columns.Clear();
+                mCmbOperadores.Columns.Add("OperadorId");
+                mCmbOperadores.Columns.Add("Nome");
+                mCmbOperadores.Columns.Add("Sobrenome");                 
+                mCmbOperadores.ValueMember = "OperadorId";
+                mCmbOperadores.DisplayMember = "Nome";
+                
+                for(int inicio = 0;inicio < operador.GetAllOperadoresAtivos().Count; inicio++)
+                {
+                    operador = operador.GetAllOperadoresAtivos()[inicio];
+                    dadosOperador[inicio, 0] = operador.OperadorId.ToString();
+                    dadosOperador[inicio, 1] = operador.Nome;
+                    dadosOperador[inicio, 2] = operador.Sobrenome;
+                    
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void AberturaSistema()
+        {
+            try
+            {
+                VerificaBanco();
+                CarregaComboOperadores();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region "Funcoes"
@@ -107,7 +153,7 @@ namespace OPS_OphellSystem
 
         private void Lounch_Shown(object sender, EventArgs e)
         {
-            VerificaBanco();
+            AberturaSistema();
         }
     }
 }
