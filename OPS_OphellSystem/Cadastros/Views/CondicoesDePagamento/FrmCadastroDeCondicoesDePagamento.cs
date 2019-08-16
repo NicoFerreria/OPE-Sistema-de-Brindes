@@ -59,17 +59,17 @@ namespace OPS_OphellSystem.Cadastros.Views.CondicoesDePagamento
         {
             Fechar();
         }
-        #endregion
-
         private void FrmCadastroDeCondicoesDePagamento_Shown(object sender, EventArgs e)
         {
             CarregaComboTiposPagamento();
         }
-
         private void btnGravar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Operação Realizada com Sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
             NovoCadastro();
         }
+        #endregion
+
+
     }
 }

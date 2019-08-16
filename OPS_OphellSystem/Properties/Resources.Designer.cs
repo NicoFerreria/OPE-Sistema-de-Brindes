@@ -83,9 +83,29 @@ namespace OPS_OphellSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Confirma28x28 {
+            get {
+                object obj = ResourceManager.GetObject("Confirma28x28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fornecedores32x32 {
             get {
                 object obj = ResourceManager.GetObject("Fornecedores32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoLogin {
+            get {
+                object obj = ResourceManager.GetObject("FundoLogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

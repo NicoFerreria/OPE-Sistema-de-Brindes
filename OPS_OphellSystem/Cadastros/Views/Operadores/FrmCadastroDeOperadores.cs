@@ -39,12 +39,13 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
             txtConfirmaSenha.Text = "";
             cmbPerfil.SelectedIndex = 0;
             tgBtnStaus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+            txtNome.Focus();
         }
         private void NovoFormulario()
         {
             try
             {
-                CarregaCombos();
+                CarregaCombos();                
             }
             catch (Exception ex)
             {
@@ -56,7 +57,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
             try
             {
                 cmbPerfil.Items.Clear();
-                cmbPerfil.Items.Add("VENDEDOR");
+                cmbPerfil.Items.Add("ADM");
                 cmbPerfil.SelectedIndex = 0;
 
             }
@@ -94,6 +95,34 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void AtivarDesativarCadastro(Syncfusion.Windows.Forms.Tools.ToggleButtonState state)
+        {
+            try
+            {
+                if(state == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive)
+                {
+                    pnlDadosGerais.Enabled = false;
+                }
+                else
+                {
+                    pnlDadosGerais.Enabled = true;
+                }
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void CarregaOperador()
+        {
+            try
+            {
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }        
         #endregion
 
         #region "Funções"
@@ -101,7 +130,46 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
         {
             try
             {
+                if(txtNome.Text == "")
+                {
+                    MessageBox.Show("Necessário preencher o campo Nome!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtNome.Focus();
+                    return false;
+                }
 
+                if(txtSobrenome.Text == "")
+                {
+                    MessageBox.Show("Necessário preencher o campo Sobrenome!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtSobrenome.Focus();
+                    return false;
+                }
+                if(txtCpf.Text == "")
+                {
+                    MessageBox.Show("Necessário preencher o campo CPF!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtCpf.Focus();
+                    return false;
+                }
+
+                if(txtSenha.Text == "")
+                {
+                    MessageBox.Show("Necessário preencher o campo Senha!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtSenha.Focus();
+                    return false;
+                }
+
+                if(txtConfirmaSenha.Text == "")
+                {
+                    MessageBox.Show("Necessário preencher o campo Confirma Senha!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtConfirmaSenha.Focus();
+                    return false;
+                }
+
+                if(long.TryParse(txtCpf.Text, out long cpf) == false)
+                {
+                    MessageBox.Show("CPF inválido!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtCpf.Focus();
+                    return false;
+                }
                 return true;
             }catch(Exception ex)
             {
@@ -129,6 +197,18 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
             SalvarOperador();
             //MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //NovoCadastro();
+        }
+        private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utilitarios.PermitirApenasNumeros(sender, e);
+        }
+        private void tgBtnStaus_ToggleStateChanged(object sender, Syncfusion.Windows.Forms.Tools.ToggleStateChangedEventArgs e)
+        {
+            AtivarDesativarCadastro(e.ToggleState);
+        }
+        private void btnNovoOperador_Click(object sender, EventArgs e)
+        {
+            NovoCadastro();
         }
         #endregion
 

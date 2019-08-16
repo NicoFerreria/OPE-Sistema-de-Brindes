@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection3 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection3 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer3 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection3 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection2 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection2 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer2 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection2 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             this.pnlDadosGerais = new System.Windows.Forms.Panel();
+            this.lblCpf = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtCpf = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtConfirmaSenha = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblTxtSenha = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -52,9 +54,8 @@
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.tgBtnStaus = new Syncfusion.Windows.Forms.Tools.ToggleButton();
-            this.txtCpf = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblCpf = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.pnlDadosGerais.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCpf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmaSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPerfil)).BeginInit();
@@ -63,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStaus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCpf)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDadosGerais
@@ -92,6 +92,33 @@
             this.pnlDadosGerais.Size = new System.Drawing.Size(992, 208);
             this.pnlDadosGerais.TabIndex = 0;
             // 
+            // lblCpf
+            // 
+            this.lblCpf.DY = -24;
+            this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpf.LabeledControl = this.txtCpf;
+            this.lblCpf.Location = new System.Drawing.Point(470, 64);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblCpf.Size = new System.Drawing.Size(46, 20);
+            this.lblCpf.TabIndex = 15;
+            this.lblCpf.Text = "CPF*";
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.BeforeTouchSize = new System.Drawing.Size(230, 27);
+            this.txtCpf.BorderColor = System.Drawing.Color.Gray;
+            this.txtCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCpf.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(470, 88);
+            this.txtCpf.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(242, 26);
+            this.txtCpf.TabIndex = 4;
+            this.txtCpf.UseBorderColorOnFocus = true;
+            this.txtCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCpf_KeyPress);
+            // 
             // autoLabel3
             // 
             this.autoLabel3.DY = -24;
@@ -100,13 +127,13 @@
             this.autoLabel3.Location = new System.Drawing.Point(272, 120);
             this.autoLabel3.Name = "autoLabel3";
             this.autoLabel3.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.autoLabel3.Size = new System.Drawing.Size(129, 20);
+            this.autoLabel3.Size = new System.Drawing.Size(135, 20);
             this.autoLabel3.TabIndex = 13;
-            this.autoLabel3.Text = "Confirmar Senha";
+            this.autoLabel3.Text = "Confirmar Senha*";
             // 
             // txtConfirmaSenha
             // 
-            this.txtConfirmaSenha.BeforeTouchSize = new System.Drawing.Size(242, 26);
+            this.txtConfirmaSenha.BeforeTouchSize = new System.Drawing.Size(230, 27);
             this.txtConfirmaSenha.BorderColor = System.Drawing.Color.Gray;
             this.txtConfirmaSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfirmaSenha.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -116,7 +143,7 @@
             this.txtConfirmaSenha.Name = "txtConfirmaSenha";
             this.txtConfirmaSenha.PasswordChar = '●';
             this.txtConfirmaSenha.Size = new System.Drawing.Size(100, 26);
-            this.txtConfirmaSenha.TabIndex = 6;
+            this.txtConfirmaSenha.TabIndex = 7;
             this.txtConfirmaSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtConfirmaSenha.UseBorderColorOnFocus = true;
             this.txtConfirmaSenha.UseSystemPasswordChar = true;
@@ -129,13 +156,13 @@
             this.lblTxtSenha.Location = new System.Drawing.Point(160, 120);
             this.lblTxtSenha.Name = "lblTxtSenha";
             this.lblTxtSenha.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTxtSenha.Size = new System.Drawing.Size(56, 20);
+            this.lblTxtSenha.Size = new System.Drawing.Size(62, 20);
             this.lblTxtSenha.TabIndex = 12;
-            this.lblTxtSenha.Text = "Senha";
+            this.lblTxtSenha.Text = "Senha*";
             // 
             // txtSenha
             // 
-            this.txtSenha.BeforeTouchSize = new System.Drawing.Size(242, 26);
+            this.txtSenha.BeforeTouchSize = new System.Drawing.Size(230, 27);
             this.txtSenha.BorderColor = System.Drawing.Color.Gray;
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSenha.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -145,7 +172,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '●';
             this.txtSenha.Size = new System.Drawing.Size(100, 26);
-            this.txtSenha.TabIndex = 5;
+            this.txtSenha.TabIndex = 6;
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSenha.UseBorderColorOnFocus = true;
             this.txtSenha.UseSystemPasswordChar = true;
@@ -174,7 +201,7 @@
             this.cmbPerfil.Name = "cmbPerfil";
             this.cmbPerfil.Size = new System.Drawing.Size(121, 28);
             this.cmbPerfil.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
-            this.cmbPerfil.TabIndex = 4;
+            this.cmbPerfil.TabIndex = 5;
             // 
             // lblTxtContas
             // 
@@ -190,7 +217,7 @@
             // 
             // txtContas
             // 
-            this.txtContas.BeforeTouchSize = new System.Drawing.Size(242, 26);
+            this.txtContas.BeforeTouchSize = new System.Drawing.Size(230, 27);
             this.txtContas.BorderColor = System.Drawing.Color.Gray;
             this.txtContas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContas.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -210,13 +237,13 @@
             this.autoLabel2.Location = new System.Drawing.Point(176, 64);
             this.autoLabel2.Name = "autoLabel2";
             this.autoLabel2.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.autoLabel2.Size = new System.Drawing.Size(92, 20);
+            this.autoLabel2.Size = new System.Drawing.Size(98, 20);
             this.autoLabel2.TabIndex = 9;
-            this.autoLabel2.Text = "Sobrenome";
+            this.autoLabel2.Text = "Sobrenome*";
             // 
             // txtSobrenome
             // 
-            this.txtSobrenome.BeforeTouchSize = new System.Drawing.Size(242, 26);
+            this.txtSobrenome.BeforeTouchSize = new System.Drawing.Size(230, 27);
             this.txtSobrenome.BorderColor = System.Drawing.Color.Gray;
             this.txtSobrenome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSobrenome.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -236,13 +263,13 @@
             this.lblTxtNome.Location = new System.Drawing.Point(16, 64);
             this.lblTxtNome.Name = "lblTxtNome";
             this.lblTxtNome.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTxtNome.Size = new System.Drawing.Size(51, 20);
+            this.lblTxtNome.Size = new System.Drawing.Size(57, 20);
             this.lblTxtNome.TabIndex = 8;
-            this.lblTxtNome.Text = "Nome";
+            this.lblTxtNome.Text = "Nome*";
             // 
             // txtNome
             // 
-            this.txtNome.BeforeTouchSize = new System.Drawing.Size(242, 26);
+            this.txtNome.BeforeTouchSize = new System.Drawing.Size(230, 27);
             this.txtNome.BorderColor = System.Drawing.Color.Gray;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -268,7 +295,7 @@
             // 
             // txtId
             // 
-            this.txtId.BeforeTouchSize = new System.Drawing.Size(242, 26);
+            this.txtId.BeforeTouchSize = new System.Drawing.Size(230, 27);
             this.txtId.BorderColor = System.Drawing.Color.Gray;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -279,6 +306,7 @@
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(100, 26);
             this.txtId.TabIndex = 0;
+            this.txtId.TabStop = false;
             this.txtId.UseBorderColorOnFocus = true;
             // 
             // btnNovoOperador
@@ -294,7 +322,8 @@
             this.btnNovoOperador.Location = new System.Drawing.Point(688, 8);
             this.btnNovoOperador.Name = "btnNovoOperador";
             this.btnNovoOperador.Size = new System.Drawing.Size(40, 40);
-            this.btnNovoOperador.TabIndex = 3;
+            this.btnNovoOperador.TabIndex = 8;
+            this.btnNovoOperador.Click += new System.EventHandler(this.btnNovoOperador_Click);
             // 
             // btnGravar
             // 
@@ -309,7 +338,7 @@
             this.btnGravar.Location = new System.Drawing.Point(744, 8);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(40, 40);
-            this.btnGravar.TabIndex = 2;
+            this.btnGravar.TabIndex = 9;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnVoltar
@@ -325,61 +354,36 @@
             this.btnVoltar.Location = new System.Drawing.Point(920, 8);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(40, 40);
-            this.btnVoltar.TabIndex = 1;
+            this.btnVoltar.TabIndex = 11;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // tgBtnStaus
             // 
-            activeStateCollection3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            activeStateCollection3.BorderColor = System.Drawing.Color.Black;
-            activeStateCollection3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            activeStateCollection3.Text = "Desativar";
-            this.tgBtnStaus.ActiveState = activeStateCollection3;
+            activeStateCollection2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            activeStateCollection2.BorderColor = System.Drawing.Color.Black;
+            activeStateCollection2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            activeStateCollection2.Text = "Desativar";
+            this.tgBtnStaus.ActiveState = activeStateCollection2;
             this.tgBtnStaus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tgBtnStaus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tgBtnStaus.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            inactiveStateCollection3.BorderColor = System.Drawing.Color.Black;
-            inactiveStateCollection3.ForeColor = System.Drawing.Color.White;
-            inactiveStateCollection3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            inactiveStateCollection3.Text = "Ativar";
-            this.tgBtnStaus.InactiveState = inactiveStateCollection3;
+            inactiveStateCollection2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            inactiveStateCollection2.BorderColor = System.Drawing.Color.Black;
+            inactiveStateCollection2.ForeColor = System.Drawing.Color.White;
+            inactiveStateCollection2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            inactiveStateCollection2.Text = "Ativar";
+            this.tgBtnStaus.InactiveState = inactiveStateCollection2;
             this.tgBtnStaus.Location = new System.Drawing.Point(792, 16);
             this.tgBtnStaus.MinimumSize = new System.Drawing.Size(52, 20);
             this.tgBtnStaus.Name = "tgBtnStaus";
-            this.tgBtnStaus.Renderer = toggleButtonRenderer3;
+            this.tgBtnStaus.Renderer = toggleButtonRenderer2;
             this.tgBtnStaus.Size = new System.Drawing.Size(114, 25);
-            this.tgBtnStaus.Slider = sliderCollection3;
-            this.tgBtnStaus.TabIndex = 4;
+            this.tgBtnStaus.Slider = sliderCollection2;
+            this.tgBtnStaus.TabIndex = 10;
             this.tgBtnStaus.Text = "toggleButton1";
             this.tgBtnStaus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             this.tgBtnStaus.VisualStyle = Syncfusion.Windows.Forms.Tools.ToggleButtonStyle.Default;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.BeforeTouchSize = new System.Drawing.Size(242, 26);
-            this.txtCpf.BorderColor = System.Drawing.Color.Gray;
-            this.txtCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCpf.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(470, 88);
-            this.txtCpf.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(242, 26);
-            this.txtCpf.TabIndex = 14;
-            this.txtCpf.UseBorderColorOnFocus = true;
-            // 
-            // lblCpf
-            // 
-            this.lblCpf.DY = -24;
-            this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCpf.LabeledControl = this.txtCpf;
-            this.lblCpf.Location = new System.Drawing.Point(470, 64);
-            this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblCpf.Size = new System.Drawing.Size(40, 20);
-            this.lblCpf.TabIndex = 15;
-            this.lblCpf.Text = "CPF";
+            this.tgBtnStaus.ToggleStateChanged += new Syncfusion.Windows.Forms.Tools.ToggleStateChangedEventHandler(this.tgBtnStaus_ToggleStateChanged);
             // 
             // FrmCadastroDeOperadores
             // 
@@ -399,6 +403,7 @@
             this.Shown += new System.EventHandler(this.FrmCadastroDeOperadores_Shown);
             this.pnlDadosGerais.ResumeLayout(false);
             this.pnlDadosGerais.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCpf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmaSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPerfil)).EndInit();
@@ -407,7 +412,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStaus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCpf)).EndInit();
             this.ResumeLayout(false);
 
         }

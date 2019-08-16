@@ -146,7 +146,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
                     operador.Sobrenome = dtDados.Rows[0]["sobrenome"].ToString();
                     operador.Contas = int.Parse(dtDados.Rows[0]["contas"].ToString());
                     operador.Perfil = dtDados.Rows[0]["perfil"].ToString();
-                    operador.Senha = dtDados.Rows[0]["senha"].ToString();
+                    operador.Senha = dtDados.Rows[0]["senha_login"].ToString();
                     operador.CPF = long.Parse(dtDados.Rows[0]["cpf"].ToString());
 
                     return operador;
