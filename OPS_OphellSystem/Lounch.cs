@@ -60,6 +60,7 @@ namespace OPS_OphellSystem
             else
             {
                 MessageBox.Show("Senha de Operador Incorreta!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtSenha.Text = "";
                 txtSenha.Focus();
                 return;
             }            

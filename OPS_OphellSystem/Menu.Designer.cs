@@ -51,7 +51,7 @@
             this.tStrpCadastroClientes.Location = new System.Drawing.Point(0, 0);
             this.tStrpCadastroClientes.MinimumSize = new System.Drawing.Size(200, 40);
             this.tStrpCadastroClientes.Name = "tStrpCadastroClientes";
-            this.tStrpCadastroClientes.Size = new System.Drawing.Size(200, 661);
+            this.tStrpCadastroClientes.Size = new System.Drawing.Size(200, 700);
             this.tStrpCadastroClientes.TabIndex = 1;
             this.tStrpCadastroClientes.Text = "Cadastro de Clientes";
             // 
@@ -118,7 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OPS_OphellSystem.Properties.Resources.LogoOphell;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1008, 661);
+            this.ClientSize = new System.Drawing.Size(1024, 700);
             this.Controls.Add(this.tStrpCadastroClientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;

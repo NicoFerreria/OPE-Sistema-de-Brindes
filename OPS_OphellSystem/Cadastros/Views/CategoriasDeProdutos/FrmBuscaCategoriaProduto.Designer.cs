@@ -37,15 +37,16 @@
             Syncfusion.WinForms.DataGrid.GridTextColumn gridTextColumn6 = new Syncfusion.WinForms.DataGrid.GridTextColumn();
             this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.dtGridCategoriaProduto = new Syncfusion.WinForms.DataGrid.SfDataGrid();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridCategoriaProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoltar
             // 
             this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVoltar.BackColor = System.Drawing.Color.White;
             this.btnVoltar.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
             this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -62,26 +63,33 @@
             // dtGridCategoriaProduto
             // 
             this.dtGridCategoriaProduto.AccessibleName = "Table";
+            this.dtGridCategoriaProduto.AllowEditing = false;
             this.dtGridCategoriaProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtGridCategoriaProduto.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
             this.dtGridCategoriaProduto.BackColor = System.Drawing.Color.White;
+            gridTextColumn1.AllowEditing = false;
             gridTextColumn1.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
             gridTextColumn1.HeaderText = "ID";
             gridTextColumn1.MappingName = "id_prod";
+            gridTextColumn2.AllowEditing = false;
             gridTextColumn2.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
             gridTextColumn2.HeaderText = "Código";
             gridTextColumn2.MappingName = "codigo_prod";
+            gridTextColumn3.AllowEditing = false;
             gridTextColumn3.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
             gridTextColumn3.HeaderText = "Categoria";
             gridTextColumn3.MappingName = "categoria_prod";
+            gridTextColumn4.AllowEditing = false;
             gridTextColumn4.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
             gridTextColumn4.HeaderText = "Descrição";
             gridTextColumn4.MappingName = "desc_prod";
+            gridTextColumn5.AllowEditing = false;
             gridTextColumn5.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
             gridTextColumn5.HeaderText = "Cor";
             gridTextColumn5.MappingName = "cor_prod";
+            gridTextColumn6.AllowEditing = false;
             gridTextColumn6.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
             gridTextColumn6.HeaderText = "Status";
             gridTextColumn6.MappingName = "status_prod";
@@ -94,29 +102,30 @@
             this.dtGridCategoriaProduto.Location = new System.Drawing.Point(24, 120);
             this.dtGridCategoriaProduto.Name = "dtGridCategoriaProduto";
             this.dtGridCategoriaProduto.Size = new System.Drawing.Size(744, 304);
+            this.dtGridCategoriaProduto.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.dtGridCategoriaProduto.TabIndex = 1;
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = global::OPS_OphellSystem.Properties.Resources.Buscar32x32;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(16, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Buscar Categoria";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.UseCompatibleTextRendering = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Image = global::OPS_OphellSystem.Properties.Resources.Buscar32x32;
+            this.lblTitulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitulo.Location = new System.Drawing.Point(16, 24);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(248, 32);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Buscar Categoria";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTitulo.UseCompatibleTextRendering = true;
             // 
             // FrmBuscaCategoriaProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dtGridCategoriaProduto);
             this.Controls.Add(this.btnVoltar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -137,6 +146,6 @@
 
         private Syncfusion.Windows.Forms.ButtonAdv btnVoltar;
         private Syncfusion.WinForms.DataGrid.SfDataGrid dtGridCategoriaProduto;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
