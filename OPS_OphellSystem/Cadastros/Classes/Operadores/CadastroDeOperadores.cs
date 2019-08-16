@@ -127,7 +127,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
                 throw new System.Exception(ex.Message);
             }
         }
-        public CadastroDeOperadores GetOperador(int id)
+        public CadastroDeOperadores GetOperador(long id)
         {
             try
             {

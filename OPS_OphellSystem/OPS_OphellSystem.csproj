@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icons8_user_shield.ico</ApplicationIcon>
+    <ApplicationIcon>LogoOphell-48.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -194,6 +194,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_user_shield.ico" />
+    <Content Include="LogoOphell-32.ico" />
+    <Content Include="LogoOphell-48.ico" />
+    <None Include="Resources\LogoOphell.png" />
+    <None Include="Resources\Fundo.png" />
+    <None Include="Resources\Clientes32x32.png" />
+    <None Include="Resources\Cadastros32x32.png" />
     <None Include="Resources\FundoLogin.png" />
     <None Include="Resources\Confirma28x28.png" />
     <None Include="Resources\CondicoesDePagamento.png" />

@@ -113,10 +113,18 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void CarregaOperador()
+        private void CarregaOperador(long id)
         {
             try
             {
+                if(id <= 0)
+                {
+                    MessageBox.Show("Não foi possível carregar dados do operador!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+                CadastroDeOperadores operador = new CadastroDeOperadores();
+
+                operador = operador.GetOperador(id);
 
             }catch(Exception ex)
             {

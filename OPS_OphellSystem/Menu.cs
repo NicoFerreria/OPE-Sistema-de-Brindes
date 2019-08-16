@@ -110,25 +110,29 @@ namespace OPS_OphellSystem
         #endregion
 
         #region "Eventos"
-        private void tStrpBtnCadastroClientes_Click(object sender, EventArgs e)
-        {
-            AbrirCadastroClientes();
-        }
-        private void btnCadastroCategoria_Click(object sender, EventArgs e)
-        {
-            AbrirCadastroDeCategoria();
-        }
-        private void btnCadastrarFornecedores_Click(object sender, EventArgs e)
+        private void btnMenuCadFornecedores_Click(object sender, EventArgs e)
         {
             AbrirCadastroDeFornecedores();
         }
-        private void btnCadastroOperadores_Click(object sender, EventArgs e)
+        private void btnMenuCadOperadores_Click(object sender, EventArgs e)
         {
             AbrirCadastroDeOperadores();
         }
-        private void bntCadastroDeCondicaoPagamento_Click(object sender, EventArgs e)
+        private void btnMenuCadClientes_Click(object sender, EventArgs e)
+        {
+            AbrirCadastroClientes();
+        }
+        private void btnMenuCadCategorias_Click(object sender, EventArgs e)
+        {
+            AbrirCadastroDeCategoria();
+        }
+        private void btnMenuCondicoesPagamento_Click(object sender, EventArgs e)
         {
             AbrirCadastroDePagamentos();
+        }
+        private void btnMenuCadastros_ButtonClick(object sender, EventArgs e)
+        {
+            btnMenuCadastros.ShowDropDown();
         }
         #endregion
 
