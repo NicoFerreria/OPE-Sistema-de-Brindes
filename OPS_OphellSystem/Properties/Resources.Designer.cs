@@ -113,6 +113,16 @@ namespace OPS_OphellSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fechar32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Fechar32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fornecedores32x32 {
             get {
                 object obj = ResourceManager.GetObject("Fornecedores32x32", resourceCulture);
@@ -136,6 +146,56 @@ namespace OPS_OphellSystem.Properties {
         internal static System.Drawing.Bitmap FundoLogin {
             get {
                 object obj = ResourceManager.GetObject("FundoLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoPanel {
+            get {
+                object obj = ResourceManager.GetObject("FundoPanel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoPanel1 {
+            get {
+                object obj = ResourceManager.GetObject("FundoPanel1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoPanel2 {
+            get {
+                object obj = ResourceManager.GetObject("FundoPanel2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoPanel3 {
+            get {
+                object obj = ResourceManager.GetObject("FundoPanel3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FundoPanel4 {
+            get {
+                object obj = ResourceManager.GetObject("FundoPanel4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

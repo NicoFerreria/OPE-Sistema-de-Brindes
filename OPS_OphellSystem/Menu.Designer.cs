@@ -126,6 +126,8 @@
             this.Name = "Menu";
             this.Text = "OPHELL - Sistema de Gestão";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Menu_Load);
+            this.MdiChildActivate += new System.EventHandler(this.Menu_MdiChildActivate);
             this.tStrpCadastroClientes.ResumeLayout(false);
             this.tStrpCadastroClientes.PerformLayout();
             this.ResumeLayout(false);

@@ -9,6 +9,10 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
         #region "Classes"
         #endregion
 
+        #region "Variaveis"
+        private List<SqlParametro> parametros;
+        #endregion
+
         #region "Propriedades"
         public int OperadorId { get; set; }
         public string Nome { get; set; }
@@ -19,7 +23,6 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
         public string ContraSenha { get; set; }
         public long CPF { get; set; }
         public int Status { get; set; }
-
         #endregion
 
         #region "Metodos"
@@ -30,12 +33,12 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
                 ValidaDadosOperador();
                 DataTable dtDados = new DataTable();
 
-                dtDados = utilitarios.RealizaConexaoBd("SELECT id FROM Usuario WHERE nome='" + Nome + "' AND sobrenome='" + Sobrenome + "' AND cpf='" + CPF + "'");
+                dtDados = utilitarios.RealizaConexaoBd("SELECT id FROM Usuario WHERE nome=@nome AND sobrenome=@sobrenome AND cpf=@cpf",RetornaParametros());
 
                 if (dtDados.Rows.Count <= 0)
                 {
-                    utilitarios.RealizaConexaoBd("INSERT INTO Usuario(nome,sobrenome,contas,senha_login,perfil,status,cpf)VALUES('" + Nome + "','" + Sobrenome +
-                        "','" + Contas + "','" + Senha + "','" + Perfil + "','" + Status + "','" + CPF + "')");
+                    utilitarios.RealizaConexaoBd("INSERT INTO Usuario(nome,sobrenome,contas,senha_login,perfil,status,cpf)VALUES(@nome,@sobrenome," +
+                        "@contas,@senha,@perfil,@status,@cpf)",RetornaParametros());
                 }
                 else
                 {
@@ -53,8 +56,8 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
             try
             {
                 if (id <= 0) throw new Exception("Id do Operador inválido!");
-                utilitarios.RealizaConexaoBd("UPDATE Usuario SET nome='" + Nome + "',sobrenome='" + Sobrenome + "',contas='" + Contas + "',senha_login='" + Senha +
-                    "',perfil='" + Perfil + "',status='" + Status + "',cpf='" + CPF + "'");
+                utilitarios.RealizaConexaoBd("UPDATE Usuario SET nome=@nome,sobrenome=@sobrenome,contas=@contas,senha_login=@senhaperfil=@perfil,status=@status," +
+                    "cpf=@cpf",RetornaParametros());
             }
             catch (Exception ex)
             {
@@ -67,7 +70,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
             {
                 if (OperadorId <= 0)
                 {
-                   // throw new Exception("Id do operador inválido!");
+                    // throw new Exception("Id do operador inválido!");
                 }
                 if (Nome == "")
                 {
@@ -101,7 +104,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
                 List<CadastroDeOperadores> lstOperadores = new List<CadastroDeOperadores>();
                 DataTable dtDados = new DataTable();
 
-                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Usuario WHERE status=1");
+                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Usuario WHERE status=1",RetornaParametros());
 
                 if (dtDados.Rows.Count > 0)
                 {
@@ -136,7 +139,9 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
                 DataTable dtDados = new DataTable();
                 CadastroDeOperadores operador;
 
-                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Usuario WHERE id='" + id + "' LIMIT 0,1");
+                parametros = new List<SqlParametro>();
+                parametros.Add(new SqlParametro { Nome ="@id",Valor= id });
+                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Usuario WHERE id=@id LIMIT 0,1",parametros);
 
                 if (dtDados.Rows.Count > 0)
                 {
@@ -172,6 +177,29 @@ namespace OPS_OphellSystem.Cadastros.Classes.Operadores
                 return true;
             }
             catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+        private List<SqlParametro> RetornaParametros()
+        {
+            try
+            {
+                parametros = new List<SqlParametro>();
+
+                parametros.Add(new SqlParametro {Nome = "@id",Valor= OperadorId });
+                parametros.Add(new SqlParametro { Nome = "@nome", Valor = Nome });
+                parametros.Add(new SqlParametro { Nome = "@sobrenome", Valor = Sobrenome });
+                parametros.Add(new SqlParametro { Nome = "@perfil", Valor = Perfil });
+                parametros.Add(new SqlParametro { Nome = "@contas", Valor = Contas });
+                parametros.Add(new SqlParametro { Nome = "@senha", Valor = Senha });
+                parametros.Add(new SqlParametro { Nome = "@cpf", Valor = CPF });
+                parametros.Add(new SqlParametro { Nome = "@status", Valor = Status });
+
+                return parametros;
+
+            }
+            catch(Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }

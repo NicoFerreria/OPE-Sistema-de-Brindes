@@ -35,6 +35,7 @@ namespace OPS_OphellSystem
             {
                 cadastroClientes = new Cadastros.Views.Clientes.FrmCadastroDeClientes();
             }
+                        
             cadastroClientes.MdiParent = this;
             cadastroClientes.Dock = DockStyle.Fill;
             cadastroClientes.Show();
@@ -104,12 +105,39 @@ namespace OPS_OphellSystem
             cadastroDeCondicoesPagamento.Dock = DockStyle.Fill;
             cadastroDeCondicoesPagamento.Show();
         }
+        private void OcultarBarraLateral()
+        {
+            try
+            {
+                Form frm = this.ActiveMdiChild;
+                if(frm != null)
+                {
+                    tStrpCadastroClientes.Hide();
+                }
+                else
+                {
+                    tStrpCadastroClientes.Show();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region "Funções"
         #endregion
 
         #region "Eventos"
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void Menu_MdiChildActivate(object sender, EventArgs e)
+        {
+            OcultarBarraLateral();
+        }
         private void btnMenuCadFornecedores_Click(object sender, EventArgs e)
         {
             AbrirCadastroDeFornecedores();
@@ -134,8 +162,9 @@ namespace OPS_OphellSystem
         {
             btnMenuCadastros.ShowDropDown();
         }
+
         #endregion
 
-
+        
     }
 }

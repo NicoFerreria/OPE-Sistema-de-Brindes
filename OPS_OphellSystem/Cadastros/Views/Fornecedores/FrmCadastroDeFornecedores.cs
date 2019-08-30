@@ -35,7 +35,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
             {
                 if (ValidaCampos() == false) return;
                 cadastro.CNPJ = long.Parse(txtCnpj.Text + txtDv.Text);
-                cadastro.DifitoVerificador = int.Parse(txtDv.Text);
+                cadastro.DigitoVerificador = int.Parse(txtDv.Text);
                 cadastro.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantasia.Text);
                 cadastro.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
                 cadastro.CEP = int.Parse(txtCep.Text);

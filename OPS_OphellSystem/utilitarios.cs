@@ -8,10 +8,11 @@ using System.Text.RegularExpressions;
 
 namespace OPS_OphellSystem
 {
-    static class utilitarios
+    public static class utilitarios
     {
         #region "Classes"
         static GeradorBD gerador = new GeradorBD();
+
         #endregion
 
         #region "Variaveis"
@@ -68,7 +69,7 @@ namespace OPS_OphellSystem
         #endregion
 
         #region "Funcoes"
-        public static DataTable RealizaConexaoBd(string sqlString)
+        public static DataTable RealizaConexaoBd(string sqlString, List<SqlParametro> parametros = null)
         {
             try
             {
@@ -83,7 +84,21 @@ namespace OPS_OphellSystem
                 }
                 SQLiteDataAdapter da = new SQLiteDataAdapter(sqlString, strConn);
                 SQLiteCommand cmd = new SQLiteCommand(sqlString, conn);
-                da.Fill(dtDados);
+
+                if(parametros != null)
+                {
+                    foreach (SqlParametro p in parametros)
+                    {
+                        cmd.Parameters.AddWithValue(p.Nome, p.Valor);
+                    }
+                    
+                }
+
+                cmd.ExecuteNonQuery();
+                var dt = cmd.ExecuteReader();
+                dtDados.Load(dt);
+
+                //da.Fill();
                 if (conn.State == ConnectionState.Open)
                 {
                     conn.Close();
@@ -96,20 +111,21 @@ namespace OPS_OphellSystem
                 throw new System.Exception(ex.Message);
             }
         }
+
         public static bool ValidaCnpj(string CNPJ, string DV)
         {
             try
             {
-                
+
                 int[] pesosPrimeiroDigito = new int[] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
                 int primeiroDigito = CalculaDigitoVarificadorCNPJ(CNPJ, pesosPrimeiroDigito);
                 CNPJ = CNPJ + primeiroDigito.ToString();
                 int[] pesosSegundoDigito = new int[] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
                 int segundoDigito = CalculaDigitoVarificadorCNPJ(CNPJ, pesosSegundoDigito);
-                
-                if(primeiroDigito == int.Parse(DV[0].ToString()))
+
+                if (primeiroDigito == int.Parse(DV[0].ToString()))
                 {
-                    if(segundoDigito == int.Parse(DV[1].ToString()))
+                    if (segundoDigito == int.Parse(DV[1].ToString()))
                     {
                         return true;
                     }
@@ -121,7 +137,7 @@ namespace OPS_OphellSystem
                 else
                 {
                     return false;
-                }                
+                }
             }
             catch (Exception Ex)
             {
@@ -139,7 +155,7 @@ namespace OPS_OphellSystem
                 throw new System.Exception(ex.Message);
             }
         }
-        private static int CalculaDigitoVarificadorCNPJ(string CNPJ,int[] pesos)
+        private static int CalculaDigitoVarificadorCNPJ(string CNPJ, int[] pesos)
         {
             try
             {
@@ -190,7 +206,8 @@ namespace OPS_OphellSystem
                 string result = rgx.Replace(input, replacement);
 
                 return result;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }

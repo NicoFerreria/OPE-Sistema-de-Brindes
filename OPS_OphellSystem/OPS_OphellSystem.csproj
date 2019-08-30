@@ -150,6 +150,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlParametro.cs" />
     <Compile Include="utilitarios.cs" />
     <EmbeddedResource Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.resx">
       <DependentUpon>FrmBuscaCategoriaProduto.cs</DependentUpon>
@@ -206,6 +207,12 @@
     <Content Include="icons8_user_shield.ico" />
     <Content Include="LogoOphell-32.ico" />
     <Content Include="LogoOphell-48.ico" />
+    <None Include="Resources\Fechar32x32.png" />
+    <None Include="Resources\FundoPanel4.png" />
+    <None Include="Resources\FundoPanel3.png" />
+    <None Include="Resources\FundoPanel2.png" />
+    <None Include="Resources\FundoPanel1.png" />
+    <None Include="Resources\FundoPanel.png" />
     <None Include="Resources\LogoOphell.png" />
     <None Include="Resources\Fundo.png" />
     <None Include="Resources\Clientes32x32.png" />

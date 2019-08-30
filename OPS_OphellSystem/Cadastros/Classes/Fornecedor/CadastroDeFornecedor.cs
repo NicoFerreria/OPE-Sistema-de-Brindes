@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
@@ -17,6 +18,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
         private string _complemento;
         private int _terceiro;
         private int _digitoVerificador;
+        private List<SqlParametro> parametros;
         #endregion
 
         #region "Propriedades"
@@ -100,7 +102,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
             get { return _terceiro; }
             set { _terceiro = value; }
         }
-        public int DifitoVerificador
+        public int DigitoVerificador
         {
             get { return _digitoVerificador; }
             set { _digitoVerificador = value; }
@@ -118,13 +120,13 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
                     return;
                 }
 
-                dtDados = utilitarios.RealizaConexaoBd("SELECT id_forn FROM Fornecedor WHERE cnpj_forn='" + _cnpj + "'");
-                if (dtDados.Rows.Count  <= 0)
+                dtDados = utilitarios.RealizaConexaoBd("SELECT id_forn FROM Fornecedor WHERE cnpj_forn=@cnpj",RetornaParametros());
+                if (dtDados.Rows.Count <= 0)
                 {
-                    utilitarios.RealizaConexaoBd("INSERT INTO Fornecedor (cnpj_forn,nome_fantasia_forn,razao_social_forn)VALUES('" + _cnpj + "','" + _fantasia + 
-                        "','" + _razao + "')");
+                    utilitarios.RealizaConexaoBd("INSERT INTO Fornecedor (cnpj_forn,nome_fantasia_forn,razao_social_forn)VALUES(@cnpj,@fantasia,@razao)",
+                        RetornaParametros());
 
-                    dtDados = utilitarios.RealizaConexaoBd("SELECT id_forn FROM Fornecedor WHERE cnpj_forn='" + _cnpj + "'");
+                    dtDados = utilitarios.RealizaConexaoBd("SELECT id_forn FROM Fornecedor WHERE cnpj_forn=@cnpj",RetornaParametros());
                     _idFornecedor = int.Parse(dtDados.Rows[0]["id_forn"].ToString());
                     AtualizaFornecedor();
                 }
@@ -142,12 +144,11 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
         {
             try
             {
-                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj_forn='" + _cnpj + "',nome_fantasia_forn='" + _fantasia + "',razao_social_forn='" + _razao +
-                    "',status_forn='" + _status + "',endereco_forn='" + _endereco + "',telefone_forn='" + _telefone + "',nome_contato_forn='" + _nomeContato +
-                    "',email_contato_forn='" + _emailContato + "',numero_forn='" + _numero + "',complemento_forn='" + _complemento +
-                    "',observacao_forn='" + _observacoes + "',terceiro='" + _terceiro + " 'WHERE id_forn='" + _idFornecedor + "'");
+                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj_forn=@cnpj,nome_fantasia_forn=@fantasia,razao_social_forn=@razao,status_forn=@satatus," +
+                    "endereco_forn=@endereco,telefone_forn=@telefone,nome_contato_forn=@contato,email_contato_forn=@email,numero_forn=@numero," +
+                    "complemento_forn=@complemento,observacao_forn=@observacao,terceiro=@terceiro WHERE id_forn=@id",RetornaParametros());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }
@@ -156,7 +157,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
         {
             try
             {
-                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET status_forn='" + _status + "' WHERE id_forn='" + _idFornecedor + "'");
+                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET status_forn=@status WHERE id_forn=@id",RetornaParametros());
             }
             catch (Exception ex)
             {
@@ -180,16 +181,16 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
                 switch (opcaoBusca)
                 {
                     case "CNPJ":
-                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE cpj_forn='" + _cnpj + "'");
+                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE cpj_forn=@cnpj",RetornaParametros());
                         break;
                     case "Nome Fantasia":
-                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE nome_fantasia_forn='" + _fantasia + "'");
+                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE nome_fantasia_forn=@fantasia",RetornaParametros());
                         break;
                     case "Razão Social":
-                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE razao_social_forn='" + _razao + "'");
+                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE razao_social_forn=@razao",RetornaParametros());
                         break;
                     case "Status":
-                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE status_forn='" + _status + "'");
+                        dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE status_forn=@status",RetornaParametros());
                         break;
                 }
 
@@ -225,6 +226,38 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
             catch (Exception ex)
             {
                 throw new SystemException(ex.Message);
+            }
+        }
+        private List<SqlParametro> RetornaParametros()
+        {
+            try
+            {
+                parametros = new List<SqlParametro>();
+
+                parametros.Add(new SqlParametro { Nome = "@id", Valor = _idFornecedor });
+                parametros.Add(new SqlParametro { Nome = "@contato", Valor = _nomeContato });
+                parametros.Add(new SqlParametro { Nome = "@email", Valor = _emailContato });
+                parametros.Add(new SqlParametro { Nome = "@observacao", Valor = _observacoes });
+                parametros.Add(new SqlParametro { Nome = "@status", Valor = _status });
+                parametros.Add(new SqlParametro { Nome = "@complemento", Valor = _complemento });
+                parametros.Add(new SqlParametro { Nome = "@terceiro", Valor = _terceiro });
+                parametros.Add(new SqlParametro { Nome = "@digitoV", Valor = _digitoVerificador });
+                parametros.Add(new SqlParametro { Nome = "@cnpj", Valor = _cnpj });
+                parametros.Add(new SqlParametro { Nome = "@fantasia", Valor = _fantasia });
+                parametros.Add(new SqlParametro { Nome = "@razao", Valor = _razao });
+                parametros.Add(new SqlParametro { Nome = "@endereco", Valor = _endereco });
+                parametros.Add(new SqlParametro { Nome = "@numero", Valor = _numero });
+                parametros.Add(new SqlParametro { Nome = "@cidade", Valor = _cidade  });
+                parametros.Add(new SqlParametro { Nome = "@cep", Valor = _cep });
+                parametros.Add(new SqlParametro { Nome = "@telefone", Valor = _telefone });
+                parametros.Add(new SqlParametro { Nome = "@bairro", Valor = _bairro });                
+
+                return parametros;
+
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
             }
         }
         #endregion

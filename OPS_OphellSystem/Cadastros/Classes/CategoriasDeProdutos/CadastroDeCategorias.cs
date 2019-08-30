@@ -13,6 +13,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos
         #endregion
 
         #region "Variaveis"
+        private List<SqlParametro> parametros;
         #endregion
 
         #region "Propriedades"
@@ -40,16 +41,16 @@ namespace OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos
                     throw new System.Exception("Descrição inválida!");
                 }
 
-                dtDados = utilitarios.RealizaConexaoBd("SELECT id_prod FROM Produto WHERE codigo_prod='" + CodigoCategoria + "'");
+                dtDados = utilitarios.RealizaConexaoBd("SELECT id_prod FROM Produto WHERE codigo_prod=@codigo", RetornaParametros());
                 if (dtDados.Rows.Count <= 0)
                 {
                     utilitarios.RealizaConexaoBd("INSERT INTO Produto(codigo_prod,categoria_prod,desc_prod,cor_prod,obs_prod,status_prod)VALUES" +
-                        "('" + CodigoCategoria + "','" + Categoria + "','" + Descricao + "','" + Cor + "','" + Observacao + "','" + Status + "')");
+                        "(@codigo,@categoria,@descricao,@cor,@satatus)", RetornaParametros());
                 }
                 else
                 {
-                    utilitarios.RealizaConexaoBd("UPDATE Produto SET categoria_prod='" + Categoria + "',desc_prod='" + Descricao + "',cor_prod='" + Cor +
-                    "',obs_prod='" + Observacao + "',status_prod='" + Status + "' WHERE id_prod='" + dtDados.Rows[0]["id_prod"] + "'");
+                    ID = int.Parse(dtDados.Rows[0]["id_prod"].ToString());                    
+                    utilitarios.RealizaConexaoBd("UPDATE Produto SET codigo_prod=@codigo,categoria_prod=@categoria,desc_prod=@descricao,cor_prod=@cor,obs_prod=@observacao,status_prod=@status WHERE id_prod=@id", RetornaParametros());
                 }
             }
             catch (Exception ex)
@@ -65,7 +66,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos
             try
             {
                 DataTable dtDados = new DataTable();
-                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Produto WHERE codigo_prod='" + CodigoCategoria + "'");
+                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Produto WHERE codigo_prod=@codigo", RetornaParametros());
                 if (dtDados.Rows.Count > 0)
                 {
                     this.ID = int.Parse(dtDados.Rows[0]["id_prod"].ToString());
@@ -89,8 +90,29 @@ namespace OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos
             try
             {
                 DataTable dtDados = new DataTable();
-                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Produto");
+                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Produto", RetornaParametros());
                 return dtDados;
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+        private List<SqlParametro> RetornaParametros()
+        {
+            try
+            {
+                parametros = new List<SqlParametro>();
+
+                parametros.Add(new SqlParametro { Nome = "@id", Valor = ID });
+                parametros.Add(new SqlParametro { Nome = "@codigo", Valor = CodigoCategoria });
+                parametros.Add(new SqlParametro { Nome = "@descricao", Valor = Descricao });
+                parametros.Add(new SqlParametro { Nome = "@categoria", Valor = Categoria });
+                parametros.Add(new SqlParametro { Nome = "@cor", Valor = Cor });
+                parametros.Add(new SqlParametro { Nome = "@observacao", Valor = Observacao });
+                parametros.Add(new SqlParametro { Nome = "@status", Valor = Status });
+
+                return parametros;
             }
             catch (Exception ex)
             {

@@ -103,10 +103,15 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 if (tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active)
                 {
                     grpDadosCliente.Enabled = true;
+                    btnAdicionarNovoCliente.Enabled = true;
+                    btnGravarCliente.Enabled = true;
+                    txtCnpj.Focus();
                 }
                 else
                 {
                     grpDadosCliente.Enabled = false;
+                    btnAdicionarNovoCliente.Enabled = false;
+                    btnGravarCliente.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -243,14 +248,6 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
             e.Cancel = true;
             Fechar();
         }
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            Fechar();
-        }
-        private void btnGravarCliente_Click(object sender, EventArgs e)
-        {
-            GravarCliente();
-        }
         private void FrmCadastroDeClientes_KeyDown(object sender, KeyEventArgs e)
         {
             if (ModifierKeys == Keys.Control && e.KeyCode == Keys.S) GravarCliente();
@@ -259,6 +256,14 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             NovoCliente();
         }
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Fechar();
+        }
+        private void btnGravarCliente_Click(object sender, EventArgs e)
+        {
+            GravarCliente();
+        }        
         private void tgBtnAtivarDesativarCliente_ToggleStateChanged(object sender, Syncfusion.Windows.Forms.Tools.ToggleStateChangedEventArgs e)
         {
             VerificaStatusCliente();
