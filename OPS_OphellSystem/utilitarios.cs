@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Syncfusion.WinForms.DataGrid;
 
 namespace OPS_OphellSystem
 {
@@ -66,6 +67,59 @@ namespace OPS_OphellSystem
                 throw new System.Exception(ex.Message);
             }
         }
+        public static void CriarColunasGrid(SfDataGrid grid, string campo, string caption, TiposColunas tipo = TiposColunas.TEXTO, bool limparColuna = false,
+            bool editar = false,bool visivel = true)
+        {
+            try
+            {
+                GridColumn coluna = new GridColumn();
+
+                switch (tipo)
+                {
+                    case TiposColunas.TEXTO:
+                        coluna = new GridTextColumn();
+                        break;
+                    case TiposColunas.NUMERICO:
+                        coluna = new GridNumericColumn();
+                        break;
+                    case TiposColunas.IMAGEM:
+                        coluna = new GridImageColumn();
+                        break;
+                    case TiposColunas.HYPERLINK:
+                        coluna = new GridHyperlinkColumn();
+                        break;
+                    case TiposColunas.DATA_HORA:
+                        coluna = new GridDateTimeColumn();
+                        break;
+                    case TiposColunas.COMBO:
+                        coluna = new GridComboBoxColumn();
+                        break;
+                    case TiposColunas.CHEK:
+                        coluna = new GridCheckBoxColumn() { AllowThreeState = false};
+                        break;
+                    case TiposColunas.BOTAO:
+                        coluna = new GridButtonColumn();
+                        break;
+                }
+                grid.AutoGenerateColumns = false;
+                
+                if (limparColuna == true)                {
+                    
+                    grid.Columns.Clear();
+                }
+
+                coluna.Visible = visivel;
+                coluna.AllowEditing = editar;
+                coluna.MappingName = campo;
+                coluna.HeaderText = caption;
+                grid.Columns.Add(coluna);
+                
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
         #endregion
 
         #region "Funcoes"
@@ -85,18 +139,18 @@ namespace OPS_OphellSystem
                 SQLiteDataAdapter da = new SQLiteDataAdapter(sqlString, strConn);
                 SQLiteCommand cmd = new SQLiteCommand(sqlString, conn);
 
-                if(parametros != null)
+                if (parametros != null)
                 {
                     foreach (SqlParametro p in parametros)
                     {
                         cmd.Parameters.AddWithValue(p.Nome, p.Valor);
                     }
-                    
+
                 }
 
                 cmd.ExecuteNonQuery();
                 var dt = cmd.ExecuteReader();
-                dtDados.Load(dt);
+                da.Fill(dtDados);
 
                 //da.Fill();
                 if (conn.State == ConnectionState.Open)
@@ -111,7 +165,6 @@ namespace OPS_OphellSystem
                 throw new System.Exception(ex.Message);
             }
         }
-
         public static bool ValidaCnpj(string CNPJ, string DV)
         {
             try

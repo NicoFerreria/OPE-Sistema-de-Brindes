@@ -88,9 +88,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cadastros\Classes\CategoriasDeProdutos\CadastroDeCategorias.cs" />
-    <Compile Include="Cadastros\Classes\Clientes\CadastroDeClientes.cs" />
     <Compile Include="Cadastros\Classes\CondicoesDePagamento\CadastroDeCondicoesPagamento.cs" />
     <Compile Include="Cadastros\Classes\Fornecedor\CadastroDeFornecedor.cs" />
+    <Compile Include="Cadastros\Controles\ClienteControle.cs" />
+    <Compile Include="Cadastros\Modelos\ClienteModelo.cs" />
     <Compile Include="Cadastros\Classes\Operadores\CadastroDeOperadores.cs" />
     <Compile Include="Cadastros\Classes\PessoaJuridica.cs" />
     <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.cs">
@@ -110,6 +111,12 @@
     </Compile>
     <Compile Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.Designer.cs">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\Views\Clientes\FrmClientesListagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Views\Clientes\FrmClientesListagem.Designer.cs">
+      <DependentUpon>FrmClientesListagem.cs</DependentUpon>
     </Compile>
     <Compile Include="Cadastros\Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.cs">
       <SubType>Form</SubType>
@@ -135,6 +142,7 @@
     <Compile Include="Cadastros\Views\Operadores\FrmCadastroDeOperadores.Designer.cs">
       <DependentUpon>FrmCadastroDeOperadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enums.cs" />
     <Compile Include="GeradorBD.cs" />
     <Compile Include="Lounch.cs">
       <SubType>Form</SubType>
@@ -150,6 +158,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessaoUsuario.cs" />
     <Compile Include="SqlParametro.cs" />
     <Compile Include="utilitarios.cs" />
     <EmbeddedResource Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.resx">
@@ -160,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.resx">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Views\Clientes\FrmClientesListagem.resx">
+      <DependentUpon>FrmClientesListagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.resx">
       <DependentUpon>FrmCadastroDeCondicoesDePagamento.cs</DependentUpon>
@@ -207,6 +219,9 @@
     <Content Include="icons8_user_shield.ico" />
     <Content Include="LogoOphell-32.ico" />
     <Content Include="LogoOphell-48.ico" />
+    <None Include="Resources\FecharPadrao32x32.png" />
+    <None Include="Resources\Adicionar32x32.png" />
+    <None Include="Resources\Pesquisa32x32.png" />
     <None Include="Resources\Fechar32x32.png" />
     <None Include="Resources\FundoPanel4.png" />
     <None Include="Resources\FundoPanel3.png" />

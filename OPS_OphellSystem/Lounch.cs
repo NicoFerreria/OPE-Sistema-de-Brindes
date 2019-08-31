@@ -27,7 +27,7 @@ namespace OPS_OphellSystem
         private void Placeholders()
         {
             try
-            {               
+            {
 
                 BannerTextInfo placeholderSenha = bnTxtOperador.GetBannerText(txtSenha);
                 placeholderSenha.Text = "Senha";
@@ -43,27 +43,45 @@ namespace OPS_OphellSystem
         }
         private void AbrirTelaMenu()
         {
-            CadastroDeOperadores operador = new CadastroDeOperadores();
-
-            operador = operador.GetOperador(int.Parse(mCmbOperadores.SelectedValue.ToString()));
-            if(operador.Senha == txtSenha.Text)
+            if (telaMenu == null)
             {
-                if (telaMenu == null)
+                telaMenu = new Menu();
+            }
+            CadastroDeOperadores operador = new CadastroDeOperadores();
+           
+            if (mCmbOperadores.SelectedValue != null)
+            {
+                operador = operador.GetOperador(int.Parse(mCmbOperadores.SelectedValue.ToString()));
+                if (operador.Senha == txtSenha.Text)
                 {
-                    telaMenu = new Menu();
+                    SessaoUsuario.ID = long.Parse(operador.OperadorId.ToString());
+                    SessaoUsuario.Nome = operador.Nome;
+                    SessaoUsuario.Senha = int.Parse(operador.Senha);
+                    SessaoUsuario.Perfil = operador.Perfil;
+                    txtSenha.Text = "";
+                    this.Hide();
+                    telaMenu.ShowDialog();
+                    this.Show();
                 }
+                else
+                {
+                    MessageBox.Show("Senha de Operador Incorreta!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtSenha.Text = "";
+                    txtSenha.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                SessaoUsuario.ID = 9999;
+                SessaoUsuario.Nome = "LOGIN DE INSTALACAO";
+                SessaoUsuario.Senha = 0;
+                SessaoUsuario.Perfil = "SISTEMA";
                 txtSenha.Text = "";
                 this.Hide();
                 telaMenu.ShowDialog();
                 this.Show();
             }
-            else
-            {
-                MessageBox.Show("Senha de Operador Incorreta!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtSenha.Text = "";
-                txtSenha.Focus();
-                return;
-            }            
         }
         private void VerificaBanco()
         {
@@ -72,13 +90,13 @@ namespace OPS_OphellSystem
                 string[] comando = gerador.ObterComandosSql();
                 if (File.Exists(utilitarios.caminhoBD) == false)
                 {
-                    if(Directory.Exists(utilitarios.diretorioBD) == false)
+                    if (Directory.Exists(utilitarios.diretorioBD) == false)
                     {
                         Directory.CreateDirectory(utilitarios.diretorioBD);
                     }
                     pgbLoadSistema.Visible = true;
                     pgbLoadSistema.Minimum = 0;
-                    pgbLoadSistema.Maximum = comando.Length;                    
+                    pgbLoadSistema.Maximum = comando.Length;
                     for (int i = 0; i < comando.Length; i++)
                     {
                         utilitarios.RealizaConexaoBd(comando[i]);
@@ -97,9 +115,9 @@ namespace OPS_OphellSystem
         private void CarregaComboOperadores()
         {
             try
-            {                
+            {
                 CadastroDeOperadores operador = new CadastroDeOperadores();
-                string[,] dadosOperador = new string [operador.GetAllOperadoresAtivos().Count,3];
+                string[,] dadosOperador = new string[operador.GetAllOperadoresAtivos().Count, 3];
                 mCmbOperadores.ListBox.Grid.ResizeColsBehavior = Syncfusion.Windows.Forms.Grid.GridResizeCellsBehavior.None;
                 Syncfusion.Windows.Forms.Grid.GridColHidden OperadorId = new Syncfusion.Windows.Forms.Grid.GridColHidden(1);
                 Syncfusion.Windows.Forms.Grid.GridColHidden Contas = new Syncfusion.Windows.Forms.Grid.GridColHidden(5);
@@ -119,12 +137,12 @@ namespace OPS_OphellSystem
                 mCmbOperadores.ListBox.Grid.ColHiddenEntries.Add(CPF);
                 mCmbOperadores.ListBox.Grid.ColHiddenEntries.Add(Status);
 
-                
-                mCmbOperadores.ValueMember  = "OperadorId";
-                mCmbOperadores.DisplayMember = "Nome";               
-               
+
+                mCmbOperadores.ValueMember = "OperadorId";
+                mCmbOperadores.DisplayMember = "Nome";
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -143,7 +161,7 @@ namespace OPS_OphellSystem
                 this.Enabled = true;
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 this.Enabled = true;
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -153,7 +171,7 @@ namespace OPS_OphellSystem
         {
             try
             {
-                if(VerificarSeExisteUsuariosNoBanco() == false)
+                if (VerificarSeExisteUsuariosNoBanco() == false)
                 {
                     mCmbOperadores.Enabled = false;
                     txtSenha.Enabled = false;
@@ -163,7 +181,8 @@ namespace OPS_OphellSystem
                     mCmbOperadores.Enabled = true;
                     txtSenha.Enabled = true;
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -177,13 +196,14 @@ namespace OPS_OphellSystem
             try
             {
                 CadastroDeOperadores operador = new CadastroDeOperadores();
-                if(operador.GetAllOperadoresAtivos().Count <= 0)
+                if (operador.GetAllOperadoresAtivos().Count <= 0)
                 {
                     return false;
                 }
 
                 return true;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -194,7 +214,7 @@ namespace OPS_OphellSystem
         #region "Eventos"
         private void Lounch_Load(object sender, EventArgs e)
         {
-            Placeholders();            
+            Placeholders();
         }
         private void Lounch_Shown(object sender, EventArgs e)
         {

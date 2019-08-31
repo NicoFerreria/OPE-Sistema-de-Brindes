@@ -38,11 +38,19 @@ namespace OPS_OphellSystem
                             {"status_clt","INTEGER NOT NULL DEFAULT 1" },
                             {"endereco_clt","TEXT" },
                             {"numero_clt","INTEGER" },
-                            {"telefone_clt","INTEGER" },
-                            {"nome_contato_clt","TEXT" },
                             {"complemento_clt","TEXT" },
+                            {"cidade","TEXT" },
+                            {"bairro","TEXT" },
+                            {"cep","INTEGER" },
+                            {"telefone_clt","INTEGER" },
+                            {"nome_contato_clt","TEXT" },                            
                             {"email_contato_clt","TEXT" },
-                            {"observacao_forn","TEXT" },
+                            {"observacao_clt","TEXT" },
+                            {"digito_verificador","INTEGER" },
+                            {"operador_cadastro_id","INTEGER" },
+                            {"operador_cadastro_nome","TEXT" },
+                            {"datahora_cadastro","TEXT" },
+                            {"datahora_alteracao","TEXT" },
                             {"terceiro","INTEGER NOT NULL DEFAULT 1" }
                         };
                         break;

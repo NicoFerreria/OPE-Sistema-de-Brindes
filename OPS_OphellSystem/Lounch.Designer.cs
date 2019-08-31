@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.MetroColorTable metroColorTable2 = new Syncfusion.Windows.Forms.MetroColorTable();
+            Syncfusion.Windows.Forms.MetroColorTable metroColorTable1 = new Syncfusion.Windows.Forms.MetroColorTable();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lounch));
             this.txtSenha = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.bnTxtOperador = new Syncfusion.Windows.Forms.BannerTextProvider(this.components);
@@ -103,25 +103,25 @@
             this.mCmbOperadores.Location = new System.Drawing.Point(371, 99);
             this.mCmbOperadores.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.mCmbOperadores.Name = "mCmbOperadores";
-            metroColorTable2.ArrowChecked = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(149)))), ((int)(((byte)(152)))));
-            metroColorTable2.ArrowCheckedBorderColor = System.Drawing.Color.Empty;
-            metroColorTable2.ArrowInActive = System.Drawing.Color.White;
-            metroColorTable2.ArrowNormal = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            metroColorTable2.ArrowNormalBackGround = System.Drawing.Color.Empty;
-            metroColorTable2.ArrowNormalBorderColor = System.Drawing.Color.Empty;
-            metroColorTable2.ArrowPushed = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(90)))));
-            metroColorTable2.ArrowPushedBackGround = System.Drawing.Color.Empty;
-            metroColorTable2.ArrowPushedBorderColor = System.Drawing.Color.Empty;
-            metroColorTable2.ScrollerBackground = System.Drawing.Color.White;
-            metroColorTable2.ThumbChecked = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(149)))), ((int)(((byte)(152)))));
-            metroColorTable2.ThumbCheckedBorderColor = System.Drawing.Color.Empty;
-            metroColorTable2.ThumbInActive = System.Drawing.Color.White;
-            metroColorTable2.ThumbNormal = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            metroColorTable2.ThumbNormalBorderColor = System.Drawing.Color.Empty;
-            metroColorTable2.ThumbPushed = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(90)))));
-            metroColorTable2.ThumbPushedBorder = System.Drawing.Color.Empty;
-            metroColorTable2.ThumbPushedBorderColor = System.Drawing.Color.Empty;
-            this.mCmbOperadores.ScrollMetroColorTable = metroColorTable2;
+            metroColorTable1.ArrowChecked = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(149)))), ((int)(((byte)(152)))));
+            metroColorTable1.ArrowCheckedBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ArrowInActive = System.Drawing.Color.White;
+            metroColorTable1.ArrowNormal = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            metroColorTable1.ArrowNormalBackGround = System.Drawing.Color.Empty;
+            metroColorTable1.ArrowNormalBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ArrowPushed = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(90)))));
+            metroColorTable1.ArrowPushedBackGround = System.Drawing.Color.Empty;
+            metroColorTable1.ArrowPushedBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ScrollerBackground = System.Drawing.Color.White;
+            metroColorTable1.ThumbChecked = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(149)))), ((int)(((byte)(152)))));
+            metroColorTable1.ThumbCheckedBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ThumbInActive = System.Drawing.Color.White;
+            metroColorTable1.ThumbNormal = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            metroColorTable1.ThumbNormalBorderColor = System.Drawing.Color.Empty;
+            metroColorTable1.ThumbPushed = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(89)))), ((int)(((byte)(90)))));
+            metroColorTable1.ThumbPushedBorder = System.Drawing.Color.Empty;
+            metroColorTable1.ThumbPushedBorderColor = System.Drawing.Color.Empty;
+            this.mCmbOperadores.ScrollMetroColorTable = metroColorTable1;
             this.mCmbOperadores.Size = new System.Drawing.Size(230, 21);
             this.mCmbOperadores.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.mCmbOperadores.TabIndex = 0;
@@ -143,6 +143,7 @@
             this.btnSair.BackColor = System.Drawing.Color.Transparent;
             this.btnSair.BeforeTouchSize = new System.Drawing.Size(40, 40);
             this.btnSair.BorderStyleAdv = Syncfusion.Windows.Forms.ButtonAdvBorderStyle.Flat;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
             this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -159,6 +160,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.BeforeTouchSize = new System.Drawing.Size(94, 40);
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

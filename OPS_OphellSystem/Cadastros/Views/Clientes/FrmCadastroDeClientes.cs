@@ -1,4 +1,6 @@
 ﻿using System;
+using Modelos;
+using Controles;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +15,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
     public partial class FrmCadastroDeClientes : Form
     {
         #region "Classes"
-        Cadastros.Classes.Clientes.CadastroDeClientes cadastroCLiente = new Classes.Clientes.CadastroDeClientes();
+        ClienteControle cadastroCLiente = new ClienteControle();
         #endregion
 
         #region"Variaveis"
@@ -44,23 +46,26 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
             {
                 //utilitarios.ValidaCnpj("114447770001","00"); 
                 if (ValidaCampos() == false) return;
+                ClienteModelo cliente = new ClienteModelo();
 
-                cadastroCLiente.CNPJ = long.Parse(txtCnpj.Text + txtDigitoVerificador.Text);
-                cadastroCLiente.DigitoVerificador = int.Parse(txtDigitoVerificador.Text);
-                cadastroCLiente.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text);
-                cadastroCLiente.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
-                cadastroCLiente.CEP = int.Parse(txtCep.Text);
-                cadastroCLiente.Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text);
-                cadastroCLiente.Numero = int.Parse(txtNumero.Text);
-                cadastroCLiente.Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text);
-                cadastroCLiente.Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text);
-                cadastroCLiente.NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text);
-                cadastroCLiente.EmailContato = txtEmail.Text;
-                cadastroCLiente.Telefone = int.Parse(txtTelefone.Text);
-                cadastroCLiente.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
-                cadastroCLiente.StatusCliente = tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive ? 0 : 1;
-                cadastroCLiente.Observacoes = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);                
-                cadastroCLiente.GravarCliente();
+
+                cliente.CNPJ = long.Parse(txtCnpj.Text + txtDigitoVerificador.Text);
+                cliente.DigitoVerificadorCnpj = int.Parse(txtDigitoVerificador.Text);
+                cliente.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text);
+                cliente.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
+                cliente.CEP = int.Parse(txtCep.Text);
+                cliente.Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text);
+                cliente.Numero = int.Parse(txtNumero.Text);
+                cliente.Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text);
+                cliente.Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text);
+                cliente.NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text);
+                cliente.Email  = txtEmail.Text;
+                cliente.Telefone = int.Parse(txtTelefone.Text);
+                cliente.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
+                cliente.Status = tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive ? 0 : 1;
+                cliente.Observacao = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
+
+                cadastroCLiente.GravarCliente(cliente);
 
                 MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -255,11 +260,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         private void FrmCadastroDeClientes_Shown(object sender, EventArgs e)
         {
             NovoCliente();
-        }
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            Fechar();
-        }
+        }        
         private void btnGravarCliente_Click(object sender, EventArgs e)
         {
             GravarCliente();

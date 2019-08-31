@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection2 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection2 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer2 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection2 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo3 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroDeClientes));
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo6 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection1 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection1 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer1 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection1 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroDeClientes));
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo3 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo7 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             this.grdLayoutBase = new Syncfusion.Windows.Forms.Tools.GridLayout(this.components);
             this.tgBtnAtivarDesativarCliente = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.grpDadosCliente = new System.Windows.Forms.GroupBox();
@@ -74,10 +72,8 @@
             this.lblObservacoes = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtObservacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
-            this.btnPesquisarCliente = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnGravarCliente = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnAdicionarNovoCliente = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
             ((System.ComponentModel.ISupportInitialize)(this.grdLayoutBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnAtivarDesativarCliente)).BeginInit();
             this.grpDadosCliente.SuspendLayout();
@@ -108,40 +104,42 @@
             // 
             // tgBtnAtivarDesativarCliente
             // 
-            activeStateCollection2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            activeStateCollection2.BorderColor = System.Drawing.Color.Black;
-            activeStateCollection2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            activeStateCollection2.Text = "Desativar";
-            this.tgBtnAtivarDesativarCliente.ActiveState = activeStateCollection2;
+            activeStateCollection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            activeStateCollection1.BorderColor = System.Drawing.Color.Black;
+            activeStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            activeStateCollection1.Text = "Desativar";
+            this.tgBtnAtivarDesativarCliente.ActiveState = activeStateCollection1;
+            this.tgBtnAtivarDesativarCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tgBtnAtivarDesativarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tgBtnAtivarDesativarCliente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.tgBtnAtivarDesativarCliente.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            inactiveStateCollection2.BorderColor = System.Drawing.Color.Black;
-            inactiveStateCollection2.ForeColor = System.Drawing.Color.White;
-            inactiveStateCollection2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            inactiveStateCollection2.Text = "Ativar";
-            this.tgBtnAtivarDesativarCliente.InactiveState = inactiveStateCollection2;
-            this.tgBtnAtivarDesativarCliente.Location = new System.Drawing.Point(197, 24);
+            inactiveStateCollection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            inactiveStateCollection1.BorderColor = System.Drawing.Color.Black;
+            inactiveStateCollection1.ForeColor = System.Drawing.Color.White;
+            inactiveStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            inactiveStateCollection1.Text = "Ativar";
+            this.tgBtnAtivarDesativarCliente.InactiveState = inactiveStateCollection1;
+            this.tgBtnAtivarDesativarCliente.Location = new System.Drawing.Point(898, 13);
             this.grdLayoutBase.SetMinimumSize(this.tgBtnAtivarDesativarCliente, new System.Drawing.Size(114, 24));
             this.tgBtnAtivarDesativarCliente.MinimumSize = new System.Drawing.Size(52, 20);
             this.tgBtnAtivarDesativarCliente.Name = "tgBtnAtivarDesativarCliente";
             this.grdLayoutBase.SetParticipateInLayout(this.tgBtnAtivarDesativarCliente, true);
             this.grdLayoutBase.SetPreferredSize(this.tgBtnAtivarDesativarCliente, new System.Drawing.Size(114, 24));
-            this.tgBtnAtivarDesativarCliente.Renderer = toggleButtonRenderer2;
+            this.tgBtnAtivarDesativarCliente.Renderer = toggleButtonRenderer1;
             this.tgBtnAtivarDesativarCliente.Size = new System.Drawing.Size(114, 24);
-            this.tgBtnAtivarDesativarCliente.Slider = sliderCollection2;
+            this.tgBtnAtivarDesativarCliente.Slider = sliderCollection1;
             this.tgBtnAtivarDesativarCliente.TabIndex = 17;
             this.tgBtnAtivarDesativarCliente.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-            toolTipInfo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo3.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Body.Text = "Ativar ou Desativar Cliente";
-            toolTipInfo3.Footer.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo3.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Footer.Text = "OPH Sistemas";
-            toolTipInfo3.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo3.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Header.Text = "Cadastro de Clientes";
-            this.superToolTip1.SetToolTip(this.tgBtnAtivarDesativarCliente, toolTipInfo3);
+            toolTipInfo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            toolTipInfo1.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Body.Text = "Ativar ou Desativar Cliente";
+            toolTipInfo1.Footer.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo1.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Footer.Text = "OPH Sistemas";
+            toolTipInfo1.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo1.Header.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Header.Text = "Cadastro de Clientes";
+            this.superToolTip1.SetToolTip(this.tgBtnAtivarDesativarCliente, toolTipInfo1);
             this.tgBtnAtivarDesativarCliente.VisualStyle = Syncfusion.Windows.Forms.Tools.ToggleButtonStyle.Default;
             this.tgBtnAtivarDesativarCliente.ToggleStateChanged += new Syncfusion.Windows.Forms.Tools.ToggleStateChangedEventHandler(this.tgBtnAtivarDesativarCliente_ToggleStateChanged);
             // 
@@ -183,14 +181,14 @@
             this.grpDadosCliente.Controls.Add(this.txtCnpj);
             this.grpDadosCliente.Controls.Add(this.txtIdCliente);
             this.grpDadosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDadosCliente.Location = new System.Drawing.Point(24, 56);
+            this.grpDadosCliente.Location = new System.Drawing.Point(24, 97);
             this.grpDadosCliente.Margin = new System.Windows.Forms.Padding(0);
             this.grdLayoutBase.SetMinimumSize(this.grpDadosCliente, new System.Drawing.Size(976, 592));
             this.grpDadosCliente.Name = "grpDadosCliente";
             this.grpDadosCliente.Padding = new System.Windows.Forms.Padding(0);
             this.grdLayoutBase.SetParticipateInLayout(this.grpDadosCliente, true);
             this.grdLayoutBase.SetPreferredSize(this.grpDadosCliente, new System.Drawing.Size(976, 592));
-            this.grpDadosCliente.Size = new System.Drawing.Size(976, 592);
+            this.grpDadosCliente.Size = new System.Drawing.Size(976, 551);
             this.grpDadosCliente.TabIndex = 0;
             this.grpDadosCliente.TabStop = false;
             this.grpDadosCliente.Text = "Dados Gerais";
@@ -199,7 +197,7 @@
             // 
             this.lblTxtDigitoVerificador.DY = -24;
             this.lblTxtDigitoVerificador.LabeledControl = this.txtDigitoVerificador;
-            this.lblTxtDigitoVerificador.Location = new System.Drawing.Point(272, 24);
+            this.lblTxtDigitoVerificador.Location = new System.Drawing.Point(328, 24);
             this.lblTxtDigitoVerificador.Name = "lblTxtDigitoVerificador";
             this.lblTxtDigitoVerificador.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
             this.lblTxtDigitoVerificador.Size = new System.Drawing.Size(32, 20);
@@ -208,11 +206,11 @@
             // 
             // txtDigitoVerificador
             // 
-            this.txtDigitoVerificador.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtDigitoVerificador.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtDigitoVerificador.BorderColor = System.Drawing.Color.Gray;
             this.txtDigitoVerificador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDigitoVerificador.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtDigitoVerificador.Location = new System.Drawing.Point(272, 48);
+            this.txtDigitoVerificador.Location = new System.Drawing.Point(328, 48);
             this.txtDigitoVerificador.MaxLength = 2;
             this.txtDigitoVerificador.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtDigitoVerificador.Name = "txtDigitoVerificador";
@@ -223,7 +221,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(253, 45);
+            this.label1.Location = new System.Drawing.Point(308, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 20);
             this.label1.TabIndex = 28;
@@ -242,7 +240,7 @@
             // 
             // txtComplemento
             // 
-            this.txtComplemento.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtComplemento.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtComplemento.Location = new System.Drawing.Point(502, 168);
             this.txtComplemento.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtComplemento.Name = "txtComplemento";
@@ -262,7 +260,7 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtTelefone.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtTelefone.BorderColor = System.Drawing.Color.Gray;
             this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefone.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -287,7 +285,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtEmail.BorderColor = System.Drawing.Color.Gray;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -311,7 +309,7 @@
             // 
             // txtNomeContato
             // 
-            this.txtNomeContato.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtNomeContato.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtNomeContato.BorderColor = System.Drawing.Color.Gray;
             this.txtNomeContato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeContato.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -335,7 +333,7 @@
             // 
             // txtCidade
             // 
-            this.txtCidade.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtCidade.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtCidade.BorderColor = System.Drawing.Color.Gray;
             this.txtCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCidade.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -359,7 +357,7 @@
             // 
             // txtBairro
             // 
-            this.txtBairro.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtBairro.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtBairro.BorderColor = System.Drawing.Color.Gray;
             this.txtBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBairro.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -383,7 +381,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtNumero.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtNumero.BorderColor = System.Drawing.Color.Gray;
             this.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -408,7 +406,7 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtEndereco.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtEndereco.BorderColor = System.Drawing.Color.Gray;
             this.txtEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEndereco.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -432,7 +430,7 @@
             // 
             // txtCep
             // 
-            this.txtCep.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtCep.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtCep.BorderColor = System.Drawing.Color.Gray;
             this.txtCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCep.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -457,7 +455,7 @@
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtRazaoSocial.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtRazaoSocial.BorderColor = System.Drawing.Color.Gray;
             this.txtRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRazaoSocial.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -481,7 +479,7 @@
             // 
             // txtNomeFantaisa
             // 
-            this.txtNomeFantaisa.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtNomeFantaisa.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtNomeFantaisa.BorderColor = System.Drawing.Color.Gray;
             this.txtNomeFantaisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeFantaisa.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -505,7 +503,7 @@
             // 
             // txtCnpj
             // 
-            this.txtCnpj.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCnpj.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtCnpj.BorderColor = System.Drawing.Color.Gray;
             this.txtCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCnpj.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -513,7 +511,7 @@
             this.txtCnpj.MaxLength = 12;
             this.txtCnpj.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(120, 26);
+            this.txtCnpj.Size = new System.Drawing.Size(174, 26);
             this.txtCnpj.TabIndex = 2;
             this.txtCnpj.UseBorderColorOnFocus = true;
             this.txtCnpj.TextChanged += new System.EventHandler(this.txtCnpj_TextChanged);
@@ -532,7 +530,7 @@
             // 
             // txtIdCliente
             // 
-            this.txtIdCliente.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtIdCliente.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtIdCliente.Location = new System.Drawing.Point(16, 48);
             this.txtIdCliente.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtIdCliente.Name = "txtIdCliente";
@@ -554,7 +552,10 @@
             // 
             // txtObservacao
             // 
-            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(932, 183);
+            this.txtObservacao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(932, 147);
             this.txtObservacao.BorderColor = System.Drawing.Color.Gray;
             this.txtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtObservacao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -562,7 +563,7 @@
             this.txtObservacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(932, 183);
+            this.txtObservacao.Size = new System.Drawing.Size(932, 147);
             this.txtObservacao.TabIndex = 13;
             this.txtObservacao.UseBorderColorOnFocus = true;
             // 
@@ -570,85 +571,69 @@
             // 
             this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             // 
-            // btnPesquisarCliente
-            // 
-            this.btnPesquisarCliente.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnPesquisarCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.btnPesquisarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnPesquisarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPesquisarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisarCliente.Image")));
-            this.btnPesquisarCliente.IsBackStageButton = false;
-            this.btnPesquisarCliente.Location = new System.Drawing.Point(134, 13);
-            this.btnPesquisarCliente.MaximumSize = new System.Drawing.Size(40, 40);
-            this.grdLayoutBase.SetMinimumSize(this.btnPesquisarCliente, new System.Drawing.Size(40, 40));
-            this.btnPesquisarCliente.MinimumSize = new System.Drawing.Size(40, 40);
-            this.btnPesquisarCliente.Name = "btnPesquisarCliente";
-            this.grdLayoutBase.SetParticipateInLayout(this.btnPesquisarCliente, true);
-            this.grdLayoutBase.SetPreferredSize(this.btnPesquisarCliente, new System.Drawing.Size(40, 40));
-            this.btnPesquisarCliente.Size = new System.Drawing.Size(40, 40);
-            this.btnPesquisarCliente.TabIndex = 16;
-            toolTipInfo6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo6.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo6.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo6.Body.Text = "Procurar Cliente cadastrado (F3)";
-            toolTipInfo6.Footer.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo6.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo6.Footer.Text = "OPH Sistemas";
-            toolTipInfo6.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo6.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo6.Header.Text = "Cadastro de Clientes";
-            this.superToolTip1.SetToolTip(this.btnPesquisarCliente, toolTipInfo6);
-            // 
             // btnGravarCliente
             // 
-            this.btnGravarCliente.BeforeTouchSize = new System.Drawing.Size(40, 40);
+            this.btnGravarCliente.BeforeTouchSize = new System.Drawing.Size(70, 70);
+            this.btnGravarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGravarCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.btnGravarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
             this.btnGravarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGravarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGravarCliente.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGravarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
             this.btnGravarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnGravarCliente.Image")));
+            this.btnGravarCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGravarCliente.IsBackStageButton = false;
-            this.btnGravarCliente.Location = new System.Drawing.Point(78, 13);
-            this.btnGravarCliente.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btnGravarCliente.KeepFocusRectangle = false;
+            this.btnGravarCliente.Location = new System.Drawing.Point(100, 13);
+            this.btnGravarCliente.MaximumSize = new System.Drawing.Size(70, 70);
             this.grdLayoutBase.SetMinimumSize(this.btnGravarCliente, new System.Drawing.Size(40, 40));
-            this.btnGravarCliente.MinimumSize = new System.Drawing.Size(40, 40);
+            this.btnGravarCliente.MinimumSize = new System.Drawing.Size(70, 70);
             this.btnGravarCliente.Name = "btnGravarCliente";
             this.grdLayoutBase.SetParticipateInLayout(this.btnGravarCliente, true);
             this.grdLayoutBase.SetPreferredSize(this.btnGravarCliente, new System.Drawing.Size(40, 40));
-            this.btnGravarCliente.Size = new System.Drawing.Size(40, 40);
+            this.btnGravarCliente.Size = new System.Drawing.Size(70, 70);
             this.btnGravarCliente.TabIndex = 15;
-            toolTipInfo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo1.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo1.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo1.Body.Text = "Gravar dados do Cliente (CTRL + S)";
-            toolTipInfo1.Footer.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo1.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo1.Footer.Text = "OPH Sistemas";
-            toolTipInfo1.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo1.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo1.Header.Text = "Cadastro e Clientes";
-            this.superToolTip1.SetToolTip(this.btnGravarCliente, toolTipInfo1);
+            this.btnGravarCliente.Text = "Salvar\r\n(Ctrl + S)";
+            this.btnGravarCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            toolTipInfo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            toolTipInfo3.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo3.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo3.Body.Text = "Gravar dados do Cliente (CTRL + S)";
+            toolTipInfo3.Footer.Font = new System.Drawing.Font("Roboto Medium", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo3.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo3.Footer.Text = "OPH Sistemas";
+            toolTipInfo3.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo3.Header.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo3.Header.Text = "Cadastro e Clientes";
+            this.superToolTip1.SetToolTip(this.btnGravarCliente, toolTipInfo3);
             this.btnGravarCliente.Click += new System.EventHandler(this.btnGravarCliente_Click);
             // 
             // btnAdicionarNovoCliente
             // 
-            this.btnAdicionarNovoCliente.BeforeTouchSize = new System.Drawing.Size(40, 40);
+            this.btnAdicionarNovoCliente.BeforeTouchSize = new System.Drawing.Size(70, 70);
+            this.btnAdicionarNovoCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdicionarNovoCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.btnAdicionarNovoCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
             this.btnAdicionarNovoCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAdicionarNovoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarNovoCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionarNovoCliente.Image")));
+            this.btnAdicionarNovoCliente.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarNovoCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            this.btnAdicionarNovoCliente.Image = global::OPS_OphellSystem.Properties.Resources.Novo32x32;
+            this.btnAdicionarNovoCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdicionarNovoCliente.IsBackStageButton = false;
-            this.btnAdicionarNovoCliente.Location = new System.Drawing.Point(22, 13);
-            this.btnAdicionarNovoCliente.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btnAdicionarNovoCliente.KeepFocusRectangle = false;
+            this.btnAdicionarNovoCliente.Location = new System.Drawing.Point(24, 13);
+            this.btnAdicionarNovoCliente.MaximumSize = new System.Drawing.Size(70, 70);
             this.grdLayoutBase.SetMinimumSize(this.btnAdicionarNovoCliente, new System.Drawing.Size(40, 40));
-            this.btnAdicionarNovoCliente.MinimumSize = new System.Drawing.Size(40, 40);
+            this.btnAdicionarNovoCliente.MinimumSize = new System.Drawing.Size(70, 70);
             this.btnAdicionarNovoCliente.Name = "btnAdicionarNovoCliente";
             this.grdLayoutBase.SetParticipateInLayout(this.btnAdicionarNovoCliente, true);
             this.grdLayoutBase.SetPreferredSize(this.btnAdicionarNovoCliente, new System.Drawing.Size(40, 40));
-            this.btnAdicionarNovoCliente.Size = new System.Drawing.Size(40, 40);
+            this.btnAdicionarNovoCliente.Size = new System.Drawing.Size(70, 70);
             this.btnAdicionarNovoCliente.TabIndex = 14;
+            this.btnAdicionarNovoCliente.Text = "Novo\r\n(Ctrl + N)";
+            this.btnAdicionarNovoCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             toolTipInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             toolTipInfo2.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             toolTipInfo2.Body.Size = new System.Drawing.Size(20, 20);
@@ -662,52 +647,21 @@
             this.superToolTip1.SetToolTip(this.btnAdicionarNovoCliente, toolTipInfo2);
             this.btnAdicionarNovoCliente.Click += new System.EventHandler(this.btnAdicionarNovoCliente_Click);
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVoltar.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Image = global::OPS_OphellSystem.Properties.Resources.Fechar32x32;
-            this.btnVoltar.IsBackStageButton = false;
-            this.btnVoltar.Location = new System.Drawing.Point(960, 13);
-            this.btnVoltar.MaximumSize = new System.Drawing.Size(40, 40);
-            this.grdLayoutBase.SetMinimumSize(this.btnVoltar, new System.Drawing.Size(40, 40));
-            this.btnVoltar.MinimumSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.Name = "btnVoltar";
-            this.grdLayoutBase.SetParticipateInLayout(this.btnVoltar, true);
-            this.grdLayoutBase.SetPreferredSize(this.btnVoltar, new System.Drawing.Size(40, 40));
-            this.btnVoltar.Size = new System.Drawing.Size(40, 40);
-            this.btnVoltar.TabIndex = 18;
-            toolTipInfo7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo7.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo7.Body.Text = "Voltar (ESC)";
-            toolTipInfo7.Footer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo7.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo7.Footer.Text = "OPH Sistemas";
-            toolTipInfo7.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo7.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo7.Header.Text = "Cadastro de Clientes";
-            this.superToolTip1.SetToolTip(this.btnVoltar, toolTipInfo7);
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
             // FrmCadastroDeClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 660);
-            this.Controls.Add(this.btnPesquisarCliente);
-            this.Controls.Add(this.btnGravarCliente);
-            this.Controls.Add(this.btnAdicionarNovoCliente);
             this.Controls.Add(this.tgBtnAtivarDesativarCliente);
-            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnAdicionarNovoCliente);
+            this.Controls.Add(this.btnGravarCliente);
             this.Controls.Add(this.grpDadosCliente);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(0, 660);
             this.Name = "FrmCadastroDeClientes";
             this.ShowIcon = false;
@@ -760,9 +714,7 @@
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtObservacao;
         private Syncfusion.Windows.Forms.ButtonAdv btnAdicionarNovoCliente;
         private Syncfusion.Windows.Forms.ButtonAdv btnGravarCliente;
-        private Syncfusion.Windows.Forms.ButtonAdv btnPesquisarCliente;
         private Syncfusion.Windows.Forms.Tools.ToggleButton tgBtnAtivarDesativarCliente;
-        private Syncfusion.Windows.Forms.ButtonAdv btnVoltar;
         private Syncfusion.Windows.Forms.Tools.SuperToolTip superToolTip1;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblTxtTelefone;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblTxtEmail;

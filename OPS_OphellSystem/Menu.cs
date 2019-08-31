@@ -17,7 +17,7 @@ namespace OPS_OphellSystem
         #endregion
 
         #region "Variaveis"
-        Cadastros.Views.Clientes.FrmCadastroDeClientes cadastroClientes;
+        Cadastros.Views.Clientes.FrmClientesListagem  cadastroClientes;
         Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias cadastroCategorias;
         Cadastros.Views.Fornecedores.FrmCadastroDeFornecedores cadastroFornecedores;
         Cadastros.Views.Operadores.FrmCadastroDeOperadores cadastroOperadores;
@@ -33,7 +33,7 @@ namespace OPS_OphellSystem
         {
             if (cadastroClientes == null)
             {
-                cadastroClientes = new Cadastros.Views.Clientes.FrmCadastroDeClientes();
+                cadastroClientes = new Cadastros.Views.Clientes.FrmClientesListagem();
             }
                         
             cadastroClientes.MdiParent = this;

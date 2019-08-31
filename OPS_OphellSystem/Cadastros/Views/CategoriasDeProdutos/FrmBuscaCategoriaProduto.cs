@@ -25,6 +25,7 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
             try
             {
                 CarregaGrid();
+                
             }
             catch(Exception ex)
             {
@@ -35,7 +36,7 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         {
             try
             {
-                DataTable dtDados = new DataTable();
+                DataTable dtDados = new DataTable();                
                 dtDados = cadastroCategoria.BuscaTodasAsCategorias();
                 dtGridCategoriaProduto.DataSource = dtDados.DefaultView;
             }catch(Exception ex)

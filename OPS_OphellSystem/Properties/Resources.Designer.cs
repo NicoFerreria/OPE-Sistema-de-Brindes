@@ -63,6 +63,16 @@ namespace OPS_OphellSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Adicionar32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Adicionar32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Buscar32x32 {
             get {
                 object obj = ResourceManager.GetObject("Buscar32x32", resourceCulture);
@@ -116,6 +126,16 @@ namespace OPS_OphellSystem.Properties {
         internal static System.Drawing.Bitmap Fechar32x32 {
             get {
                 object obj = ResourceManager.GetObject("Fechar32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FecharPadrao32x32 {
+            get {
+                object obj = ResourceManager.GetObject("FecharPadrao32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +286,16 @@ namespace OPS_OphellSystem.Properties {
         internal static System.Drawing.Bitmap Operadores32x32 {
             get {
                 object obj = ResourceManager.GetObject("Operadores32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pesquisa32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Pesquisa32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

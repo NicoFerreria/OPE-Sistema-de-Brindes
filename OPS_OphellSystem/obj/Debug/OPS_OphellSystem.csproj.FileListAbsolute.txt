@@ -40,3 +40,4 @@ C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\o
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Operadores.FrmCadastroDeOperadores.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Operadores.FrmBuscaOperadores.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Clientes.FrmClientesListagem.resources
