@@ -88,6 +88,7 @@ namespace OPS_OphellSystem
             try
             {
                 string[] comando = gerador.ObterComandosSql();
+                string[] regras = gerador.ObterRegras();
                 if (File.Exists(utilitarios.caminhoBD) == false)
                 {
                     if (Directory.Exists(utilitarios.diretorioBD) == false)
@@ -95,11 +96,23 @@ namespace OPS_OphellSystem
                         Directory.CreateDirectory(utilitarios.diretorioBD);
                     }
                     pgbLoadSistema.Visible = true;
+
+                    //CRIA TABELAS E CAMPOS
                     pgbLoadSistema.Minimum = 0;
-                    pgbLoadSistema.Maximum = comando.Length;
+                    pgbLoadSistema.Maximum = comando.Length;                    
                     for (int i = 0; i < comando.Length; i++)
                     {
                         utilitarios.RealizaConexaoBd(comando[i]);
+                        pgbLoadSistema.Value = i + 1;
+                        pgbLoadSistema.Refresh();
+                    }
+
+                    //CRIA REGRAS
+                    pgbLoadSistema.Minimum = 0;
+                    pgbLoadSistema.Maximum = regras.Length;
+                    for(int i = 0; i < regras.Length; i++)
+                    {
+                        utilitarios.RealizaConexaoBd(regras[i]);
                         pgbLoadSistema.Value = i + 1;
                         pgbLoadSistema.Refresh();
                     }

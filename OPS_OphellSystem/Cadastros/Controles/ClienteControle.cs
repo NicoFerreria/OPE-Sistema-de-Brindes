@@ -32,7 +32,7 @@ namespace Controles
                     return;
                 }
 
-                dtDados = utilitarios.RealizaConexaoBd("SELECT @id FROM Cliente WHERE cnpj_clt=@cnpj", RetornaParametros(cliente));
+                dtDados = utilitarios.RealizaConexaoBd("SELECT id_clt FROM Cliente WHERE excluido='0' AND (cnpj_clt=@cnpj OR id_clt=@id)", RetornaParametros(cliente));
                 if (dtDados.Rows.Count <= 0)
                 {
                     utilitarios.RealizaConexaoBd("INSERT INTO Cliente(cnpj_clt,nome_fantasia_clt,razao_social_clt,status_clt,endereco_clt,telefone_clt,nome_contato_clt" +
@@ -40,8 +40,8 @@ namespace Controles
                         "operador_cadastro_nome,datahora_cadastro,datahora_alteracao,observacao_clt)VALUES(@cnpj,@fantasia,@razao,@status,@endereco,@telefone,@contato,@email," +
                         "@numero,@complemento,@cidade,@bairro,@cep,@digitoV,@operadorCodigo,@operadorNome,@dataHora,@datahoraAlteracao,@observacao)",
                         RetornaParametros(cliente));
-                    dtDados = utilitarios.RealizaConexaoBd("SELECT @id FROM Cliente WHERE cnpj_clt=@cnpj", RetornaParametros(cliente));
-                    cliente.ClienteId = int.Parse(dtDados.Rows[0]["id_clt"].ToString());
+                    //dtDados = utilitarios.RealizaConexaoBd("SELECT @id FROM Cliente WHERE cnpj_clt=@cnpj", RetornaParametros(cliente));
+                    //cliente.ClienteId = int.Parse(dtDados.Rows[0]["id_clt"].ToString());
                 }
                 else
                 {
@@ -78,24 +78,54 @@ namespace Controles
                 throw new System.Exception(ex.Message);
             }
         }
-
+        public void ExcluirCliente(long id)
+        {
+            try
+            {
+                if (id <= 0) throw new System.Exception("Não foi possível excluir cliente! Id do cliente inválido.");
+                parametros = new List<SqlParametro>() { new SqlParametro() { Nome = "@id", Valor = id } };
+                utilitarios.RealizaConexaoBd("UPDATE Cliente SET excluido=1 WHERE id_clt=@id AND excluido=0", parametros);
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
         #endregion
 
         #region "Funcoes"
         /// <summary>
-        /// Retorna DataTable com os dados do Cliente
+        /// Retorna DataTable com os dados do Cliente com base em uma string.
         /// </summary>
-        /// <param name="opcaoBusca">Tipo de filtro da busca</param>
+        /// <param name="criterio">Compara a string passada com ID,CNPJ,Fantasia e razao social.</param>
         /// <returns></returns>
-        public DataTable BuscaCliente(ClienteModelo cliente)
+        public DataTable BuscaCliente(string criterio)
         {
             try
             {
                 DataTable dtDados = new DataTable();
-                if (cliente == null) throw new System.Exception("Cliente não instanciado!");
-                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE cpj_clt=@cnpj OR nome_fantasia_clt=@fantasia OR razao_social_clt=@razao LIMIT 100",
-                    RetornaParametros(cliente));
+                if (long.TryParse(criterio, out long saida) == false & criterio != "")
+                {
+                    criterio = '%' + criterio + '%';
+                }
 
+                parametros = new List<SqlParametro>() { new SqlParametro() { Nome = "@criterio", Valor = criterio } };
+                if (criterio == "")
+                {
+                    dtDados = utilitarios.RealizaConexaoBd("SELECT id_clt,cnpj_clt,nome_fantasia_clt,razao_social_clt," +
+                    "CASE status_clt WHEN 1 THEN 'true' ELSE 'false' END status_clt,endereco_clt,numero_clt,complemento_clt," +
+                    "cidade,bairro,cep,telefone_clt,nome_contato_clt,email_contato_clt,observacao_clt,digito_verificador,operador_cadastro_id,operador_cadastro_nome," +
+                    "datahora_cadastro,datahora_alteracao FROM Cliente WHERE excluido='0'");
+                }
+                else
+                {
+                    dtDados = utilitarios.RealizaConexaoBd("SELECT id_clt,cnpj_clt,nome_fantasia_clt,razao_social_clt," +
+                    "CASE status_clt WHEN 1 THEN 'true' ELSE 'false' END status_clt,endereco_clt,numero_clt,complemento_clt," +
+                    "cidade,bairro,cep,telefone_clt,nome_contato_clt,email_contato_clt,observacao_clt,digito_verificador,operador_cadastro_id,operador_cadastro_nome," +
+                    "datahora_cadastro,datahora_alteracao FROM Cliente WHERE excluido=0 OR id_clt=@criterio OR cnpj_clt=@criterio OR " +
+                    "nome_fantasia_clt LIKE @criterio OR razao_social_clt LIKE @criterio LIMIT 100",
+                    parametros);
+                }
                 return dtDados;
             }
             catch (Exception ex)
@@ -103,16 +133,38 @@ namespace Controles
                 throw new System.Exception(ex.Message);
             }
         }
-        public DataTable ListarTodos()
+        public ClienteModelo GetCliente(long id)
         {
             try
             {
+                ClienteModelo cliente = new ClienteModelo();
                 DataTable dtDados = new DataTable();
-                dtDados = utilitarios.RealizaConexaoBd("SELECT CASE terceiro WHEN 1 THEN 'true' ELSE 'false' END terceiro, id_clt,cnpj_clt,nome_fantasia_clt,razao_social_clt," +
-                    "CASE status_clt WHEN 1 THEN 'true' ELSE 'false' END status_clt,endereco_clt,numero_clt,complemento_clt," +
-                    "cidade,bairro,cep,telefone_clt,nome_contato_clt,email_contato_clt,observacao_clt,digito_verificador,operador_cadastro_id,operador_cadastro_nome," +
-                    "datahora_cadastro,datahora_alteracao FROM Cliente");
-                return dtDados;
+                parametros = new List<SqlParametro>() { new SqlParametro { Nome = "@id", Valor = id },
+                    new SqlParametro() { Nome="@excluido",Valor=0}
+                };
+
+                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Cliente WHERE excluido='0' AND id_clt=@id", parametros);
+                if (dtDados.Rows.Count > 0)
+                {
+                    cliente.ClienteId = long.Parse(dtDados.Rows[0]["id_clt"].ToString());
+                    cliente.CNPJ = dtDados.Rows[0]["cnpj_clt"].ToString();
+                    cliente.Fantasia = dtDados.Rows[0]["nome_fantasia_clt"].ToString();
+                    cliente.Razao = dtDados.Rows[0]["razao_social_clt"].ToString();
+                    cliente.Status = dtDados.Rows[0]["status_clt"].ToString() == "1" ? true : false;
+                    cliente.Endereco = dtDados.Rows[0]["endereco_clt"].ToString();
+                    cliente.Numero = int.Parse(dtDados.Rows[0]["numero_clt"].ToString());
+                    cliente.Complemento = dtDados.Rows[0]["complemento_clt"].ToString();
+                    cliente.Cidade = dtDados.Rows[0]["cidade"].ToString();
+                    cliente.Bairro = dtDados.Rows[0]["bairro"].ToString();
+                    cliente.CEP = int.Parse(dtDados.Rows[0]["cep"].ToString());
+                    cliente.Telefone = int.Parse(dtDados.Rows[0]["telefone_clt"].ToString());
+                    cliente.NomeContato = dtDados.Rows[0]["nome_contato_clt"].ToString();
+                    cliente.Email = dtDados.Rows[0]["email_contato_clt"].ToString();
+                    cliente.Observacao = dtDados.Rows[0]["observacao_clt"].ToString();
+                    cliente.DigitoVerificadorCnpj = dtDados.Rows[0]["digito_verificador"].ToString();
+                }
+
+                return cliente;
             }
             catch (Exception ex)
             {
@@ -127,7 +179,7 @@ namespace Controles
                 {
                     throw new System.Exception("CNPJ inválido! Confira se este é um CNPJ válido.");
                 }
-                if (cliente.CNPJ.ToString().Length < 14 || cliente.CNPJ.ToString().Length > 14)
+                if (cliente.CNPJ.ToString().Length < 12 || cliente.CNPJ.ToString().Length > 12)
                 {
                     throw new System.Exception("CNPJ está com a quantidade de dígitos inferior ou superior a 14!");
                 }
@@ -156,7 +208,7 @@ namespace Controles
             parametros.Add(new SqlParametro { Nome = "@contato", Valor = cliente.NomeContato });
             parametros.Add(new SqlParametro { Nome = "@email", Valor = cliente.Email });
             parametros.Add(new SqlParametro { Nome = "@observacao", Valor = cliente.Observacao });
-            parametros.Add(new SqlParametro { Nome = "@status", Valor = cliente.Status });
+            parametros.Add(new SqlParametro { Nome = "@status", Valor = cliente.Status ? 1 : 0 });
             parametros.Add(new SqlParametro { Nome = "@cnpj", Valor = cliente.CNPJ });
             parametros.Add(new SqlParametro { Nome = "@endereco", Valor = cliente.Endereco });
             parametros.Add(new SqlParametro { Nome = "@numero", Valor = cliente.Numero });

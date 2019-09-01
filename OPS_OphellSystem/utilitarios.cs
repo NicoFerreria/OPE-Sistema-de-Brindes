@@ -148,10 +148,10 @@ namespace OPS_OphellSystem
 
                 }
 
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
                 var dt = cmd.ExecuteReader();
-                da.Fill(dtDados);
-
+                //da.Fill(dtDados);
+                dtDados.Load(dt);
                 //da.Fill();
                 if (conn.State == ConnectionState.Open)
                 {
@@ -160,9 +160,9 @@ namespace OPS_OphellSystem
                 return dtDados;
 
             }
-            catch (Exception ex)
+            catch (SQLiteException ex)
             {
-                throw new System.Exception(ex.Message);
+                throw new SQLiteException(ex.Message);
             }
         }
         public static bool ValidaCnpj(string CNPJ, string DV)

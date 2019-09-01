@@ -32,7 +32,7 @@ namespace OPS_OphellSystem
                         campos = new string[,]
                         {
                             {"id_clt","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
-                            {"cnpj_clt","INTEGER NOT NULL UNIQUE" },
+                            {"cnpj_clt","TEXT NOT NULL UNIQUE" },
                             {"nome_fantasia_clt","TEXT NOT NULL" },
                             {"razao_social_clt","TEXT NOT NULL" },
                             {"status_clt","INTEGER NOT NULL DEFAULT 1" },
@@ -51,7 +51,7 @@ namespace OPS_OphellSystem
                             {"operador_cadastro_nome","TEXT" },
                             {"datahora_cadastro","TEXT" },
                             {"datahora_alteracao","TEXT" },
-                            {"terceiro","INTEGER NOT NULL DEFAULT 1" }
+                            {"excluido","INTEGER NOT NULL DEFAULT 0" }
                         };
                         break;
                     case "Produto":
@@ -85,10 +85,41 @@ namespace OPS_OphellSystem
                                 {"email_contato_forn","Text" },
                                 {"observacao_forn","TEXT" },
                                 {"terceiro","INTEGER NOT NULL DEFAULT 0" }
-                            };
-                            break;
-
+                            };                            
                         }
+                        break;
+
+                    case "Pagamento":
+                        {
+                            campos = new string[,] {
+                                { "id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE"},
+                                {"duplicata","INTEGER NOT NULL DEFAULT 1" },                                
+                                {"data_lancamento","TEXT" },                                
+                                {"total","DOUBLE" }
+                            };                            
+                        }
+                        break;
+                    case "PagamentoConta":
+                        {
+                            campos = new string[,] {
+                                {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
+                                {"data_lancamento","TEXT" },
+                                {"data_vencimento","TEXT" },
+                                {"valor","DOUBLE" }                                
+                            };
+                        }
+                        break;
+                    case "FormasPagamento":
+                        {
+                            campos = new string[,]
+                            {
+                                {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
+                                {"descricao","TEXT" },
+                                {"tipo","TEXT" }
+                            };
+                        }
+                        break;
+                        
                 }
 
                 return campos;
@@ -107,7 +138,10 @@ namespace OPS_OphellSystem
                     "Usuario",
                     "Cliente",
                     "Produto",
-                    "Fornecedor"
+                    "Fornecedor",
+                    "Pagamento",
+                    "PagamentoConta",
+                    "FormasPagamento"
                 };
 
                 return tabelas;
@@ -139,6 +173,22 @@ namespace OPS_OphellSystem
                 comandos[i] = comando;
             }
             return comandos;
+        }
+        public string[] ObterRegras()
+        {
+            try
+            {
+                string[] retorno = new string[] {
+                    "ALTER TABLE PagamentoConta ADD COLUMN id_pagamento INTEGER REFERENCES Pagamento(id)",
+                    "ALTER TABLE Pagamento ADD COLUMN id_fornecedor INTEGER REFERENCES Fornecedor(id_forn)",
+                    "ALTER TABLE Pagamento ADD COLUMN id_forma_pagamento INTEGER REFERENCES FormasPagamento(id)"
+                };
+
+                return retorno;
+            }catch(Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
         }
     }
 }

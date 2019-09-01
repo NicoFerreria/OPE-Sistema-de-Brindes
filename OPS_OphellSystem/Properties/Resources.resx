@@ -196,4 +196,25 @@
   <data name="FecharPadrao32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FecharPadrao32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ExcluirPadrao32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ExcluirPadrao32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BuscarPadrao28x28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuscarPadrao28x28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdicionarPadrao28x28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdicionarPadrao28x28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NovoPadrao32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NovoPadrao32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SalvarPadrao28x28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SalvarPadrao28x28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PagamentoPadrao32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PagamentoPadrao32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RecebimentoPadrao32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RecebimentoPadrao32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

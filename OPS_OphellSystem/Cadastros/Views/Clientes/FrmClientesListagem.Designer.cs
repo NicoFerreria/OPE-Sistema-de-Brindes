@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo3 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo5 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo6 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo3 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             this.grdClienteListagem = new Syncfusion.WinForms.DataGrid.SfDataGrid();
-            this.btnAdicionar = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.txtPesquisa = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.btnFechar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.sTip = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
+            this.btnExcluir = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.txtPesquisa = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.btnFechar = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnAdicionar = new Syncfusion.Windows.Forms.ButtonAdv();
             ((System.ComponentModel.ISupportInitialize)(this.grdClienteListagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPesquisa)).BeginInit();
             this.SuspendLayout();
@@ -52,44 +54,70 @@
             this.grdClienteListagem.Name = "grdClienteListagem";
             this.grdClienteListagem.Size = new System.Drawing.Size(1000, 502);
             this.grdClienteListagem.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.grdClienteListagem.Style.CurrentCellStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.grdClienteListagem.Style.RowHeaderStyle.SelectionMarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.grdClienteListagem.TabIndex = 2;
             this.grdClienteListagem.Text = "sfDataGrid1";
+            this.grdClienteListagem.CellDoubleClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.grdClienteListagem_CellDoubleClick);
+            this.grdClienteListagem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdClienteListagem_KeyDown);
             // 
-            // btnAdicionar
+            // gradientLabel1
             // 
-            this.btnAdicionar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAdicionar.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionar.FlatAppearance.BorderSize = 0;
-            this.btnAdicionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionar.Image = global::OPS_OphellSystem.Properties.Resources.Adicionar32x32;
-            this.btnAdicionar.IsBackStageButton = false;
-            this.btnAdicionar.KeepFocusRectangle = false;
-            this.btnAdicionar.Location = new System.Drawing.Point(763, 12);
-            this.btnAdicionar.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(40, 40);
-            this.btnAdicionar.TabIndex = 1;
-            toolTipInfo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo3.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo3.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Body.Text = "Adicionar Cliente";
-            toolTipInfo3.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo3.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo3.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Footer.Text = "OPH";
-            toolTipInfo3.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo3.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo3.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Header.Text = "Clientes";
-            this.sTip.SetToolTip(this.btnAdicionar, toolTipInfo3);
-            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+            this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43))))), System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29))))));
+            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(201, 43);
+            this.gradientLabel1.BorderAppearance = System.Windows.Forms.BorderStyle.None;
+            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
+            | System.Windows.Forms.Border3DSide.Bottom)));
+            this.gradientLabel1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gradientLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            this.gradientLabel1.Location = new System.Drawing.Point(12, 9);
+            this.gradientLabel1.Name = "gradientLabel1";
+            this.gradientLabel1.Size = new System.Drawing.Size(201, 43);
+            this.gradientLabel1.TabIndex = 4;
+            this.gradientLabel1.Text = "Clientes Listagem";
+            this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sTip
+            // 
+            this.sTip.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnExcluir.BeforeTouchSize = new System.Drawing.Size(40, 40);
+            this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Image = global::OPS_OphellSystem.Properties.Resources.ExcluirPadrao32x32;
+            this.btnExcluir.IsBackStageButton = false;
+            this.btnExcluir.KeepFocusRectangle = false;
+            this.btnExcluir.Location = new System.Drawing.Point(858, 12);
+            this.btnExcluir.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btnExcluir.MinimumSize = new System.Drawing.Size(40, 40);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(40, 40);
+            this.btnExcluir.TabIndex = 5;
+            toolTipInfo5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            toolTipInfo5.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo5.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo5.Body.Text = "Excluir Cliente";
+            toolTipInfo5.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo5.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo5.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo5.Footer.Text = "OPH";
+            toolTipInfo5.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo5.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo5.Header.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo5.Header.Text = "Cliente";
+            this.sTip.SetToolTip(this.btnExcluir, toolTipInfo5);
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // txtPesquisa
             // 
             this.txtPesquisa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPesquisa.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtPesquisa.BeforeTouchSize = new System.Drawing.Size(490, 40);
             this.txtPesquisa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
             this.txtPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPesquisa.CornerRadius = 5;
@@ -140,42 +168,52 @@
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(40, 40);
             this.btnFechar.TabIndex = 3;
-            toolTipInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo2.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo2.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo2.Body.Text = "Fechar Listagem";
-            toolTipInfo2.BorderColor = System.Drawing.Color.Transparent;
-            toolTipInfo2.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo2.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo2.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo2.Footer.Text = "OPH";
-            toolTipInfo2.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo2.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo2.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo2.Header.Text = "Clientes";
-            this.sTip.SetToolTip(this.btnFechar, toolTipInfo2);
+            toolTipInfo6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            toolTipInfo6.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo6.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo6.Body.Text = "Fechar Listagem";
+            toolTipInfo6.BorderColor = System.Drawing.Color.Transparent;
+            toolTipInfo6.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo6.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo6.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo6.Footer.Text = "OPH";
+            toolTipInfo6.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo6.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo6.Header.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo6.Header.Text = "Clientes";
+            this.sTip.SetToolTip(this.btnFechar, toolTipInfo6);
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // gradientLabel1
+            // btnAdicionar
             // 
-            this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43))))), System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29))))));
-            this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(201, 43);
-            this.gradientLabel1.BorderAppearance = System.Windows.Forms.BorderStyle.None;
-            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
-            | System.Windows.Forms.Border3DSide.Right) 
-            | System.Windows.Forms.Border3DSide.Bottom)));
-            this.gradientLabel1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gradientLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            this.gradientLabel1.Location = new System.Drawing.Point(12, 9);
-            this.gradientLabel1.Name = "gradientLabel1";
-            this.gradientLabel1.Size = new System.Drawing.Size(201, 43);
-            this.gradientLabel1.TabIndex = 4;
-            this.gradientLabel1.Text = "Clientes Listagem";
-            this.gradientLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // sTip
-            // 
-            this.sTip.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
+            this.btnAdicionar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAdicionar.BeforeTouchSize = new System.Drawing.Size(40, 40);
+            this.btnAdicionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionar.FlatAppearance.BorderSize = 0;
+            this.btnAdicionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionar.Image = global::OPS_OphellSystem.Properties.Resources.Adicionar32x32;
+            this.btnAdicionar.IsBackStageButton = false;
+            this.btnAdicionar.KeepFocusRectangle = false;
+            this.btnAdicionar.Location = new System.Drawing.Point(763, 12);
+            this.btnAdicionar.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(40, 40);
+            this.btnAdicionar.TabIndex = 1;
+            toolTipInfo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            toolTipInfo3.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo3.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo3.Body.Text = "Adicionar Cliente";
+            toolTipInfo3.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo3.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo3.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo3.Footer.Text = "OPH";
+            toolTipInfo3.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo3.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo3.Header.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo3.Header.Text = "Clientes";
+            this.sTip.SetToolTip(this.btnAdicionar, toolTipInfo3);
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // FrmClientesListagem
             // 
@@ -183,6 +221,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 660);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.gradientLabel1);
             this.Controls.Add(this.btnFechar);
@@ -209,5 +248,6 @@
         private Syncfusion.Windows.Forms.ButtonAdv btnFechar;
         private Syncfusion.Windows.Forms.Tools.GradientLabel gradientLabel1;
         private Syncfusion.Windows.Forms.Tools.SuperToolTip sTip;
+        private Syncfusion.Windows.Forms.ButtonAdv btnExcluir;
     }
 }

@@ -36,6 +36,8 @@
             this.btnMenuCadClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuCadCategorias = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuCondicoesPagamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuContasPagar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuContasReceber = new System.Windows.Forms.ToolStripMenuItem();
             this.tStrpCadastroClientes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +66,9 @@
             this.btnMenuCadOperadores,
             this.btnMenuCadClientes,
             this.btnMenuCadCategorias,
-            this.btnMenuCondicoesPagamento});
+            this.btnMenuCondicoesPagamento,
+            this.btnMenuContasPagar,
+            this.btnMenuContasReceber});
             this.btnMenuCadastros.Image = global::OPS_OphellSystem.Properties.Resources.Cadastros32x32;
             this.btnMenuCadastros.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnMenuCadastros.Name = "btnMenuCadastros";
@@ -112,6 +116,21 @@
             this.btnMenuCondicoesPagamento.Text = "Condições Pagamentos";
             this.btnMenuCondicoesPagamento.Click += new System.EventHandler(this.btnMenuCondicoesPagamento_Click);
             // 
+            // btnMenuContasPagar
+            // 
+            this.btnMenuContasPagar.Image = global::OPS_OphellSystem.Properties.Resources.PagamentoPadrao32x32;
+            this.btnMenuContasPagar.Name = "btnMenuContasPagar";
+            this.btnMenuContasPagar.Size = new System.Drawing.Size(199, 22);
+            this.btnMenuContasPagar.Text = "Contas a Pagar";
+            this.btnMenuContasPagar.Click += new System.EventHandler(this.btnMenuContasPagar_Click);
+            // 
+            // btnMenuContasReceber
+            // 
+            this.btnMenuContasReceber.Image = global::OPS_OphellSystem.Properties.Resources.RecebimentoPadrao32x32;
+            this.btnMenuContasReceber.Name = "btnMenuContasReceber";
+            this.btnMenuContasReceber.Size = new System.Drawing.Size(199, 22);
+            this.btnMenuContasReceber.Text = "Contas a Receber";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,5 +163,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnMenuCadClientes;
         private System.Windows.Forms.ToolStripMenuItem btnMenuCadCategorias;
         private System.Windows.Forms.ToolStripMenuItem btnMenuCondicoesPagamento;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuContasPagar;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuContasReceber;
     }
 }

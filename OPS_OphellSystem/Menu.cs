@@ -22,6 +22,7 @@ namespace OPS_OphellSystem
         Cadastros.Views.Fornecedores.FrmCadastroDeFornecedores cadastroFornecedores;
         Cadastros.Views.Operadores.FrmCadastroDeOperadores cadastroOperadores;
         Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento cadastroDeCondicoesPagamento;
+        Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas cadastroDeContasAPagar;
         #endregion
 
         #region "Metodos"
@@ -105,6 +106,22 @@ namespace OPS_OphellSystem
             cadastroDeCondicoesPagamento.Dock = DockStyle.Fill;
             cadastroDeCondicoesPagamento.Show();
         }
+        public void AbrirCadastroDeContasAPagar()
+        {
+            try
+            {
+                if(cadastroDeContasAPagar == null)
+                {
+                    cadastroDeContasAPagar = new Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas();
+                }
+
+                cadastroDeContasAPagar.ShowDialog();
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void OcultarBarraLateral()
         {
             try
@@ -162,9 +179,12 @@ namespace OPS_OphellSystem
         {
             btnMenuCadastros.ShowDropDown();
         }
-
+        private void btnMenuContasPagar_Click(object sender, EventArgs e)
+        {
+            AbrirCadastroDeContasAPagar();
+        }
         #endregion
 
-        
+
     }
 }

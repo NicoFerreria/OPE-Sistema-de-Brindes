@@ -19,6 +19,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         #endregion
 
         #region"Variaveis"
+        public long IdCliente { get; set; } = 0;
         #endregion
 
         #region "Metodos"
@@ -48,9 +49,9 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 if (ValidaCampos() == false) return;
                 ClienteModelo cliente = new ClienteModelo();
 
-
-                cliente.CNPJ = long.Parse(txtCnpj.Text + txtDigitoVerificador.Text);
-                cliente.DigitoVerificadorCnpj = int.Parse(txtDigitoVerificador.Text);
+                cliente.ClienteId = long.Parse(txtIdCliente.Text);
+                cliente.CNPJ = txtCnpj.Text;
+                cliente.DigitoVerificadorCnpj = txtDigitoVerificador.Text;
                 cliente.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text);
                 cliente.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
                 cliente.CEP = int.Parse(txtCep.Text);
@@ -62,7 +63,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 cliente.Email  = txtEmail.Text;
                 cliente.Telefone = int.Parse(txtTelefone.Text);
                 cliente.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
-                cliente.Status = tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive ? 0 : 1;
+                cliente.Status = (tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
                 cliente.Observacao = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
 
                 cadastroCLiente.GravarCliente(cliente);
@@ -116,7 +117,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                 {
                     grpDadosCliente.Enabled = false;
                     btnAdicionarNovoCliente.Enabled = false;
-                    btnGravarCliente.Enabled = false;
+                    //btnGravarCliente.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -128,7 +129,36 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             try
             {
-                VerificaStatusCliente();
+                ClienteModelo cliente = cadastroCLiente.GetCliente(IdCliente);
+
+                if(cliente != null)
+                {
+                    txtIdCliente.Text = cliente.ClienteId.ToString();
+                    txtCnpj.Text = cliente.CNPJ;
+                    txtDigitoVerificador.Text = cliente.DigitoVerificadorCnpj;
+                    txtNomeFantaisa.Text = cliente.Fantasia;
+                    txtRazaoSocial.Text = cliente.Razao;
+                    txtCep.Text = cliente.CEP.ToString();
+                    txtEndereco.Text = cliente.Endereco;
+                    txtNumero.Text = cliente.Numero.ToString();
+                    txtComplemento.Text = cliente.Complemento;
+                    txtBairro.Text = cliente.Bairro;
+                    txtCidade.Text = cliente.Cidade;
+                    txtNomeContato.Text = cliente.NomeContato;
+                    txtEmail.Text = cliente.Email;
+                    txtTelefone.Text = cliente.Telefone.ToString();
+                    txtObservacao.Text = cliente.Observacao;
+                    tgBtnAtivarDesativarCliente.ToggleState = cliente.Status ? Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active : Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive;
+                }
+                else
+                {
+                    NovoCliente();
+                }
+                if(cliente.ClienteId == 0)
+                {
+                    tgBtnAtivarDesativarCliente.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+                }
+                //VerificaStatusCliente();
 
             }
             catch (Exception ex)
@@ -256,10 +286,13 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         private void FrmCadastroDeClientes_KeyDown(object sender, KeyEventArgs e)
         {
             if (ModifierKeys == Keys.Control && e.KeyCode == Keys.S) GravarCliente();
+            if (ModifierKeys == Keys.Control && e.KeyCode == Keys.N) NovoCliente();
+            if (e.KeyCode == Keys.Escape) Fechar();
         }
         private void FrmCadastroDeClientes_Shown(object sender, EventArgs e)
         {
-            NovoCliente();
+            //NovoCliente();
+            PreencheCamposFormulario();
         }        
         private void btnGravarCliente_Click(object sender, EventArgs e)
         {
@@ -295,6 +328,10 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
             {
                 txtDigitoVerificador.Focus();
             }
+        }
+        private void FrmCadastroDeClientes_VisibleChanged(object sender, EventArgs e)
+        {
+            PreencheCamposFormulario();
         }
         #endregion
 

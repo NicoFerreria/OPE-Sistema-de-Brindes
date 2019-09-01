@@ -1,0 +1,359 @@
+﻿namespace OPS_OphellSystem.Cadastros.Views.ContasAPagar
+{
+    partial class FrmCadastroPagamentoContas
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroPagamentoContas));
+            this.grpDadosPagamento = new System.Windows.Forms.GroupBox();
+            this.txtId = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblId = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtFornecedor = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblFornecedor = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.cmbFormasPagamento = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
+            this.lblFormasPagamento = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.grpDadosConta = new System.Windows.Forms.GroupBox();
+            this.txtValorConta = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.dtpVencimento = new Syncfusion.Windows.Forms.Tools.DateTimePickerAdv();
+            this.lblDataVencimento = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblValor = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.grdContas = new Syncfusion.WinForms.DataGrid.SfDataGrid();
+            this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnNovoPagamento = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnAdicionarConta = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnFornecedor = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.grpDadosPagamento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFornecedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbFormasPagamento)).BeginInit();
+            this.grpDadosConta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorConta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpVencimento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdContas)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // grpDadosPagamento
+            // 
+            this.grpDadosPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpDadosPagamento.Controls.Add(this.btnFornecedor);
+            this.grpDadosPagamento.Controls.Add(this.lblFormasPagamento);
+            this.grpDadosPagamento.Controls.Add(this.cmbFormasPagamento);
+            this.grpDadosPagamento.Controls.Add(this.lblFornecedor);
+            this.grpDadosPagamento.Controls.Add(this.txtFornecedor);
+            this.grpDadosPagamento.Controls.Add(this.lblId);
+            this.grpDadosPagamento.Controls.Add(this.txtId);
+            this.grpDadosPagamento.Location = new System.Drawing.Point(12, 88);
+            this.grpDadosPagamento.Name = "grpDadosPagamento";
+            this.grpDadosPagamento.Size = new System.Drawing.Size(984, 90);
+            this.grpDadosPagamento.TabIndex = 0;
+            this.grpDadosPagamento.TabStop = false;
+            this.grpDadosPagamento.Text = "Dados do Pagamento";
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.SystemColors.Control;
+            this.txtId.BeforeTouchSize = new System.Drawing.Size(490, 40);
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(6, 38);
+            this.txtId.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 0;
+            // 
+            // lblId
+            // 
+            this.lblId.DY = -17;
+            this.lblId.LabeledControl = this.txtId;
+            this.lblId.Location = new System.Drawing.Point(6, 21);
+            this.lblId.Name = "lblId";
+            this.lblId.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblId.Size = new System.Drawing.Size(16, 13);
+            this.lblId.TabIndex = 1;
+            this.lblId.Text = "Id";
+            // 
+            // txtFornecedor
+            // 
+            this.txtFornecedor.BeforeTouchSize = new System.Drawing.Size(490, 40);
+            this.txtFornecedor.Enabled = false;
+            this.txtFornecedor.Location = new System.Drawing.Point(112, 38);
+            this.txtFornecedor.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtFornecedor.Name = "txtFornecedor";
+            this.txtFornecedor.Size = new System.Drawing.Size(375, 20);
+            this.txtFornecedor.TabIndex = 2;
+            // 
+            // lblFornecedor
+            // 
+            this.lblFornecedor.DY = -17;
+            this.lblFornecedor.LabeledControl = this.txtFornecedor;
+            this.lblFornecedor.Location = new System.Drawing.Point(112, 21);
+            this.lblFornecedor.Name = "lblFornecedor";
+            this.lblFornecedor.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblFornecedor.Size = new System.Drawing.Size(61, 13);
+            this.lblFornecedor.TabIndex = 3;
+            this.lblFornecedor.Text = "Fornecedor";
+            // 
+            // cmbFormasPagamento
+            // 
+            this.cmbFormasPagamento.BackColor = System.Drawing.Color.White;
+            this.cmbFormasPagamento.BeforeTouchSize = new System.Drawing.Size(260, 21);
+            this.cmbFormasPagamento.Location = new System.Drawing.Point(538, 38);
+            this.cmbFormasPagamento.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.cmbFormasPagamento.Name = "cmbFormasPagamento";
+            this.cmbFormasPagamento.Size = new System.Drawing.Size(260, 21);
+            this.cmbFormasPagamento.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
+            this.cmbFormasPagamento.TabIndex = 4;
+            // 
+            // lblFormasPagamento
+            // 
+            this.lblFormasPagamento.DY = -17;
+            this.lblFormasPagamento.LabeledControl = this.cmbFormasPagamento;
+            this.lblFormasPagamento.Location = new System.Drawing.Point(538, 21);
+            this.lblFormasPagamento.Name = "lblFormasPagamento";
+            this.lblFormasPagamento.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblFormasPagamento.Size = new System.Drawing.Size(108, 13);
+            this.lblFormasPagamento.TabIndex = 5;
+            this.lblFormasPagamento.Text = "Forma de Pagamento";
+            // 
+            // grpDadosConta
+            // 
+            this.grpDadosConta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpDadosConta.Controls.Add(this.grdContas);
+            this.grpDadosConta.Controls.Add(this.btnAdicionarConta);
+            this.grpDadosConta.Controls.Add(this.lblValor);
+            this.grpDadosConta.Controls.Add(this.lblDataVencimento);
+            this.grpDadosConta.Controls.Add(this.dtpVencimento);
+            this.grpDadosConta.Controls.Add(this.txtValorConta);
+            this.grpDadosConta.Location = new System.Drawing.Point(12, 184);
+            this.grpDadosConta.Name = "grpDadosConta";
+            this.grpDadosConta.Size = new System.Drawing.Size(984, 406);
+            this.grpDadosConta.TabIndex = 1;
+            this.grpDadosConta.TabStop = false;
+            this.grpDadosConta.Text = "Dados da Conta";
+            // 
+            // txtValorConta
+            // 
+            this.txtValorConta.BeforeTouchSize = new System.Drawing.Size(490, 40);
+            this.txtValorConta.Location = new System.Drawing.Point(268, 50);
+            this.txtValorConta.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtValorConta.Name = "txtValorConta";
+            this.txtValorConta.Size = new System.Drawing.Size(100, 20);
+            this.txtValorConta.TabIndex = 2;
+            this.txtValorConta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorConta_KeyPress);
+            // 
+            // dtpVencimento
+            // 
+            this.dtpVencimento.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
+            this.dtpVencimento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.dtpVencimento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dtpVencimento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpVencimento.CalendarSize = new System.Drawing.Size(189, 176);
+            this.dtpVencimento.Checked = false;
+            this.dtpVencimento.Culture = new System.Globalization.CultureInfo("pt-BR");
+            this.dtpVencimento.DropDownImage = null;
+            this.dtpVencimento.DropDownNormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.dtpVencimento.DropDownPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.dtpVencimento.DropDownSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(175)))), ((int)(((byte)(85)))));
+            this.dtpVencimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpVencimento.Location = new System.Drawing.Point(30, 50);
+            this.dtpVencimento.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.dtpVencimento.MinValue = new System.DateTime(((long)(0)));
+            this.dtpVencimento.Name = "dtpVencimento";
+            this.dtpVencimento.ShowCheckBox = false;
+            this.dtpVencimento.Size = new System.Drawing.Size(232, 20);
+            this.dtpVencimento.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
+            this.dtpVencimento.TabIndex = 4;
+            this.dtpVencimento.Value = new System.DateTime(2019, 8, 31, 21, 26, 55, 909);
+            // 
+            // lblDataVencimento
+            // 
+            this.lblDataVencimento.DY = -17;
+            this.lblDataVencimento.LabeledControl = this.dtpVencimento;
+            this.lblDataVencimento.Location = new System.Drawing.Point(30, 33);
+            this.lblDataVencimento.Name = "lblDataVencimento";
+            this.lblDataVencimento.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblDataVencimento.Size = new System.Drawing.Size(63, 13);
+            this.lblDataVencimento.TabIndex = 5;
+            this.lblDataVencimento.Text = "Vencimento";
+            // 
+            // lblValor
+            // 
+            this.lblValor.DY = -17;
+            this.lblValor.LabeledControl = this.txtValorConta;
+            this.lblValor.Location = new System.Drawing.Point(268, 33);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblValor.Size = new System.Drawing.Size(31, 13);
+            this.lblValor.TabIndex = 6;
+            this.lblValor.Text = "Valor";
+            // 
+            // grdContas
+            // 
+            this.grdContas.AccessibleName = "Table";
+            this.grdContas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdContas.Location = new System.Drawing.Point(6, 104);
+            this.grdContas.Name = "grdContas";
+            this.grdContas.Size = new System.Drawing.Size(972, 271);
+            this.grdContas.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.grdContas.TabIndex = 8;
+            this.grdContas.Text = "sfDataGrid1";
+            // 
+            // btnGravar
+            // 
+            this.btnGravar.BeforeTouchSize = new System.Drawing.Size(70, 70);
+            this.btnGravar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnGravar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnGravar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGravar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            this.btnGravar.Image = global::OPS_OphellSystem.Properties.Resources.Gravar32x32;
+            this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGravar.IsBackStageButton = false;
+            this.btnGravar.Location = new System.Drawing.Point(88, 12);
+            this.btnGravar.MaximumSize = new System.Drawing.Size(70, 70);
+            this.btnGravar.MinimumSize = new System.Drawing.Size(70, 70);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(70, 70);
+            this.btnGravar.TabIndex = 3;
+            this.btnGravar.Text = "Salvar\r\n(Ctrl + S)";
+            this.btnGravar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // btnNovoPagamento
+            // 
+            this.btnNovoPagamento.BeforeTouchSize = new System.Drawing.Size(70, 70);
+            this.btnNovoPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNovoPagamento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnNovoPagamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnNovoPagamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnNovoPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovoPagamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            this.btnNovoPagamento.Image = global::OPS_OphellSystem.Properties.Resources.Novo32x32;
+            this.btnNovoPagamento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNovoPagamento.IsBackStageButton = false;
+            this.btnNovoPagamento.Location = new System.Drawing.Point(12, 12);
+            this.btnNovoPagamento.MaximumSize = new System.Drawing.Size(70, 70);
+            this.btnNovoPagamento.MinimumSize = new System.Drawing.Size(70, 70);
+            this.btnNovoPagamento.Name = "btnNovoPagamento";
+            this.btnNovoPagamento.Size = new System.Drawing.Size(70, 70);
+            this.btnNovoPagamento.TabIndex = 2;
+            this.btnNovoPagamento.Text = "Novo\r\n(Ctrl + N)";
+            this.btnNovoPagamento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // btnAdicionarConta
+            // 
+            this.btnAdicionarConta.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnAdicionarConta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarConta.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnAdicionarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarConta.Image = global::OPS_OphellSystem.Properties.Resources.AdicionarPadrao28x28;
+            this.btnAdicionarConta.IsBackStageButton = false;
+            this.btnAdicionarConta.KeepFocusRectangle = false;
+            this.btnAdicionarConta.Location = new System.Drawing.Point(374, 40);
+            this.btnAdicionarConta.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnAdicionarConta.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnAdicionarConta.Name = "btnAdicionarConta";
+            this.btnAdicionarConta.Size = new System.Drawing.Size(30, 30);
+            this.btnAdicionarConta.TabIndex = 7;
+            // 
+            // btnFornecedor
+            // 
+            this.btnFornecedor.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFornecedor.Image = global::OPS_OphellSystem.Properties.Resources.BuscarPadrao28x28;
+            this.btnFornecedor.IsBackStageButton = false;
+            this.btnFornecedor.KeepFocusRectangle = false;
+            this.btnFornecedor.Location = new System.Drawing.Point(493, 29);
+            this.btnFornecedor.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnFornecedor.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnFornecedor.Name = "btnFornecedor";
+            this.btnFornecedor.Size = new System.Drawing.Size(30, 30);
+            this.btnFornecedor.TabIndex = 6;
+            // 
+            // FrmCadastroPagamentoContas
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1008, 621);
+            this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.btnNovoPagamento);
+            this.Controls.Add(this.grpDadosConta);
+            this.Controls.Add(this.grpDadosPagamento);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FrmCadastroPagamentoContas";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de Contas a Pagar";
+            this.grpDadosPagamento.ResumeLayout(false);
+            this.grpDadosPagamento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFornecedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbFormasPagamento)).EndInit();
+            this.grpDadosConta.ResumeLayout(false);
+            this.grpDadosConta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorConta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpVencimento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdContas)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox grpDadosPagamento;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblId;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtId;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblFornecedor;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtFornecedor;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblFormasPagamento;
+        private Syncfusion.Windows.Forms.Tools.ComboBoxAdv cmbFormasPagamento;
+        private Syncfusion.Windows.Forms.ButtonAdv btnFornecedor;
+        private System.Windows.Forms.GroupBox grpDadosConta;
+        private Syncfusion.Windows.Forms.Tools.DateTimePickerAdv dtpVencimento;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtValorConta;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblDataVencimento;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblValor;
+        private Syncfusion.Windows.Forms.ButtonAdv btnAdicionarConta;
+        private Syncfusion.WinForms.DataGrid.SfDataGrid grdContas;
+        private Syncfusion.Windows.Forms.ButtonAdv btnNovoPagamento;
+        private Syncfusion.Windows.Forms.ButtonAdv btnGravar;
+    }
+}
