@@ -52,6 +52,9 @@
     <Reference Include="Syncfusion.Grid.Base, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Grid.Windows, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.GridCommon.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Licensing, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.16.4.0.42\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.SfInput.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.SfListView.WinForms, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -91,6 +94,8 @@
     <Compile Include="Cadastros\Classes\CondicoesDePagamento\CadastroDeCondicoesPagamento.cs" />
     <Compile Include="Cadastros\Classes\Fornecedor\CadastroDeFornecedor.cs" />
     <Compile Include="Cadastros\Controles\ClienteControle.cs" />
+    <Compile Include="Cadastros\Controles\ContasPagarControle.cs" />
+    <Compile Include="Cadastros\Controles\FormasPagamentoControle.cs" />
     <Compile Include="Cadastros\Modelos\ClienteModelo.cs" />
     <Compile Include="Cadastros\Classes\Operadores\CadastroDeOperadores.cs" />
     <Compile Include="Cadastros\Classes\PessoaJuridica.cs" />
@@ -153,6 +158,12 @@
     <Compile Include="Cadastros\Views\Operadores\FrmCadastroDeOperadores.Designer.cs">
       <DependentUpon>FrmCadastroDeOperadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\Views\Orcamento\FrmOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\Views\Orcamento\FrmOrcamento.Designer.cs">
+      <DependentUpon>FrmOrcamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enums.cs" />
     <Compile Include="GeradorBD.cs" />
     <Compile Include="Lounch.cs">
@@ -199,6 +210,9 @@
     <EmbeddedResource Include="Cadastros\Views\Operadores\FrmCadastroDeOperadores.resx">
       <DependentUpon>FrmCadastroDeOperadores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\Views\Orcamento\FrmOrcamento.resx">
+      <DependentUpon>FrmOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lounch.resx">
       <DependentUpon>Lounch.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +247,8 @@
     <Content Include="icons8_user_shield.ico" />
     <Content Include="LogoOphell-32.ico" />
     <Content Include="LogoOphell-48.ico" />
+    <None Include="Resources\OrcamentoPadrao32x32.png" />
+    <None Include="Resources\VendasPadrao32x32.png" />
     <None Include="Resources\RecebimentoPadrao32x32.png" />
     <None Include="Resources\PagamentoPadrao32x32.png" />
     <None Include="Resources\NovoPadrao32x32.png" />

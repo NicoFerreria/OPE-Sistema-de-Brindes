@@ -333,6 +333,16 @@ namespace OPS_OphellSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OrcamentoPadrao32x32 {
+            get {
+                object obj = ResourceManager.GetObject("OrcamentoPadrao32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PagamentoPadrao32x32 {
             get {
                 object obj = ResourceManager.GetObject("PagamentoPadrao32x32", resourceCulture);
@@ -376,6 +386,16 @@ namespace OPS_OphellSystem.Properties {
         internal static System.Drawing.Bitmap SalvarPadrao28x28 {
             get {
                 object obj = ResourceManager.GetObject("SalvarPadrao28x28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VendasPadrao32x32 {
+            get {
+                object obj = ResourceManager.GetObject("VendasPadrao32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

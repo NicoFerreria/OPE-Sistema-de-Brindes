@@ -38,6 +38,8 @@
             this.btnMenuCondicoesPagamento = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuContasPagar = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuContasReceber = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuVendas = new System.Windows.Forms.ToolStripSplitButton();
+            this.btnMenuOrcamento = new System.Windows.Forms.ToolStripMenuItem();
             this.tStrpCadastroClientes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +50,8 @@
             this.tStrpCadastroClientes.GripMargin = new System.Windows.Forms.Padding(0);
             this.tStrpCadastroClientes.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tStrpCadastroClientes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnMenuCadastros});
+            this.btnMenuCadastros,
+            this.btnMenuVendas});
             this.tStrpCadastroClientes.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.tStrpCadastroClientes.Location = new System.Drawing.Point(0, 0);
             this.tStrpCadastroClientes.MinimumSize = new System.Drawing.Size(200, 40);
@@ -131,6 +134,26 @@
             this.btnMenuContasReceber.Size = new System.Drawing.Size(199, 22);
             this.btnMenuContasReceber.Text = "Contas a Receber";
             // 
+            // btnMenuVendas
+            // 
+            this.btnMenuVendas.AutoSize = false;
+            this.btnMenuVendas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnMenuOrcamento});
+            this.btnMenuVendas.Image = global::OPS_OphellSystem.Properties.Resources.VendasPadrao32x32;
+            this.btnMenuVendas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMenuVendas.Name = "btnMenuVendas";
+            this.btnMenuVendas.Size = new System.Drawing.Size(196, 40);
+            this.btnMenuVendas.Text = "Vendas";
+            this.btnMenuVendas.ButtonClick += new System.EventHandler(this.btnMenuVendas_ButtonClick);
+            // 
+            // btnMenuOrcamento
+            // 
+            this.btnMenuOrcamento.Image = global::OPS_OphellSystem.Properties.Resources.OrcamentoPadrao32x32;
+            this.btnMenuOrcamento.Name = "btnMenuOrcamento";
+            this.btnMenuOrcamento.Size = new System.Drawing.Size(180, 22);
+            this.btnMenuOrcamento.Text = "Orçamento";
+            this.btnMenuOrcamento.Click += new System.EventHandler(this.btnMenuOrcamento_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,5 +188,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnMenuCondicoesPagamento;
         private System.Windows.Forms.ToolStripMenuItem btnMenuContasPagar;
         private System.Windows.Forms.ToolStripMenuItem btnMenuContasReceber;
+        private System.Windows.Forms.ToolStripSplitButton btnMenuVendas;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuOrcamento;
     }
 }

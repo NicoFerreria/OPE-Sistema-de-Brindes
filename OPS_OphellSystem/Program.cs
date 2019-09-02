@@ -14,6 +14,9 @@ namespace OPS_OphellSystem
         [STAThread]
         static void Main()
         {
+            //License Syncfusion
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTM3ODM5QDMxMzYyZTM0MmUzMFZhWmpRY2dVdzJJdEMxUjlRb2tQSTNBekRBbE1zTElORkZOVlh2SWRwSXc9");
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Lounch());

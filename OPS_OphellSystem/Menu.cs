@@ -23,6 +23,7 @@ namespace OPS_OphellSystem
         Cadastros.Views.Operadores.FrmCadastroDeOperadores cadastroOperadores;
         Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento cadastroDeCondicoesPagamento;
         Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas cadastroDeContasAPagar;
+        Cadastros.Views.Orcamento.FrmOrcamento orcamento;
         #endregion
 
         #region "Metodos"
@@ -102,9 +103,9 @@ namespace OPS_OphellSystem
                 cadastroDeCondicoesPagamento = new Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento();
             }
 
-            cadastroDeCondicoesPagamento.MdiParent = this;
-            cadastroDeCondicoesPagamento.Dock = DockStyle.Fill;
-            cadastroDeCondicoesPagamento.Show();
+            //cadastroDeCondicoesPagamento.MdiParent = this;
+            //cadastroDeCondicoesPagamento.Dock = DockStyle.Fill;
+            cadastroDeCondicoesPagamento.ShowDialog();
         }
         public void AbrirCadastroDeContasAPagar()
         {
@@ -137,6 +138,24 @@ namespace OPS_OphellSystem
                 }
             }
             catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void AbrirVendasOrcamento()
+        {
+            try
+            {
+                if (orcamento == null)
+                {
+                    orcamento = new Cadastros.Views.Orcamento.FrmOrcamento();
+                }
+
+                orcamento.MdiParent = this;
+                orcamento.Dock = DockStyle.Fill;
+                orcamento.Show();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -182,6 +201,14 @@ namespace OPS_OphellSystem
         private void btnMenuContasPagar_Click(object sender, EventArgs e)
         {
             AbrirCadastroDeContasAPagar();
+        }
+        private void btnMenuVendas_ButtonClick(object sender, EventArgs e)
+        {
+            btnMenuVendas.ShowDropDown();
+        }
+        private void btnMenuOrcamento_Click(object sender, EventArgs e)
+        {
+            AbrirVendasOrcamento();
         }
         #endregion
 

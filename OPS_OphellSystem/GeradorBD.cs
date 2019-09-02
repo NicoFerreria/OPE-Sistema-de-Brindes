@@ -115,7 +115,9 @@ namespace OPS_OphellSystem
                             {
                                 {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
                                 {"descricao","TEXT" },
-                                {"tipo","TEXT" }
+                                {"tipo","TEXT" },
+                                {"excluido","INTEGER NOT NULL DEFAULT 0" },
+                                {"status","INTEGER NOT NULL DEFAULT 1" }
                             };
                         }
                         break;
