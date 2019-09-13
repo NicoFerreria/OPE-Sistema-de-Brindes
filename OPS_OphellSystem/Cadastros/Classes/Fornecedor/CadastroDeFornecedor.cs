@@ -17,7 +17,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
         private int _status;
         private string _complemento;
         private int _terceiro;
-        private int _digitoVerificador;
+        private string _digitoVerificador;
         private List<SqlParametro> parametros;
         #endregion
 
@@ -47,7 +47,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
             get { return _status; }
             set { _status = value; }
         }
-        public long CNPJ
+        public string CNPJ
         {
             get { return _cnpj; }
             set { _cnpj = value; }
@@ -102,7 +102,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
             get { return _terceiro; }
             set { _terceiro = value; }
         }
-        public int DigitoVerificador
+        public string DigitoVerificador
         {
             get { return _digitoVerificador; }
             set { _digitoVerificador = value; }
@@ -144,7 +144,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.Fornecedor
         {
             try
             {
-                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj_forn=@cnpj,nome_fantasia_forn=@fantasia,razao_social_forn=@razao,status_forn=@satatus," +
+                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj_forn=@cnpj,nome_fantasia_forn=@fantasia,razao_social_forn=@razao,status_forn=@status," +
                     "endereco_forn=@endereco,telefone_forn=@telefone,nome_contato_forn=@contato,email_contato_forn=@email,numero_forn=@numero," +
                     "complemento_forn=@complemento,observacao_forn=@observacao,terceiro=@terceiro WHERE id_forn=@id",RetornaParametros());
             }

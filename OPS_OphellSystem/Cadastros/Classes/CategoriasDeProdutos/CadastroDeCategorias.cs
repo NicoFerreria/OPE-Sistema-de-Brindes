@@ -45,7 +45,7 @@ namespace OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos
                 if (dtDados.Rows.Count <= 0)
                 {
                     utilitarios.RealizaConexaoBd("INSERT INTO Produto(codigo_prod,categoria_prod,desc_prod,cor_prod,obs_prod,status_prod)VALUES" +
-                        "(@codigo,@categoria,@descricao,@cor,@satatus)", RetornaParametros());
+                        "(@codigo,@categoria,@descricao,@cor,@observacao,@status)", RetornaParametros());
                 }
                 else
                 {
