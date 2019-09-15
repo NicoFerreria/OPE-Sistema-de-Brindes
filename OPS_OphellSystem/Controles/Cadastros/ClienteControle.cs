@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using Modelos;
-using System.Text;
-using System.Threading.Tasks;
+using Cadastros.Modelos;
 using System.Data;
 using OPS_OphellSystem;
 
-namespace Controles
+namespace Cadastros.Controles
 {
     public class ClienteControle
     {

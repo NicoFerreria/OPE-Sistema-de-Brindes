@@ -93,89 +93,90 @@
     <Compile Include="Cadastros\Classes\CategoriasDeProdutos\CadastroDeCategorias.cs" />
     <Compile Include="Cadastros\Classes\CondicoesDePagamento\CadastroDeCondicoesPagamento.cs" />
     <Compile Include="Cadastros\Classes\Fornecedor\CadastroDeFornecedor.cs" />
-    <Compile Include="Cadastros\Controles\ClienteControle.cs" />
-    <Compile Include="Cadastros\Controles\ContasPagarControle.cs" />
-    <Compile Include="Cadastros\Controles\FormasPagamentoControle.cs" />
-    <Compile Include="Cadastros\Modelos\ClienteModelo.cs" />
+    <Compile Include="Controles\Cadastros\ClienteControle.cs" />
+    <Compile Include="Controles\Financeiro\ContasPagarControle.cs" />
+    <Compile Include="Controles\Cadastros\FormasPagamentoControle.cs" />
+    <Compile Include="Modelos\Cadastros\ClienteModelo.cs" />
     <Compile Include="Cadastros\Classes\Operadores\CadastroDeOperadores.cs" />
     <Compile Include="Cadastros\Classes\PessoaJuridica.cs" />
-    <Compile Include="Cadastros\Modelos\ContaModelo.cs" />
-    <Compile Include="Cadastros\Modelos\ContasPagarModelo.cs" />
-    <Compile Include="Cadastros\Modelos\ContasReceberModelo.cs" />
-    <Compile Include="Cadastros\Modelos\FormaPagamentoModelo.cs" />
-    <Compile Include="Cadastros\Modelos\FornecedorModelo.cs" />
-    <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.cs">
+    <Compile Include="Modelos\Financeiro\ContaModelo.cs" />
+    <Compile Include="Modelos\Financeiro\ContasPagarModelo.cs" />
+    <Compile Include="Modelos\Financeiro\ContasReceberModelo.cs" />
+    <Compile Include="Modelos\Cadastros\FormaPagamentoModelo.cs" />
+    <Compile Include="Modelos\Cadastros\FornecedorModelo.cs" />
+    <Compile Include="Modelos\Vendas\OrcamentoModelo.cs" />
+    <Compile Include="Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.Designer.cs">
+    <Compile Include="Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.Designer.cs">
       <DependentUpon>FrmBuscaCategoriaProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmCadastroDeCategorias.cs">
+    <Compile Include="Views\CategoriasDeProdutos\FrmCadastroDeCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\CategoriasDeProdutos\FrmCadastroDeCategorias.Designer.cs">
+    <Compile Include="Views\CategoriasDeProdutos\FrmCadastroDeCategorias.Designer.cs">
       <DependentUpon>FrmCadastroDeCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.cs">
+    <Compile Include="Views\Clientes\FrmCadastroDeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.Designer.cs">
+    <Compile Include="Views\Clientes\FrmCadastroDeClientes.Designer.cs">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\Views\Clientes\FrmClientesListagem.cs">
+    <Compile Include="Views\Clientes\FrmClientesListagem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\Clientes\FrmClientesListagem.Designer.cs">
+    <Compile Include="Views\Clientes\FrmClientesListagem.Designer.cs">
       <DependentUpon>FrmClientesListagem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.cs">
+    <Compile Include="Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.Designer.cs">
+    <Compile Include="Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.Designer.cs">
       <DependentUpon>FrmCadastroDeCondicoesDePagamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\Views\ContasAPagar\FrmCadastroPagamentoContas.cs">
+    <Compile Include="Views\ContasAPagar\FrmCadastroPagamentoContas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\ContasAPagar\FrmCadastroPagamentoContas.Designer.cs">
+    <Compile Include="Views\ContasAPagar\FrmCadastroPagamentoContas.Designer.cs">
       <DependentUpon>FrmCadastroPagamentoContas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\Views\Fornecedores\FrmCadastroDeFornecedores.cs">
+    <Compile Include="Views\Fornecedores\FrmCadastroDeFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\Fornecedores\FrmCadastroDeFornecedores.Designer.cs">
+    <Compile Include="Views\Fornecedores\FrmCadastroDeFornecedores.Designer.cs">
       <DependentUpon>FrmCadastroDeFornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\Views\Operadores\FrmBuscaOperadores.cs">
+    <Compile Include="Views\Operadores\FrmBuscaOperadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\Operadores\FrmBuscaOperadores.Designer.cs">
+    <Compile Include="Views\Operadores\FrmBuscaOperadores.Designer.cs">
       <DependentUpon>FrmBuscaOperadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\Views\Operadores\FrmCadastroDeOperadores.cs">
+    <Compile Include="Views\Operadores\FrmCadastroDeOperadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\Operadores\FrmCadastroDeOperadores.Designer.cs">
+    <Compile Include="Views\Operadores\FrmCadastroDeOperadores.Designer.cs">
       <DependentUpon>FrmCadastroDeOperadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\Views\Orcamento\FrmOrcamento.cs">
+    <Compile Include="Views\Orcamento\FrmOrcamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastros\Views\Orcamento\FrmOrcamento.Designer.cs">
+    <Compile Include="Views\Orcamento\FrmOrcamento.Designer.cs">
       <DependentUpon>FrmOrcamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Enums.cs" />
     <Compile Include="GeradorBD.cs" />
-    <Compile Include="Lounch.cs">
+    <Compile Include="Views\Lounch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lounch.Designer.cs">
+    <Compile Include="Views\Lounch.Designer.cs">
       <DependentUpon>Lounch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Views\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Views\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -183,40 +184,40 @@
     <Compile Include="SessaoUsuario.cs" />
     <Compile Include="SqlParametro.cs" />
     <Compile Include="utilitarios.cs" />
-    <EmbeddedResource Include="Cadastros\Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.resx">
+    <EmbeddedResource Include="Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.resx">
       <DependentUpon>FrmBuscaCategoriaProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Views\CategoriasDeProdutos\FrmCadastroDeCategorias.resx">
+    <EmbeddedResource Include="Views\CategoriasDeProdutos\FrmCadastroDeCategorias.resx">
       <DependentUpon>FrmCadastroDeCategorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Views\Clientes\FrmCadastroDeClientes.resx">
+    <EmbeddedResource Include="Views\Clientes\FrmCadastroDeClientes.resx">
       <DependentUpon>FrmCadastroDeClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Views\Clientes\FrmClientesListagem.resx">
+    <EmbeddedResource Include="Views\Clientes\FrmClientesListagem.resx">
       <DependentUpon>FrmClientesListagem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.resx">
+    <EmbeddedResource Include="Views\CondicoesDePagamento\FrmCadastroDeCondicoesDePagamento.resx">
       <DependentUpon>FrmCadastroDeCondicoesDePagamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Views\ContasAPagar\FrmCadastroPagamentoContas.resx">
+    <EmbeddedResource Include="Views\ContasAPagar\FrmCadastroPagamentoContas.resx">
       <DependentUpon>FrmCadastroPagamentoContas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Views\Fornecedores\FrmCadastroDeFornecedores.resx">
+    <EmbeddedResource Include="Views\Fornecedores\FrmCadastroDeFornecedores.resx">
       <DependentUpon>FrmCadastroDeFornecedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Views\Operadores\FrmBuscaOperadores.resx">
+    <EmbeddedResource Include="Views\Operadores\FrmBuscaOperadores.resx">
       <DependentUpon>FrmBuscaOperadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Views\Operadores\FrmCadastroDeOperadores.resx">
+    <EmbeddedResource Include="Views\Operadores\FrmCadastroDeOperadores.resx">
       <DependentUpon>FrmCadastroDeOperadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Views\Orcamento\FrmOrcamento.resx">
+    <EmbeddedResource Include="Views\Orcamento\FrmOrcamento.resx">
       <DependentUpon>FrmOrcamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lounch.resx">
+    <EmbeddedResource Include="Views\Lounch.resx">
       <DependentUpon>Lounch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Views\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

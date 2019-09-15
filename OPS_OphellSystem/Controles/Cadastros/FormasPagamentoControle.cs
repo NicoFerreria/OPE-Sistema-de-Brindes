@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Modelos;
+using Cadastros.Modelos;
 using OPS_OphellSystem;
 
-namespace Controles
+namespace Cadastros.Controles
 {
     public class FormasPagamentoControle
     {

@@ -247,7 +247,6 @@
             this.Controls.Add(this.tgBtnStatus);
             this.Controls.Add(this.btnNovaCondicaoDePagamento);
             this.Controls.Add(this.btnGravar);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

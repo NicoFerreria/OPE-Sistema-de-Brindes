@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo5 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo6 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo3 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo4 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             this.grdClienteListagem = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.gradientLabel1 = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.sTip = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
@@ -99,19 +99,19 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(40, 40);
             this.btnExcluir.TabIndex = 5;
-            toolTipInfo5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo5.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo5.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo5.Body.Text = "Excluir Cliente";
-            toolTipInfo5.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo5.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo5.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo5.Footer.Text = "OPH";
-            toolTipInfo5.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo5.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo5.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo5.Header.Text = "Cliente";
-            this.sTip.SetToolTip(this.btnExcluir, toolTipInfo5);
+            toolTipInfo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            toolTipInfo1.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo1.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Body.Text = "Excluir Cliente";
+            toolTipInfo1.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo1.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo1.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Footer.Text = "OPH";
+            toolTipInfo1.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo1.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo1.Header.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Header.Text = "Cliente";
+            this.sTip.SetToolTip(this.btnExcluir, toolTipInfo1);
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // txtPesquisa
@@ -121,7 +121,7 @@
             this.txtPesquisa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
             this.txtPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPesquisa.CornerRadius = 5;
-            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtPesquisa.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPesquisa.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtPesquisa.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
@@ -132,21 +132,21 @@
             this.txtPesquisa.NearImage = global::OPS_OphellSystem.Properties.Resources.Pesquisa32x32;
             this.txtPesquisa.Size = new System.Drawing.Size(490, 40);
             this.txtPesquisa.TabIndex = 0;
-            toolTipInfo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo1.Body.ForeColor = System.Drawing.Color.Black;
-            toolTipInfo1.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo1.Body.Text = "Digite o CNPJ, Fantasia ou Razão social para pesquisa.\r\nPara Carregar todos, tecl" +
+            toolTipInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            toolTipInfo2.Body.ForeColor = System.Drawing.Color.Black;
+            toolTipInfo2.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo2.Body.Text = "Digite o CNPJ, Fantasia ou Razão social para pesquisa.\r\nPara Carregar todos, tecl" +
     "e enter com o campo vazio.";
-            toolTipInfo1.BorderColor = System.Drawing.Color.Transparent;
-            toolTipInfo1.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo1.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo1.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo1.Footer.Text = "OPH";
-            toolTipInfo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo1.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo1.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo1.Header.Text = "Clientes";
-            this.sTip.SetToolTip(this.txtPesquisa, toolTipInfo1);
+            toolTipInfo2.BorderColor = System.Drawing.Color.Transparent;
+            toolTipInfo2.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo2.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo2.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo2.Footer.Text = "OPH";
+            toolTipInfo2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo2.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo2.Header.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo2.Header.Text = "Clientes";
+            this.sTip.SetToolTip(this.txtPesquisa, toolTipInfo2);
             this.txtPesquisa.UseBorderColorOnFocus = true;
             this.txtPesquisa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPesquisa_KeyDown);
             // 
@@ -168,20 +168,20 @@
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(40, 40);
             this.btnFechar.TabIndex = 3;
-            toolTipInfo6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo6.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo6.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo6.Body.Text = "Fechar Listagem";
-            toolTipInfo6.BorderColor = System.Drawing.Color.Transparent;
-            toolTipInfo6.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo6.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo6.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo6.Footer.Text = "OPH";
-            toolTipInfo6.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo6.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo6.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo6.Header.Text = "Clientes";
-            this.sTip.SetToolTip(this.btnFechar, toolTipInfo6);
+            toolTipInfo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            toolTipInfo3.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo3.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo3.Body.Text = "Fechar Listagem";
+            toolTipInfo3.BorderColor = System.Drawing.Color.Transparent;
+            toolTipInfo3.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo3.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo3.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo3.Footer.Text = "OPH";
+            toolTipInfo3.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo3.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo3.Header.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo3.Header.Text = "Clientes";
+            this.sTip.SetToolTip(this.btnFechar, toolTipInfo3);
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnAdicionar
@@ -200,19 +200,19 @@
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(40, 40);
             this.btnAdicionar.TabIndex = 1;
-            toolTipInfo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            toolTipInfo3.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo3.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Body.Text = "Adicionar Cliente";
-            toolTipInfo3.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo3.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo3.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Footer.Text = "OPH";
-            toolTipInfo3.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolTipInfo3.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            toolTipInfo3.Header.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Header.Text = "Clientes";
-            this.sTip.SetToolTip(this.btnAdicionar, toolTipInfo3);
+            toolTipInfo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            toolTipInfo4.Body.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo4.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo4.Body.Text = "Adicionar Cliente";
+            toolTipInfo4.Footer.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo4.Footer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo4.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo4.Footer.Text = "OPH";
+            toolTipInfo4.Header.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolTipInfo4.Header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            toolTipInfo4.Header.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo4.Header.Text = "Clientes";
+            this.sTip.SetToolTip(this.btnAdicionar, toolTipInfo4);
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // FrmClientesListagem
