@@ -1,6 +1,8 @@
 ﻿using System;
 using OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos;
 using System.Windows.Forms;
+using Cadastros.Modelos;
+using Cadastros.Controles;
 
 namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
 {
@@ -15,6 +17,7 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         public FrmCadastroDeCategorias()
         {
             InitializeComponent();
+            CriaColunasGrid();
         }
         private void NovoForm()
         {
@@ -25,6 +28,24 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                 NovoProduto();
             }
             catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void CriaColunasGrid()
+        {
+            try
+            {
+                utilitarios.CriarColunasGrid(grdListagemProdutos, "id", "ID", TiposColunas.TEXTO, true, false, false);
+                utilitarios.CriarColunasGrid(grdListagemProdutos, "codigo", "Código");
+                utilitarios.CriarColunasGrid(grdListagemProdutos, "nome", "Nome");
+                utilitarios.CriarColunasGrid(grdListagemProdutos, "descricao", "Descrição");
+                utilitarios.CriarColunasGrid(grdListagemProdutos, "status", "Status",TiposColunas.CHEK);
+                utilitarios.CriarColunasGrid(grdListagemProdutos, "observacao", "Observação");
+
+                grdListagemProdutos.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -144,10 +165,7 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
             Fechar();
             e.Cancel = true;
         }
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            Fechar();
-        }
+        
         private void GravarCategoria()
         {
             try
@@ -156,15 +174,16 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                 {
                     return;
                 }
-
-                cadastroCategoria.ID = txtId.Text == string.Empty ? 0 : int.Parse(txtId.Text);
-                cadastroCategoria.CodigoCategoria = int.Parse(txtCodigoCategria.Text);
-                cadastroCategoria.Categoria = txtCategoria.Text;
-                cadastroCategoria.Descricao = txtDescricao.Text;
-                cadastroCategoria.Observacao = txtObservacao.Text;
-                cadastroCategoria.Cor = cmbCor.Text;
-                cadastroCategoria.Status = tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active ? 1 : 0;
-                cadastroCategoria.GravarCategoria();
+                ProdutoModelo produto = new ProdutoModelo();
+                produto.ProdutoID = txtId.Text == string.Empty ? 0 : int.Parse(txtId.Text);                
+                produto.Codigo = int.Parse(txtCodigoCategria.Text);
+                produto.Nome = txtCategoria.Text;
+                produto.Descricao = txtDescricao.Text;
+                produto.Observacao = txtObservacao.Text;
+                produto.Cor = cmbCor.Text;
+                produto.Status = (tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);                
+                ProdutoControle cadastro = new ProdutoControle(produto);
+                cadastro.GravarProduto();
                 MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -250,6 +269,10 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             AbreTelaPesquisa();
+        }
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Fechar();
         }
         #endregion
 
