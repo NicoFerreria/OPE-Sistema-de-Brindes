@@ -29,13 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection5 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection5 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer5 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection5 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection3 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection3 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer3 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection3 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             this.grpDadosCategoria = new System.Windows.Forms.GroupBox();
+            this.cmbCriterioPesquisa = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
+            this.txtFiltrar = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblListagem = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.grdListagemProdutos = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.lblCodigoCategoria = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtCodigoCategria = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.btnBuscar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.cmbCor = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
             this.lblTxtDescricao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtObservacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -49,12 +54,11 @@
             this.tgBtnStatus = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.btnNovoProduto = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.btnBuscar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.grdListagemProdutos = new Syncfusion.WinForms.DataGrid.SfDataGrid();
-            this.lblListagem = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtFiltrar = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.grpDadosCategoria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbCriterioPesquisa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListagemProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoCategria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObservacao)).BeginInit();
@@ -62,21 +66,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdListagemProdutos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDadosCategoria
             // 
-            this.grpDadosCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpDadosCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.grpDadosCategoria.BackColor = System.Drawing.Color.White;
-            this.grpDadosCategoria.Controls.Add(this.txtFiltrar);
-            this.grpDadosCategoria.Controls.Add(this.lblListagem);
-            this.grpDadosCategoria.Controls.Add(this.grdListagemProdutos);
             this.grpDadosCategoria.Controls.Add(this.lblCodigoCategoria);
-            this.grpDadosCategoria.Controls.Add(this.btnBuscar);
             this.grpDadosCategoria.Controls.Add(this.txtCodigoCategria);
             this.grpDadosCategoria.Controls.Add(this.cmbCor);
             this.grpDadosCategoria.Controls.Add(this.lblTxtDescricao);
@@ -91,10 +88,59 @@
             this.grpDadosCategoria.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDadosCategoria.Location = new System.Drawing.Point(12, 105);
             this.grpDadosCategoria.Name = "grpDadosCategoria";
-            this.grpDadosCategoria.Size = new System.Drawing.Size(984, 544);
+            this.grpDadosCategoria.Size = new System.Drawing.Size(537, 544);
             this.grpDadosCategoria.TabIndex = 0;
             this.grpDadosCategoria.TabStop = false;
             this.grpDadosCategoria.Text = "Dados da Categoria";
+            // 
+            // cmbCriterioPesquisa
+            // 
+            this.cmbCriterioPesquisa.BackColor = System.Drawing.Color.White;
+            this.cmbCriterioPesquisa.BeforeTouchSize = new System.Drawing.Size(220, 21);
+            this.cmbCriterioPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCriterioPesquisa.Location = new System.Drawing.Point(555, 151);
+            this.cmbCriterioPesquisa.Name = "cmbCriterioPesquisa";
+            this.cmbCriterioPesquisa.Size = new System.Drawing.Size(220, 21);
+            this.cmbCriterioPesquisa.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
+            this.cmbCriterioPesquisa.TabIndex = 15;
+            // 
+            // txtFiltrar
+            // 
+            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFiltrar.BeforeTouchSize = new System.Drawing.Size(507, 192);
+            this.txtFiltrar.Location = new System.Drawing.Point(781, 152);
+            this.txtFiltrar.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtFiltrar.Name = "txtFiltrar";
+            this.txtFiltrar.Size = new System.Drawing.Size(169, 20);
+            this.txtFiltrar.TabIndex = 14;
+            this.txtFiltrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFiltrar_KeyDown);
+            // 
+            // lblListagem
+            // 
+            this.lblListagem.DY = -17;
+            this.lblListagem.LabeledControl = this.grdListagemProdutos;
+            this.lblListagem.Location = new System.Drawing.Point(555, 191);
+            this.lblListagem.Name = "lblListagem";
+            this.lblListagem.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblListagem.Size = new System.Drawing.Size(49, 13);
+            this.lblListagem.TabIndex = 13;
+            this.lblListagem.Text = "Listagem";
+            // 
+            // grdListagemProdutos
+            // 
+            this.grdListagemProdutos.AccessibleName = "Table";
+            this.grdListagemProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdListagemProdutos.Location = new System.Drawing.Point(555, 208);
+            this.grdListagemProdutos.Name = "grdListagemProdutos";
+            this.grdListagemProdutos.Size = new System.Drawing.Size(442, 441);
+            this.grdListagemProdutos.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.grdListagemProdutos.Style.CurrentCellStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.grdListagemProdutos.Style.RowHeaderStyle.SelectionMarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.grdListagemProdutos.TabIndex = 12;
+            this.grdListagemProdutos.Text = "sfDataGrid1";
             // 
             // lblCodigoCategoria
             // 
@@ -109,7 +155,7 @@
             // 
             // txtCodigoCategria
             // 
-            this.txtCodigoCategria.BeforeTouchSize = new System.Drawing.Size(79, 27);
+            this.txtCodigoCategria.BeforeTouchSize = new System.Drawing.Size(271, 20);
             this.txtCodigoCategria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodigoCategria.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtCodigoCategria.Location = new System.Drawing.Point(109, 47);
@@ -121,12 +167,31 @@
             this.txtCodigoCategria.TextChanged += new System.EventHandler(this.txtCodigoCategria_TextChanged);
             this.txtCodigoCategria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoCategria_KeyPress);
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BeforeTouchSize = new System.Drawing.Size(40, 40);
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = global::OPS_OphellSystem.Properties.Resources.BuscarPadrao28x28;
+            this.btnBuscar.IsBackStageButton = false;
+            this.btnBuscar.Location = new System.Drawing.Point(956, 139);
+            this.btnBuscar.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btnBuscar.MinimumSize = new System.Drawing.Size(40, 40);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(40, 40);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // cmbCor
             // 
             this.cmbCor.AllowNewText = false;
             this.cmbCor.AutoComplete = false;
             this.cmbCor.BackColor = System.Drawing.Color.White;
-            this.cmbCor.BeforeTouchSize = new System.Drawing.Size(200, 27);
+            this.cmbCor.BeforeTouchSize = new System.Drawing.Size(507, 27);
             this.cmbCor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCor.FlatBorderColor = System.Drawing.Color.Black;
             this.cmbCor.FlatStyle = Syncfusion.Windows.Forms.Tools.ComboFlatStyle.Flat;
@@ -134,7 +199,7 @@
             this.cmbCor.MetroBorderColor = System.Drawing.Color.Black;
             this.cmbCor.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.cmbCor.Name = "cmbCor";
-            this.cmbCor.Size = new System.Drawing.Size(200, 27);
+            this.cmbCor.Size = new System.Drawing.Size(507, 27);
             this.cmbCor.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.cmbCor.TabIndex = 4;
             // 
@@ -151,14 +216,14 @@
             // 
             // txtObservacao
             // 
-            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(273, 27);
+            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(507, 192);
             this.txtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtObservacao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtObservacao.Location = new System.Drawing.Point(24, 274);
             this.txtObservacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(392, 105);
+            this.txtObservacao.Size = new System.Drawing.Size(507, 192);
             this.txtObservacao.TabIndex = 6;
             this.txtObservacao.UseBorderColorOnFocus = true;
             // 
@@ -175,13 +240,13 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.BeforeTouchSize = new System.Drawing.Size(273, 27);
+            this.txtDescricao.BeforeTouchSize = new System.Drawing.Size(507, 192);
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescricao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtDescricao.Location = new System.Drawing.Point(24, 159);
             this.txtDescricao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(392, 27);
+            this.txtDescricao.Size = new System.Drawing.Size(507, 27);
             this.txtDescricao.TabIndex = 5;
             this.txtDescricao.UseBorderColorOnFocus = true;
             // 
@@ -209,13 +274,13 @@
             // 
             // txtCategoria
             // 
-            this.txtCategoria.BeforeTouchSize = new System.Drawing.Size(273, 27);
+            this.txtCategoria.BeforeTouchSize = new System.Drawing.Size(507, 192);
             this.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCategoria.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtCategoria.Location = new System.Drawing.Point(24, 104);
             this.txtCategoria.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(392, 27);
+            this.txtCategoria.Size = new System.Drawing.Size(507, 27);
             this.txtCategoria.TabIndex = 3;
             this.txtCategoria.UseBorderColorOnFocus = true;
             // 
@@ -232,7 +297,7 @@
             // 
             // txtId
             // 
-            this.txtId.BeforeTouchSize = new System.Drawing.Size(79, 27);
+            this.txtId.BeforeTouchSize = new System.Drawing.Size(271, 20);
             this.txtId.Location = new System.Drawing.Point(24, 47);
             this.txtId.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtId.Name = "txtId";
@@ -243,27 +308,27 @@
             // 
             // tgBtnStatus
             // 
-            activeStateCollection5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            activeStateCollection5.BorderColor = System.Drawing.Color.Black;
-            activeStateCollection5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            activeStateCollection5.Text = "Desativar";
-            this.tgBtnStatus.ActiveState = activeStateCollection5;
+            activeStateCollection3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            activeStateCollection3.BorderColor = System.Drawing.Color.Black;
+            activeStateCollection3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            activeStateCollection3.Text = "Desativar";
+            this.tgBtnStatus.ActiveState = activeStateCollection3;
             this.tgBtnStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tgBtnStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tgBtnStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tgBtnStatus.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            inactiveStateCollection5.BorderColor = System.Drawing.Color.Black;
-            inactiveStateCollection5.ForeColor = System.Drawing.Color.White;
-            inactiveStateCollection5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            inactiveStateCollection5.Text = "Ativar";
-            this.tgBtnStatus.InactiveState = inactiveStateCollection5;
+            inactiveStateCollection3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            inactiveStateCollection3.BorderColor = System.Drawing.Color.Black;
+            inactiveStateCollection3.ForeColor = System.Drawing.Color.White;
+            inactiveStateCollection3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            inactiveStateCollection3.Text = "Ativar";
+            this.tgBtnStatus.InactiveState = inactiveStateCollection3;
             this.tgBtnStatus.Location = new System.Drawing.Point(882, 75);
             this.tgBtnStatus.MinimumSize = new System.Drawing.Size(52, 20);
             this.tgBtnStatus.Name = "tgBtnStatus";
-            this.tgBtnStatus.Renderer = toggleButtonRenderer5;
+            this.tgBtnStatus.Renderer = toggleButtonRenderer3;
             this.tgBtnStatus.Size = new System.Drawing.Size(114, 24);
-            this.tgBtnStatus.Slider = sliderCollection5;
+            this.tgBtnStatus.Slider = sliderCollection3;
             this.tgBtnStatus.TabIndex = 10;
             this.tgBtnStatus.Text = "toggleButton1";
             this.tgBtnStatus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
@@ -311,25 +376,6 @@
             this.btnVoltar.TabIndex = 11;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Image = global::OPS_OphellSystem.Properties.Resources.BuscarPadrao28x28;
-            this.btnBuscar.IsBackStageButton = false;
-            this.btnBuscar.Location = new System.Drawing.Point(938, 37);
-            this.btnBuscar.MaximumSize = new System.Drawing.Size(40, 40);
-            this.btnBuscar.MinimumSize = new System.Drawing.Size(40, 40);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(40, 40);
-            this.btnBuscar.TabIndex = 9;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // btnGravar
             // 
             this.btnGravar.BeforeTouchSize = new System.Drawing.Size(70, 70);
@@ -352,52 +398,20 @@
             this.btnGravar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
-            // grdListagemProdutos
-            // 
-            this.grdListagemProdutos.AccessibleName = "Table";
-            this.grdListagemProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdListagemProdutos.Location = new System.Drawing.Point(433, 104);
-            this.grdListagemProdutos.Name = "grdListagemProdutos";
-            this.grdListagemProdutos.Size = new System.Drawing.Size(545, 421);
-            this.grdListagemProdutos.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
-            this.grdListagemProdutos.Style.CurrentCellStyle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.grdListagemProdutos.Style.RowHeaderStyle.SelectionMarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.grdListagemProdutos.TabIndex = 12;
-            this.grdListagemProdutos.Text = "sfDataGrid1";
-            // 
-            // lblListagem
-            // 
-            this.lblListagem.DY = -23;
-            this.lblListagem.LabeledControl = this.grdListagemProdutos;
-            this.lblListagem.Location = new System.Drawing.Point(433, 81);
-            this.lblListagem.Name = "lblListagem";
-            this.lblListagem.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblListagem.Size = new System.Drawing.Size(75, 19);
-            this.lblListagem.TabIndex = 13;
-            this.lblListagem.Text = "Listagem";
-            // 
-            // txtFiltrar
-            // 
-            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltrar.BeforeTouchSize = new System.Drawing.Size(273, 27);
-            this.txtFiltrar.Location = new System.Drawing.Point(659, 47);
-            this.txtFiltrar.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(273, 27);
-            this.txtFiltrar.TabIndex = 14;
-            // 
             // FrmCadastroDeCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 661);
+            this.Controls.Add(this.txtFiltrar);
+            this.Controls.Add(this.cmbCriterioPesquisa);
             this.Controls.Add(this.tgBtnStatus);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnNovoProduto);
+            this.Controls.Add(this.lblListagem);
             this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.grdListagemProdutos);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.grpDadosCategoria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -409,6 +423,9 @@
             this.Shown += new System.EventHandler(this.FrmCadastroDeCategorias_Shown);
             this.grpDadosCategoria.ResumeLayout(false);
             this.grpDadosCategoria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbCriterioPesquisa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListagemProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoCategria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObservacao)).EndInit();
@@ -416,9 +433,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCategoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdListagemProdutos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFiltrar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -445,5 +461,6 @@
         private Syncfusion.WinForms.DataGrid.SfDataGrid grdListagemProdutos;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblListagem;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtFiltrar;
+        private Syncfusion.Windows.Forms.Tools.ComboBoxAdv cmbCriterioPesquisa;
     }
 }

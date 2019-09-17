@@ -68,7 +68,7 @@ namespace OPS_OphellSystem
             }
         }
         public static void CriarColunasGrid(SfDataGrid grid, string campo, string caption, TiposColunas tipo = TiposColunas.TEXTO, bool limparColuna = false,
-            bool editar = false,bool visivel = true)
+            bool editar = false,bool visivel = true,bool permitirFiltro = false)
         {
             try
             {
@@ -112,6 +112,7 @@ namespace OPS_OphellSystem
                 coluna.AllowEditing = editar;
                 coluna.MappingName = campo;
                 coluna.HeaderText = caption;
+                coluna.AllowFiltering = permitirFiltro;
                 grid.Columns.Add(coluna);
                 
             }

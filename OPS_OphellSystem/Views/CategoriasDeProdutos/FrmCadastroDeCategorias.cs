@@ -9,6 +9,7 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
     public partial class FrmCadastroDeCategorias : Form
     {
         #region "Classes"
+        ProdutoControle cadastro = new ProdutoControle();
         CadastroDeCategorias cadastroCategoria = new CadastroDeCategorias();
         FrmBuscaCategoriaProduto telaPesquisa;
         #endregion
@@ -26,6 +27,7 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                 CarregarCombos();
                 AtivaDesativaProduto();
                 NovoProduto();
+                CarregarGrid();
             }
             catch (Exception ex)
             {
@@ -40,12 +42,14 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                 utilitarios.CriarColunasGrid(grdListagemProdutos, "codigo", "Código");
                 utilitarios.CriarColunasGrid(grdListagemProdutos, "nome", "Nome");
                 utilitarios.CriarColunasGrid(grdListagemProdutos, "descricao", "Descrição");
-                utilitarios.CriarColunasGrid(grdListagemProdutos, "status", "Status",TiposColunas.CHEK);
+                utilitarios.CriarColunasGrid(grdListagemProdutos, "cor", "Cor");
+                utilitarios.CriarColunasGrid(grdListagemProdutos, "status", "Status", TiposColunas.CHEK);
                 utilitarios.CriarColunasGrid(grdListagemProdutos, "observacao", "Observação");
 
                 grdListagemProdutos.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.Fill;
+                grdListagemProdutos.AllowFiltering = true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -68,6 +72,7 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         {
             try
             {
+                //Combo Cor
                 cmbCor.Items.Clear();
                 cmbCor.Items.Add("Azul");
                 cmbCor.Items.Add("Preto");
@@ -77,6 +82,13 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                 cmbCor.Items.Add("Verde");
                 cmbCor.Items.Add("Laranja");
                 cmbCor.SelectedIndex = 0;
+
+                //Combo Pesquisa
+                cmbCriterioPesquisa.Items.Clear();
+                cmbCriterioPesquisa.Items.Add("Nome");
+                cmbCriterioPesquisa.Items.Add("Descrição");
+                cmbCriterioPesquisa.Items.Add("Cor");
+                cmbCriterioPesquisa.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -103,14 +115,15 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void NovoProduto()
+        private void NovoProduto(bool limparCodigo = true)
         {
             try
             {
-                txtId.Text = string.Empty;
-                txtCodigoCategria.Text = string.Empty;
+                if(limparCodigo == true) txtCodigoCategria.Text = string.Empty;
+                txtId.Text = string.Empty;                
                 txtCategoria.Text = string.Empty;
                 cmbCor.SelectedIndex = 0;
+                cmbCriterioPesquisa.SelectedIndex = 0;
                 txtDescricao.Text = string.Empty;
                 txtObservacao.Text = string.Empty;
                 btnGravar.Enabled = true;
@@ -126,46 +139,31 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         {
             try
             {
-                if (txtCodigoCategria.Text == string.Empty)
+                ProdutoModelo produto = new ProdutoModelo();
+                if (long.TryParse(txtCodigoCategria.Text, out long codigo))
                 {
-                    return;
+                    produto = cadastro.GetProduto(codigo);
+                }
+                if(produto.ProdutoID > 0)
+                {
+                    txtId.Text = produto.ProdutoID.ToString();
+                    txtCategoria.Text = produto.Nome;
+                    txtDescricao.Text = produto.Descricao;
+                    cmbCor.Text = produto.Cor;
+                    txtObservacao.Text = produto.Observacao;
+                    tgBtnStatus.ToggleState = produto.Status ? Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active : Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive;
                 }
                 else
                 {
-                    cadastroCategoria.CodigoCategoria = int.Parse(txtCodigoCategria.Text);
-                }
-                if(cadastroCategoria.ConsultaCategoriaProcudoPeloCodigo() == true)
-                {
-                    txtId.Text = cadastroCategoria.ID.ToString();
-                    txtCategoria.Text = cadastroCategoria.Categoria;
-                    txtDescricao.Text = cadastroCategoria.Descricao;
-                    cmbCor.Text = cadastroCategoria.Cor;
-                    txtObservacao.Text = cadastroCategoria.Observacao;
-                    if(cadastroCategoria.Status == 1)
-                    {
-                        tgBtnStatus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-                    }
-                    else
-                    {
-                        tgBtnStatus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive;
-                    }
-
+                    NovoProduto(false);
                 }
                 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        #endregion
-
-        #region "Eventos"
-        private void FrmCadastroDeCategorias_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Fechar();
-            e.Cancel = true;
-        }
-        
         private void GravarCategoria()
         {
             try
@@ -175,17 +173,20 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                     return;
                 }
                 ProdutoModelo produto = new ProdutoModelo();
-                produto.ProdutoID = txtId.Text == string.Empty ? 0 : int.Parse(txtId.Text);                
+                produto.ProdutoID = txtId.Text == string.Empty ? 0 : int.Parse(txtId.Text);
                 produto.Codigo = int.Parse(txtCodigoCategria.Text);
                 produto.Nome = txtCategoria.Text;
                 produto.Descricao = txtDescricao.Text;
                 produto.Observacao = txtObservacao.Text;
                 produto.Cor = cmbCor.Text;
-                produto.Status = (tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);                
-                ProdutoControle cadastro = new ProdutoControle(produto);
-                cadastro.GravarProduto();
-                MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                produto.Status = (tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
+                cadastro.GravarProduto(produto);
+                CarregarGrid();
+                if(MessageBox.Show("Operação realizada com sucesso! Deseja gravar mais produtos?", "OPH", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    NovoProduto();                    
+                }
             }
             catch (Exception ex)
             {
@@ -194,13 +195,57 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         }
         private void AbreTelaPesquisa()
         {
-            if(telaPesquisa == null)
+            if (telaPesquisa == null)
             {
                 telaPesquisa = new FrmBuscaCategoriaProduto();
             }
             telaPesquisa.ShowDialog();
         }
-        #endregion
+        private void CarregarGrid()
+        {
+            try
+            {
+                grdListagemProdutos.DataSource = null;
+                grdListagemProdutos.DataSource = cadastro.RetornaDataTableTodosProdutos();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void BuscaNaGrid()
+        {
+            try
+            {
+                if (txtFiltrar.Text == "")
+                {
+                    grdListagemProdutos.ClearFilters();
+                    return;
+                }
+                string coluna = "";
+                switch (cmbCriterioPesquisa.Text)
+                {
+                    case "Nome":
+                        coluna = "nome";
+                        break;
+                    case "Descrição":
+                        coluna = "descricao";
+                        break;
+                    case "Cor":
+                        coluna = "cor";
+                        break;                    
+                }
+
+                grdListagemProdutos.ClearFilters();
+                grdListagemProdutos.Columns[coluna].FilterPredicates.Add(new Syncfusion.Data.FilterPredicate() { FilterType= Syncfusion.Data.FilterType.Contains,
+                FilterValue = txtFiltrar.Text, FilterBehavior = Syncfusion.Data.FilterBehavior.StronglyTyped});      
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion       
 
         #region "Funcoes"
         private bool ValidaCampos()
@@ -213,7 +258,7 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                     txtCodigoCategria.Focus();
                     return false;
                 }
-                if(int.Parse(txtCodigoCategria.Text) <= 0)
+                if (int.Parse(txtCodigoCategria.Text) <= 0)
                 {
                     MessageBox.Show("O Código da categoria não pode ser menor ou igual a 0!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtCodigoCategria.Focus();
@@ -246,6 +291,11 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         {
             NovoForm();
         }
+        private void FrmCadastroDeCategorias_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Fechar();
+            e.Cancel = true;
+        }
         private void btnGravar_Click(object sender, EventArgs e)
         {
             GravarCategoria();
@@ -268,14 +318,16 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            AbreTelaPesquisa();
+            BuscaNaGrid();
         }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Fechar();
         }
+        private void txtFiltrar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) BuscaNaGrid();
+        }
         #endregion
-
-
     }
 }
