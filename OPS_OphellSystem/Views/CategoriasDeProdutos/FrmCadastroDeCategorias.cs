@@ -3,6 +3,7 @@ using OPS_OphellSystem.Cadastros.Classes.CategoriasDeProdutos;
 using System.Windows.Forms;
 using Cadastros.Modelos;
 using Cadastros.Controles;
+using System.Data;
 
 namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
 {
@@ -167,19 +168,8 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         private void GravarCategoria()
         {
             try
-            {
-                if (ValidaCampos() == false)
-                {
-                    return;
-                }
-                ProdutoModelo produto = new ProdutoModelo();
-                produto.ProdutoID = txtId.Text == string.Empty ? 0 : int.Parse(txtId.Text);
-                produto.Codigo = int.Parse(txtCodigoCategria.Text);
-                produto.Nome = txtCategoria.Text;
-                produto.Descricao = txtDescricao.Text;
-                produto.Observacao = txtObservacao.Text;
-                produto.Cor = cmbCor.Text;
-                produto.Status = (tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
+            {               
+                ProdutoModelo produto = ObterProdutoCarregado();
                 cadastro.GravarProduto(produto);
                 CarregarGrid();
                 if(MessageBox.Show("Operação realizada com sucesso! Deseja gravar mais produtos?", "OPH", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
@@ -245,6 +235,49 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void CapturaDadosGrid()
+        {
+            try
+            {
+                DataRowView drLinha = grdListagemProdutos.SelectedItem as DataRowView;
+                if(drLinha != null)
+                {
+                    txtCodigoCategria.Text = drLinha["codigo"].ToString();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ExcluirProduto()
+        {
+            try
+            {
+                DataRowView drLinha = grdListagemProdutos.SelectedItem as DataRowView;
+                if(drLinha != null)
+                {
+                    if (MessageBox.Show("Tem certeza de que deseja excluir este produto?", "OPH", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                        MessageBoxDefaultButton.Button2) == DialogResult.No) return;
+                    ProdutoModelo produto = new ProdutoModelo();
+                    produto.ProdutoID = long.Parse(drLinha["id"].ToString());
+                    produto.Nome = drLinha["nome"].ToString();
+                    produto.Descricao = drLinha["descricao"].ToString();
+                    produto.Codigo = long.Parse(drLinha["codigo"].ToString());
+                    produto.Cor = drLinha["cor"].ToString();
+                    produto.Observacao = drLinha["observacao"].ToString();
+                    if(cadastro.ExcluirProduto(produto) == true)
+                    {
+                        MessageBox.Show("Produto excluído com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CarregarGrid();
+                        NovoProduto();
+                    }
+                }
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion       
 
         #region "Funcoes"
@@ -284,9 +317,39 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
                 return false;
             }
         }
+        private ProdutoModelo ObterProdutoCarregado()
+        {
+            ProdutoModelo produto = new ProdutoModelo();
+            try
+            {
+                if (ValidaCampos() == false)
+                {
+                    throw new Exception("Erro ao validar Campos!");
+                }
+                produto.ProdutoID = txtId.Text == string.Empty ? 0 : int.Parse(txtId.Text);
+                produto.Codigo = int.Parse(txtCodigoCategria.Text);
+                produto.Nome = txtCategoria.Text;
+                produto.Descricao = txtDescricao.Text;
+                produto.Observacao = txtObservacao.Text;
+                produto.Cor = cmbCor.Text;
+                produto.Status = (tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return produto;
+        }
         #endregion
 
         #region "Eventos"
+        private void FrmCadastroDeCategorias_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.N && e.Modifiers == Keys.Control) NovoProduto();
+            if (e.KeyCode == Keys.S && e.Modifiers == Keys.Control) GravarCategoria();
+            if (e.KeyCode == Keys.Escape) Fechar();
+            if (e.KeyCode == Keys.F8) cadastro.ExcluirProduto(ObterProdutoCarregado());
+        }
         private void FrmCadastroDeCategorias_Shown(object sender, EventArgs e)
         {
             NovoForm();
@@ -327,6 +390,21 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
         private void txtFiltrar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) BuscaNaGrid();
+        }
+        private void grdListagemProdutos_CellDoubleClick(object sender, Syncfusion.WinForms.DataGrid.Events.CellClickEventArgs e)
+        {
+            CapturaDadosGrid();
+        }       
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            cadastro.ExcluirProduto(ObterProdutoCarregado());
+            CarregarGrid();
+            NovoProduto();
+        }
+        private void grdListagemProdutos_CurrentCellKeyDown(object sender, Syncfusion.WinForms.DataGrid.Events.CurrentCellKeyEventArgs e)
+        {
+            var k = e.KeyEventArgs;
+            if (k.KeyCode == Keys.Delete) ExcluirProduto();
         }
         #endregion
     }

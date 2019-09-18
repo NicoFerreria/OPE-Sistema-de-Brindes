@@ -70,6 +70,7 @@ namespace Cadastros.Controles
                 throw new System.Exception(ex.Message);
             }
         }        
+        
         #endregion
 
         #region "Funcoes"
@@ -144,11 +145,23 @@ namespace Cadastros.Controles
         {
             try
             {                
-                return utilitarios.RealizaConexaoBd("SELECT id,codigo,nome,descricao,cor,excluido,observacao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status FROM Produto");                
+                return utilitarios.RealizaConexaoBd("SELECT id,codigo,nome,descricao,cor,excluido,observacao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status" +
+                    " FROM Produto WHERE excluido=0");                
             }catch(Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }
+        }
+        public bool ExcluirProduto(ProdutoModelo produto)
+        {
+            try
+            {
+                utilitarios.RealizaConexaoBd("UPDATE Produto SET excluido=1 WHERE id=@id AND excluido=0",parametros(produto));
+            }catch(Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+            return true;
         }
         #endregion
     }
