@@ -124,15 +124,6 @@
     <value>149, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnGravarCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAALpJREFUWEft
-        jsEKAjEMRPsJgnrR//8ZDyKCoF/jJmCWEsY23elhD3nwkAw7Y0uS7JXvBO/iUdwEGtziQzyJw9hADcoU
-        n9t9+/2+xYs4hB9VUKb43O6DaI/4iFcxjB9VUIaovzuLT1HvlwZR0J+hDOG/00dEuyuoYFnUGpQ1aY1E
-        rUFZk+FCh3wA/QC7RzX83eXfwKiGv7uwA2yfHmD79ADbpwfYPj3A9ukBtk8PsP21MNswqDzDJNkbpSxt
-        cv4pggNaTwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAAAAAAMQOAADEDgAAAAAAAAAA

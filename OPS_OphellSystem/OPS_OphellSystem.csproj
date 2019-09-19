@@ -250,6 +250,12 @@
     <Content Include="icons8_user_shield.ico" />
     <Content Include="LogoOphell-32.ico" />
     <Content Include="LogoOphell-48.ico" />
+    <None Include="Resources\LimparBrancoPadrao28x28.png" />
+    <None Include="Resources\FinalizarBrancoPadrao28x28.png" />
+    <None Include="Resources\ExcluirBrancoPadrao28x28.png" />
+    <None Include="Resources\LimparBrancoPadrao32x32.png" />
+    <None Include="Resources\FinalizarBrancoPadrao32x32.png" />
+    <None Include="Resources\ExcluirBrancoPadrao32x32.png" />
     <None Include="Resources\OrcamentoPadrao32x32.png" />
     <None Include="Resources\VendasPadrao32x32.png" />
     <None Include="Resources\RecebimentoPadrao32x32.png" />

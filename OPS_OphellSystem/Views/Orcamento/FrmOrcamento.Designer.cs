@@ -51,13 +51,17 @@
             this.textBoxExt1 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.btnNovo = new Syncfusion.Windows.Forms.ButtonAdv();
             this.pnlGravcao = new System.Windows.Forms.Panel();
-            this.pnlTransporte = new System.Windows.Forms.Panel();
-            this.cmbTipoGravacao = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
-            this.lblTipoGravacao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.lblValorGravcao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtValorGravacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblCodigoGravacao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtCodigoGravacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblTotalGravacao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtTotalGravacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblValorGravcao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtValorGravacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblTipoGravacao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.cmbTipoGravacao = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
+            this.pnlTransporte = new System.Windows.Forms.Panel();
+            this.lblCodigoTransporte = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.txtCodigoTransporte = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblValorTransporte = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtValorTransporte = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblCodigoCliente = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -66,10 +70,6 @@
             this.txtCodigoFornecedor = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblCodigoProduto = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtCodigoProduto = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblCodigoGravacao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtCodigoGravacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblCodigoTransporte = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtCodigoTransporte = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.txtPorcentagemImposto = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblBv = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtBv = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -80,22 +80,22 @@
             this.lblTotalLucro = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.lblTotal = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.grpDadosOrcamento = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.textBoxExt6 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.textBoxExt5 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.textBoxExt3 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtTotalProduto = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblTotalProduto = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblTituloTotal = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.lblPorcentagemImposto = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.grdOrcamentos = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.lblListagem = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.lblTituloTotal = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnFechar = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxExt3 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblTotalProduto = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtTotalProduto = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.autoLabel3 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.textBoxExt5 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.textBoxExt6 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
             ((System.ComponentModel.ISupportInitialize)(this.txtCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGravacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTrasnporte)).BeginInit();
@@ -104,33 +104,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).BeginInit();
             this.pnlGravcao.SuspendLayout();
-            this.pnlTransporte.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoGravacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValorGravacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoGravacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalGravacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorGravacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoGravacao)).BeginInit();
+            this.pnlTransporte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoTransporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValorTransporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoFornecedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoGravacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoTransporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPorcentagemImposto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPorcentagemLucro)).BeginInit();
             this.grpDadosOrcamento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdOrcamentos)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdOrcamentos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCliente
             // 
             this.txtCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCliente.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCliente.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtCliente.Enabled = false;
             this.txtCliente.Location = new System.Drawing.Point(100, 36);
             this.txtCliente.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -198,7 +198,7 @@
             // 
             this.txtGravacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGravacao.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtGravacao.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtGravacao.Enabled = false;
             this.txtGravacao.Location = new System.Drawing.Point(96, 23);
             this.txtGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -238,7 +238,7 @@
             // 
             this.txtTrasnporte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTrasnporte.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtTrasnporte.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtTrasnporte.Enabled = false;
             this.txtTrasnporte.Location = new System.Drawing.Point(96, 27);
             this.txtTrasnporte.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -250,7 +250,7 @@
             // 
             this.txtFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFornecedor.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtFornecedor.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtFornecedor.Enabled = false;
             this.txtFornecedor.Location = new System.Drawing.Point(100, 83);
             this.txtFornecedor.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -290,7 +290,7 @@
             // 
             this.txtProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtProduto.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtProduto.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtProduto.Enabled = false;
             this.txtProduto.Location = new System.Drawing.Point(107, 27);
             this.txtProduto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -328,7 +328,7 @@
             // 
             // txtQuantidade
             // 
-            this.txtQuantidade.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtQuantidade.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtQuantidade.Location = new System.Drawing.Point(13, 70);
             this.txtQuantidade.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtQuantidade.Name = "txtQuantidade";
@@ -362,7 +362,7 @@
             // 
             // textBoxExt1
             // 
-            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.textBoxExt1.Location = new System.Drawing.Point(97, 70);
             this.textBoxExt1.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.textBoxExt1.Name = "textBoxExt1";
@@ -372,23 +372,27 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.BeforeTouchSize = new System.Drawing.Size(70, 70);
+            this.btnNovo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnNovo.BeforeTouchSize = new System.Drawing.Size(130, 40);
             this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnNovo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
             this.btnNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnNovo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Image = global::OPS_OphellSystem.Properties.Resources.Novo32x32;
-            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNovo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.ForeColor = System.Drawing.Color.White;
+            this.btnNovo.Image = global::OPS_OphellSystem.Properties.Resources.LimparBrancoPadrao28x28;
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovo.IsBackStageButton = false;
-            this.btnNovo.Location = new System.Drawing.Point(12, 12);
-            this.btnNovo.MaximumSize = new System.Drawing.Size(70, 70);
-            this.btnNovo.MinimumSize = new System.Drawing.Size(70, 70);
+            this.btnNovo.KeepFocusRectangle = false;
+            this.btnNovo.Location = new System.Drawing.Point(517, 608);
+            this.btnNovo.MaximumSize = new System.Drawing.Size(130, 40);
+            this.btnNovo.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(70, 70);
+            this.btnNovo.Size = new System.Drawing.Size(130, 40);
             this.btnNovo.TabIndex = 4;
-            this.btnNovo.Text = "Novo\r\n(Ctrl + N)";
-            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNovo.Text = "Novo (Ctrl + N)";
+            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pnlGravcao
             // 
@@ -411,6 +415,92 @@
             this.pnlGravcao.Size = new System.Drawing.Size(533, 108);
             this.pnlGravcao.TabIndex = 9;
             // 
+            // lblCodigoGravacao
+            // 
+            this.lblCodigoGravacao.DY = -17;
+            this.lblCodigoGravacao.LabeledControl = this.txtCodigoGravacao;
+            this.lblCodigoGravacao.Location = new System.Drawing.Point(21, 6);
+            this.lblCodigoGravacao.Name = "lblCodigoGravacao";
+            this.lblCodigoGravacao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblCodigoGravacao.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigoGravacao.TabIndex = 18;
+            this.lblCodigoGravacao.Text = "Código";
+            // 
+            // txtCodigoGravacao
+            // 
+            this.txtCodigoGravacao.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtCodigoGravacao.Enabled = false;
+            this.txtCodigoGravacao.Location = new System.Drawing.Point(21, 23);
+            this.txtCodigoGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtCodigoGravacao.Name = "txtCodigoGravacao";
+            this.txtCodigoGravacao.Size = new System.Drawing.Size(69, 20);
+            this.txtCodigoGravacao.TabIndex = 17;
+            this.txtCodigoGravacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblTotalGravacao
+            // 
+            this.lblTotalGravacao.DY = -17;
+            this.lblTotalGravacao.LabeledControl = this.txtTotalGravacao;
+            this.lblTotalGravacao.Location = new System.Drawing.Point(257, 53);
+            this.lblTotalGravacao.Name = "lblTotalGravacao";
+            this.lblTotalGravacao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTotalGravacao.Size = new System.Drawing.Size(31, 13);
+            this.lblTotalGravacao.TabIndex = 16;
+            this.lblTotalGravacao.Text = "Total";
+            // 
+            // txtTotalGravacao
+            // 
+            this.txtTotalGravacao.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtTotalGravacao.Enabled = false;
+            this.txtTotalGravacao.Location = new System.Drawing.Point(257, 70);
+            this.txtTotalGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtTotalGravacao.Name = "txtTotalGravacao";
+            this.txtTotalGravacao.Size = new System.Drawing.Size(80, 20);
+            this.txtTotalGravacao.TabIndex = 15;
+            this.txtTotalGravacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblValorGravcao
+            // 
+            this.lblValorGravcao.DY = -17;
+            this.lblValorGravcao.LabeledControl = this.txtValorGravacao;
+            this.lblValorGravcao.Location = new System.Drawing.Point(182, 53);
+            this.lblValorGravcao.Name = "lblValorGravcao";
+            this.lblValorGravcao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblValorGravcao.Size = new System.Drawing.Size(57, 13);
+            this.lblValorGravcao.TabIndex = 14;
+            this.lblValorGravcao.Text = "Valor Und.";
+            // 
+            // txtValorGravacao
+            // 
+            this.txtValorGravacao.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtValorGravacao.Location = new System.Drawing.Point(182, 70);
+            this.txtValorGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtValorGravacao.Name = "txtValorGravacao";
+            this.txtValorGravacao.Size = new System.Drawing.Size(69, 20);
+            this.txtValorGravacao.TabIndex = 13;
+            this.txtValorGravacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblTipoGravacao
+            // 
+            this.lblTipoGravacao.DY = -17;
+            this.lblTipoGravacao.LabeledControl = this.cmbTipoGravacao;
+            this.lblTipoGravacao.Location = new System.Drawing.Point(21, 52);
+            this.lblTipoGravacao.Name = "lblTipoGravacao";
+            this.lblTipoGravacao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTipoGravacao.Size = new System.Drawing.Size(93, 13);
+            this.lblTipoGravacao.TabIndex = 7;
+            this.lblTipoGravacao.Text = "Tipo de Gravação";
+            // 
+            // cmbTipoGravacao
+            // 
+            this.cmbTipoGravacao.BackColor = System.Drawing.Color.White;
+            this.cmbTipoGravacao.BeforeTouchSize = new System.Drawing.Size(155, 21);
+            this.cmbTipoGravacao.Location = new System.Drawing.Point(21, 69);
+            this.cmbTipoGravacao.Name = "cmbTipoGravacao";
+            this.cmbTipoGravacao.Size = new System.Drawing.Size(155, 21);
+            this.cmbTipoGravacao.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
+            this.cmbTipoGravacao.TabIndex = 6;
+            // 
             // pnlTransporte
             // 
             this.pnlTransporte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -428,69 +518,27 @@
             this.pnlTransporte.Size = new System.Drawing.Size(533, 106);
             this.pnlTransporte.TabIndex = 10;
             // 
-            // cmbTipoGravacao
+            // lblCodigoTransporte
             // 
-            this.cmbTipoGravacao.BackColor = System.Drawing.Color.White;
-            this.cmbTipoGravacao.BeforeTouchSize = new System.Drawing.Size(155, 21);
-            this.cmbTipoGravacao.Location = new System.Drawing.Point(21, 69);
-            this.cmbTipoGravacao.Name = "cmbTipoGravacao";
-            this.cmbTipoGravacao.Size = new System.Drawing.Size(155, 21);
-            this.cmbTipoGravacao.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
-            this.cmbTipoGravacao.TabIndex = 6;
+            this.lblCodigoTransporte.DY = -17;
+            this.lblCodigoTransporte.LabeledControl = this.txtCodigoTransporte;
+            this.lblCodigoTransporte.Location = new System.Drawing.Point(21, 10);
+            this.lblCodigoTransporte.Name = "lblCodigoTransporte";
+            this.lblCodigoTransporte.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblCodigoTransporte.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigoTransporte.TabIndex = 16;
+            this.lblCodigoTransporte.Text = "Código";
             // 
-            // lblTipoGravacao
+            // txtCodigoTransporte
             // 
-            this.lblTipoGravacao.DY = -17;
-            this.lblTipoGravacao.LabeledControl = this.cmbTipoGravacao;
-            this.lblTipoGravacao.Location = new System.Drawing.Point(21, 52);
-            this.lblTipoGravacao.Name = "lblTipoGravacao";
-            this.lblTipoGravacao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTipoGravacao.Size = new System.Drawing.Size(93, 13);
-            this.lblTipoGravacao.TabIndex = 7;
-            this.lblTipoGravacao.Text = "Tipo de Gravação";
-            // 
-            // lblValorGravcao
-            // 
-            this.lblValorGravcao.DY = -17;
-            this.lblValorGravcao.LabeledControl = this.txtValorGravacao;
-            this.lblValorGravcao.Location = new System.Drawing.Point(182, 53);
-            this.lblValorGravcao.Name = "lblValorGravcao";
-            this.lblValorGravcao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblValorGravcao.Size = new System.Drawing.Size(57, 13);
-            this.lblValorGravcao.TabIndex = 14;
-            this.lblValorGravcao.Text = "Valor Und.";
-            // 
-            // txtValorGravacao
-            // 
-            this.txtValorGravacao.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtValorGravacao.Location = new System.Drawing.Point(182, 70);
-            this.txtValorGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtValorGravacao.Name = "txtValorGravacao";
-            this.txtValorGravacao.Size = new System.Drawing.Size(69, 20);
-            this.txtValorGravacao.TabIndex = 13;
-            this.txtValorGravacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblTotalGravacao
-            // 
-            this.lblTotalGravacao.DY = -17;
-            this.lblTotalGravacao.LabeledControl = this.txtTotalGravacao;
-            this.lblTotalGravacao.Location = new System.Drawing.Point(257, 53);
-            this.lblTotalGravacao.Name = "lblTotalGravacao";
-            this.lblTotalGravacao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTotalGravacao.Size = new System.Drawing.Size(31, 13);
-            this.lblTotalGravacao.TabIndex = 16;
-            this.lblTotalGravacao.Text = "Total";
-            // 
-            // txtTotalGravacao
-            // 
-            this.txtTotalGravacao.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtTotalGravacao.Enabled = false;
-            this.txtTotalGravacao.Location = new System.Drawing.Point(257, 70);
-            this.txtTotalGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtTotalGravacao.Name = "txtTotalGravacao";
-            this.txtTotalGravacao.Size = new System.Drawing.Size(80, 20);
-            this.txtTotalGravacao.TabIndex = 15;
-            this.txtTotalGravacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCodigoTransporte.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtCodigoTransporte.Enabled = false;
+            this.txtCodigoTransporte.Location = new System.Drawing.Point(21, 27);
+            this.txtCodigoTransporte.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtCodigoTransporte.Name = "txtCodigoTransporte";
+            this.txtCodigoTransporte.Size = new System.Drawing.Size(69, 20);
+            this.txtCodigoTransporte.TabIndex = 15;
+            this.txtCodigoTransporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblValorTransporte
             // 
@@ -505,7 +553,7 @@
             // 
             // txtValorTransporte
             // 
-            this.txtValorTransporte.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtValorTransporte.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtValorTransporte.Location = new System.Drawing.Point(21, 74);
             this.txtValorTransporte.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtValorTransporte.Name = "txtValorTransporte";
@@ -526,7 +574,7 @@
             // 
             // txtCodigoCliente
             // 
-            this.txtCodigoCliente.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCodigoCliente.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtCodigoCliente.Enabled = false;
             this.txtCodigoCliente.Location = new System.Drawing.Point(6, 36);
             this.txtCodigoCliente.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -548,7 +596,7 @@
             // 
             // txtCodigoFornecedor
             // 
-            this.txtCodigoFornecedor.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCodigoFornecedor.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtCodigoFornecedor.Enabled = false;
             this.txtCodigoFornecedor.Location = new System.Drawing.Point(6, 83);
             this.txtCodigoFornecedor.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -570,7 +618,7 @@
             // 
             // txtCodigoProduto
             // 
-            this.txtCodigoProduto.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCodigoProduto.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtCodigoProduto.Enabled = false;
             this.txtCodigoProduto.Location = new System.Drawing.Point(13, 26);
             this.txtCodigoProduto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -579,54 +627,10 @@
             this.txtCodigoProduto.TabIndex = 17;
             this.txtCodigoProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // lblCodigoGravacao
-            // 
-            this.lblCodigoGravacao.DY = -17;
-            this.lblCodigoGravacao.LabeledControl = this.txtCodigoGravacao;
-            this.lblCodigoGravacao.Location = new System.Drawing.Point(21, 6);
-            this.lblCodigoGravacao.Name = "lblCodigoGravacao";
-            this.lblCodigoGravacao.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblCodigoGravacao.Size = new System.Drawing.Size(40, 13);
-            this.lblCodigoGravacao.TabIndex = 18;
-            this.lblCodigoGravacao.Text = "Código";
-            // 
-            // txtCodigoGravacao
-            // 
-            this.txtCodigoGravacao.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtCodigoGravacao.Enabled = false;
-            this.txtCodigoGravacao.Location = new System.Drawing.Point(21, 23);
-            this.txtCodigoGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtCodigoGravacao.Name = "txtCodigoGravacao";
-            this.txtCodigoGravacao.Size = new System.Drawing.Size(69, 20);
-            this.txtCodigoGravacao.TabIndex = 17;
-            this.txtCodigoGravacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblCodigoTransporte
-            // 
-            this.lblCodigoTransporte.DY = -17;
-            this.lblCodigoTransporte.LabeledControl = this.txtCodigoTransporte;
-            this.lblCodigoTransporte.Location = new System.Drawing.Point(21, 10);
-            this.lblCodigoTransporte.Name = "lblCodigoTransporte";
-            this.lblCodigoTransporte.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblCodigoTransporte.Size = new System.Drawing.Size(40, 13);
-            this.lblCodigoTransporte.TabIndex = 16;
-            this.lblCodigoTransporte.Text = "Código";
-            // 
-            // txtCodigoTransporte
-            // 
-            this.txtCodigoTransporte.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtCodigoTransporte.Enabled = false;
-            this.txtCodigoTransporte.Location = new System.Drawing.Point(21, 27);
-            this.txtCodigoTransporte.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtCodigoTransporte.Name = "txtCodigoTransporte";
-            this.txtCodigoTransporte.Size = new System.Drawing.Size(69, 20);
-            this.txtCodigoTransporte.TabIndex = 15;
-            this.txtCodigoTransporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // txtPorcentagemImposto
             // 
             this.txtPorcentagemImposto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPorcentagemImposto.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtPorcentagemImposto.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtPorcentagemImposto.Location = new System.Drawing.Point(8, 462);
             this.txtPorcentagemImposto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtPorcentagemImposto.Name = "txtPorcentagemImposto";
@@ -649,7 +653,7 @@
             // txtBv
             // 
             this.txtBv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBv.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtBv.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtBv.Location = new System.Drawing.Point(245, 462);
             this.txtBv.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtBv.Name = "txtBv";
@@ -672,7 +676,7 @@
             // txtPorcentagemLucro
             // 
             this.txtPorcentagemLucro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPorcentagemLucro.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtPorcentagemLucro.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtPorcentagemLucro.Location = new System.Drawing.Point(8, 502);
             this.txtPorcentagemLucro.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtPorcentagemLucro.Name = "txtPorcentagemLucro";
@@ -764,95 +768,12 @@
             this.grpDadosOrcamento.Controls.Add(this.btnBuscaCliente);
             this.grpDadosOrcamento.Controls.Add(this.btnBuscaFornecedor);
             this.grpDadosOrcamento.Controls.Add(this.txtCodigoCliente);
-            this.grpDadosOrcamento.Location = new System.Drawing.Point(12, 103);
+            this.grpDadosOrcamento.Location = new System.Drawing.Point(12, 57);
             this.grpDadosOrcamento.Name = "grpDadosOrcamento";
             this.grpDadosOrcamento.Size = new System.Drawing.Size(545, 545);
             this.grpDadosOrcamento.TabIndex = 6;
             this.grpDadosOrcamento.TabStop = false;
             this.grpDadosOrcamento.Text = "Dados do Orçamento";
-            // 
-            // lblPorcentagemImposto
-            // 
-            this.lblPorcentagemImposto.DY = -17;
-            this.lblPorcentagemImposto.LabeledControl = this.txtPorcentagemImposto;
-            this.lblPorcentagemImposto.Location = new System.Drawing.Point(8, 445);
-            this.lblPorcentagemImposto.Name = "lblPorcentagemImposto";
-            this.lblPorcentagemImposto.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblPorcentagemImposto.Size = new System.Drawing.Size(55, 13);
-            this.lblPorcentagemImposto.TabIndex = 23;
-            this.lblPorcentagemImposto.Text = "% Imposto";
-            // 
-            // grdOrcamentos
-            // 
-            this.grdOrcamentos.AccessibleName = "Table";
-            this.grdOrcamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdOrcamentos.Location = new System.Drawing.Point(563, 132);
-            this.grdOrcamentos.Name = "grdOrcamentos";
-            this.grdOrcamentos.Size = new System.Drawing.Size(449, 516);
-            this.grdOrcamentos.TabIndex = 7;
-            this.grdOrcamentos.Text = "sfDataGrid1";
-            // 
-            // lblListagem
-            // 
-            this.lblListagem.DY = -17;
-            this.lblListagem.LabeledControl = this.grdOrcamentos;
-            this.lblListagem.Location = new System.Drawing.Point(563, 115);
-            this.lblListagem.Name = "lblListagem";
-            this.lblListagem.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblListagem.Size = new System.Drawing.Size(49, 13);
-            this.lblListagem.TabIndex = 8;
-            this.lblListagem.Text = "Listagem";
-            // 
-            // lblTituloTotal
-            // 
-            this.lblTituloTotal.DX = -35;
-            this.lblTituloTotal.DY = 5;
-            this.lblTituloTotal.LabeledControl = this.lblTotal;
-            this.lblTituloTotal.Location = new System.Drawing.Point(404, 524);
-            this.lblTituloTotal.Name = "lblTituloTotal";
-            this.lblTituloTotal.Size = new System.Drawing.Size(31, 13);
-            this.lblTituloTotal.TabIndex = 24;
-            this.lblTituloTotal.Text = "Total";
-            // 
-            // btnGravar
-            // 
-            this.btnGravar.BeforeTouchSize = new System.Drawing.Size(70, 70);
-            this.btnGravar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.btnGravar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnGravar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGravar.Image = global::OPS_OphellSystem.Properties.Resources.Gravar32x32;
-            this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGravar.IsBackStageButton = false;
-            this.btnGravar.Location = new System.Drawing.Point(88, 12);
-            this.btnGravar.MaximumSize = new System.Drawing.Size(70, 70);
-            this.btnGravar.MinimumSize = new System.Drawing.Size(70, 70);
-            this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(70, 70);
-            this.btnGravar.TabIndex = 9;
-            this.btnGravar.Text = "Salvar\r\n(Ctrl + S)";
-            this.btnGravar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Image = global::OPS_OphellSystem.Properties.Resources.FecharPadrao32x32;
-            this.btnFechar.IsBackStageButton = false;
-            this.btnFechar.Location = new System.Drawing.Point(972, 12);
-            this.btnFechar.MaximumSize = new System.Drawing.Size(40, 40);
-            this.btnFechar.MinimumSize = new System.Drawing.Size(40, 40);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(40, 40);
-            this.btnFechar.TabIndex = 10;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // panel1
             // 
@@ -882,95 +803,6 @@
             this.panel1.Size = new System.Drawing.Size(533, 103);
             this.panel1.TabIndex = 11;
             // 
-            // textBoxExt3
-            // 
-            this.textBoxExt3.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.textBoxExt3.Enabled = false;
-            this.textBoxExt3.Location = new System.Drawing.Point(-161, 37);
-            this.textBoxExt3.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.textBoxExt3.Name = "textBoxExt3";
-            this.textBoxExt3.Size = new System.Drawing.Size(88, 20);
-            this.textBoxExt3.TabIndex = 17;
-            this.textBoxExt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblTotalProduto
-            // 
-            this.lblTotalProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalProduto.DY = -17;
-            this.lblTotalProduto.LabeledControl = this.txtTotalProduto;
-            this.lblTotalProduto.Location = new System.Drawing.Point(172, 53);
-            this.lblTotalProduto.Name = "lblTotalProduto";
-            this.lblTotalProduto.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTotalProduto.Size = new System.Drawing.Size(31, 13);
-            this.lblTotalProduto.TabIndex = 14;
-            this.lblTotalProduto.Text = "Total";
-            // 
-            // txtTotalProduto
-            // 
-            this.txtTotalProduto.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtTotalProduto.Enabled = false;
-            this.txtTotalProduto.Location = new System.Drawing.Point(172, 70);
-            this.txtTotalProduto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtTotalProduto.Name = "txtTotalProduto";
-            this.txtTotalProduto.Size = new System.Drawing.Size(80, 20);
-            this.txtTotalProduto.TabIndex = 13;
-            this.txtTotalProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // autoLabel2
-            // 
-            this.autoLabel2.DY = -17;
-            this.autoLabel2.LabeledControl = this.textBoxExt3;
-            this.autoLabel2.Location = new System.Drawing.Point(-161, 20);
-            this.autoLabel2.Name = "autoLabel2";
-            this.autoLabel2.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.autoLabel2.Size = new System.Drawing.Size(68, 13);
-            this.autoLabel2.TabIndex = 18;
-            this.autoLabel2.Text = "Código Prod.";
-            // 
-            // autoLabel3
-            // 
-            this.autoLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.autoLabel3.DY = -17;
-            this.autoLabel3.LabeledControl = this.textBoxExt5;
-            this.autoLabel3.Location = new System.Drawing.Point(-77, 65);
-            this.autoLabel3.Name = "autoLabel3";
-            this.autoLabel3.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.autoLabel3.Size = new System.Drawing.Size(57, 13);
-            this.autoLabel3.TabIndex = 12;
-            this.autoLabel3.Text = "Valor Und.";
-            // 
-            // textBoxExt5
-            // 
-            this.textBoxExt5.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.textBoxExt5.Location = new System.Drawing.Point(-77, 82);
-            this.textBoxExt5.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.textBoxExt5.Name = "textBoxExt5";
-            this.textBoxExt5.Size = new System.Drawing.Size(69, 20);
-            this.textBoxExt5.TabIndex = 11;
-            this.textBoxExt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // autoLabel4
-            // 
-            this.autoLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.autoLabel4.DY = -17;
-            this.autoLabel4.LabeledControl = this.textBoxExt6;
-            this.autoLabel4.Location = new System.Drawing.Point(-161, 65);
-            this.autoLabel4.Name = "autoLabel4";
-            this.autoLabel4.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.autoLabel4.Size = new System.Drawing.Size(27, 13);
-            this.autoLabel4.TabIndex = 10;
-            this.autoLabel4.Text = "Qtd.";
-            // 
-            // textBoxExt6
-            // 
-            this.textBoxExt6.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.textBoxExt6.Location = new System.Drawing.Point(-161, 82);
-            this.textBoxExt6.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.textBoxExt6.Name = "textBoxExt6";
-            this.textBoxExt6.Size = new System.Drawing.Size(78, 20);
-            this.textBoxExt6.TabIndex = 9;
-            this.textBoxExt6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // buttonAdv1
             // 
             this.buttonAdv1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -987,6 +819,183 @@
             this.buttonAdv1.Name = "buttonAdv1";
             this.buttonAdv1.Size = new System.Drawing.Size(30, 30);
             this.buttonAdv1.TabIndex = 8;
+            // 
+            // textBoxExt6
+            // 
+            this.textBoxExt6.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.textBoxExt6.Location = new System.Drawing.Point(-161, 82);
+            this.textBoxExt6.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt6.Name = "textBoxExt6";
+            this.textBoxExt6.Size = new System.Drawing.Size(78, 20);
+            this.textBoxExt6.TabIndex = 9;
+            this.textBoxExt6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // autoLabel4
+            // 
+            this.autoLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.autoLabel4.DY = -17;
+            this.autoLabel4.LabeledControl = this.textBoxExt6;
+            this.autoLabel4.Location = new System.Drawing.Point(-161, 65);
+            this.autoLabel4.Name = "autoLabel4";
+            this.autoLabel4.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.autoLabel4.Size = new System.Drawing.Size(27, 13);
+            this.autoLabel4.TabIndex = 10;
+            this.autoLabel4.Text = "Qtd.";
+            // 
+            // textBoxExt5
+            // 
+            this.textBoxExt5.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.textBoxExt5.Location = new System.Drawing.Point(-77, 82);
+            this.textBoxExt5.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt5.Name = "textBoxExt5";
+            this.textBoxExt5.Size = new System.Drawing.Size(69, 20);
+            this.textBoxExt5.TabIndex = 11;
+            this.textBoxExt5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // autoLabel3
+            // 
+            this.autoLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.autoLabel3.DY = -17;
+            this.autoLabel3.LabeledControl = this.textBoxExt5;
+            this.autoLabel3.Location = new System.Drawing.Point(-77, 65);
+            this.autoLabel3.Name = "autoLabel3";
+            this.autoLabel3.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.autoLabel3.Size = new System.Drawing.Size(57, 13);
+            this.autoLabel3.TabIndex = 12;
+            this.autoLabel3.Text = "Valor Und.";
+            // 
+            // autoLabel2
+            // 
+            this.autoLabel2.DY = -17;
+            this.autoLabel2.LabeledControl = this.textBoxExt3;
+            this.autoLabel2.Location = new System.Drawing.Point(-161, 20);
+            this.autoLabel2.Name = "autoLabel2";
+            this.autoLabel2.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.autoLabel2.Size = new System.Drawing.Size(68, 13);
+            this.autoLabel2.TabIndex = 18;
+            this.autoLabel2.Text = "Código Prod.";
+            // 
+            // textBoxExt3
+            // 
+            this.textBoxExt3.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.textBoxExt3.Enabled = false;
+            this.textBoxExt3.Location = new System.Drawing.Point(-161, 37);
+            this.textBoxExt3.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.textBoxExt3.Name = "textBoxExt3";
+            this.textBoxExt3.Size = new System.Drawing.Size(88, 20);
+            this.textBoxExt3.TabIndex = 17;
+            this.textBoxExt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtTotalProduto
+            // 
+            this.txtTotalProduto.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtTotalProduto.Enabled = false;
+            this.txtTotalProduto.Location = new System.Drawing.Point(172, 70);
+            this.txtTotalProduto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtTotalProduto.Name = "txtTotalProduto";
+            this.txtTotalProduto.Size = new System.Drawing.Size(80, 20);
+            this.txtTotalProduto.TabIndex = 13;
+            this.txtTotalProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblTotalProduto
+            // 
+            this.lblTotalProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalProduto.DY = -17;
+            this.lblTotalProduto.LabeledControl = this.txtTotalProduto;
+            this.lblTotalProduto.Location = new System.Drawing.Point(172, 53);
+            this.lblTotalProduto.Name = "lblTotalProduto";
+            this.lblTotalProduto.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTotalProduto.Size = new System.Drawing.Size(31, 13);
+            this.lblTotalProduto.TabIndex = 14;
+            this.lblTotalProduto.Text = "Total";
+            // 
+            // lblTituloTotal
+            // 
+            this.lblTituloTotal.DX = -35;
+            this.lblTituloTotal.DY = 5;
+            this.lblTituloTotal.LabeledControl = this.lblTotal;
+            this.lblTituloTotal.Location = new System.Drawing.Point(404, 524);
+            this.lblTituloTotal.Name = "lblTituloTotal";
+            this.lblTituloTotal.Size = new System.Drawing.Size(31, 13);
+            this.lblTituloTotal.TabIndex = 24;
+            this.lblTituloTotal.Text = "Total";
+            // 
+            // lblPorcentagemImposto
+            // 
+            this.lblPorcentagemImposto.DY = -17;
+            this.lblPorcentagemImposto.LabeledControl = this.txtPorcentagemImposto;
+            this.lblPorcentagemImposto.Location = new System.Drawing.Point(8, 445);
+            this.lblPorcentagemImposto.Name = "lblPorcentagemImposto";
+            this.lblPorcentagemImposto.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblPorcentagemImposto.Size = new System.Drawing.Size(55, 13);
+            this.lblPorcentagemImposto.TabIndex = 23;
+            this.lblPorcentagemImposto.Text = "% Imposto";
+            // 
+            // grdOrcamentos
+            // 
+            this.grdOrcamentos.AccessibleName = "Table";
+            this.grdOrcamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdOrcamentos.Location = new System.Drawing.Point(563, 76);
+            this.grdOrcamentos.Name = "grdOrcamentos";
+            this.grdOrcamentos.Size = new System.Drawing.Size(449, 526);
+            this.grdOrcamentos.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
+            this.grdOrcamentos.TabIndex = 7;
+            this.grdOrcamentos.Text = "sfDataGrid1";
+            // 
+            // lblListagem
+            // 
+            this.lblListagem.DY = -17;
+            this.lblListagem.LabeledControl = this.grdOrcamentos;
+            this.lblListagem.Location = new System.Drawing.Point(563, 59);
+            this.lblListagem.Name = "lblListagem";
+            this.lblListagem.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblListagem.Size = new System.Drawing.Size(49, 13);
+            this.lblListagem.TabIndex = 8;
+            this.lblListagem.Text = "Listagem";
+            // 
+            // btnGravar
+            // 
+            this.btnGravar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnGravar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnGravar.BeforeTouchSize = new System.Drawing.Size(130, 40);
+            this.btnGravar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            this.btnGravar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGravar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGravar.ForeColor = System.Drawing.Color.White;
+            this.btnGravar.Image = global::OPS_OphellSystem.Properties.Resources.FinalizarBrancoPadrao28x28;
+            this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGravar.IsBackStageButton = false;
+            this.btnGravar.KeepFocusRectangle = false;
+            this.btnGravar.Location = new System.Drawing.Point(381, 608);
+            this.btnGravar.MaximumSize = new System.Drawing.Size(130, 40);
+            this.btnGravar.MinimumSize = new System.Drawing.Size(130, 40);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(130, 40);
+            this.btnGravar.TabIndex = 9;
+            this.btnGravar.Text = "Salvar (Ctrl + S)";
+            this.btnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BeforeTouchSize = new System.Drawing.Size(40, 40);
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Image = global::OPS_OphellSystem.Properties.Resources.FecharPadrao32x32;
+            this.btnFechar.IsBackStageButton = false;
+            this.btnFechar.Location = new System.Drawing.Point(972, 12);
+            this.btnFechar.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btnFechar.MinimumSize = new System.Drawing.Size(40, 40);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(40, 40);
+            this.btnFechar.TabIndex = 10;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // FrmOrcamento
             // 
@@ -1012,29 +1021,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).EndInit();
             this.pnlGravcao.ResumeLayout(false);
             this.pnlGravcao.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoGravacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalGravacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorGravacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoGravacao)).EndInit();
             this.pnlTransporte.ResumeLayout(false);
             this.pnlTransporte.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoGravacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValorGravacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalGravacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoTransporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValorTransporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoFornecedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoGravacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoTransporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPorcentagemImposto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPorcentagemLucro)).EndInit();
             this.grpDadosOrcamento.ResumeLayout(false);
             this.grpDadosOrcamento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdOrcamentos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdOrcamentos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -143,6 +143,26 @@ namespace OPS_OphellSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ExcluirBrancoPadrao28x28 {
+            get {
+                object obj = ResourceManager.GetObject("ExcluirBrancoPadrao28x28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ExcluirBrancoPadrao32x32 {
+            get {
+                object obj = ResourceManager.GetObject("ExcluirBrancoPadrao32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ExcluirPadrao32x32 {
             get {
                 object obj = ResourceManager.GetObject("ExcluirPadrao32x32", resourceCulture);
@@ -166,6 +186,26 @@ namespace OPS_OphellSystem.Properties {
         internal static System.Drawing.Bitmap FecharPadrao32x32 {
             get {
                 object obj = ResourceManager.GetObject("FecharPadrao32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FinalizarBrancoPadrao28x28 {
+            get {
+                object obj = ResourceManager.GetObject("FinalizarBrancoPadrao28x28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FinalizarBrancoPadrao32x32 {
+            get {
+                object obj = ResourceManager.GetObject("FinalizarBrancoPadrao32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +316,26 @@ namespace OPS_OphellSystem.Properties {
         internal static System.Drawing.Bitmap icons8_new_company_32px_2 {
             get {
                 object obj = ResourceManager.GetObject("icons8_new_company_32px_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LimparBrancoPadrao28x28 {
+            get {
+                object obj = ResourceManager.GetObject("LimparBrancoPadrao28x28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LimparBrancoPadrao32x32 {
+            get {
+                object obj = ResourceManager.GetObject("LimparBrancoPadrao32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

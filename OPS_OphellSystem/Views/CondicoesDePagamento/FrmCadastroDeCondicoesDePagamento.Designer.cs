@@ -140,7 +140,6 @@
             activeStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             activeStateCollection1.Text = "Desativar";
             this.tgBtnStatus.ActiveState = activeStateCollection1;
-            this.tgBtnStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tgBtnStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tgBtnStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tgBtnStatus.ForeColor = System.Drawing.Color.Black;
@@ -150,7 +149,7 @@
             inactiveStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
             inactiveStateCollection1.Text = "Ativar";
             this.tgBtnStatus.InactiveState = inactiveStateCollection1;
-            this.tgBtnStatus.Location = new System.Drawing.Point(882, 12);
+            this.tgBtnStatus.Location = new System.Drawing.Point(12, 12);
             this.tgBtnStatus.MinimumSize = new System.Drawing.Size(52, 20);
             this.tgBtnStatus.Name = "tgBtnStatus";
             this.tgBtnStatus.Renderer = toggleButtonRenderer1;
@@ -164,46 +163,50 @@
             // 
             // btnNovaCondicaoDePagamento
             // 
-            this.btnNovaCondicaoDePagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNovaCondicaoDePagamento.BeforeTouchSize = new System.Drawing.Size(70, 70);
+            this.btnNovaCondicaoDePagamento.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnNovaCondicaoDePagamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnNovaCondicaoDePagamento.BeforeTouchSize = new System.Drawing.Size(130, 40);
             this.btnNovaCondicaoDePagamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovaCondicaoDePagamento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnNovaCondicaoDePagamento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
             this.btnNovaCondicaoDePagamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnNovaCondicaoDePagamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnNovaCondicaoDePagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovaCondicaoDePagamento.Image = global::OPS_OphellSystem.Properties.Resources.Novo32x32;
-            this.btnNovaCondicaoDePagamento.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNovaCondicaoDePagamento.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovaCondicaoDePagamento.ForeColor = System.Drawing.Color.White;
+            this.btnNovaCondicaoDePagamento.Image = global::OPS_OphellSystem.Properties.Resources.LimparBrancoPadrao28x28;
+            this.btnNovaCondicaoDePagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovaCondicaoDePagamento.IsBackStageButton = false;
-            this.btnNovaCondicaoDePagamento.Location = new System.Drawing.Point(12, 12);
-            this.btnNovaCondicaoDePagamento.MaximumSize = new System.Drawing.Size(70, 70);
-            this.btnNovaCondicaoDePagamento.MinimumSize = new System.Drawing.Size(70, 70);
+            this.btnNovaCondicaoDePagamento.Location = new System.Drawing.Point(532, 569);
+            this.btnNovaCondicaoDePagamento.MaximumSize = new System.Drawing.Size(130, 40);
+            this.btnNovaCondicaoDePagamento.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnNovaCondicaoDePagamento.Name = "btnNovaCondicaoDePagamento";
-            this.btnNovaCondicaoDePagamento.Size = new System.Drawing.Size(70, 70);
+            this.btnNovaCondicaoDePagamento.Size = new System.Drawing.Size(130, 40);
             this.btnNovaCondicaoDePagamento.TabIndex = 7;
-            this.btnNovaCondicaoDePagamento.Text = "Novo\r\n(Ctrl + N)";
-            this.btnNovaCondicaoDePagamento.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNovaCondicaoDePagamento.Text = "Novo (Ctrl + N)";
+            this.btnNovaCondicaoDePagamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNovaCondicaoDePagamento.Click += new System.EventHandler(this.btnNovaCondicaoDePagamento_Click);
             // 
             // btnGravar
             // 
-            this.btnGravar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGravar.BeforeTouchSize = new System.Drawing.Size(70, 70);
+            this.btnGravar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnGravar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnGravar.BeforeTouchSize = new System.Drawing.Size(130, 40);
             this.btnGravar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
             this.btnGravar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnGravar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGravar.Image = global::OPS_OphellSystem.Properties.Resources.Gravar32x32;
-            this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGravar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGravar.ForeColor = System.Drawing.Color.White;
+            this.btnGravar.Image = global::OPS_OphellSystem.Properties.Resources.FinalizarBrancoPadrao28x28;
+            this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGravar.IsBackStageButton = false;
-            this.btnGravar.Location = new System.Drawing.Point(90, 12);
-            this.btnGravar.MaximumSize = new System.Drawing.Size(70, 70);
-            this.btnGravar.MinimumSize = new System.Drawing.Size(70, 70);
+            this.btnGravar.Location = new System.Drawing.Point(396, 569);
+            this.btnGravar.MaximumSize = new System.Drawing.Size(130, 40);
+            this.btnGravar.MinimumSize = new System.Drawing.Size(130, 40);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(70, 70);
+            this.btnGravar.Size = new System.Drawing.Size(130, 40);
             this.btnGravar.TabIndex = 6;
-            this.btnGravar.Text = "Salvar\r\n(Ctrl + S)";
-            this.btnGravar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGravar.Text = "Salvar (Ctrl + S)";
+            this.btnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // grpDadosFormaPagamento
@@ -218,7 +221,7 @@
             this.grpDadosFormaPagamento.Controls.Add(this.lblCodigo);
             this.grpDadosFormaPagamento.Controls.Add(this.cmbTipo);
             this.grpDadosFormaPagamento.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grpDadosFormaPagamento.Location = new System.Drawing.Point(12, 98);
+            this.grpDadosFormaPagamento.Location = new System.Drawing.Point(12, 60);
             this.grpDadosFormaPagamento.Name = "grpDadosFormaPagamento";
             this.grpDadosFormaPagamento.Size = new System.Drawing.Size(984, 107);
             this.grpDadosFormaPagamento.TabIndex = 0;
@@ -228,9 +231,9 @@
             // grdFormasPagamento
             // 
             this.grdFormasPagamento.AccessibleName = "Table";
-            this.grdFormasPagamento.Location = new System.Drawing.Point(12, 228);
+            this.grdFormasPagamento.Location = new System.Drawing.Point(12, 173);
             this.grdFormasPagamento.Name = "grdFormasPagamento";
-            this.grdFormasPagamento.Size = new System.Drawing.Size(984, 357);
+            this.grdFormasPagamento.Size = new System.Drawing.Size(984, 376);
             this.grdFormasPagamento.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
             this.grdFormasPagamento.TabIndex = 4;
             this.grdFormasPagamento.Text = "sfDataGrid1";
@@ -242,11 +245,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 621);
-            this.Controls.Add(this.grdFormasPagamento);
             this.Controls.Add(this.grpDadosFormaPagamento);
             this.Controls.Add(this.tgBtnStatus);
             this.Controls.Add(this.btnNovaCondicaoDePagamento);
             this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.grdFormasPagamento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
