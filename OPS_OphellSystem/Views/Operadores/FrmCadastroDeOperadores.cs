@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using OPS_OphellSystem.Cadastros.Classes.Operadores;
 
@@ -34,7 +27,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
             txtId.Text = "";
             txtNome.Text = "";
             txtSobrenome.Text = "";
-            txtContas.Text = "";
+            txtCodigo.Text = "";
             txtSenha.Text = "";
             txtConfirmaSenha.Text = "";
             cmbPerfil.SelectedIndex = 0;
@@ -77,7 +70,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
                 operador.Nome = txtNome.Text;
                 operador.Sobrenome = txtSobrenome.Text;
                 operador.Perfil = cmbPerfil.Text;
-                operador.Contas = txtContas.Text == "" ? 0 : int.Parse(txtContas.Text);
+                operador.Contas = txtCodigo.Text == "" ? 0 : int.Parse(txtCodigo.Text);
                 operador.Status = tgBtnStaus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active ? 1 : 0;
                 operador.Senha = txtSenha.Text;
                 operador.ContraSenha = txtConfirmaSenha.Text;

@@ -21,10 +21,11 @@ namespace OPS_OphellSystem
                            {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE"},
                            {"nome","TEXT NOT NULL" },
                            {"sobrenome","TEXT NOT NULL" },
-                           {"contas","INTEGER" },
+                           {"codigo","INTEGER" },
                            {"senha_login","TEXT NOT NULL" },
                            {"perfil","TEXT NOT NULL" },
                            {"status","INTEGER NOT NULL DEFAULT 1" },
+                           {"excluido","INTEGER NOT NULL DEFAULT 0" },
                            {"cpf","INTEGER NOT NULL" }
                          };
                         break;
