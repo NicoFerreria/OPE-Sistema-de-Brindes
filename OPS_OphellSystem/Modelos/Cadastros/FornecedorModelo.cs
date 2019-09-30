@@ -8,7 +8,7 @@ namespace Cadastros.Modelos
 {
    public class FornecedorModelo
     {
-        public long ClienteId { get; set; }
+        public long FornecedorId { get; set; }
         public string CNPJ { get; set; }
         public string DigitoVerificadorCnpj { get; set; }
         public string Fantasia { get; set; }
@@ -25,5 +25,6 @@ namespace Cadastros.Modelos
         public string Cidade { get; set; }
         public string Bairro { get; set; }
         public int CEP { get; set; }
+        public int Excluido { get; set; }
     }
 }

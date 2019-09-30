@@ -94,10 +94,12 @@
     <Compile Include="Cadastros\Classes\CondicoesDePagamento\CadastroDeCondicoesPagamento.cs" />
     <Compile Include="Cadastros\Classes\Fornecedor\CadastroDeFornecedor.cs" />
     <Compile Include="Controles\Cadastros\ClienteControle.cs" />
+    <Compile Include="Controles\Cadastros\FornecedorControle.cs" />
     <Compile Include="Controles\Cadastros\OperadorControle.cs" />
     <Compile Include="Controles\Cadastros\ProdutoControle.cs" />
     <Compile Include="Controles\Financeiro\ContasPagarControle.cs" />
     <Compile Include="Controles\Cadastros\FormasPagamentoControle.cs" />
+    <Compile Include="Dados\ForcencedorDados.cs" />
     <Compile Include="Modelos\Cadastros\ClienteModelo.cs" />
     <Compile Include="Cadastros\Classes\Operadores\CadastroDeOperadores.cs" />
     <Compile Include="Cadastros\Classes\PessoaJuridica.cs" />
@@ -151,6 +153,12 @@
     </Compile>
     <Compile Include="Views\Fornecedores\FrmCadastroDeFornecedores.Designer.cs">
       <DependentUpon>FrmCadastroDeFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Fornecedores\FrmFornecedorListagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Fornecedores\FrmFornecedorListagem.Designer.cs">
+      <DependentUpon>FrmFornecedorListagem.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Operadores\FrmBuscaOperadores.cs">
       <SubType>Form</SubType>
@@ -209,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Fornecedores\FrmCadastroDeFornecedores.resx">
       <DependentUpon>FrmCadastroDeFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Fornecedores\FrmFornecedorListagem.resx">
+      <DependentUpon>FrmFornecedorListagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Operadores\FrmBuscaOperadores.resx">
       <DependentUpon>FrmBuscaOperadores.cs</DependentUpon>

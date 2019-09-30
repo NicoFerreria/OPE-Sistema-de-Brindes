@@ -74,19 +74,29 @@ namespace OPS_OphellSystem
                         {
                             campos = new string[,]
                             {
-                                {"id_forn","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
-                                {"cnpj_forn", "INTEGER NOT NULL UNIQUE" },
-                                {"nome_fantasia_forn","TEXT NOT NULL" },
-                                {"razao_social_forn","TEXT NOT NULL" },
-                                {"status_forn","INTEGER NOT NULL DEFAULT 1" },
-                                {"endereco_forn","TEXT" },
-                                {"numero_forn","INTEGER" },
-                                {"telefone_forn","INTEGER" },
-                                {"nome_contato_forn","TEXT" },
-                                {"complemento_forn","TEXT" },
-                                {"email_contato_forn","Text" },
-                                {"observacao_forn","TEXT" },
-                                {"terceiro","INTEGER NOT NULL DEFAULT 0" }
+                            {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
+                            {"cnpj","TEXT NOT NULL UNIQUE" },
+                            {"fantasia","TEXT NOT NULL" },
+                            {"razao","TEXT NOT NULL" },
+                            {"status","INTEGER NOT NULL DEFAULT 1" },
+                            {"endereco","TEXT" },
+                            {"numero","INTEGER" },
+                            {"complemento","TEXT" },
+                            {"cidade","TEXT" },
+                            {"bairro","TEXT" },
+                            {"cep","INTEGER" },
+                            {"telefone","INTEGER" },
+                            {"contato","TEXT" },
+                            {"email","TEXT" },
+                            {"observacao","TEXT" },
+                            {"digito_verificador","INTEGER" },
+                            {"operador_cadastro_id","INTEGER" },
+                            {"operador_cadastro_nome","TEXT" },
+                            {"operador_alteracao_id","INTEGER" },
+                            {"operador_alteracao_nome","TEXT" },
+                            {"datahora_cadastro","TEXT" },
+                            {"datahora_alteracao","TEXT" },
+                            {"excluido","INTEGER NOT NULL DEFAULT 0" }
                             };                            
                         }
                         break;

@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OPS_OphellSystem.Cadastros.Classes;
+using Cadastros.Modelos;
+using Cadastros.Controles;
 
 namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
 {
     public partial class FrmCadastroDeFornecedores : Form
     {
         #region "Classes"
+        FornecedorControle controle = new FornecedorControle();
         private Cadastros.Classes.Fornecedor.CadastroDeFornecedor cadastro = new Classes.Fornecedor.CadastroDeFornecedor();
         #endregion
 
@@ -33,24 +36,25 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         {
             try
             {
+                FornecedorModelo fornecedor = new FornecedorModelo();
                 if (ValidaCampos() == false) return;
-                cadastro.CNPJ = txtCnpj.Text + txtDv.Text;
-                cadastro.DigitoVerificador = txtDv.Text;
-                cadastro.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantasia.Text);
-                cadastro.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
-                cadastro.CEP = int.Parse(txtCep.Text);
-                cadastro.Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text);
-                cadastro.Numero = int.Parse(txtNumero.Text);
-                cadastro.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
-                cadastro.Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text);
-                cadastro.Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text);
-                cadastro.NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text);
-                cadastro.EmailContato = utilitarios.RemoveCaracteresEspeciais(txtEmail.Text);
-                cadastro.Telefone = int.Parse(txtTelefone.Text);
-                cadastro.Observacoes = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
-                cadastro.StatusFornecedor = tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active ? 1 : 0;
-                cadastro.Terceiro = chkTerceiro.CheckState == CheckState.Checked ? 1 : 0;
-                cadastro.GravarFornecedor();
+                fornecedor.CNPJ = txtCnpj.Text + txtDv.Text;
+                fornecedor.DigitoVerificadorCnpj = txtDv.Text;
+                fornecedor.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantasia.Text);
+                fornecedor.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
+                fornecedor.CEP = int.Parse(txtCep.Text);
+                fornecedor.Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text);
+                fornecedor.Numero = int.Parse(txtNumero.Text);
+                fornecedor.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
+                fornecedor.Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text);
+                fornecedor.Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text);
+                fornecedor.NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text);
+                fornecedor.Email = utilitarios.RemoveCaracteresEspeciais(txtEmail.Text);
+                fornecedor.Telefone = int.Parse(txtTelefone.Text);
+                fornecedor.Observacao = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
+                fornecedor.Status = (tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
+                fornecedor.Terceiro = (chkTerceiro.CheckState == CheckState.Checked);
+                controle.GravarFornecedor(fornecedor);
                 NovoFornecedor();
                 MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

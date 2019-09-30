@@ -19,7 +19,7 @@ namespace OPS_OphellSystem
         #region "Variaveis"
         Cadastros.Views.Clientes.FrmClientesListagem  cadastroClientes;
         Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias cadastroCategorias;
-        Cadastros.Views.Fornecedores.FrmCadastroDeFornecedores cadastroFornecedores;
+        Cadastros.Views.Fornecedores.FrmFornecedorListagem cadastroFornecedores;
         Cadastros.Views.Operadores.FrmCadastroDeOperadores cadastroOperadores;
         Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento cadastroDeCondicoesPagamento;
         Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas cadastroDeContasAPagar;
@@ -66,7 +66,7 @@ namespace OPS_OphellSystem
             {
                 if (cadastroFornecedores == null)
                 {
-                    cadastroFornecedores = new Cadastros.Views.Fornecedores.FrmCadastroDeFornecedores();
+                    cadastroFornecedores = new Cadastros.Views.Fornecedores.FrmFornecedorListagem();
                 }
 
                 cadastroFornecedores.MdiParent = this;
