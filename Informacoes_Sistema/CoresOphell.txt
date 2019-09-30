@@ -2,6 +2,6 @@ f7941dff
 
 f8cc2bff
 
-247;148;29
+247;148;29 - F7F7941D - Laranja
 
-248;204;43
+248;204;43 - FFF8CC2B - Amarelo
