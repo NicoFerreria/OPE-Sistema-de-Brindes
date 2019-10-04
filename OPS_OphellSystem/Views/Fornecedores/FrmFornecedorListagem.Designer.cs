@@ -44,8 +44,8 @@
             this.lblTitulo.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43))))), System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29))))));
             this.lblTitulo.BeforeTouchSize = new System.Drawing.Size(201, 52);
             this.lblTitulo.BorderAppearance = System.Windows.Forms.BorderStyle.None;
-            this.lblTitulo.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top)
-            | System.Windows.Forms.Border3DSide.Right)
+            this.lblTitulo.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
             | System.Windows.Forms.Border3DSide.Bottom)));
             this.lblTitulo.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
@@ -73,6 +73,7 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(40, 40);
             this.btnExcluir.TabIndex = 9;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // txtPesquisa
             // 
@@ -113,6 +114,7 @@
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(40, 40);
             this.btnFechar.TabIndex = 8;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // btnAdicionar
             // 
@@ -130,12 +132,13 @@
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(40, 40);
             this.btnAdicionar.TabIndex = 7;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // grdFornecedorListagem
             // 
             this.grdFornecedorListagem.AccessibleName = "Table";
-            this.grdFornecedorListagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.grdFornecedorListagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdFornecedorListagem.Location = new System.Drawing.Point(12, 90);
             this.grdFornecedorListagem.Name = "grdFornecedorListagem";
@@ -145,6 +148,7 @@
             this.grdFornecedorListagem.Style.RowHeaderStyle.SelectionMarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.grdFornecedorListagem.TabIndex = 10;
             this.grdFornecedorListagem.Text = "sfDataGrid1";
+            this.grdFornecedorListagem.CellDoubleClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.grdFornecedorListagem_CellDoubleClick);
             // 
             // FrmFornecedorListagem
             // 

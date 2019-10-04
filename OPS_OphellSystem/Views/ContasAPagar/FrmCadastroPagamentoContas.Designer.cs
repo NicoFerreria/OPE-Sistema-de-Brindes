@@ -108,6 +108,7 @@
             // 
             this.cmbFormasPagamento.BackColor = System.Drawing.Color.White;
             this.cmbFormasPagamento.BeforeTouchSize = new System.Drawing.Size(260, 21);
+            this.cmbFormasPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFormasPagamento.Location = new System.Drawing.Point(538, 38);
             this.cmbFormasPagamento.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.cmbFormasPagamento.Name = "cmbFormasPagamento";
@@ -325,6 +326,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Contas a Pagar";
+            this.Shown += new System.EventHandler(this.FrmCadastroPagamentoContas_Shown);
             this.grpDadosPagamento.ResumeLayout(false);
             this.grpDadosPagamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbFormasPagamento)).EndInit();

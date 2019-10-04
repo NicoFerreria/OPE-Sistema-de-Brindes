@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Cadastros.Modelos;
+using Cadastros.Controles;
 using System.Windows.Forms;
 
 namespace OPS_OphellSystem.Cadastros.Views.ContasAPagar
@@ -36,15 +32,45 @@ namespace OPS_OphellSystem.Cadastros.Views.ContasAPagar
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        private void NovoLoad()
+        {
+            try
+            {
+                CarregaCombos();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void CarregaCombos()
+        {
+            try
+            {
+                FormasPagamentoControle formaPagamento = new FormasPagamentoControle();
+                cmbFormasPagamento.DataSource = null;
+                cmbFormasPagamento.DataSource = formaPagamento.ListarFormasPagamento();
+                cmbFormasPagamento.DisplayMember = "Descricao";
+                cmbFormasPagamento.ValueMember = "FormasPafamentoId";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"OPH",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region "Eventos"
+        private void FrmCadastroPagamentoContas_Shown(object sender, EventArgs e)
+        {
+            NovoLoad();
+        }
         private void txtValorConta_KeyPress(object sender, KeyPressEventArgs e)
         {
             utilitarios.PermitirApenasNumeros(sender, e, true);
         }
         #endregion
 
+        
     }
 }

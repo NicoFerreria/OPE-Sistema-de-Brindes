@@ -26,7 +26,7 @@ namespace OPS_OphellSystem
                            {"perfil","TEXT NOT NULL" },
                            {"status","INTEGER NOT NULL DEFAULT 1" },
                            {"excluido","INTEGER NOT NULL DEFAULT 0" },
-                           {"cpf","INTEGER NOT NULL" }
+                           {"cpf","TEXT NOT NULL" }
                          };
                         break;
                     case "Cliente":
@@ -42,7 +42,7 @@ namespace OPS_OphellSystem
                             {"complemento_clt","TEXT" },
                             {"cidade","TEXT" },
                             {"bairro","TEXT" },
-                            {"cep","INTEGER" },
+                            {"cep","TEXT" },
                             {"telefone_clt","INTEGER" },
                             {"nome_contato_clt","TEXT" },                            
                             {"email_contato_clt","TEXT" },
@@ -84,12 +84,12 @@ namespace OPS_OphellSystem
                             {"complemento","TEXT" },
                             {"cidade","TEXT" },
                             {"bairro","TEXT" },
-                            {"cep","INTEGER" },
+                            {"cep","TEXT" },
                             {"telefone","INTEGER" },
                             {"contato","TEXT" },
                             {"email","TEXT" },
                             {"observacao","TEXT" },
-                            {"digito_verificador","INTEGER" },
+                            {"digito_verificador","TEXT NOT NULL" },
                             {"operador_cadastro_id","INTEGER" },
                             {"operador_cadastro_nome","TEXT" },
                             {"operador_alteracao_id","INTEGER" },

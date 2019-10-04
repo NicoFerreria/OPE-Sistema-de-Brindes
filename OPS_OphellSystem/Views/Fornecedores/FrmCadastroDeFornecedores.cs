@@ -20,6 +20,11 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         private Cadastros.Classes.Fornecedor.CadastroDeFornecedor cadastro = new Classes.Fornecedor.CadastroDeFornecedor();
         #endregion
 
+        #region "Variaveis"
+        public long FornecedorID { get; set; }
+
+        #endregion
+
         #region "Metodos"
         public FrmCadastroDeFornecedores()
         {
@@ -32,17 +37,30 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
                 this.Hide();
             }
         }
+        private void NovoLoad()
+        {
+            try
+            {
+                NovoFornecedor();
+                CarregaFornecedorSelecionado();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void Gravar()
         {
             try
             {
                 FornecedorModelo fornecedor = new FornecedorModelo();
                 if (ValidaCampos() == false) return;
-                fornecedor.CNPJ = txtCnpj.Text + txtDv.Text;
+                fornecedor.FornecedorId = txtId.Text == "" ? 0 : long.Parse(txtId.Text);
+                fornecedor.CNPJ = txtCnpj.Text;
                 fornecedor.DigitoVerificadorCnpj = txtDv.Text;
                 fornecedor.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantasia.Text);
                 fornecedor.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
-                fornecedor.CEP = int.Parse(txtCep.Text);
+                fornecedor.CEP = txtCep.Text;
                 fornecedor.Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text);
                 fornecedor.Numero = int.Parse(txtNumero.Text);
                 fornecedor.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
@@ -54,9 +72,11 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
                 fornecedor.Observacao = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
                 fornecedor.Status = (tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
                 fornecedor.Terceiro = (chkTerceiro.CheckState == CheckState.Checked);
-                controle.GravarFornecedor(fornecedor);
-                NovoFornecedor();
-                MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (controle.GravarFornecedor(fornecedor))
+                {
+                    NovoFornecedor();
+                    MessageBox.Show("Operação realizada com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
@@ -113,8 +133,35 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         {
             try
             {
-                VerificaStatusFornecedor();
+                FornecedorModelo fornecedor = controle.GetFornecedorById(FornecedorID);
 
+                if (fornecedor != null)
+                {
+                    txtId.Text = fornecedor.FornecedorId == 0 ? "" : fornecedor.FornecedorId.ToString();
+                    txtCnpj.Text = fornecedor.CNPJ;
+                    txtDv.Text = fornecedor.DigitoVerificadorCnpj;
+                    txtDv.Text = fornecedor.DigitoVerificadorCnpj;
+                    txtNomeFantasia.Text = fornecedor.Fantasia;
+                    txtRazaoSocial.Text = fornecedor.Razao;
+                    txtCep.Text = fornecedor.CEP;
+                    txtEndereco.Text = fornecedor.Endereco;
+                    txtNumero.Text = fornecedor.Numero == 0 ? "" : fornecedor.Numero.ToString();
+                    txtComplemento.Text = fornecedor.Complemento;
+                    txtBairro.Text = fornecedor.Bairro;
+                    txtCidade.Text = fornecedor.Cidade;
+                    txtNomeContato.Text = fornecedor.NomeContato;
+                    txtEmail.Text = fornecedor.Email;
+                    txtTelefone.Text = fornecedor.Telefone == 0 ? "" : fornecedor.Telefone.ToString();
+                    txtObservacao.Text = fornecedor.Observacao;
+                    tgBtnStatus.ToggleState = fornecedor.Status ? Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active : Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive;
+                    chkTerceiro.CheckState = fornecedor.Terceiro ? CheckState.Checked : CheckState.Unchecked;
+
+                    VerificaStatusFornecedor();
+                }
+                else
+                {
+                    NovoFornecedor();
+                }
             }
             catch (Exception ex)
             {
@@ -134,11 +181,11 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
                     tgBtnStatus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
         #endregion
 
@@ -204,9 +251,13 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         private void FrmCadastroDeFornecedores_KeyDown(object sender, KeyEventArgs e)
         {
             if (ModifierKeys == Keys.Control && e.KeyCode == Keys.N) NovoFornecedor();
-            if (ModifierKeys == Keys.Control && e.KeyCode == Keys.S) Gravar();            
+            if (ModifierKeys == Keys.Control && e.KeyCode == Keys.S) Gravar();
             if (e.KeyCode == Keys.F2) AtivarDesativarFornecedor();
             if (e.KeyCode == Keys.Escape) Fechar();
+        }
+        private void FrmCadastroDeFornecedores_Shown(object sender, EventArgs e)
+        {
+            NovoLoad();
         }
         private void txtNumero_TextChanged(object sender, EventArgs e)
         {
@@ -259,8 +310,6 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         {
             Gravar();
         }
-        #endregion       
-
-        
+        #endregion        
     }
 }

@@ -40,28 +40,28 @@
             this.lblCnpj = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtCnpj = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.chkTerceiro = new Syncfusion.Windows.Forms.Tools.CheckBoxAdv();
-            this.lblTxtObservacoes = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtObservacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblTxtRelefone = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtTelefone = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtEmail = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblTxtNomeContato = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtNomeContato = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblCidade = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtCidade = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblBairro = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtBairro = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblTxtComplemento = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtComplemento = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblTxtNumero = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtNumero = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblEndereco = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtEndereco = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblCep = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.txtCep = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.lblRazaoSocial = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtRazaoSocial = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtCep = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtEndereco = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtBairro = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtNumero = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtComplemento = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtCidade = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtNomeContato = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtEmail = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtTelefone = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.txtObservacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblTxtObservacoes = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblTxtRelefone = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.autoLabel2 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblTxtNomeContato = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblCidade = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblBairro = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblTxtComplemento = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblTxtNumero = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblEndereco = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblCep = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblRazaoSocial = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtNomeFantasia = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblTxtEmail = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,25 +70,23 @@
             this.tgBtnStatus = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.btnNovoFornecedor = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.btnBuscarFornecedor = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.sfToolTip1 = new Syncfusion.WinForms.Controls.SfToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridBagLayout1)).BeginInit();
             this.pnlDadosGerais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCnpj)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkTerceiro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtObservacao)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelefone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNomeContato)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCidade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBairro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtComplemento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEndereco)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRazaoSocial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndereco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBairro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComplemento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNomeContato)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtObservacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeFantasia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStatus)).BeginInit();
@@ -107,8 +105,18 @@
             this.pnlDadosGerais.Controls.Add(this.lblDv);
             this.pnlDadosGerais.Controls.Add(this.lblCnpj);
             this.pnlDadosGerais.Controls.Add(this.chkTerceiro);
-            this.pnlDadosGerais.Controls.Add(this.lblTxtObservacoes);
+            this.pnlDadosGerais.Controls.Add(this.txtRazaoSocial);
+            this.pnlDadosGerais.Controls.Add(this.txtCep);
+            this.pnlDadosGerais.Controls.Add(this.txtEndereco);
+            this.pnlDadosGerais.Controls.Add(this.txtBairro);
+            this.pnlDadosGerais.Controls.Add(this.txtNumero);
+            this.pnlDadosGerais.Controls.Add(this.txtComplemento);
+            this.pnlDadosGerais.Controls.Add(this.txtCidade);
+            this.pnlDadosGerais.Controls.Add(this.txtNomeContato);
+            this.pnlDadosGerais.Controls.Add(this.txtEmail);
+            this.pnlDadosGerais.Controls.Add(this.txtTelefone);
             this.pnlDadosGerais.Controls.Add(this.txtObservacao);
+            this.pnlDadosGerais.Controls.Add(this.lblTxtObservacoes);
             this.pnlDadosGerais.Controls.Add(this.lblTxtRelefone);
             this.pnlDadosGerais.Controls.Add(this.autoLabel2);
             this.pnlDadosGerais.Controls.Add(this.lblTxtNomeContato);
@@ -118,7 +126,6 @@
             this.pnlDadosGerais.Controls.Add(this.lblTxtNumero);
             this.pnlDadosGerais.Controls.Add(this.lblEndereco);
             this.pnlDadosGerais.Controls.Add(this.lblCep);
-            this.pnlDadosGerais.Controls.Add(this.txtCep);
             this.pnlDadosGerais.Controls.Add(this.lblRazaoSocial);
             this.pnlDadosGerais.Controls.Add(this.txtNomeFantasia);
             this.pnlDadosGerais.Controls.Add(this.lblTxtEmail);
@@ -127,18 +134,9 @@
             this.pnlDadosGerais.Controls.Add(this.lblTxtId);
             this.pnlDadosGerais.Controls.Add(this.txtId);
             this.pnlDadosGerais.Controls.Add(this.txtCnpj);
-            this.pnlDadosGerais.Controls.Add(this.txtRazaoSocial);
-            this.pnlDadosGerais.Controls.Add(this.txtEndereco);
-            this.pnlDadosGerais.Controls.Add(this.txtNumero);
-            this.pnlDadosGerais.Controls.Add(this.txtComplemento);
-            this.pnlDadosGerais.Controls.Add(this.txtBairro);
-            this.pnlDadosGerais.Controls.Add(this.txtCidade);
-            this.pnlDadosGerais.Controls.Add(this.txtNomeContato);
-            this.pnlDadosGerais.Controls.Add(this.txtEmail);
-            this.pnlDadosGerais.Controls.Add(this.txtTelefone);
             this.pnlDadosGerais.Location = new System.Drawing.Point(24, 56);
             this.pnlDadosGerais.Name = "pnlDadosGerais";
-            this.pnlDadosGerais.Size = new System.Drawing.Size(976, 584);
+            this.pnlDadosGerais.Size = new System.Drawing.Size(976, 525);
             this.pnlDadosGerais.TabIndex = 0;
             // 
             // lblDv
@@ -155,7 +153,7 @@
             // 
             // txtDv
             // 
-            this.txtDv.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtDv.BeforeTouchSize = new System.Drawing.Size(96, 26);
             this.txtDv.BorderColor = System.Drawing.Color.Gray;
             this.txtDv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDv.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -183,7 +181,7 @@
             // 
             // txtCnpj
             // 
-            this.txtCnpj.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtCnpj.BeforeTouchSize = new System.Drawing.Size(96, 26);
             this.txtCnpj.BorderColor = System.Drawing.Color.Gray;
             this.txtCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCnpj.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -212,161 +210,60 @@
             this.chkTerceiro.Text = "Parceiro Terceirizado";
             this.chkTerceiro.ThemesEnabled = false;
             // 
-            // lblTxtObservacoes
+            // txtRazaoSocial
             // 
-            this.lblTxtObservacoes.DY = -24;
-            this.lblTxtObservacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxtObservacoes.LabeledControl = this.txtObservacao;
-            this.lblTxtObservacoes.Location = new System.Drawing.Point(560, 24);
-            this.lblTxtObservacoes.Name = "lblTxtObservacoes";
-            this.lblTxtObservacoes.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTxtObservacoes.Size = new System.Drawing.Size(102, 20);
-            this.lblTxtObservacoes.TabIndex = 28;
-            this.lblTxtObservacoes.Text = "Observações";
+            this.txtRazaoSocial.BeforeTouchSize = new System.Drawing.Size(96, 26);
+            this.txtRazaoSocial.BorderColor = System.Drawing.Color.Gray;
+            this.txtRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRazaoSocial.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazaoSocial.Location = new System.Drawing.Point(402, 87);
+            this.txtRazaoSocial.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtRazaoSocial.MinimumSize = new System.Drawing.Size(380, 4);
+            this.txtRazaoSocial.Name = "txtRazaoSocial";
+            this.txtRazaoSocial.Size = new System.Drawing.Size(380, 26);
+            this.txtRazaoSocial.TabIndex = 6;
+            this.txtRazaoSocial.UseBorderColorOnFocus = true;
             // 
-            // txtObservacao
+            // txtCep
             // 
-            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtObservacao.BorderColor = System.Drawing.Color.Gray;
-            this.txtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtObservacao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtObservacao.Location = new System.Drawing.Point(560, 48);
-            this.txtObservacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtObservacao.Multiline = true;
-            this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(296, 328);
-            this.txtObservacao.TabIndex = 16;
-            this.txtObservacao.UseBorderColorOnFocus = true;
+            this.txtCep.BeforeTouchSize = new System.Drawing.Size(96, 26);
+            this.txtCep.BorderColor = System.Drawing.Color.Gray;
+            this.txtCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCep.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCep.Location = new System.Drawing.Point(16, 147);
+            this.txtCep.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtCep.MinimumSize = new System.Drawing.Size(4, 4);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(120, 26);
+            this.txtCep.TabIndex = 7;
+            this.txtCep.UseBorderColorOnFocus = true;
+            this.txtCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCep_KeyPress);
             // 
-            // lblTxtRelefone
+            // txtEndereco
             // 
-            this.lblTxtRelefone.DY = -24;
-            this.lblTxtRelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxtRelefone.LabeledControl = this.txtTelefone;
-            this.lblTxtRelefone.Location = new System.Drawing.Point(16, 512);
-            this.lblTxtRelefone.Name = "lblTxtRelefone";
-            this.lblTxtRelefone.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTxtRelefone.Size = new System.Drawing.Size(71, 20);
-            this.lblTxtRelefone.TabIndex = 26;
-            this.lblTxtRelefone.Text = "Telefone";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtTelefone.BorderColor = System.Drawing.Color.Gray;
-            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelefone.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(16, 536);
-            this.txtTelefone.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtTelefone.MinimumSize = new System.Drawing.Size(4, 4);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(152, 26);
-            this.txtTelefone.TabIndex = 15;
-            this.txtTelefone.UseBorderColorOnFocus = true;
-            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
-            // 
-            // autoLabel2
-            // 
-            this.autoLabel2.DY = -24;
-            this.autoLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoLabel2.LabeledControl = this.txtEmail;
-            this.autoLabel2.Location = new System.Drawing.Point(16, 456);
-            this.autoLabel2.Name = "autoLabel2";
-            this.autoLabel2.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.autoLabel2.Size = new System.Drawing.Size(48, 20);
-            this.autoLabel2.TabIndex = 25;
-            this.autoLabel2.Text = "Email";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtEmail.BorderColor = System.Drawing.Color.Gray;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(16, 480);
-            this.txtEmail.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtEmail.MinimumSize = new System.Drawing.Size(4, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(380, 26);
-            this.txtEmail.TabIndex = 14;
-            this.txtEmail.UseBorderColorOnFocus = true;
-            // 
-            // lblTxtNomeContato
-            // 
-            this.lblTxtNomeContato.DY = -24;
-            this.lblTxtNomeContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxtNomeContato.LabeledControl = this.txtNomeContato;
-            this.lblTxtNomeContato.Location = new System.Drawing.Point(16, 400);
-            this.lblTxtNomeContato.Name = "lblTxtNomeContato";
-            this.lblTxtNomeContato.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTxtNomeContato.Size = new System.Drawing.Size(112, 20);
-            this.lblTxtNomeContato.TabIndex = 24;
-            this.lblTxtNomeContato.Text = "Nome Contato";
-            // 
-            // txtNomeContato
-            // 
-            this.txtNomeContato.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtNomeContato.BorderColor = System.Drawing.Color.Gray;
-            this.txtNomeContato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeContato.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtNomeContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeContato.Location = new System.Drawing.Point(16, 424);
-            this.txtNomeContato.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtNomeContato.MinimumSize = new System.Drawing.Size(4, 4);
-            this.txtNomeContato.Name = "txtNomeContato";
-            this.txtNomeContato.Size = new System.Drawing.Size(380, 26);
-            this.txtNomeContato.TabIndex = 13;
-            this.txtNomeContato.UseBorderColorOnFocus = true;
-            // 
-            // lblCidade
-            // 
-            this.lblCidade.DY = -24;
-            this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidade.LabeledControl = this.txtCidade;
-            this.lblCidade.Location = new System.Drawing.Point(16, 344);
-            this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblCidade.Size = new System.Drawing.Size(59, 20);
-            this.lblCidade.TabIndex = 23;
-            this.lblCidade.Text = "Cidade";
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtCidade.BorderColor = System.Drawing.Color.Gray;
-            this.txtCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCidade.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(16, 368);
-            this.txtCidade.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtCidade.MinimumSize = new System.Drawing.Size(4, 4);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(380, 26);
-            this.txtCidade.TabIndex = 12;
-            this.txtCidade.UseBorderColorOnFocus = true;
-            // 
-            // lblBairro
-            // 
-            this.lblBairro.DY = -24;
-            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.LabeledControl = this.txtBairro;
-            this.lblBairro.Location = new System.Drawing.Point(16, 288);
-            this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblBairro.Size = new System.Drawing.Size(51, 20);
-            this.lblBairro.TabIndex = 22;
-            this.lblBairro.Text = "Bairro";
+            this.txtEndereco.BeforeTouchSize = new System.Drawing.Size(96, 26);
+            this.txtEndereco.BorderColor = System.Drawing.Color.Gray;
+            this.txtEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEndereco.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(142, 147);
+            this.txtEndereco.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtEndereco.MinimumSize = new System.Drawing.Size(4, 4);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(248, 26);
+            this.txtEndereco.TabIndex = 8;
+            this.txtEndereco.UseBorderColorOnFocus = true;
             // 
             // txtBairro
             // 
-            this.txtBairro.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtBairro.BeforeTouchSize = new System.Drawing.Size(96, 26);
             this.txtBairro.BorderColor = System.Drawing.Color.Gray;
             this.txtBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBairro.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(16, 312);
+            this.txtBairro.Location = new System.Drawing.Point(396, 147);
             this.txtBairro.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtBairro.MinimumSize = new System.Drawing.Size(4, 4);
             this.txtBairro.Name = "txtBairro";
@@ -374,53 +271,14 @@
             this.txtBairro.TabIndex = 11;
             this.txtBairro.UseBorderColorOnFocus = true;
             // 
-            // lblTxtComplemento
-            // 
-            this.lblTxtComplemento.DY = -24;
-            this.lblTxtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxtComplemento.LabeledControl = this.txtComplemento;
-            this.lblTxtComplemento.Location = new System.Drawing.Point(384, 232);
-            this.lblTxtComplemento.Name = "lblTxtComplemento";
-            this.lblTxtComplemento.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTxtComplemento.Size = new System.Drawing.Size(108, 20);
-            this.lblTxtComplemento.TabIndex = 21;
-            this.lblTxtComplemento.Text = "Complemento";
-            // 
-            // txtComplemento
-            // 
-            this.txtComplemento.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtComplemento.BorderColor = System.Drawing.Color.Gray;
-            this.txtComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtComplemento.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(384, 256);
-            this.txtComplemento.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtComplemento.MinimumSize = new System.Drawing.Size(4, 4);
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(100, 26);
-            this.txtComplemento.TabIndex = 10;
-            this.txtComplemento.UseBorderColorOnFocus = true;
-            // 
-            // lblTxtNumero
-            // 
-            this.lblTxtNumero.DY = -24;
-            this.lblTxtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTxtNumero.LabeledControl = this.txtNumero;
-            this.lblTxtNumero.Location = new System.Drawing.Point(272, 232);
-            this.lblTxtNumero.Name = "lblTxtNumero";
-            this.lblTxtNumero.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTxtNumero.Size = new System.Drawing.Size(65, 20);
-            this.lblTxtNumero.TabIndex = 20;
-            this.lblTxtNumero.Text = "Numero";
-            // 
             // txtNumero
             // 
-            this.txtNumero.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtNumero.BeforeTouchSize = new System.Drawing.Size(96, 26);
             this.txtNumero.BorderColor = System.Drawing.Color.Gray;
             this.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNumero.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(272, 256);
+            this.txtNumero.Location = new System.Drawing.Point(795, 147);
             this.txtNumero.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtNumero.MinimumSize = new System.Drawing.Size(4, 4);
             this.txtNumero.Name = "txtNumero";
@@ -430,91 +288,231 @@
             this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
+            // txtComplemento
+            // 
+            this.txtComplemento.BeforeTouchSize = new System.Drawing.Size(96, 26);
+            this.txtComplemento.BorderColor = System.Drawing.Color.Gray;
+            this.txtComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtComplemento.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Location = new System.Drawing.Point(16, 207);
+            this.txtComplemento.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtComplemento.MinimumSize = new System.Drawing.Size(4, 4);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(100, 26);
+            this.txtComplemento.TabIndex = 10;
+            this.txtComplemento.UseBorderColorOnFocus = true;
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.BeforeTouchSize = new System.Drawing.Size(96, 26);
+            this.txtCidade.BorderColor = System.Drawing.Color.Gray;
+            this.txtCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCidade.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(130, 207);
+            this.txtCidade.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtCidade.MinimumSize = new System.Drawing.Size(4, 4);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(380, 26);
+            this.txtCidade.TabIndex = 12;
+            this.txtCidade.UseBorderColorOnFocus = true;
+            // 
+            // txtNomeContato
+            // 
+            this.txtNomeContato.BeforeTouchSize = new System.Drawing.Size(96, 26);
+            this.txtNomeContato.BorderColor = System.Drawing.Color.Gray;
+            this.txtNomeContato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeContato.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtNomeContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeContato.Location = new System.Drawing.Point(16, 264);
+            this.txtNomeContato.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtNomeContato.MinimumSize = new System.Drawing.Size(4, 4);
+            this.txtNomeContato.Name = "txtNomeContato";
+            this.txtNomeContato.Size = new System.Drawing.Size(380, 26);
+            this.txtNomeContato.TabIndex = 13;
+            this.txtNomeContato.UseBorderColorOnFocus = true;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BeforeTouchSize = new System.Drawing.Size(96, 26);
+            this.txtEmail.BorderColor = System.Drawing.Color.Gray;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(402, 264);
+            this.txtEmail.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtEmail.MinimumSize = new System.Drawing.Size(4, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(380, 26);
+            this.txtEmail.TabIndex = 14;
+            this.txtEmail.UseBorderColorOnFocus = true;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.BeforeTouchSize = new System.Drawing.Size(96, 26);
+            this.txtTelefone.BorderColor = System.Drawing.Color.Gray;
+            this.txtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefone.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(788, 264);
+            this.txtTelefone.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtTelefone.MinimumSize = new System.Drawing.Size(4, 4);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(152, 26);
+            this.txtTelefone.TabIndex = 15;
+            this.txtTelefone.UseBorderColorOnFocus = true;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
+            // 
+            // txtObservacao
+            // 
+            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(96, 26);
+            this.txtObservacao.BorderColor = System.Drawing.Color.Gray;
+            this.txtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtObservacao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.txtObservacao.Location = new System.Drawing.Point(16, 335);
+            this.txtObservacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtObservacao.Multiline = true;
+            this.txtObservacao.Name = "txtObservacao";
+            this.txtObservacao.Size = new System.Drawing.Size(924, 104);
+            this.txtObservacao.TabIndex = 16;
+            this.txtObservacao.UseBorderColorOnFocus = true;
+            // 
+            // lblTxtObservacoes
+            // 
+            this.lblTxtObservacoes.DY = -24;
+            this.lblTxtObservacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxtObservacoes.LabeledControl = this.txtObservacao;
+            this.lblTxtObservacoes.Location = new System.Drawing.Point(16, 311);
+            this.lblTxtObservacoes.Name = "lblTxtObservacoes";
+            this.lblTxtObservacoes.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTxtObservacoes.Size = new System.Drawing.Size(102, 20);
+            this.lblTxtObservacoes.TabIndex = 28;
+            this.lblTxtObservacoes.Text = "Observações";
+            // 
+            // lblTxtRelefone
+            // 
+            this.lblTxtRelefone.DY = -24;
+            this.lblTxtRelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxtRelefone.LabeledControl = this.txtTelefone;
+            this.lblTxtRelefone.Location = new System.Drawing.Point(788, 240);
+            this.lblTxtRelefone.Name = "lblTxtRelefone";
+            this.lblTxtRelefone.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTxtRelefone.Size = new System.Drawing.Size(71, 20);
+            this.lblTxtRelefone.TabIndex = 26;
+            this.lblTxtRelefone.Text = "Telefone";
+            // 
+            // autoLabel2
+            // 
+            this.autoLabel2.DY = -24;
+            this.autoLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoLabel2.LabeledControl = this.txtEmail;
+            this.autoLabel2.Location = new System.Drawing.Point(402, 240);
+            this.autoLabel2.Name = "autoLabel2";
+            this.autoLabel2.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.autoLabel2.Size = new System.Drawing.Size(48, 20);
+            this.autoLabel2.TabIndex = 25;
+            this.autoLabel2.Text = "Email";
+            // 
+            // lblTxtNomeContato
+            // 
+            this.lblTxtNomeContato.DY = -24;
+            this.lblTxtNomeContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxtNomeContato.LabeledControl = this.txtNomeContato;
+            this.lblTxtNomeContato.Location = new System.Drawing.Point(16, 240);
+            this.lblTxtNomeContato.Name = "lblTxtNomeContato";
+            this.lblTxtNomeContato.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTxtNomeContato.Size = new System.Drawing.Size(112, 20);
+            this.lblTxtNomeContato.TabIndex = 24;
+            this.lblTxtNomeContato.Text = "Nome Contato";
+            // 
+            // lblCidade
+            // 
+            this.lblCidade.DY = -24;
+            this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCidade.LabeledControl = this.txtCidade;
+            this.lblCidade.Location = new System.Drawing.Point(130, 183);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblCidade.Size = new System.Drawing.Size(59, 20);
+            this.lblCidade.TabIndex = 23;
+            this.lblCidade.Text = "Cidade";
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.DY = -24;
+            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBairro.LabeledControl = this.txtBairro;
+            this.lblBairro.Location = new System.Drawing.Point(396, 123);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblBairro.Size = new System.Drawing.Size(51, 20);
+            this.lblBairro.TabIndex = 22;
+            this.lblBairro.Text = "Bairro";
+            // 
+            // lblTxtComplemento
+            // 
+            this.lblTxtComplemento.DY = -24;
+            this.lblTxtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxtComplemento.LabeledControl = this.txtComplemento;
+            this.lblTxtComplemento.Location = new System.Drawing.Point(16, 183);
+            this.lblTxtComplemento.Name = "lblTxtComplemento";
+            this.lblTxtComplemento.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTxtComplemento.Size = new System.Drawing.Size(108, 20);
+            this.lblTxtComplemento.TabIndex = 21;
+            this.lblTxtComplemento.Text = "Complemento";
+            // 
+            // lblTxtNumero
+            // 
+            this.lblTxtNumero.DY = -24;
+            this.lblTxtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTxtNumero.LabeledControl = this.txtNumero;
+            this.lblTxtNumero.Location = new System.Drawing.Point(795, 123);
+            this.lblTxtNumero.Name = "lblTxtNumero";
+            this.lblTxtNumero.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblTxtNumero.Size = new System.Drawing.Size(65, 20);
+            this.lblTxtNumero.TabIndex = 20;
+            this.lblTxtNumero.Text = "Numero";
+            // 
             // lblEndereco
             // 
             this.lblEndereco.DY = -24;
             this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereco.LabeledControl = this.txtEndereco;
-            this.lblEndereco.Location = new System.Drawing.Point(16, 232);
+            this.lblEndereco.Location = new System.Drawing.Point(142, 123);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
             this.lblEndereco.Size = new System.Drawing.Size(78, 20);
             this.lblEndereco.TabIndex = 19;
             this.lblEndereco.Text = "Endereço";
             // 
-            // txtEndereco
-            // 
-            this.txtEndereco.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtEndereco.BorderColor = System.Drawing.Color.Gray;
-            this.txtEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEndereco.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(16, 256);
-            this.txtEndereco.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtEndereco.MinimumSize = new System.Drawing.Size(4, 4);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(248, 26);
-            this.txtEndereco.TabIndex = 8;
-            this.txtEndereco.UseBorderColorOnFocus = true;
-            // 
             // lblCep
             // 
             this.lblCep.DY = -24;
             this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCep.LabeledControl = this.txtCep;
-            this.lblCep.Location = new System.Drawing.Point(16, 176);
+            this.lblCep.Location = new System.Drawing.Point(16, 123);
             this.lblCep.Name = "lblCep";
             this.lblCep.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
             this.lblCep.Size = new System.Drawing.Size(41, 20);
             this.lblCep.TabIndex = 18;
             this.lblCep.Text = "CEP";
             // 
-            // txtCep
-            // 
-            this.txtCep.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtCep.BorderColor = System.Drawing.Color.Gray;
-            this.txtCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCep.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.Location = new System.Drawing.Point(16, 200);
-            this.txtCep.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtCep.MinimumSize = new System.Drawing.Size(4, 4);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(120, 26);
-            this.txtCep.TabIndex = 7;
-            this.txtCep.UseBorderColorOnFocus = true;
-            this.txtCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCep_KeyPress);
-            // 
             // lblRazaoSocial
             // 
             this.lblRazaoSocial.DY = -24;
             this.lblRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRazaoSocial.LabeledControl = this.txtRazaoSocial;
-            this.lblRazaoSocial.Location = new System.Drawing.Point(16, 120);
+            this.lblRazaoSocial.Location = new System.Drawing.Point(402, 63);
             this.lblRazaoSocial.Name = "lblRazaoSocial";
             this.lblRazaoSocial.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
             this.lblRazaoSocial.Size = new System.Drawing.Size(103, 20);
             this.lblRazaoSocial.TabIndex = 8;
             this.lblRazaoSocial.Text = "Razão Social";
             // 
-            // txtRazaoSocial
-            // 
-            this.txtRazaoSocial.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.txtRazaoSocial.BorderColor = System.Drawing.Color.Gray;
-            this.txtRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRazaoSocial.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.txtRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRazaoSocial.Location = new System.Drawing.Point(16, 144);
-            this.txtRazaoSocial.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.txtRazaoSocial.MinimumSize = new System.Drawing.Size(380, 4);
-            this.txtRazaoSocial.Name = "txtRazaoSocial";
-            this.txtRazaoSocial.Size = new System.Drawing.Size(380, 26);
-            this.txtRazaoSocial.TabIndex = 6;
-            this.txtRazaoSocial.UseBorderColorOnFocus = true;
-            // 
             // txtNomeFantasia
             // 
-            this.txtNomeFantasia.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtNomeFantasia.BeforeTouchSize = new System.Drawing.Size(96, 26);
             this.txtNomeFantasia.BorderColor = System.Drawing.Color.Gray;
             this.txtNomeFantasia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeFantasia.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -562,7 +560,7 @@
             // 
             // txtId
             // 
-            this.txtId.BeforeTouchSize = new System.Drawing.Size(100, 26);
+            this.txtId.BeforeTouchSize = new System.Drawing.Size(96, 26);
             this.txtId.BorderColor = System.Drawing.Color.Gray;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -583,6 +581,7 @@
             activeStateCollection1.Text = "Desativar";
             this.tgBtnStatus.ActiveState = activeStateCollection1;
             this.tgBtnStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tgBtnStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tgBtnStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tgBtnStatus.ForeColor = System.Drawing.Color.Black;
             inactiveStateCollection1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
@@ -591,7 +590,7 @@
             inactiveStateCollection1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
             inactiveStateCollection1.Text = "Ativar";
             this.tgBtnStatus.InactiveState = inactiveStateCollection1;
-            this.tgBtnStatus.Location = new System.Drawing.Point(776, 16);
+            this.tgBtnStatus.Location = new System.Drawing.Point(898, 12);
             this.tgBtnStatus.MinimumSize = new System.Drawing.Size(52, 20);
             this.tgBtnStatus.Name = "tgBtnStatus";
             this.tgBtnStatus.Renderer = toggleButtonRenderer1;
@@ -605,70 +604,52 @@
             // 
             // btnNovoFornecedor
             // 
-            this.btnNovoFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNovoFornecedor.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnNovoFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnNovoFornecedor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnNovoFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnNovoFornecedor.BeforeTouchSize = new System.Drawing.Size(135, 40);
+            this.btnNovoFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNovoFornecedor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
             this.btnNovoFornecedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnNovoFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnNovoFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovoFornecedor.Image = global::OPS_OphellSystem.Properties.Resources.icons8_new_company_32px_2;
+            this.btnNovoFornecedor.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovoFornecedor.ForeColor = System.Drawing.Color.White;
+            this.btnNovoFornecedor.Image = global::OPS_OphellSystem.Properties.Resources.LimparBrancoPadrao28x28;
+            this.btnNovoFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNovoFornecedor.IsBackStageButton = false;
-            this.btnNovoFornecedor.Location = new System.Drawing.Point(608, 8);
+            this.btnNovoFornecedor.KeepFocusRectangle = false;
+            this.btnNovoFornecedor.Location = new System.Drawing.Point(525, 608);
             this.btnNovoFornecedor.Name = "btnNovoFornecedor";
-            this.btnNovoFornecedor.Size = new System.Drawing.Size(40, 40);
+            this.btnNovoFornecedor.Size = new System.Drawing.Size(135, 40);
             this.btnNovoFornecedor.TabIndex = 19;
+            this.btnNovoFornecedor.Text = "Novo (Ctrl + N)";
+            this.btnNovoFornecedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sfToolTip1.SetToolTip(this.btnNovoFornecedor, "Novo Fornecedor (Ctrl+N)");
             this.btnNovoFornecedor.Click += new System.EventHandler(this.btnNovoFornecedor_Click);
             // 
             // btnGravar
             // 
-            this.btnGravar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGravar.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnGravar.FlatAppearance.BorderSize = 0;
+            this.btnGravar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnGravar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnGravar.BeforeTouchSize = new System.Drawing.Size(135, 40);
+            this.btnGravar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
             this.btnGravar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnGravar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGravar.Image = global::OPS_OphellSystem.Properties.Resources.Gravar32x32;
+            this.btnGravar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGravar.ForeColor = System.Drawing.Color.White;
+            this.btnGravar.Image = global::OPS_OphellSystem.Properties.Resources.FinalizarBrancoPadrao28x28;
+            this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGravar.IsBackStageButton = false;
-            this.btnGravar.Location = new System.Drawing.Point(664, 8);
+            this.btnGravar.KeepFocusRectangle = false;
+            this.btnGravar.Location = new System.Drawing.Point(384, 608);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(40, 40);
+            this.btnGravar.Size = new System.Drawing.Size(135, 40);
             this.btnGravar.TabIndex = 17;
+            this.btnGravar.Text = "Salvar (Ctrl + S)";
+            this.btnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGravar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.sfToolTip1.SetToolTip(this.btnGravar, "Novo (Ctrl+S)");
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
-            // 
-            // btnBuscarFornecedor
-            // 
-            this.btnBuscarFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscarFornecedor.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnBuscarFornecedor.FlatAppearance.BorderSize = 0;
-            this.btnBuscarFornecedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnBuscarFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnBuscarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarFornecedor.Image = global::OPS_OphellSystem.Properties.Resources.Buscar32x32;
-            this.btnBuscarFornecedor.IsBackStageButton = false;
-            this.btnBuscarFornecedor.Location = new System.Drawing.Point(720, 8);
-            this.btnBuscarFornecedor.Name = "btnBuscarFornecedor";
-            this.btnBuscarFornecedor.Size = new System.Drawing.Size(40, 40);
-            this.btnBuscarFornecedor.TabIndex = 18;
-            this.sfToolTip1.SetToolTip(this.btnBuscarFornecedor, "PesquisarFornecedor (Ctrl+F)");
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVoltar.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
-            this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Image = global::OPS_OphellSystem.Properties.Resources.Voltar32x32;
-            this.btnVoltar.IsBackStageButton = false;
-            this.btnVoltar.Location = new System.Drawing.Point(912, 8);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(40, 40);
-            this.btnVoltar.TabIndex = 21;
-            this.sfToolTip1.SetToolTip(this.btnVoltar, "Voltar (Esc)");
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // sfToolTip1
             // 
@@ -678,19 +659,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 660);
             this.Controls.Add(this.tgBtnStatus);
             this.Controls.Add(this.btnNovoFornecedor);
-            this.Controls.Add(this.btnGravar);
-            this.Controls.Add(this.btnBuscarFornecedor);
-            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.pnlDadosGerais);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.btnGravar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "FrmCadastroDeFornecedores";
-            this.Text = "FrmCadastroDeFornecedor";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastrar Fornecedor";
             this.Load += new System.EventHandler(this.FrmCadastroDeFornecedores_Load);
+            this.Shown += new System.EventHandler(this.FrmCadastroDeFornecedores_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCadastroDeFornecedores_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridBagLayout1)).EndInit();
             this.pnlDadosGerais.ResumeLayout(false);
@@ -698,17 +680,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCnpj)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkTerceiro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtObservacao)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelefone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNomeContato)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCidade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBairro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtComplemento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEndereco)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRazaoSocial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEndereco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBairro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComplemento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNomeContato)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtObservacao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomeFantasia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnStatus)).EndInit();
@@ -750,8 +732,6 @@
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblTxtObservacoes;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblCnpj;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblDv;
-        private Syncfusion.Windows.Forms.ButtonAdv btnVoltar;
-        private Syncfusion.Windows.Forms.ButtonAdv btnBuscarFornecedor;
         private Syncfusion.Windows.Forms.ButtonAdv btnGravar;
         private Syncfusion.Windows.Forms.ButtonAdv btnNovoFornecedor;
         private Syncfusion.Windows.Forms.Tools.ToggleButton tgBtnStatus;

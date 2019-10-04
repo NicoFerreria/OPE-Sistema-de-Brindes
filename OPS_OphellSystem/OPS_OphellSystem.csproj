@@ -99,7 +99,6 @@
     <Compile Include="Controles\Cadastros\ProdutoControle.cs" />
     <Compile Include="Controles\Financeiro\ContasPagarControle.cs" />
     <Compile Include="Controles\Cadastros\FormasPagamentoControle.cs" />
-    <Compile Include="Dados\ForcencedorDados.cs" />
     <Compile Include="Modelos\Cadastros\ClienteModelo.cs" />
     <Compile Include="Cadastros\Classes\Operadores\CadastroDeOperadores.cs" />
     <Compile Include="Cadastros\Classes\PessoaJuridica.cs" />

@@ -78,6 +78,30 @@ namespace Cadastros.Controles
                 throw new System.Exception(ex.Message);
             }
         }
+        public List<FormaPagamentoModelo> ListarFormasPagamento()
+        {
+            try
+            {
+                List<FormaPagamentoModelo> list = new List<FormaPagamentoModelo>();
+                DataTable dtDados = GetAllFormasPagamento();
+                if(dtDados.Rows.Count > 0)
+                {
+                    for(int index = 0; index < dtDados.Rows.Count; index++)
+                    {
+                        FormaPagamentoModelo formaPagamento = new FormaPagamentoModelo();
+                        formaPagamento.FormasPafamentoId = long.Parse(dtDados.Rows[index]["id"].ToString());
+                        formaPagamento.Descricao = dtDados.Rows[index]["descricao"].ToString();
+                        formaPagamento.Tipo = dtDados.Rows[index]["tipo"].ToString();
+                        formaPagamento.Status = bool.Parse(dtDados.Rows[index]["status"].ToString());
+                        list.Add(formaPagamento);
+                    }
+                }
+                return list;
+            }catch(Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
         #endregion 
     }
 }
