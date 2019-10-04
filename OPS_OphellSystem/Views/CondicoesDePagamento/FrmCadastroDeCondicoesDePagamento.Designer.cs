@@ -45,6 +45,7 @@
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.grpDadosFormaPagamento = new System.Windows.Forms.GroupBox();
             this.grdFormasPagamento = new Syncfusion.WinForms.DataGrid.SfDataGrid();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescricao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
@@ -240,12 +241,25 @@
             this.grdFormasPagamento.Text = "sfDataGrid1";
             this.grdFormasPagamento.CellDoubleClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.grdFormasPagamento_CellDoubleClick);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::OPS_OphellSystem.Properties.Resources.Ajuda;
+            this.button1.Location = new System.Drawing.Point(956, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmCadastroDeCondicoesDePagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 621);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.grpDadosFormaPagamento);
             this.Controls.Add(this.tgBtnStatus);
             this.Controls.Add(this.btnNovaCondicaoDePagamento);
@@ -283,5 +297,6 @@
         private Syncfusion.Windows.Forms.Tools.ToggleButton tgBtnStatus;
         private System.Windows.Forms.GroupBox grpDadosFormaPagamento;
         private Syncfusion.WinForms.DataGrid.SfDataGrid grdFormasPagamento;
+        private System.Windows.Forms.Button button1;
     }
 }

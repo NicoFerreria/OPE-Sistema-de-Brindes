@@ -69,8 +69,12 @@ namespace OPS_OphellSystem.Cadastros.Views.ContasAPagar
         {
             utilitarios.PermitirApenasNumeros(sender, e, true);
         }
+
         #endregion
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "C:\\Users\\Nicolas\\Documents\\Projetos\\OphellSB\\OPS_OphellSystem\\OPS_OphellSystem\\Resources\\Help.chm");
+        }
     }
 }

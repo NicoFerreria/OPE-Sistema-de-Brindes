@@ -56,6 +56,7 @@
             this.btnVoltar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnExcluir = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.button1 = new System.Windows.Forms.Button();
             this.grpDadosCategoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoCategria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbCor)).BeginInit();
@@ -107,7 +108,7 @@
             // 
             // txtCodigoCategria
             // 
-            this.txtCodigoCategria.BeforeTouchSize = new System.Drawing.Size(507, 107);
+            this.txtCodigoCategria.BeforeTouchSize = new System.Drawing.Size(169, 20);
             this.txtCodigoCategria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCodigoCategria.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtCodigoCategria.Location = new System.Drawing.Point(109, 47);
@@ -149,7 +150,7 @@
             // 
             // txtObservacao
             // 
-            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(507, 107);
+            this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(169, 20);
             this.txtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtObservacao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtObservacao.Location = new System.Drawing.Point(24, 274);
@@ -173,7 +174,7 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.BeforeTouchSize = new System.Drawing.Size(507, 107);
+            this.txtDescricao.BeforeTouchSize = new System.Drawing.Size(169, 20);
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescricao.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtDescricao.Location = new System.Drawing.Point(24, 159);
@@ -207,7 +208,7 @@
             // 
             // txtCategoria
             // 
-            this.txtCategoria.BeforeTouchSize = new System.Drawing.Size(507, 107);
+            this.txtCategoria.BeforeTouchSize = new System.Drawing.Size(169, 20);
             this.txtCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCategoria.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
             this.txtCategoria.Location = new System.Drawing.Point(24, 104);
@@ -230,7 +231,7 @@
             // 
             // txtId
             // 
-            this.txtId.BeforeTouchSize = new System.Drawing.Size(507, 107);
+            this.txtId.BeforeTouchSize = new System.Drawing.Size(169, 20);
             this.txtId.Location = new System.Drawing.Point(24, 47);
             this.txtId.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtId.Name = "txtId";
@@ -254,7 +255,7 @@
             // 
             this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltrar.BeforeTouchSize = new System.Drawing.Size(507, 107);
+            this.txtFiltrar.BeforeTouchSize = new System.Drawing.Size(169, 20);
             this.txtFiltrar.Location = new System.Drawing.Point(781, 85);
             this.txtFiltrar.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtFiltrar.Name = "txtFiltrar";
@@ -427,12 +428,25 @@
             this.btnExcluir.Text = "Excluir (F8)";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::OPS_OphellSystem.Properties.Resources.Ajuda;
+            this.button1.Location = new System.Drawing.Point(910, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 17;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmCadastroDeCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 661);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtFiltrar);
             this.Controls.Add(this.cmbCriterioPesquisa);
@@ -495,5 +509,6 @@
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtFiltrar;
         private Syncfusion.Windows.Forms.Tools.ComboBoxAdv cmbCriterioPesquisa;
         private Syncfusion.Windows.Forms.ButtonAdv btnExcluir;
+        private System.Windows.Forms.Button button1;
     }
 }

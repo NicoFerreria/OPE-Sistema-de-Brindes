@@ -407,5 +407,10 @@ namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
             if (k.KeyCode == Keys.Delete) ExcluirProduto();
         }
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "C:\\Users\\Nicolas\\Documents\\Projetos\\OphellSB\\OPS_OphellSystem\\OPS_OphellSystem\\Resources\\Help.chm");
+        }
     }
 }

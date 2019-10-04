@@ -83,6 +83,16 @@ namespace OPS_OphellSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ajuda {
+            get {
+                object obj = ResourceManager.GetObject("Ajuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Buscar32x32 {
             get {
                 object obj = ResourceManager.GetObject("Buscar32x32", resourceCulture);
@@ -297,6 +307,16 @@ namespace OPS_OphellSystem.Properties {
             get {
                 object obj = ResourceManager.GetObject("Gravar32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Help {
+            get {
+                object obj = ResourceManager.GetObject("Help", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

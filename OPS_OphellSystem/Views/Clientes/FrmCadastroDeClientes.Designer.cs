@@ -74,6 +74,7 @@
             this.btnAdicionarNovoCliente = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnGravarCliente = new Syncfusion.Windows.Forms.ButtonAdv();
             this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdLayoutBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnAtivarDesativarCliente)).BeginInit();
             this.grpDadosCliente.SuspendLayout();
@@ -649,12 +650,26 @@
             // 
             this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::OPS_OphellSystem.Properties.Resources.Ajuda;
+            this.button1.Location = new System.Drawing.Point(852, 9);
+            this.button1.Name = "button1";
+            this.grdLayoutBase.SetParticipateInLayout(this.button1, true);
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 19;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmCadastroDeClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 660);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tgBtnAtivarDesativarCliente);
             this.Controls.Add(this.grpDadosCliente);
             this.Controls.Add(this.btnGravarCliente);
@@ -736,5 +751,6 @@
         private System.Windows.Forms.Label label1;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtDigitoVerificador;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblTxtDigitoVerificador;
+        private System.Windows.Forms.Button button1;
     }
 }

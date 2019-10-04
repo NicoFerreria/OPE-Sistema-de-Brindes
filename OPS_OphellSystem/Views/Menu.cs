@@ -23,6 +23,7 @@ namespace OPS_OphellSystem
         Cadastros.Views.Operadores.FrmCadastroDeOperadores cadastroOperadores;
         Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento cadastroDeCondicoesPagamento;
         Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas cadastroDeContasAPagar;
+        Cadastros.Views.ContasAReceber.FrmCadastroRecebimentoContas cadastroDeContasAReceber;
         Cadastros.Views.Orcamento.FrmOrcamento orcamento;
         #endregion
 
@@ -160,6 +161,22 @@ namespace OPS_OphellSystem
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void AbrirCadastroDeContasAReceber()
+        {
+            try
+            {
+                if(cadastroDeContasAReceber == null)
+                {
+                    cadastroDeContasAReceber = new Cadastros.Views.ContasAReceber.FrmCadastroRecebimentoContas();
+                }
+                cadastroDeContasAReceber.ShowDialog();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region "Funções"
@@ -209,6 +226,10 @@ namespace OPS_OphellSystem
         private void btnMenuOrcamento_Click(object sender, EventArgs e)
         {
             AbrirVendasOrcamento();
+        }
+        private void btnMenuContasReceber_Click(object sender, EventArgs e)
+        {
+            AbrirCadastroDeContasAReceber();
         }
         #endregion
 

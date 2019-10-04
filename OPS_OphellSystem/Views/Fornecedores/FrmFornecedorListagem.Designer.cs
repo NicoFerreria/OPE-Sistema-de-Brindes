@@ -35,6 +35,7 @@
             this.btnFechar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnAdicionar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.grdFornecedorListagem = new Syncfusion.WinForms.DataGrid.SfDataGrid();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtPesquisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdFornecedorListagem)).BeginInit();
             this.SuspendLayout();
@@ -150,12 +151,25 @@
             this.grdFornecedorListagem.Text = "sfDataGrid1";
             this.grdFornecedorListagem.CellDoubleClick += new Syncfusion.WinForms.DataGrid.Events.CellClickEventHandler(this.grdFornecedorListagem_CellDoubleClick);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::OPS_OphellSystem.Properties.Resources.Ajuda;
+            this.button1.Location = new System.Drawing.Point(926, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 11;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmFornecedorListagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 660);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.grdFornecedorListagem);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtPesquisa);
@@ -180,5 +194,6 @@
         private Syncfusion.Windows.Forms.ButtonAdv btnFechar;
         private Syncfusion.Windows.Forms.ButtonAdv btnAdicionar;
         private Syncfusion.WinForms.DataGrid.SfDataGrid grdFornecedorListagem;
+        private System.Windows.Forms.Button button1;
     }
 }

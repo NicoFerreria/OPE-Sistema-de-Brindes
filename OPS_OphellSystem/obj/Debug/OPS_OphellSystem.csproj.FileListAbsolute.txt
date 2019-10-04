@@ -44,3 +44,5 @@ C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\o
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Orcamento.FrmOrcamento.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Fornecedores.FrmFornecedorListagem.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.ContasAReceber.FrmCadastroRecebimentoContas.resources
+C:\OphellSB\Resources\Help.chm

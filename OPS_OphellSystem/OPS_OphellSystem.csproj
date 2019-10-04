@@ -147,6 +147,12 @@
     <Compile Include="Views\ContasAPagar\FrmCadastroPagamentoContas.Designer.cs">
       <DependentUpon>FrmCadastroPagamentoContas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ContasAReceber\FrmCadastroRecebimentoContas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ContasAReceber\FrmCadastroRecebimentoContas.Designer.cs">
+      <DependentUpon>FrmCadastroRecebimentoContas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Fornecedores\FrmCadastroDeFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     <EmbeddedResource Include="Views\ContasAPagar\FrmCadastroPagamentoContas.resx">
       <DependentUpon>FrmCadastroPagamentoContas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ContasAReceber\FrmCadastroRecebimentoContas.resx">
+      <DependentUpon>FrmCadastroRecebimentoContas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Fornecedores\FrmCadastroDeFornecedores.resx">
       <DependentUpon>FrmCadastroDeFornecedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +272,10 @@
     <Content Include="icons8_user_shield.ico" />
     <Content Include="LogoOphell-32.ico" />
     <Content Include="LogoOphell-48.ico" />
+    <None Include="Resources\Ajuda.png" />
+    <None Include="Resources\Help.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\LimparBrancoPadrao28x28.png" />
     <None Include="Resources\FinalizarBrancoPadrao28x28.png" />
     <None Include="Resources\ExcluirBrancoPadrao28x28.png" />

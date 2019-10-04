@@ -133,6 +133,7 @@
             this.btnMenuContasReceber.Name = "btnMenuContasReceber";
             this.btnMenuContasReceber.Size = new System.Drawing.Size(199, 22);
             this.btnMenuContasReceber.Text = "Contas a Receber";
+            this.btnMenuContasReceber.Click += new System.EventHandler(this.btnMenuContasReceber_Click);
             // 
             // btnMenuVendas
             // 
@@ -150,7 +151,7 @@
             // 
             this.btnMenuOrcamento.Image = global::OPS_OphellSystem.Properties.Resources.OrcamentoPadrao32x32;
             this.btnMenuOrcamento.Name = "btnMenuOrcamento";
-            this.btnMenuOrcamento.Size = new System.Drawing.Size(180, 22);
+            this.btnMenuOrcamento.Size = new System.Drawing.Size(134, 22);
             this.btnMenuOrcamento.Text = "Orçamento";
             this.btnMenuOrcamento.Click += new System.EventHandler(this.btnMenuOrcamento_Click);
             // 
