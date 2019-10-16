@@ -47,15 +47,16 @@ namespace Cadastros.Controles
                 if (dtDados.Rows.Count <= 0)
                 {
                     utilitarios.RealizaConexaoBd("INSERT INTO Fornecedor(cnpj,fantasia,razao,status,endereco,numero,complemento,cidade,bairro,cep,telefone,contato,email" +
-                ",observacao,digito_verificador,operador_cadastro_id,operador_cadastro_nome,datahora_cadastro,datahora_alteracao)VALUES(@cnpj,@fantasia,@razao,@status" +
+                ",observacao,digito_verificador,operador_cadastro_id,operador_cadastro_nome,datahora_cadastro,datahora_alteracao,ie)VALUES(@cnpj,@fantasia,@razao,@status" +
                 ",@endereco,@numero,@complemento,@cidade,@bairro,@cep,@telefone,@contato,@email,@observacao,@digitoVerificador,@operadorId,@operadorNome,@dataAlteracao" +
-                ",@dataAlteracao)",RetornaParametros(fornecedor));
+                ",@dataAlteracao,@IE)",RetornaParametros(fornecedor));
                 }
                 else
                 {
                     utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj=@cnpj,fantasia=@fantasia,razao=@razao,status=@status,endereco=@endereco,numero=@numero" +
                 ",complemento=@complemento,cidade=@cidade,bairro=@bairro,cep=@cep,telefone=@telefone,contato=@contato,email=@email,observacao=@observacao" +
-                ",digito_verificador=@digitoVerificador,operador_alteracao_id=@operadorId,operador_alteracao_nome=@operadorNome,datahora_alteracao=@dataAlteracao WHERE id=@id", RetornaParametros(fornecedor));
+                ",digito_verificador=@digitoVerificador,operador_alteracao_id=@operadorId,operador_alteracao_nome=@operadorNome,datahora_alteracao=@dataAlteracao" +
+                ",ie=@IE WHERE id=@id", RetornaParametros(fornecedor));
                 }
             }
             catch (Exception ex)
@@ -82,15 +83,15 @@ namespace Cadastros.Controles
 
                 if (criterio == "")
                 {
-                    return utilitarios.RealizaConexaoBd("SELECT id,cnpj,fantasia,razao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status,endereco,numero" +
+                    return utilitarios.RealizaConexaoBd("SELECT id,ie,cnpj,fantasia,razao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status,endereco,numero" +
                 ",complemento,cidade,bairro,cep,telefone,contato,email,observacao,digito_verificador,operador_alteracao_id,operador_alteracao_nome,datahora_alteracao" +
-                " FROM Fornecedor WHERE excluido=0");
+                " FROM Fornecedor WHERE excluido=0 ORDER BY id DESC");
                 }
                 else
                 {
-                    return utilitarios.RealizaConexaoBd("SELECT id,cnpj,fantasia,razao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status,endereco,numero" +
+                    return utilitarios.RealizaConexaoBd("SELECT id,ie,cnpj,fantasia,razao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status,endereco,numero" +
                 ",complemento,cidade,bairro,cep,telefone,contato,email,observacao,digito_verificador,operador_alteracao_id,operador_alteracao_nome,datahora_alteracao" +
-                " FROM Fornecedor WHERE excluido=0 AND cnpj=@criterio OR razao LIKE @criterio OR fantasia LIKE @criterio",parametros);
+                " FROM Fornecedor WHERE (ie=@IE OR cnpj=@criterio OR razao LIKE @criterio OR fantasia LIKE @criterio) AND excluido=0 ORDER BY id DESC",parametros);
                 }
                 
             }catch(Exception ex)
@@ -124,6 +125,7 @@ namespace Cadastros.Controles
                     fornecedor.Email = dtFornecedor.Rows[0]["email"].ToString();
                     fornecedor.Observacao = dtFornecedor.Rows[0]["observacao"].ToString();
                     fornecedor.DigitoVerificadorCnpj = dtFornecedor.Rows[0]["digito_verificador"].ToString();
+                    fornecedor.InscricaoEstadual = dtFornecedor.Rows[0]["ie"].ToString();
                 }
                 else
                 {
@@ -158,7 +160,8 @@ namespace Cadastros.Controles
             list.Add(new SqlParametro { Nome = "@operadorId", Valor = SessaoUsuario.ID });
             list.Add(new SqlParametro { Nome = "@operadorNome", Valor = SessaoUsuario.Nome });
             list.Add(new SqlParametro { Nome = "@dataAlteracao", Valor = DateTime.Now });
-            list.Add(new SqlParametro { Nome = "@excluido", Valor = fornecedor.Excluido });            
+            list.Add(new SqlParametro { Nome = "@excluido", Valor = fornecedor.Excluido });
+            list.Add(new SqlParametro { Nome = "@IE", Valor = fornecedor.InscricaoEstadual });
 
             return list;
         }

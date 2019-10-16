@@ -6,6 +6,12 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Syncfusion.WinForms.DataGrid;
+using OPS_OphellSystem.Modelos;
+using System.Runtime.Serialization;
+using System.Web;
+using System.Net;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace OPS_OphellSystem
 {
@@ -68,7 +74,7 @@ namespace OPS_OphellSystem
             }
         }
         public static void CriarColunasGrid(SfDataGrid grid, string campo, string caption, TiposColunas tipo = TiposColunas.TEXTO, bool limparColuna = false,
-            bool editar = false,bool visivel = true,bool permitirFiltro = false)
+            bool editar = false, bool visivel = true, bool permitirFiltro = false)
         {
             try
             {
@@ -95,16 +101,17 @@ namespace OPS_OphellSystem
                         coluna = new GridComboBoxColumn();
                         break;
                     case TiposColunas.CHEK:
-                        coluna = new GridCheckBoxColumn() { AllowThreeState = false};
+                        coluna = new GridCheckBoxColumn() { AllowThreeState = false };
                         break;
                     case TiposColunas.BOTAO:
                         coluna = new GridButtonColumn();
                         break;
                 }
                 grid.AutoGenerateColumns = false;
-                
-                if (limparColuna == true)                {
-                    
+
+                if (limparColuna == true)
+                {
+
                     grid.Columns.Clear();
                 }
 
@@ -114,7 +121,7 @@ namespace OPS_OphellSystem
                 coluna.HeaderText = caption;
                 coluna.AllowFiltering = permitirFiltro;
                 grid.Columns.Add(coluna);
-                
+
             }
             catch (Exception ex)
             {
@@ -164,6 +171,29 @@ namespace OPS_OphellSystem
             catch (SQLiteException ex)
             {
                 throw new SQLiteException(ex.Message);
+            }
+        }
+        public static bool VerificaSeColunaExisteNoBd(string tabela, string coluna)
+        {
+            try
+            {
+                DataTable dtDados = new DataTable();
+                string strConn = @"Data Source=" + caminhoBD + "; Version=3;";
+
+                using (var conn = new SQLiteConnection(strConn))
+                {
+                    conn.Open();
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = string.Format("PRAGMA table_info({0})", tabela);
+                    dtDados = conn.GetSchema("Columns");
+                    bool retorno = dtDados.Select("COLUMN_NAME='" + coluna + "' AND TABLE_NAME='" + tabela + "'").Length != 0;
+                    conn.Close();
+                    return retorno;
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                throw new System.Exception(ex.Message);
             }
         }
         public static bool ValidaCnpj(string CNPJ, string DV)
@@ -253,6 +283,7 @@ namespace OPS_OphellSystem
         {
             try
             {
+                if (texto == "") return "";
                 string input = texto;
                 string pattern = @"(?i)[^0-9a-záéíóúàèìòùâêîôûãõç\s]";
                 string replacement = "";
@@ -265,6 +296,46 @@ namespace OPS_OphellSystem
             {
                 throw new System.Exception(ex.Message);
             }
+        }
+        public static Cep ObterCep(string numeroCep)
+        {            
+            try
+            {                
+                string str = ObterJsonDeApi("http://viacep.com.br/ws/" + numeroCep + "/json/");
+                Dictionary<string,string> dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(str);                
+                Cep cep = new Cep();
+                if (dict.ContainsKey("erro") == false)
+                {                    
+                    cep = JsonConvert.DeserializeObject<Cep>(str);
+                }
+                return cep;
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+        public static string ObterJsonDeApi(string url)
+        {
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    using (Stream stream = response.GetResponseStream())
+                    {
+                        StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+                        return reader.ReadToEnd();
+                    }
+                }
+                return "";
+            }           
+            catch(WebException wx)
+            {
+                throw new WebException(wx.Message);
+            }
+
         }
         #endregion
     }

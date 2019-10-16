@@ -33,10 +33,11 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         {
             try
             {
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "id", "ID", TiposColunas.TEXTO, true, false, false, false);
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "cnpj", "CNPJ");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "id", "ID", TiposColunas.TEXTO, true, false, false, false);                
                 utilitarios.CriarColunasGrid(grdFornecedorListagem, "fantasia", "Fantasia");
                 utilitarios.CriarColunasGrid(grdFornecedorListagem, "razao", "Razão");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "cnpj", "CNPJ");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "ie", "IE");
                 utilitarios.CriarColunasGrid(grdFornecedorListagem, "status", "Ativo",TiposColunas.CHEK);
                 utilitarios.CriarColunasGrid(grdFornecedorListagem, "endereco", "Endereco");
                 utilitarios.CriarColunasGrid(grdFornecedorListagem, "numero", "Numero");
@@ -87,7 +88,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
                 }
                 cadastroFornecedores.FornecedorID = 0;
                 cadastroFornecedores.ShowDialog();
-                CarregaListagem();
+                grdFornecedorListagem.DataSource = null;
             }
             catch (Exception ex)
             {
@@ -98,6 +99,10 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         {
             try
             {
+                if (grdFornecedorListagem.DataSource == null){
+                    MessageBox.Show("Selecione pelo menos um registro para exclusão!","OPH",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    return;
+                }
                 if (MessageBox.Show("Tem certeza de que deseja excluir este fornecedor?", "OPH", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) == DialogResult.No) return;
 
@@ -124,7 +129,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
                     cadastroFornecedores = new FrmCadastroDeFornecedores();
                 }
 
-                DataRowView drLinha = grdFornecedorListagem.SelectedItem as DataRowView;
+                DataRowView drLinha = grdFornecedorListagem.SelectedItem as DataRowView;                
                 if(drLinha != null)
                 {
                     cadastroFornecedores.FornecedorID = long.Parse(drLinha["id"].ToString());

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using OPS_OphellSystem.Cadastros.Classes;
 using Cadastros.Modelos;
 using Cadastros.Controles;
+using OPS_OphellSystem.Modelos;
 
 namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
 {
@@ -41,8 +42,9 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         {
             try
             {
-                NovoFornecedor();
+                //NovoFornecedor();
                 CarregaFornecedorSelecionado();
+                txtNomeFantasia.Focus();
             }
             catch (Exception ex)
             {
@@ -55,23 +57,24 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
             {
                 FornecedorModelo fornecedor = new FornecedorModelo();
                 if (ValidaCampos() == false) return;
-                fornecedor.FornecedorId = txtId.Text == "" ? 0 : long.Parse(txtId.Text);
+                fornecedor.FornecedorId = long.TryParse(txtId.Text, out long fornId) ? fornId : 0;
                 fornecedor.CNPJ = txtCnpj.Text;
                 fornecedor.DigitoVerificadorCnpj = txtDv.Text;
                 fornecedor.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantasia.Text);
                 fornecedor.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
                 fornecedor.CEP = txtCep.Text;
                 fornecedor.Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text);
-                fornecedor.Numero = int.Parse(txtNumero.Text);
+                fornecedor.Numero = int.TryParse(txtNumero.Text, out int numero) ? numero : 0;
                 fornecedor.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
                 fornecedor.Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text);
                 fornecedor.Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text);
                 fornecedor.NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text);
                 fornecedor.Email = utilitarios.RemoveCaracteresEspeciais(txtEmail.Text);
-                fornecedor.Telefone = int.Parse(txtTelefone.Text);
+                fornecedor.Telefone = int.TryParse(txtTelefone.Text, out int telefone) ? telefone : 0;
                 fornecedor.Observacao = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
                 fornecedor.Status = (tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
                 fornecedor.Terceiro = (chkTerceiro.CheckState == CheckState.Checked);
+                fornecedor.InscricaoEstadual = txtInscricaoEstadual.Text;
                 if (controle.GravarFornecedor(fornecedor))
                 {
                     NovoFornecedor();
@@ -103,6 +106,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
                 txtEmail.Text = "";
                 txtTelefone.Text = "";
                 txtObservacao.Text = "";
+                txtInscricaoEstadual.Text = "";
                 tgBtnStatus.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
 
             }
@@ -135,7 +139,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
             {
                 FornecedorModelo fornecedor = controle.GetFornecedorById(FornecedorID);
 
-                if (fornecedor != null)
+                if (fornecedor.FornecedorId != 0)
                 {
                     txtId.Text = fornecedor.FornecedorId == 0 ? "" : fornecedor.FornecedorId.ToString();
                     txtCnpj.Text = fornecedor.CNPJ;
@@ -155,7 +159,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
                     txtObservacao.Text = fornecedor.Observacao;
                     tgBtnStatus.ToggleState = fornecedor.Status ? Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active : Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive;
                     chkTerceiro.CheckState = fornecedor.Terceiro ? CheckState.Checked : CheckState.Unchecked;
-
+                    txtInscricaoEstadual.Text = fornecedor.InscricaoEstadual;
                     VerificaStatusFornecedor();
                 }
                 else
@@ -187,6 +191,38 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
             }
 
         }
+        private void ObterDadosEndereco()
+        {
+            try
+            {
+                if (txtCep.Text != "")
+                {
+                    if (txtCep.Text.Length == 8)
+                    {
+                        Cep cep = utilitarios.ObterCep(txtCep.Text);
+                        txtCep.Text = cep.CEP == null ? txtCep.Text : utilitarios.RemoveCaracteresEspeciais(cep.CEP);
+                        txtEndereco.Text = cep.Logradouro;
+                        txtBairro.Text = cep.Bairro;
+                        txtComplemento.Text = cep.Complemento;
+                        txtCidade.Text = cep.Localidade;
+                        if(cep.CEP != null)
+                        {
+                            txtNumero.Focus();
+                        }
+                        else
+                        {
+                            txtEndereco.Focus();
+                        }                        
+                        return;
+                    }
+                }
+                txtEndereco.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region "Funções"
@@ -194,36 +230,49 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         {
             try
             {
-                if (txtCnpj.Text == "")
+                //if (txtCnpj.Text == "")
+                //{
+                //    MessageBox.Show("Por favor preencha o campo CNPJ!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //    txtCnpj.Focus();
+                //    return false;
+                //}
+                //if (txtDv.Text == "")
+                //{
+                //    MessageBox.Show("Por favor preencha o campo dígito verificador do CNPJ!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //    txtDv.Focus();
+                //    return false;
+                //}
+                if (txtCnpj.Text != "")
                 {
-                    MessageBox.Show("Por favor preencha o campo CNPJ!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txtCnpj.Focus();
-                    return false;
+                    if (long.TryParse(txtCnpj.Text, out long cnpj) == false)
+                    {
+                        MessageBox.Show("O CNPJ está em um formato incorreto!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        txtCnpj.Focus();
+                        return false;
+                    }
+
+                    if (txtDv.Text == "")
+                    {
+                        MessageBox.Show("Por favor preencha o campo dígito verificador do CNPJ!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        txtDv.Focus();
+                        return false;
+                    }
+
+                    if (int.TryParse(txtDv.Text, out int dv) == false)
+                    {
+                        MessageBox.Show("O dígito verificador do CNPJ está em um formato incorreto!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        txtDv.Focus();
+                        return false;
+                    }
+
+                    if (utilitarios.ValidaCnpj(txtCnpj.Text, txtDv.Text) == false)
+                    {
+                        MessageBox.Show("O CNPJ está inválido! Por favor verifique o mesmo.", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        txtCnpj.Focus();
+                        return false;
+                    }
                 }
-                if (txtDv.Text == "")
-                {
-                    MessageBox.Show("Por favor preencha o campo dígito verificador do CNPJ!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txtDv.Focus();
-                    return false;
-                }
-                if (Int64.TryParse(txtCnpj.Text, out long cnpj) == false)
-                {
-                    MessageBox.Show("O CNPJ está em um formato incorreto!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txtCnpj.Focus();
-                    return false;
-                }
-                if (int.TryParse(txtDv.Text, out int dv) == false)
-                {
-                    MessageBox.Show("O dígito verificador do CNPJ está em um formato incorreto!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txtDv.Focus();
-                    return false;
-                }
-                if (utilitarios.ValidaCnpj(txtCnpj.Text, txtDv.Text) == false)
-                {
-                    MessageBox.Show("O CNPJ está inválido! Por favor verifique o mesmo.", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txtCnpj.Focus();
-                    return false;
-                }
+
                 if (txtNomeFantasia.Text == "")
                 {
                     MessageBox.Show("Por favor preencha o Nome Fantasia!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -310,6 +359,16 @@ namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
         {
             Gravar();
         }
-        #endregion        
+        private void txtInscricaoEstadual_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            utilitarios.PermitirApenasNumeros(sender, e);
+        }
+        private void txtCep_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) ObterDadosEndereco();
+        }
+        #endregion
+
+
     }
 }

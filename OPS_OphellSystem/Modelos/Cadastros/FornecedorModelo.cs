@@ -26,5 +26,7 @@ namespace Cadastros.Modelos
         public string Bairro { get; set; }
         public string CEP { get; set; }
         public int Excluido { get; set; }
+        public string InscricaoEstadual { get; set; }
+
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using OPS_OphellSystem.Cadastros.Classes.Operadores;
+using Cadastros.Controles;
+using Cadastros.Modelos;
 
 namespace OPS_OphellSystem.Cadastros.Views.Operadores
 {
@@ -38,7 +40,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
         {
             try
             {
-                CarregaCombos();                
+                CarregaCombos();
             }
             catch (Exception ex)
             {
@@ -64,24 +66,18 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
             try
             {
                 if (ValidaCampos() == false) return;
-                CadastroDeOperadores operador = new CadastroDeOperadores();
+                OperadorControle operadorControle = new OperadorControle();
+                OperadorModelo operador = new OperadorModelo();
 
-                operador.OperadorId = txtId.Text == "" ? 0 : int.Parse(txtId.Text);
+                operador.OperadroId = long.TryParse(txtId.Text, out long id) ? id : 0;
                 operador.Nome = txtNome.Text;
                 operador.Sobrenome = txtSobrenome.Text;
-                operador.Perfil = cmbPerfil.Text;
-                operador.Contas = txtCodigo.Text == "" ? 0 : int.Parse(txtCodigo.Text);
-                operador.Status = tgBtnStaus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active ? 1 : 0;
-                operador.Senha = txtSenha.Text;
-                operador.ContraSenha = txtConfirmaSenha.Text;
-                operador.CPF = long.Parse(txtCpf.Text);
+                operador.Status = (tgBtnStaus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
+                operador.Senha = utilitarios.RemoveCaracteresEspeciais(txtSenha.Text);
+                operador.CPF = txtCpf.Text;
+                operador.Codigo = int.TryParse(txtCodigo.Text, out int codigo) ? codigo : 0;
+                operador.Perfil = new PerfilModelo() { PerfilId = long.Parse(cmbPerfil.ValueMember), Descricao = cmbPerfil.DisplayMember };
 
-                if(operador.ValidaSenhaOperador() == false)
-                {
-                    MessageBox.Show("Senhas não coincidem! Por favor varifique a senha.","OPH",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                    return;
-                }
-                operador.SalvarOperador();
             }
             catch (Exception ex)
             {
@@ -92,7 +88,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
         {
             try
             {
-                if(state == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive)
+                if (state == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive)
                 {
                     pnlDadosGerais.Enabled = false;
                 }
@@ -101,7 +97,8 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
                     pnlDadosGerais.Enabled = true;
                 }
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -110,7 +107,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
         {
             try
             {
-                if(id <= 0)
+                if (id <= 0)
                 {
                     MessageBox.Show("Não foi possível carregar dados do operador!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
@@ -119,11 +116,12 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
 
                 operador = operador.GetOperador(id);
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }        
+        }
         #endregion
 
         #region "Funções"
@@ -131,48 +129,55 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
         {
             try
             {
-                if(txtNome.Text == "")
+                if (txtNome.Text == "")
                 {
                     MessageBox.Show("Necessário preencher o campo Nome!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     txtNome.Focus();
                     return false;
                 }
 
-                if(txtSobrenome.Text == "")
+                if (txtSobrenome.Text == "")
                 {
                     MessageBox.Show("Necessário preencher o campo Sobrenome!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     txtSobrenome.Focus();
                     return false;
                 }
-                if(txtCpf.Text == "")
+                if (txtCpf.Text == "")
                 {
                     MessageBox.Show("Necessário preencher o campo CPF!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     txtCpf.Focus();
                     return false;
                 }
 
-                if(txtSenha.Text == "")
+                if (txtSenha.Text == "")
                 {
                     MessageBox.Show("Necessário preencher o campo Senha!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     txtSenha.Focus();
                     return false;
                 }
+                if (txtSenha.Text != txtConfirmaSenha.Text)
+                {
+                    MessageBox.Show("A senha e a confirmação da senha não coincidem!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtSenha.Focus();
+                    return false;
+                }
 
-                if(txtConfirmaSenha.Text == "")
+                if (txtConfirmaSenha.Text == "")
                 {
                     MessageBox.Show("Necessário preencher o campo Confirma Senha!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     txtConfirmaSenha.Focus();
                     return false;
                 }
 
-                if(long.TryParse(txtCpf.Text, out long cpf) == false)
+                if (long.TryParse(txtCpf.Text, out long cpf) == false)
                 {
                     MessageBox.Show("CPF inválido!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     txtCpf.Focus();
                     return false;
                 }
                 return true;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -211,6 +216,11 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
         {
             NovoCadastro();
         }
+        private void FrmCadastroDeOperadores_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Fechar();
+        }
+
         #endregion
 
 

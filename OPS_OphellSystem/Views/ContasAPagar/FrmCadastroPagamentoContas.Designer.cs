@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroPagamentoContas));
             this.grpDadosPagamento = new System.Windows.Forms.GroupBox();
+            this.btnFornecedor = new Syncfusion.Windows.Forms.ButtonAdv();
             this.lblFormasPagamento = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.cmbFormasPagamento = new Syncfusion.Windows.Forms.Tools.ComboBoxAdv();
             this.lblFornecedor = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -39,14 +40,13 @@
             this.txtId = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.grpDadosConta = new System.Windows.Forms.GroupBox();
             this.grdContas = new Syncfusion.WinForms.DataGrid.SfDataGrid();
+            this.btnAdicionarConta = new Syncfusion.Windows.Forms.ButtonAdv();
             this.lblValor = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtValorConta = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblDataVencimento = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.dtpVencimento = new Syncfusion.Windows.Forms.Tools.DateTimePickerAdv();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.btnAdicionarConta = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.btnFornecedor = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnNovoPagamento = new Syncfusion.Windows.Forms.ButtonAdv();
             this.grpDadosPagamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbFormasPagamento)).BeginInit();
@@ -76,6 +76,23 @@
             this.grpDadosPagamento.TabIndex = 0;
             this.grpDadosPagamento.TabStop = false;
             this.grpDadosPagamento.Text = "Dados do Pagamento";
+            // 
+            // btnFornecedor
+            // 
+            this.btnFornecedor.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFornecedor.Image = global::OPS_OphellSystem.Properties.Resources.BuscarPadrao28x28;
+            this.btnFornecedor.IsBackStageButton = false;
+            this.btnFornecedor.KeepFocusRectangle = false;
+            this.btnFornecedor.Location = new System.Drawing.Point(493, 29);
+            this.btnFornecedor.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnFornecedor.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnFornecedor.Name = "btnFornecedor";
+            this.btnFornecedor.Size = new System.Drawing.Size(30, 30);
+            this.btnFornecedor.TabIndex = 6;
             // 
             // lblFormasPagamento
             // 
@@ -174,6 +191,23 @@
             this.grdContas.TabIndex = 8;
             this.grdContas.Text = "sfDataGrid1";
             // 
+            // btnAdicionarConta
+            // 
+            this.btnAdicionarConta.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnAdicionarConta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdicionarConta.FlatAppearance.BorderSize = 0;
+            this.btnAdicionarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnAdicionarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionarConta.Image = global::OPS_OphellSystem.Properties.Resources.AdicionarPadrao28x28;
+            this.btnAdicionarConta.IsBackStageButton = false;
+            this.btnAdicionarConta.KeepFocusRectangle = false;
+            this.btnAdicionarConta.Location = new System.Drawing.Point(374, 40);
+            this.btnAdicionarConta.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnAdicionarConta.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnAdicionarConta.Name = "btnAdicionarConta";
+            this.btnAdicionarConta.Size = new System.Drawing.Size(30, 30);
+            this.btnAdicionarConta.TabIndex = 7;
+            // 
             // lblValor
             // 
             this.lblValor.DY = -17;
@@ -211,7 +245,6 @@
             this.dtpVencimento.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
             this.dtpVencimento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.dtpVencimento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dtpVencimento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpVencimento.CalendarSize = new System.Drawing.Size(189, 176);
             this.dtpVencimento.Checked = false;
             this.dtpVencimento.Culture = new System.Globalization.CultureInfo("pt-BR");
@@ -232,6 +265,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::OPS_OphellSystem.Properties.Resources.Ajuda;
@@ -264,40 +298,6 @@
             this.btnGravar.TabIndex = 3;
             this.btnGravar.Text = "Salvar (Ctrl + S)";
             this.btnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnAdicionarConta
-            // 
-            this.btnAdicionarConta.BeforeTouchSize = new System.Drawing.Size(30, 30);
-            this.btnAdicionarConta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdicionarConta.FlatAppearance.BorderSize = 0;
-            this.btnAdicionarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnAdicionarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdicionarConta.Image = global::OPS_OphellSystem.Properties.Resources.AdicionarPadrao28x28;
-            this.btnAdicionarConta.IsBackStageButton = false;
-            this.btnAdicionarConta.KeepFocusRectangle = false;
-            this.btnAdicionarConta.Location = new System.Drawing.Point(374, 40);
-            this.btnAdicionarConta.MaximumSize = new System.Drawing.Size(30, 30);
-            this.btnAdicionarConta.MinimumSize = new System.Drawing.Size(30, 30);
-            this.btnAdicionarConta.Name = "btnAdicionarConta";
-            this.btnAdicionarConta.Size = new System.Drawing.Size(30, 30);
-            this.btnAdicionarConta.TabIndex = 7;
-            // 
-            // btnFornecedor
-            // 
-            this.btnFornecedor.BeforeTouchSize = new System.Drawing.Size(30, 30);
-            this.btnFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFornecedor.FlatAppearance.BorderSize = 0;
-            this.btnFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFornecedor.Image = global::OPS_OphellSystem.Properties.Resources.BuscarPadrao28x28;
-            this.btnFornecedor.IsBackStageButton = false;
-            this.btnFornecedor.KeepFocusRectangle = false;
-            this.btnFornecedor.Location = new System.Drawing.Point(493, 29);
-            this.btnFornecedor.MaximumSize = new System.Drawing.Size(30, 30);
-            this.btnFornecedor.MinimumSize = new System.Drawing.Size(30, 30);
-            this.btnFornecedor.Name = "btnFornecedor";
-            this.btnFornecedor.Size = new System.Drawing.Size(30, 30);
-            this.btnFornecedor.TabIndex = 6;
             // 
             // btnNovoPagamento
             // 

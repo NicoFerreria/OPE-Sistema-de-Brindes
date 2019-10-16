@@ -38,7 +38,7 @@ namespace OPS_OphellSystem
             {
                 cadastroClientes = new Cadastros.Views.Clientes.FrmClientesListagem();
             }
-                        
+
             cadastroClientes.MdiParent = this;
             cadastroClientes.Dock = DockStyle.Fill;
             cadastroClientes.Show();
@@ -88,9 +88,8 @@ namespace OPS_OphellSystem
                     cadastroOperadores = new Cadastros.Views.Operadores.FrmCadastroDeOperadores();
                 }
 
-                cadastroOperadores.MdiParent = this;
-                cadastroOperadores.Dock = DockStyle.Fill;
-                cadastroOperadores.Show();
+                
+                cadastroOperadores.ShowDialog();
             }
             catch (Exception ex)
             {
