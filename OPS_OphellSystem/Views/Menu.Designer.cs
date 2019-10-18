@@ -40,6 +40,7 @@
             this.btnMenuContasReceber = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMenuVendas = new System.Windows.Forms.ToolStripSplitButton();
             this.btnMenuOrcamento = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMenuCadPerfil = new System.Windows.Forms.ToolStripMenuItem();
             this.tStrpCadastroClientes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             this.btnMenuCadastros.DoubleClickEnabled = true;
             this.btnMenuCadastros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnMenuCadFornecedores,
+            this.btnMenuCadPerfil,
             this.btnMenuCadOperadores,
             this.btnMenuCadClientes,
             this.btnMenuCadCategorias,
@@ -155,6 +157,13 @@
             this.btnMenuOrcamento.Text = "Orçamento";
             this.btnMenuOrcamento.Click += new System.EventHandler(this.btnMenuOrcamento_Click);
             // 
+            // btnMenuCadPerfil
+            // 
+            this.btnMenuCadPerfil.Name = "btnMenuCadPerfil";
+            this.btnMenuCadPerfil.Size = new System.Drawing.Size(199, 22);
+            this.btnMenuCadPerfil.Text = "Perfil";
+            this.btnMenuCadPerfil.Click += new System.EventHandler(this.btnMenuCadPerfil_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,5 +200,6 @@
         private System.Windows.Forms.ToolStripMenuItem btnMenuContasReceber;
         private System.Windows.Forms.ToolStripSplitButton btnMenuVendas;
         private System.Windows.Forms.ToolStripMenuItem btnMenuOrcamento;
+        private System.Windows.Forms.ToolStripMenuItem btnMenuCadPerfil;
     }
 }

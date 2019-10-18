@@ -21,7 +21,8 @@ namespace OPS_OphellSystem
                         campos = new string[,]
                         {
                             {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
-                            {"descricao", "TEXT NOT NULL" }
+                            {"descricao", "TEXT NOT NULL" },
+                            {"excluido", "INTEGER NOT NULL DEFAULT 0" }
                         };
                         break;
                     case "Usuario":

@@ -25,6 +25,7 @@ namespace OPS_OphellSystem
         Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas cadastroDeContasAPagar;
         Cadastros.Views.ContasAReceber.FrmCadastroRecebimentoContas cadastroDeContasAReceber;
         Cadastros.Views.Orcamento.FrmOrcamento orcamento;
+        Cadastros.Views.Perfil.FrmCadastroPerfil perfil;
         #endregion
 
         #region "Metodos"
@@ -176,6 +177,21 @@ namespace OPS_OphellSystem
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void AbrirCadastroDePerfil()
+        {
+            try
+            {
+                if(perfil == null)
+                {
+                    perfil = new Cadastros.Views.Perfil.FrmCadastroPerfil();
+                }
+
+                perfil.ShowDialog();
+            }catch(Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
         #endregion
 
         #region "Funções"
@@ -229,6 +245,10 @@ namespace OPS_OphellSystem
         private void btnMenuContasReceber_Click(object sender, EventArgs e)
         {
             AbrirCadastroDeContasAReceber();
+        }
+        private void btnMenuCadPerfil_Click(object sender, EventArgs e)
+        {
+            AbrirCadastroDePerfil();
         }
         #endregion
 

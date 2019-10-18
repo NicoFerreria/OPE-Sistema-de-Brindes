@@ -51,9 +51,14 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
         {
             try
             {
-                cmbPerfil.Items.Clear();
-                cmbPerfil.Items.Add("ADM");
-                cmbPerfil.SelectedIndex = 0;
+                PerfilModelo perfil = new PerfilModelo();
+                cmbPerfil.DataSource = null;
+                cmbPerfil.DataSource = perfil.GetPerfis();
+                cmbPerfil.DisplayMember = "Descricao";
+                cmbPerfil.ValueMember = "PerfilId";
+                //cmbPerfil.Items.Clear();
+                //cmbPerfil.Items.Add("ADM");
+                //cmbPerfil.SelectedIndex = 0;
 
             }
             catch (Exception ex)
@@ -175,6 +180,12 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
                     txtCpf.Focus();
                     return false;
                 }
+                if(cmbPerfil.Text == "")
+                {
+                    MessageBox.Show("Perfil inválido! Selecione ou cdastre um novo perfil.","OPH",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                    cmbPerfil.Focus();
+                    return false;
+                }
                 return true;
             }
             catch (Exception ex)
@@ -192,6 +203,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
         }
         private void FrmCadastroDeOperadores_Shown(object sender, EventArgs e)
         {
+            CarregaCombos();
             NovoFormulario();
         }
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -220,7 +232,6 @@ namespace OPS_OphellSystem.Cadastros.Views.Operadores
         {
             Fechar();
         }
-
         #endregion
 
 
