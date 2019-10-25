@@ -8,9 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cadastros.Controles;
-using Cadastros.Modelos;
+using Modelos;
+using OPS_OphellSystem;
 
-namespace OPS_OphellSystem.Cadastros.Views.Perfil
+namespace Views
 {
     public partial class FrmCadastroPerfil : Form
     {

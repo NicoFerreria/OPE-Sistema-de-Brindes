@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.CondicoesDePagamento
+﻿namespace Views
 {
     partial class FrmCadastroDeCondicoesDePagamento
     {
@@ -213,8 +213,8 @@
             // 
             // grpDadosFormaPagamento
             // 
-            this.grpDadosFormaPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpDadosFormaPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDadosFormaPagamento.Controls.Add(this.lblCmbTipo);
             this.grpDadosFormaPagamento.Controls.Add(this.txtDescricao);

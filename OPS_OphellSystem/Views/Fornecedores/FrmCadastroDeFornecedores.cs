@@ -7,18 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using OPS_OphellSystem.Cadastros.Classes;
-using Cadastros.Modelos;
+using Modelos;
 using Cadastros.Controles;
+using OPS_OphellSystem;
 using OPS_OphellSystem.Modelos;
 
-namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
+namespace Views
 {
     public partial class FrmCadastroDeFornecedores : Form
     {
         #region "Classes"
-        FornecedorControle controle = new FornecedorControle();
-        private Cadastros.Classes.Fornecedor.CadastroDeFornecedor cadastro = new Classes.Fornecedor.CadastroDeFornecedor();
+        FornecedorControle controle = new FornecedorControle();        
         #endregion
 
         #region "Variaveis"

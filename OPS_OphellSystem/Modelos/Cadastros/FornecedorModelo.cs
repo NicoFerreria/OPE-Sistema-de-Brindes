@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OPS_OphellSystem;
 
-namespace Cadastros.Modelos
+namespace Modelos
 {
    public class FornecedorModelo
     {
@@ -27,6 +28,7 @@ namespace Cadastros.Modelos
         public string CEP { get; set; }
         public int Excluido { get; set; }
         public string InscricaoEstadual { get; set; }
+        public TiposFornecedores TipoFornecedor { get; set; }
 
     }
 }

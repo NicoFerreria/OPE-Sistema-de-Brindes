@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Cadastros.Modelos;
+using OPS_OphellSystem;
+using Modelos;
 using Cadastros.Controles;
 
-namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
+namespace Views
 {
     public partial class FrmFornecedorListagem : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.Clientes
+﻿namespace Views
 {
     partial class FrmClientesListagem
     {
@@ -47,8 +47,8 @@
             // grdClienteListagem
             // 
             this.grdClienteListagem.AccessibleName = "Table";
-            this.grdClienteListagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grdClienteListagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdClienteListagem.Location = new System.Drawing.Point(12, 90);
             this.grdClienteListagem.Name = "grdClienteListagem";
@@ -66,8 +66,8 @@
             this.gradientLabel1.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43))))), System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29))))));
             this.gradientLabel1.BeforeTouchSize = new System.Drawing.Size(201, 43);
             this.gradientLabel1.BorderAppearance = System.Windows.Forms.BorderStyle.None;
-            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
-            | System.Windows.Forms.Border3DSide.Right) 
+            this.gradientLabel1.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top)
+            | System.Windows.Forms.Border3DSide.Right)
             | System.Windows.Forms.Border3DSide.Bottom)));
             this.gradientLabel1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradientLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));

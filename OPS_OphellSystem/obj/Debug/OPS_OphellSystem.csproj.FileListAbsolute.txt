@@ -21,9 +21,7 @@ C:\OphellSB\OPS_OphellSystem.exe.config
 C:\OphellSB\OPS_OphellSystem.exe
 C:\OphellSB\OPS_OphellSystem.pdb
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Lounch.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Clientes.FrmCadastroDeClientes.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Menu.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias.resources
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmBuscaCategoriaProduto.resources
 C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmBuscaCategoriaProduto.resources
 C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias.resources
@@ -36,14 +34,19 @@ C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\
 C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.csproj.CopyComplete
 C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.exe
 C:\Users\DELL PC\Documents\Projetos\OPE-Sistema-de-Brindes\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.pdb
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Fornecedores.FrmCadastroDeFornecedores.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Operadores.FrmCadastroDeOperadores.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Operadores.FrmBuscaOperadores.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Clientes.FrmClientesListagem.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Orcamento.FrmOrcamento.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Fornecedores.FrmFornecedorListagem.resources
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.ContasAReceber.FrmCadastroRecebimentoContas.resources
 C:\OphellSB\Resources\Help.chm
-C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.Cadastros.Views.Perfil.FrmCadastroPerfil.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmCadastroDeFornecedores.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.Modelos.FrmBusca.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmFornecedorListagem.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmBuscaCliente.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmCadastroDeClientes.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmClientesListagem.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmCadastroDeCategorias.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmCadastroDeCondicoesDePagamento.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmCadastroPagamentoContas.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmCadastroRecebimentoContas.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmBuscaOperadores.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmCadastroDeOperadores.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmOrcamento.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmCadastroPerfil.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmBuscaFornecedor.resources

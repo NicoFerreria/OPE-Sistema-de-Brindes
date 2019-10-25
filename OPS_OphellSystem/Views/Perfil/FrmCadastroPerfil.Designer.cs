@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.Perfil
+﻿namespace Views
 {
     partial class FrmCadastroPerfil
     {
@@ -67,8 +67,8 @@
             // grdPerfis
             // 
             this.grdPerfis.AccessibleName = "Table";
-            this.grdPerfis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grdPerfis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdPerfis.Location = new System.Drawing.Point(12, 101);
             this.grdPerfis.Name = "grdPerfis";

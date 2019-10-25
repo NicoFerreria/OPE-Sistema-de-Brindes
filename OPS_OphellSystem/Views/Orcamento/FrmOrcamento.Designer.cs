@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.Orcamento
+﻿namespace Views
 {
     partial class FrmOrcamento
     {
@@ -44,7 +44,6 @@
             this.btnBuscaFornecedor = new Syncfusion.Windows.Forms.ButtonAdv();
             this.txtProduto = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblProduto = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.btnBuscaProduto = new Syncfusion.Windows.Forms.ButtonAdv();
             this.txtQuantidade = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblQuantidade = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.lblValorProduto = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -81,7 +80,7 @@
             this.lblTotal = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.grpDadosOrcamento = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonAdv1 = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnBuscaProduto = new Syncfusion.Windows.Forms.ButtonAdv();
             this.textBoxExt6 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.textBoxExt5 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -165,6 +164,7 @@
             this.btnBuscaCliente.Name = "btnBuscaCliente";
             this.btnBuscaCliente.Size = new System.Drawing.Size(30, 30);
             this.btnBuscaCliente.TabIndex = 2;
+            this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 
             // btnBuscaGravacao
             // 
@@ -182,6 +182,7 @@
             this.btnBuscaGravacao.Name = "btnBuscaGravacao";
             this.btnBuscaGravacao.Size = new System.Drawing.Size(30, 30);
             this.btnBuscaGravacao.TabIndex = 5;
+            this.btnBuscaGravacao.Click += new System.EventHandler(this.btnBuscaGravacao_Click);
             // 
             // lblGravacao
             // 
@@ -222,6 +223,7 @@
             this.btnBuscaTransporte.Name = "btnBuscaTransporte";
             this.btnBuscaTransporte.Size = new System.Drawing.Size(30, 30);
             this.btnBuscaTransporte.TabIndex = 8;
+            this.btnBuscaTransporte.Click += new System.EventHandler(this.btnBuscaTransporte_Click);
             // 
             // lblTransporte
             // 
@@ -285,6 +287,7 @@
             this.btnBuscaFornecedor.Name = "btnBuscaFornecedor";
             this.btnBuscaFornecedor.Size = new System.Drawing.Size(30, 30);
             this.btnBuscaFornecedor.TabIndex = 5;
+            this.btnBuscaFornecedor.Click += new System.EventHandler(this.btnBuscaFornecedor_Click);
             // 
             // txtProduto
             // 
@@ -308,23 +311,6 @@
             this.lblProduto.Size = new System.Drawing.Size(44, 13);
             this.lblProduto.TabIndex = 7;
             this.lblProduto.Text = "Produto";
-            // 
-            // btnBuscaProduto
-            // 
-            this.btnBuscaProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscaProduto.BeforeTouchSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscaProduto.FlatAppearance.BorderSize = 0;
-            this.btnBuscaProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnBuscaProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaProduto.Image")));
-            this.btnBuscaProduto.IsBackStageButton = false;
-            this.btnBuscaProduto.Location = new System.Drawing.Point(567, 27);
-            this.btnBuscaProduto.MaximumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaProduto.MinimumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaProduto.Name = "btnBuscaProduto";
-            this.btnBuscaProduto.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscaProduto.TabIndex = 8;
             // 
             // txtQuantidade
             // 
@@ -781,7 +767,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtProduto);
-            this.panel1.Controls.Add(this.buttonAdv1);
             this.panel1.Controls.Add(this.btnBuscaProduto);
             this.panel1.Controls.Add(this.textBoxExt6);
             this.panel1.Controls.Add(this.lblProduto);
@@ -803,22 +788,23 @@
             this.panel1.Size = new System.Drawing.Size(533, 103);
             this.panel1.TabIndex = 11;
             // 
-            // buttonAdv1
+            // btnBuscaProduto
             // 
-            this.buttonAdv1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdv1.BeforeTouchSize = new System.Drawing.Size(30, 30);
-            this.buttonAdv1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAdv1.FlatAppearance.BorderSize = 0;
-            this.buttonAdv1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.buttonAdv1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdv1.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdv1.Image")));
-            this.buttonAdv1.IsBackStageButton = false;
-            this.buttonAdv1.Location = new System.Drawing.Point(498, 17);
-            this.buttonAdv1.MaximumSize = new System.Drawing.Size(30, 30);
-            this.buttonAdv1.MinimumSize = new System.Drawing.Size(30, 30);
-            this.buttonAdv1.Name = "buttonAdv1";
-            this.buttonAdv1.Size = new System.Drawing.Size(30, 30);
-            this.buttonAdv1.TabIndex = 8;
+            this.btnBuscaProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscaProduto.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscaProduto.FlatAppearance.BorderSize = 0;
+            this.btnBuscaProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnBuscaProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaProduto.Image")));
+            this.btnBuscaProduto.IsBackStageButton = false;
+            this.btnBuscaProduto.Location = new System.Drawing.Point(498, 17);
+            this.btnBuscaProduto.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaProduto.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaProduto.Name = "btnBuscaProduto";
+            this.btnBuscaProduto.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscaProduto.TabIndex = 8;
+            this.btnBuscaProduto.Click += new System.EventHandler(this.btnBuscaProduto_Click);
             // 
             // textBoxExt6
             // 
@@ -1064,7 +1050,6 @@
         private Syncfusion.Windows.Forms.ButtonAdv btnBuscaFornecedor;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtProduto;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblProduto;
-        private Syncfusion.Windows.Forms.ButtonAdv btnBuscaProduto;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblValorProduto;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt1;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblQuantidade;
@@ -1107,7 +1092,7 @@
         private Syncfusion.Windows.Forms.ButtonAdv btnGravar;
         private Syncfusion.Windows.Forms.ButtonAdv btnFechar;
         private System.Windows.Forms.Panel panel1;
-        private Syncfusion.Windows.Forms.ButtonAdv buttonAdv1;
+        private Syncfusion.Windows.Forms.ButtonAdv btnBuscaProduto;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt6;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel4;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt5;

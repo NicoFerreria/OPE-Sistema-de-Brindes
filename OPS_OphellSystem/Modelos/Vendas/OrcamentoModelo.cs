@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Cadastros.Modelos;
+using Modelos;
 
-namespace Vendas.Modelos
+namespace Modelos
 {
     public class OrcamentoModelo
     {
         public long OrcamentoID { get; set; }
         public ClienteModelo Cliente { get; set; }
-        public FornecedorModelo Fornecedor { get; set; }
-        
+        public List<FornecedorModelo> Fornecedores { get; set; }
+        public ProdutoModelo Produto { get; set; }
+
+
     }
 }

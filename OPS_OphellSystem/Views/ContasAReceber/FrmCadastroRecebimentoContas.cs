@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OPS_OphellSystem.Cadastros.Views.ContasAReceber
+namespace Views
 {
     public partial class FrmCadastroRecebimentoContas : Form
     {

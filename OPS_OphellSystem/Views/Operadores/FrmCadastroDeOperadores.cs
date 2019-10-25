@@ -2,9 +2,10 @@
 using System.Windows.Forms;
 using OPS_OphellSystem.Cadastros.Classes.Operadores;
 using Cadastros.Controles;
-using Cadastros.Modelos;
+using Modelos;
+using OPS_OphellSystem;
 
-namespace OPS_OphellSystem.Cadastros.Views.Operadores
+namespace Views
 {
     public partial class FrmCadastroDeOperadores : Form
     {

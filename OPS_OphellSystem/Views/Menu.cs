@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Views;
 
 namespace OPS_OphellSystem
 {
@@ -17,15 +18,15 @@ namespace OPS_OphellSystem
         #endregion
 
         #region "Variaveis"
-        Cadastros.Views.Clientes.FrmClientesListagem  cadastroClientes;
-        Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias cadastroCategorias;
-        Cadastros.Views.Fornecedores.FrmFornecedorListagem cadastroFornecedores;
-        Cadastros.Views.Operadores.FrmCadastroDeOperadores cadastroOperadores;
-        Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento cadastroDeCondicoesPagamento;
-        Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas cadastroDeContasAPagar;
-        Cadastros.Views.ContasAReceber.FrmCadastroRecebimentoContas cadastroDeContasAReceber;
-        Cadastros.Views.Orcamento.FrmOrcamento orcamento;
-        Cadastros.Views.Perfil.FrmCadastroPerfil perfil;
+        FrmClientesListagem  cadastroClientes;
+        FrmCadastroDeCategorias cadastroCategorias;
+        FrmFornecedorListagem cadastroFornecedores;
+        FrmCadastroDeOperadores cadastroOperadores;
+        FrmCadastroDeCondicoesDePagamento cadastroDeCondicoesPagamento;
+        FrmCadastroPagamentoContas cadastroDeContasAPagar;
+        FrmCadastroRecebimentoContas cadastroDeContasAReceber;
+        FrmOrcamento orcamento;
+        FrmCadastroPerfil perfil;
         #endregion
 
         #region "Metodos"
@@ -37,7 +38,7 @@ namespace OPS_OphellSystem
         {
             if (cadastroClientes == null)
             {
-                cadastroClientes = new Cadastros.Views.Clientes.FrmClientesListagem();
+                cadastroClientes = new FrmClientesListagem();
             }
 
             cadastroClientes.MdiParent = this;
@@ -51,7 +52,7 @@ namespace OPS_OphellSystem
             {
                 if (cadastroCategorias == null)
                 {
-                    cadastroCategorias = new Cadastros.Views.CategoriasDeProdutos.FrmCadastroDeCategorias();
+                    cadastroCategorias = new FrmCadastroDeCategorias();
                 }
                 cadastroCategorias.MdiParent = this;
                 cadastroCategorias.Dock = DockStyle.Fill;
@@ -68,7 +69,7 @@ namespace OPS_OphellSystem
             {
                 if (cadastroFornecedores == null)
                 {
-                    cadastroFornecedores = new Cadastros.Views.Fornecedores.FrmFornecedorListagem();
+                    cadastroFornecedores = new FrmFornecedorListagem();
                 }
 
                 cadastroFornecedores.MdiParent = this;
@@ -86,7 +87,7 @@ namespace OPS_OphellSystem
             {
                 if (cadastroOperadores == null)
                 {
-                    cadastroOperadores = new Cadastros.Views.Operadores.FrmCadastroDeOperadores();
+                    cadastroOperadores = new FrmCadastroDeOperadores();
                 }
 
                 
@@ -101,7 +102,7 @@ namespace OPS_OphellSystem
         {
             if(cadastroDeCondicoesPagamento == null)
             {
-                cadastroDeCondicoesPagamento = new Cadastros.Views.CondicoesDePagamento.FrmCadastroDeCondicoesDePagamento();
+                cadastroDeCondicoesPagamento = new FrmCadastroDeCondicoesDePagamento();
             }
 
             //cadastroDeCondicoesPagamento.MdiParent = this;
@@ -114,7 +115,7 @@ namespace OPS_OphellSystem
             {
                 if(cadastroDeContasAPagar == null)
                 {
-                    cadastroDeContasAPagar = new Cadastros.Views.ContasAPagar.FrmCadastroPagamentoContas();
+                    cadastroDeContasAPagar = new FrmCadastroPagamentoContas();
                 }
 
                 cadastroDeContasAPagar.ShowDialog();
@@ -149,7 +150,7 @@ namespace OPS_OphellSystem
             {
                 if (orcamento == null)
                 {
-                    orcamento = new Cadastros.Views.Orcamento.FrmOrcamento();
+                    orcamento = new FrmOrcamento();
                 }
 
                 orcamento.MdiParent = this;
@@ -167,7 +168,7 @@ namespace OPS_OphellSystem
             {
                 if(cadastroDeContasAReceber == null)
                 {
-                    cadastroDeContasAReceber = new Cadastros.Views.ContasAReceber.FrmCadastroRecebimentoContas();
+                    cadastroDeContasAReceber = new FrmCadastroRecebimentoContas();
                 }
                 cadastroDeContasAReceber.ShowDialog();
 
@@ -183,7 +184,7 @@ namespace OPS_OphellSystem
             {
                 if(perfil == null)
                 {
-                    perfil = new Cadastros.Views.Perfil.FrmCadastroPerfil();
+                    perfil = new FrmCadastroPerfil();
                 }
 
                 perfil.ShowDialog();

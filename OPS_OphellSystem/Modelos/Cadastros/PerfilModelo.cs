@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OPS_OphellSystem;
 
-namespace Cadastros.Modelos
+namespace Modelos
 {
    public class PerfilModelo
     {

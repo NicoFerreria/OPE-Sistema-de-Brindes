@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Interfaces;
 
-namespace Cadastros.Modelos
+namespace Modelos
 {
-    public class ClienteModelo
+    public class ClienteModelo : Models
     {
         public long ClienteId { get; set; }
         public string CNPJ { get; set; }
@@ -25,6 +26,9 @@ namespace Cadastros.Modelos
         public string Cidade { get; set; }
         public string Bairro { get; set; }
         public int CEP { get; set; }
-
+        public bool Excluido { get; set; }
+        public long OperadorId { get; set; }
+        public string OperadorNome { get; set; }
+        public DateTime Datahora { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OPS_OphellSystem.Cadastros.Views.Operadores
+namespace Views
 {
     public partial class FrmBuscaOperadores : Form
     {

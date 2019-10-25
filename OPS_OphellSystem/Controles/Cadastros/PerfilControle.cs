@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Cadastros.Modelos;
+using Modelos;
 using OPS_OphellSystem;
 
 namespace Cadastros.Controles

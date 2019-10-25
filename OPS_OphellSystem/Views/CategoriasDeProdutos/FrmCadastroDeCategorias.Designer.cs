@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.CategoriasDeProdutos
+﻿namespace Views
 {
     partial class FrmCadastroDeCategorias
     {
@@ -72,7 +72,7 @@
             // 
             // grpDadosCategoria
             // 
-            this.grpDadosCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grpDadosCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.grpDadosCategoria.BackColor = System.Drawing.Color.White;
             this.grpDadosCategoria.Controls.Add(this.lblCodigoCategoria);
@@ -253,7 +253,7 @@
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiltrar.BeforeTouchSize = new System.Drawing.Size(169, 20);
             this.txtFiltrar.Location = new System.Drawing.Point(781, 85);
@@ -277,8 +277,8 @@
             // grdListagemProdutos
             // 
             this.grdListagemProdutos.AccessibleName = "Table";
-            this.grdListagemProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grdListagemProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdListagemProdutos.EditMode = Syncfusion.WinForms.DataGrid.Enums.EditMode.SingleClick;
             this.grdListagemProdutos.Location = new System.Drawing.Point(555, 141);

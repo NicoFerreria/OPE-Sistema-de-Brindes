@@ -17,4 +17,11 @@ namespace OPS_OphellSystem
         HYPERLINK,
         BOTAO
     }
+
+    public enum TiposFornecedores
+    {
+        TRANSPORTADOR,
+        GRAFICA,
+        MERCADORIA
+    }
 }

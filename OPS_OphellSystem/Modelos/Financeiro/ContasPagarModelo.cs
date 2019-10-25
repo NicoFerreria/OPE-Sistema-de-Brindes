@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Cadastros.Modelos;
+using Modelos;
 namespace Financeiro.Modelos
 {
     public class ContasPagarModelo

@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
+﻿namespace Views
 {
     partial class FrmCadastroDeFornecedores
     {
@@ -102,7 +102,7 @@
             // 
             // pnlDadosGerais
             // 
-            this.pnlDadosGerais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlDadosGerais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDadosGerais.BackColor = System.Drawing.Color.White;
             this.pnlDadosGerais.Controls.Add(this.txtNomeFantasia);

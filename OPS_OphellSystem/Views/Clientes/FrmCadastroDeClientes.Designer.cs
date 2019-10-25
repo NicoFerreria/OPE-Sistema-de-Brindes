@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.Clientes
+﻿namespace Views
 {
     partial class FrmCadastroDeClientes
     {
@@ -146,7 +146,7 @@
             // 
             // grpDadosCliente
             // 
-            this.grpDadosCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grpDadosCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDadosCliente.BackColor = System.Drawing.Color.White;
             this.grpDadosCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -553,8 +553,8 @@
             // 
             // txtObservacao
             // 
-            this.txtObservacao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtObservacao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(100, 26);
             this.txtObservacao.BorderColor = System.Drawing.Color.Gray;

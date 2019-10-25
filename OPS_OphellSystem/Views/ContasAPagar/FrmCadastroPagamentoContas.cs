@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Linq;
-using Cadastros.Modelos;
+using Modelos;
 using Cadastros.Controles;
 using System.Windows.Forms;
+using OPS_OphellSystem;
 
-namespace OPS_OphellSystem.Cadastros.Views.ContasAPagar
+namespace Views
 {
     public partial class FrmCadastroPagamentoContas : Form
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using Cadastros.Modelos;
+using Modelos;
 using OPS_OphellSystem;
 
 namespace Cadastros.Controles

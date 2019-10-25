@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.Fornecedores
+﻿namespace Views
 {
     partial class FrmFornecedorListagem
     {
@@ -45,8 +45,8 @@
             this.lblTitulo.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43))))), System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29))))));
             this.lblTitulo.BeforeTouchSize = new System.Drawing.Size(201, 52);
             this.lblTitulo.BorderAppearance = System.Windows.Forms.BorderStyle.None;
-            this.lblTitulo.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
-            | System.Windows.Forms.Border3DSide.Right) 
+            this.lblTitulo.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top)
+            | System.Windows.Forms.Border3DSide.Right)
             | System.Windows.Forms.Border3DSide.Bottom)));
             this.lblTitulo.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
@@ -138,8 +138,8 @@
             // grdFornecedorListagem
             // 
             this.grdFornecedorListagem.AccessibleName = "Table";
-            this.grdFornecedorListagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grdFornecedorListagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdFornecedorListagem.Location = new System.Drawing.Point(12, 90);
             this.grdFornecedorListagem.Name = "grdFornecedorListagem";

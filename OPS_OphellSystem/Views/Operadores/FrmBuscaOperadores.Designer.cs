@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.Operadores
+﻿namespace Views
 {
     partial class FrmBuscaOperadores
     {

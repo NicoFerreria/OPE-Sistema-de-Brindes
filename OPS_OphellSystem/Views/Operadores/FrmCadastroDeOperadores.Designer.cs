@@ -1,4 +1,4 @@
-﻿namespace OPS_OphellSystem.Cadastros.Views.Operadores
+﻿namespace Views
 {
     partial class FrmCadastroDeOperadores
     {
@@ -70,7 +70,7 @@
             // 
             // pnlDadosGerais
             // 
-            this.pnlDadosGerais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlDadosGerais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDadosGerais.BackColor = System.Drawing.Color.White;
             this.pnlDadosGerais.Controls.Add(this.lblCpf);
@@ -402,8 +402,8 @@
             // sfDataGrid1
             // 
             this.sfDataGrid1.AccessibleName = "Table";
-            this.sfDataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.sfDataGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sfDataGrid1.Location = new System.Drawing.Point(12, 283);
             this.sfDataGrid1.Name = "sfDataGrid1";

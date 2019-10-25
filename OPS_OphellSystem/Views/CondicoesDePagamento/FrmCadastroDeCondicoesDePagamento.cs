@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using Cadastros.Modelos;
+using Modelos;
 using Cadastros.Controles;
+using OPS_OphellSystem;
 
-namespace OPS_OphellSystem.Cadastros.Views.CondicoesDePagamento
+namespace Views
 {
     public partial class FrmCadastroDeCondicoesDePagamento : Form
     {

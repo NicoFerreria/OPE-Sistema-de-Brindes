@@ -1,9 +1,10 @@
 ﻿using System;
-using Cadastros.Modelos;
+using Modelos;
 using Cadastros.Controles;
 using System.Windows.Forms;
+using OPS_OphellSystem;
 
-namespace OPS_OphellSystem.Cadastros.Views.Clientes
+namespace Views
 {
     public partial class FrmCadastroDeClientes : Form
     {
@@ -13,13 +14,14 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
 
         #region"Variaveis"
         public long IdCliente { get; set; } = 0;
+        public ClienteModelo  Cliente { get; set; }
         #endregion
 
         #region "Metodos"
         public FrmCadastroDeClientes()
         {
             InitializeComponent();
-        }
+        }       
         private void Fechar()
         {
             try
@@ -40,24 +42,27 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
             {
                 //utilitarios.ValidaCnpj("114447770001","00"); 
                 if (ValidaCampos() == false) return;
-                ClienteModelo cliente = new ClienteModelo();
-
-                cliente.ClienteId = long.Parse(txtIdCliente.Text);
-                cliente.CNPJ = txtCnpj.Text;
-                cliente.DigitoVerificadorCnpj = txtDigitoVerificador.Text;
-                cliente.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text);
-                cliente.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
-                cliente.CEP = int.Parse(txtCep.Text);
-                cliente.Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text);
-                cliente.Numero = int.Parse(txtNumero.Text);
-                cliente.Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text);
-                cliente.Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text);
-                cliente.NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text);
-                cliente.Email  = txtEmail.Text;
-                cliente.Telefone = int.Parse(txtTelefone.Text);
-                cliente.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
-                cliente.Status = (tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
-                cliente.Observacao = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
+                ClienteModelo cliente = new ClienteModelo()
+                {
+                    ClienteId = long.Parse(txtIdCliente.Text),
+                    CNPJ = txtCnpj.Text,
+                    DigitoVerificadorCnpj = txtDigitoVerificador.Text,
+                    Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text),
+                    Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text),
+                    CEP = int.Parse(txtCep.Text),
+                    Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text),
+                    Numero = int.Parse(txtNumero.Text),
+                    Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text),
+                    Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text),
+                    NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text),
+                    Email = txtEmail.Text,
+                    Telefone = int.Parse(txtTelefone.Text),
+                    Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text),
+                    Status = (tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active),
+                    Observacao = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text),
+                    OperadorId = SessaoUsuario.ID,
+                    OperadorNome = SessaoUsuario.Nome
+                };
 
                 cadastroCLiente.GravarCliente(cliente);
 
@@ -122,32 +127,32 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             try
             {
-                ClienteModelo cliente = cadastroCLiente.GetCliente(IdCliente);
+                //ClienteModelo cliente = cadastroCLiente.GetCliente(IdCliente);
 
-                if(cliente != null)
+                if (Cliente != null)
                 {
-                    txtIdCliente.Text = cliente.ClienteId.ToString();
-                    txtCnpj.Text = cliente.CNPJ;
-                    txtDigitoVerificador.Text = cliente.DigitoVerificadorCnpj;
-                    txtNomeFantaisa.Text = cliente.Fantasia;
-                    txtRazaoSocial.Text = cliente.Razao;
-                    txtCep.Text = cliente.CEP.ToString();
-                    txtEndereco.Text = cliente.Endereco;
-                    txtNumero.Text = cliente.Numero.ToString();
-                    txtComplemento.Text = cliente.Complemento;
-                    txtBairro.Text = cliente.Bairro;
-                    txtCidade.Text = cliente.Cidade;
-                    txtNomeContato.Text = cliente.NomeContato;
-                    txtEmail.Text = cliente.Email;
-                    txtTelefone.Text = cliente.Telefone.ToString();
-                    txtObservacao.Text = cliente.Observacao;
-                    tgBtnAtivarDesativarCliente.ToggleState = cliente.Status ? Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active : Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive;
+                    txtIdCliente.Text = Cliente.ClienteId.ToString();
+                    txtCnpj.Text = Cliente.CNPJ.Substring(0,12);
+                    txtDigitoVerificador.Text = Cliente.DigitoVerificadorCnpj;
+                    txtNomeFantaisa.Text = Cliente.Fantasia;
+                    txtRazaoSocial.Text = Cliente.Razao;
+                    txtCep.Text = Cliente.CEP.ToString();
+                    txtEndereco.Text = Cliente.Endereco;
+                    txtNumero.Text = Cliente.Numero.ToString();
+                    txtComplemento.Text = Cliente.Complemento;
+                    txtBairro.Text = Cliente.Bairro;
+                    txtCidade.Text = Cliente.Cidade;
+                    txtNomeContato.Text = Cliente.NomeContato;
+                    txtEmail.Text = Cliente.Email;
+                    txtTelefone.Text = Cliente.Telefone.ToString();
+                    txtObservacao.Text = Cliente.Observacao;
+                    tgBtnAtivarDesativarCliente.ToggleState = Cliente.Status ? Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active : Syncfusion.Windows.Forms.Tools.ToggleButtonState.Inactive;
                 }
                 else
                 {
                     NovoCliente();
                 }
-                if(cliente.ClienteId == 0)
+                if (Cliente.ClienteId == 0)
                 {
                     tgBtnAtivarDesativarCliente.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
                 }
@@ -179,31 +184,31 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                     txtCnpj.Focus();
                     return false;
                 }
-                if(txtCnpj.Text.Length < 12)
+                if (txtCnpj.Text.Length < 12)
                 {
                     MessageBox.Show("CNPJ inválido! Verifique a quantidade de dítos.", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtCnpj.Focus();
                     return false;
                 }
-                if(txtDigitoVerificador.Text == "")
+                if (txtDigitoVerificador.Text == "")
                 {
-                    MessageBox.Show("Dígito verificador do CNPJ está em branco","OPH",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Dígito verificador do CNPJ está em branco", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtDigitoVerificador.Focus();
                     return false;
                 }
-                if(int.TryParse(txtDigitoVerificador.Text, out int result) == false)
+                if (int.TryParse(txtDigitoVerificador.Text, out int result) == false)
                 {
                     MessageBox.Show("Dígito verificador do CNPJ é inválido!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtDigitoVerificador.Focus();
                     return false;
                 }
-                if(txtDigitoVerificador.Text.Length < 2)
+                if (txtDigitoVerificador.Text.Length < 2)
                 {
                     MessageBox.Show("Dígito verificador do CNPJ inválido! Verifique a quantidade de dígitos.", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtDigitoVerificador.Focus();
                     return false;
                 }
-                if(utilitarios.ValidaCnpj(txtCnpj.Text,txtDigitoVerificador.Text) == false)
+                if (utilitarios.ValidaCnpj(txtCnpj.Text, txtDigitoVerificador.Text) == false)
                 {
                     MessageBox.Show("CNPJ inválido!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtCnpj.Focus();
@@ -251,9 +256,9 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                     txtCidade.Focus();
                     return false;
                 }
-                if(txtNumero.Text == "")
+                if (txtNumero.Text == "")
                 {
-                    if(MessageBox.Show("O campo número está vazio! Deseja Continuar?","OPH",MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                    if (MessageBox.Show("O campo número está vazio! Deseja Continuar?", "OPH", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                         MessageBoxDefaultButton.Button2) == DialogResult.No)
                     {
                         txtNumero.Focus();
@@ -261,7 +266,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
                     }
                 }
                 return true;
-            }            
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -286,11 +291,11 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             //NovoCliente();
             PreencheCamposFormulario();
-        }        
+        }
         private void btnGravarCliente_Click(object sender, EventArgs e)
         {
             GravarCliente();
-        }        
+        }
         private void tgBtnAtivarDesativarCliente_ToggleStateChanged(object sender, Syncfusion.Windows.Forms.Tools.ToggleStateChangedEventArgs e)
         {
             VerificaStatusCliente();

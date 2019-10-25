@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using Cadastros.Modelos;
+using Modelos;
 using Cadastros.Controles;
+using OPS_OphellSystem;
+using System.Collections.Generic;
 
-namespace OPS_OphellSystem.Cadastros.Views.Clientes
+namespace Views
 {
     public partial class FrmClientesListagem : Form
     {
         #region "Variaveis"
-        Cadastros.Views.Clientes.FrmCadastroDeClientes cadastrarCliente = new FrmCadastroDeClientes();
+        FrmCadastroDeClientes cadastrarCliente = new FrmCadastroDeClientes();
         ClienteControle cadastroCliente = new ClienteControle();
         #endregion 
 
@@ -57,26 +59,25 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             try
             {
-                utilitarios.CriarColunasGrid(grdClienteListagem, "id_clt", "ID", TiposColunas.TEXTO, true,false,false);
-                utilitarios.CriarColunasGrid(grdClienteListagem, "cnpj_clt", "CNPJ");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "digito_verificador", "DV");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "nome_fantasia_clt", "Fantasia");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "razao_social_clt", "Razão");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "status_clt", "Ativo", TiposColunas.CHEK);
-                utilitarios.CriarColunasGrid(grdClienteListagem, "endereco_clt", "Endereco");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "numero_clt", "Número");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "complemento_clt", "Complemento");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "cidade", "Cidade");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "bairro", "Bairro");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "cep", "CEP");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "telefone_clt", "Telefone");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "nome_contato_clt", "Contato");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "email_contato_clt", "E-mail");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "observacao_clt", "Observação");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "operador_cadastro_id", "Operador ID");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "operador_cadastro_nome", "Operador");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "datahora_cadastro", "Data Cadastro");
-                utilitarios.CriarColunasGrid(grdClienteListagem, "datahora_alteracao", "Data Alteração");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "ClienteId", "ID", TiposColunas.TEXTO, true,false,false);
+                utilitarios.CriarColunasGrid(grdClienteListagem, "CNPJ", "CNPJ");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "DigitoVerificadorCnpj", "DV");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Fantasia", "Fantasia");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Razao", "Razão");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Status", "Ativo", TiposColunas.CHEK);
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Endereco", "Endereco");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Numero", "Número");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Complemento", "Complemento");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Cidade", "Cidade");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Bairro", "Bairro");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "CEP", "CEP");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Telefone", "Telefone");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "NomeContato", "Contato");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Email", "E-mail");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Observacao", "Observação");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "OperadorId", "Operador ID");
+                utilitarios.CriarColunasGrid(grdClienteListagem, "OperadorNome", "Operador"); 
+                utilitarios.CriarColunasGrid(grdClienteListagem, "Datahora", "Ultima Alteração");
 
                 grdClienteListagem.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.AllCells;
             }
@@ -101,18 +102,22 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             try
             {
-                DataRowView linha = ObterDadosDaGrid();
-                ClienteModelo cliente = new ClienteModelo();
-                if (cadastrarCliente == null)
-                {
-                    cadastrarCliente = new FrmCadastroDeClientes();
-                }
-                if (linha != null)
-                {
-                    cadastrarCliente.IdCliente = long.Parse(linha["id_clt"].ToString());
-                    cliente = cadastroCliente.GetCliente(long.Parse(linha["id_clt"].ToString()));
-                }
 
+                //DataRowView linha = ObterDadosDaGrid();
+
+                //ClienteModelo cliente = new ClienteModelo();
+                //if (cadastrarCliente == null)
+                //{
+                //    cadastrarCliente = new FrmCadastroDeClientes();
+                //}
+                //if (linha != null)
+                //{
+                //    cadastrarCliente.IdCliente = long.Parse(linha["id_clt"].ToString());
+                //    cliente = cadastroCliente.GetCliente(long.Parse(linha["id_clt"].ToString()));
+                //}
+
+                if (ObterDadosDaGrid() == null) return;
+                cadastrarCliente.Cliente = ObterDadosDaGrid();
                 cadastrarCliente.ShowDialog();
                 //grdClienteListagem.DataSource = null;
                 //grdClienteListagem.DataSource = cadastroCliente.BuscaCliente(cliente.ClienteId.ToString());
@@ -128,21 +133,26 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         {
             try
             {
-                if(grdClienteListagem.DataSource == null)
-                {
-                    MessageBox.Show("Selecione um registro para excluir!","OPH",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                    return;
-                }
-                if (MessageBox.Show("Deseja realmente excluir este cliente?", "OPH", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-                    MessageBoxDefaultButton.Button2) == DialogResult.No) return;
+                if (ObterDadosDaGrid() == null) return;
+                ClienteModelo cliente = ObterDadosDaGrid();
+                cliente.Excluido = true;
+                cadastroCliente.ExcluirCliente(cliente);
+                CarregaListagem();
+                //if(grdClienteListagem.DataSource == null)
+                //{
+                //    MessageBox.Show("Selecione um registro para excluir!","OPH",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                //    return;
+                //}
+                //if (MessageBox.Show("Deseja realmente excluir este cliente?", "OPH", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                //    MessageBoxDefaultButton.Button2) == DialogResult.No) return;
 
-                DataRowView drLinha = ObterDadosDaGrid();
-                if(drLinha != null)
-                {
-                    cadastroCliente.ExcluirCliente(long.Parse(drLinha["id_clt"].ToString()));
-                    MessageBox.Show("Cliente excluído com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CarregaListagem();
-                }
+                //DataRowView drLinha = ObterDadosDaGrid();
+                //if(drLinha != null)
+                //{
+                //    //cadastroCliente.ExcluirCliente();
+                //    MessageBox.Show("Cliente excluído com sucesso!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    CarregaListagem();
+                //}
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message,"OPH",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -151,12 +161,12 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
         #endregion
 
         #region "Funcoes"
-        private DataRowView ObterDadosDaGrid()
-        {
-            DataRowView drLinha = grdClienteListagem.SelectedItem as DataRowView;
-            if(drLinha != null)
+        private ClienteModelo ObterDadosDaGrid()
+        {  
+            if(grdClienteListagem.DataSource != null)
             {
-                return drLinha;
+                ClienteModelo cliente = (ClienteModelo)grdClienteListagem.SelectedItem;
+                return cliente;
             }
             return null;
         }
@@ -185,7 +195,7 @@ namespace OPS_OphellSystem.Cadastros.Views.Clientes
            if(e.KeyCode == Keys.Enter) CarregaListagem();
         }
         private void grdClienteListagem_CellDoubleClick(object sender, Syncfusion.WinForms.DataGrid.Events.CellClickEventArgs e)
-        {
+        {            
             EditarCliente();
         }
         private void btnExcluir_Click(object sender, EventArgs e)
