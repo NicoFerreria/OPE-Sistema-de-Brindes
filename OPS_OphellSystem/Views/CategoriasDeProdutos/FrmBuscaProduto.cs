@@ -35,7 +35,7 @@ namespace Views
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message,"OPH", MessageBoxButtons.OK, MessageBoxIcon.Erro);
+                MessageBox.Show(ex.Message,"OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Fechar(bool confirma = false)

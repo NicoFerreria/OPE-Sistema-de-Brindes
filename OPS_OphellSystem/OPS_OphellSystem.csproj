@@ -104,6 +104,7 @@
     <Compile Include="Controles\Cadastros\ProdutoControle.cs" />
     <Compile Include="Controles\Financeiro\ContasPagarControle.cs" />
     <Compile Include="Controles\Cadastros\FormasPagamentoControle.cs" />
+    <Compile Include="Controles\Financeiro\ContasReceberControle.cs" />
     <Compile Include="Modelos\Models.cs" />
     <Compile Include="Dao\ClienteDao.cs" />
     <Compile Include="Interfaces\IDao.cs" />

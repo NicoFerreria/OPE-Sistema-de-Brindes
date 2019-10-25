@@ -125,7 +125,9 @@ namespace OPS_OphellSystem
                                 { "id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE"},
                                 {"duplicata","INTEGER NOT NULL DEFAULT 1" },
                                 {"data_lancamento","TEXT" },
-                                {"total","DOUBLE" }
+                                {"total","DOUBLE" },
+                                {"id_fornecedor","INTEGER" },
+                                {"forma_pagamento","TEXT" }
                             };
                         }
                         break;
@@ -212,12 +214,11 @@ namespace OPS_OphellSystem
             try
             {
                 string[] retorno = new string[] {
-                    "ALTER TABLE PagamentoConta ADD COLUMN id_pagamento INTEGER REFERENCES Pagamento(id)",
-                    "ALTER TABLE Pagamento ADD COLUMN id_fornecedor INTEGER REFERENCES Fornecedor(id_forn)",
+                    "ALTER TABLE PagamentoConta ADD COLUMN id_pagamento INTEGER REFERENCES Pagamento(id)",                    
                     "ALTER TABLE Pagamento ADD COLUMN id_forma_pagamento INTEGER REFERENCES FormasPagamento(id)",
                     "ALTER TABLE Usuario ADD COLUMN perfil_id INTEGER REFERENCES Perfil(id)"
                 };
-
+                //"ALTER TABLE Pagamento ADD COLUMN id_fornecedor INTEGER REFERENCES Fornecedor(id_forn)",
                 return retorno;
             }
             catch (Exception ex)
