@@ -28,19 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.cmbFiltro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCriterio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdResultados)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmbFiltro
+            // txtCriterio
             // 
-            this.cmbFiltro.Size = new System.Drawing.Size(249, 23);
+            this.txtCriterio.BeforeTouchSize = new System.Drawing.Size(687, 40);
+            this.txtCriterio.MinimumSize = new System.Drawing.Size(687, 40);
+            this.txtCriterio.Size = new System.Drawing.Size(687, 40);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // grdResultados
             // 
             this.grdResultados.Location = new System.Drawing.Point(12, 104);
             this.grdResultados.Size = new System.Drawing.Size(776, 285);
+            this.grdResultados.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
             // 
             // btnConfirma
             // 
@@ -59,7 +65,6 @@
             this.Text = "Bucar Cliente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmBuscaCliente_FormClosing);
             this.Shown += new System.EventHandler(this.FrmBuscaCliente_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.cmbFiltro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCriterio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdResultados)).EndInit();
             this.ResumeLayout(false);

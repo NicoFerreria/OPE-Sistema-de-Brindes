@@ -202,10 +202,10 @@ namespace OPS_OphellSystem
             {
 
                 int[] pesosPrimeiroDigito = new int[] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-                int primeiroDigito = CalculaDigitoVarificadorCNPJ(CNPJ, pesosPrimeiroDigito);
+                int primeiroDigito = CalculaDigitoVarificadorCNPJ(CNPJ.ToString(), pesosPrimeiroDigito);
                 CNPJ = CNPJ + primeiroDigito.ToString();
                 int[] pesosSegundoDigito = new int[] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-                int segundoDigito = CalculaDigitoVarificadorCNPJ(CNPJ, pesosSegundoDigito);
+                int segundoDigito = CalculaDigitoVarificadorCNPJ(CNPJ.ToString(), pesosSegundoDigito);
 
                 if (primeiroDigito == int.Parse(DV[0].ToString()))
                 {

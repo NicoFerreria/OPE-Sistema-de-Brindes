@@ -97,9 +97,10 @@ namespace Cadastros.Controles
             try
             {
                 ClienteDao dao = new ClienteDao();
+                return dao.SelectCliente(criterio);
 
-                return dao.SelectAll().FindAll(c => c.Excluido == excluidos && (c.ClienteId.ToString() == criterio || c.CNPJ.ToString() == criterio || c.Fantasia.Contains(criterio) ||
-                c.Razao.Contains(criterio)));
+                //return dao.SelectAll().FindAll(c => c.Excluido == excluidos && (c.ClienteId.ToString() == criterio || c.CNPJ.ToString() == criterio || c.Fantasia.Contains(criterio) ||
+                //c.Razao.Contains(criterio)));
 
                 //DataTable dtDados = new DataTable();
                 //if (long.TryParse(criterio, out long saida) == false & criterio != "")

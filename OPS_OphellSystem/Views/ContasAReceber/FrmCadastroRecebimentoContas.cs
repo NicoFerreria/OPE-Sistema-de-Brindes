@@ -16,14 +16,14 @@ namespace Views
 {
     public partial class FrmCadastroRecebimentoContas : Form
     {
-        FrmBuscaFornecedor formBuscaFornecedor;
+        FrmBuscaCliente formBuscaFornecedor;
         public FrmCadastroRecebimentoContas()
         {
             InitializeComponent();
         }
 
         private List<ContasReceberModelo> Contas = new List<ContasReceberModelo>();
-        private FornecedorModelo Fornecedor;
+        private ClienteModelo Fornecedor;
         private void GravarConta()
         {
             if(double.TryParse(txtValorConta.Text,out double valor) == false)
@@ -38,7 +38,7 @@ namespace Views
                 return;
             }
 
-            Contas.Add(new ContasReceberModelo() { ContasAReceberID = Contas.Count + 1, Duplicata = 0, Fornecedor = Fornecedor,
+            Contas.Add(new ContasReceberModelo() { ContasAReceberID = Contas.Count + 1, Duplicata = 0, Cliente = Fornecedor,
                 FormaPagamento = cmbFormasPagamento.ValueMember, Valor = double.Parse(txtValorConta.Text), DataVencimento= dtpVencimento.Value});          
             
         }
@@ -75,15 +75,15 @@ namespace Views
 
         private void btnFornecedor_Click(object sender, EventArgs e)
         {
-            if (formBuscaFornecedor == null) formBuscaFornecedor = new FrmBuscaFornecedor();
+            if (formBuscaFornecedor == null) formBuscaFornecedor = new FrmBuscaCliente();
             formBuscaFornecedor.ShowDialog();
-            Fornecedor = formBuscaFornecedor.Fornecedor;
+            Fornecedor = formBuscaFornecedor.Cliente;
             if (Fornecedor == null)
             {
-                MessageBox.Show("Erro ao obter Fornecedor, Verifique o Cadastro!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // MessageBox.Show("Erro ao obter Fornecedor, Verifique o Cadastro!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            txtId.Text = Fornecedor.FornecedorId.ToString();
+            txtId.Text = Fornecedor.ClienteId.ToString();
             txtFornecedor.Text = Fornecedor.Fantasia;
         }
 
@@ -101,7 +101,7 @@ namespace Views
         {
             List<SqlParametro> parametros = new List<SqlParametro>()
             {
-                new SqlParametro() { Nome = "@idForcenedor", Valor = Fornecedor.FornecedorId },
+                new SqlParametro() { Nome = "@idForcenedor", Valor = Fornecedor.ClienteId },
                 new SqlParametro() { Nome = "@formaPagamento", Valor = cmbFormasPagamento.ValueMember },
                 new SqlParametro() { Nome = "@valor", Valor = double.Parse(txtValorConta.Text)},
                 new SqlParametro() { Nome = "@vencimento", Valor = dtpVencimento.Value.ToShortDateString()},

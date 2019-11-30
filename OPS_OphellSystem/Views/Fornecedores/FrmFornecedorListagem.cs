@@ -28,29 +28,35 @@ namespace Views
         {
             InitializeComponent();
 
-            CriarColunasGrid();
+            //CriarColunasGrid();
         }
         private void CriarColunasGrid()
         {
             try
             {
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "id", "ID", TiposColunas.TEXTO, true, false, false, false);                
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "fantasia", "Fantasia");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "razao", "Razão");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "cnpj", "CNPJ");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "ie", "IE");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "status", "Ativo",TiposColunas.CHEK);
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "endereco", "Endereco");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "numero", "Numero");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "complemento", "Complemento");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "cidade", "Cidade");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "bairro", "Bairro");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "cep", "CEP");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "telefone", "Telefone");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "contato", "Contato");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "email", "Email");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "observacao", "Observação");
-                utilitarios.CriarColunasGrid(grdFornecedorListagem, "digito_verificador", "DV",TiposColunas.TEXTO,false,false,false);
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "FornecedorId", "ID", TiposColunas.TEXTO, true, false, false, false);                
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Fantasia", "Fantasia");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Razao", "Razão");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "CNPJ", "CNPJ");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "InscricaoEstadual", "IE");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Status", "Ativo",TiposColunas.CHEK);
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Terceiro", "Tipo", TiposColunas.CHEK);
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Endereco", "Endereco");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Numero", "Numero");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Complemento", "Complemento");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Cidade", "Cidade");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Bairro", "Bairro");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "CEP", "CEP");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Telefone", "Telefone");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "NomeContato", "Contato");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Email", "Email");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "PlanoDeContas1", "Plano de Contas 1", TiposColunas.TEXTO);
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "PlanoDeContas2", "Plano de Contas 2", TiposColunas.TEXTO);
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "PlanoDeContas3", "Plano de Contas 3", TiposColunas.TEXTO);
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "PlanoDeContas4", "Plano de Contas 4", TiposColunas.TEXTO);
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "Observacao", "Observação");
+                utilitarios.CriarColunasGrid(grdFornecedorListagem, "DigitoVerificadorCnpj", "DV",TiposColunas.TEXTO,false,false,false);
+                
 
                 grdFornecedorListagem.AutoSizeColumnsMode = Syncfusion.WinForms.DataGrid.Enums.AutoSizeColumnsMode.AllCells;
 

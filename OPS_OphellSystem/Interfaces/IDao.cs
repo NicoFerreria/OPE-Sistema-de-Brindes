@@ -11,6 +11,7 @@ namespace Interfaces
     {
         void Create(t modelo);
         void Update(t modelo);
-        void Delete(t modelo);        
+        void Delete(t modelo);
+        List<t> SelectAll();
     }
 }

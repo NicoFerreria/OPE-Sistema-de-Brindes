@@ -60,8 +60,8 @@
             // 
             // grpDadosPagamento
             // 
-            this.grpDadosPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.grpDadosPagamento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDadosPagamento.Controls.Add(this.btnFornecedor);
             this.grpDadosPagamento.Controls.Add(this.lblFormasPagamento);
@@ -93,6 +93,7 @@
             this.btnFornecedor.Name = "btnFornecedor";
             this.btnFornecedor.Size = new System.Drawing.Size(30, 30);
             this.btnFornecedor.TabIndex = 6;
+            this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
             // 
             // lblFormasPagamento
             // 
@@ -162,8 +163,8 @@
             // 
             // grpDadosConta
             // 
-            this.grpDadosConta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.grpDadosConta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDadosConta.Controls.Add(this.grdContas);
             this.grpDadosConta.Controls.Add(this.btnAdicionarConta);
@@ -181,8 +182,8 @@
             // grdContas
             // 
             this.grdContas.AccessibleName = "Table";
-            this.grdContas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.grdContas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdContas.Location = new System.Drawing.Point(6, 104);
             this.grdContas.Name = "grdContas";

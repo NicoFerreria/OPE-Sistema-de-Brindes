@@ -51,7 +51,7 @@ namespace Views
                 }
                 else
                 {
-                    Cliente = null;
+                    Cliente = new ClienteModelo();
                 }
                 this.Hide();
             }
@@ -68,11 +68,35 @@ namespace Views
 
                 MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }        
+        private void NovoForm()
+        {
+            grdResultados.DataSource = null;
+            txtCriterio.Text = "";
+            txtCriterio.Focus();
+        }
+        private void BuscarCliente()
+        {
+            try
+            {
+                if (txtCriterio.Text == "")
+                {
+                    CarregaListagem();
+                }
+                else
+                {
+                    grdResultados.DataSource = null;
+                    grdResultados.DataSource = _controle.BuscaCliente(txtCriterio.Text);
+                }                
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void FrmBuscaCliente_Shown(object sender, EventArgs e)
         {
-            CarregaListagem();
+            NovoForm();
         }
 
         private void FrmBuscaCliente_FormClosing(object sender, FormClosingEventArgs e)
@@ -83,6 +107,11 @@ namespace Views
         private void btnConfirma_Click(object sender, EventArgs e)
         {
             Fechar(true);
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            BuscarCliente();
         }
     }
 }

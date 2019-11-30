@@ -9,6 +9,8 @@ namespace Views
 {
     public partial class FrmCadastroPagamentoContas : Form
     {
+        FrmBuscaFornecedor formBuscaFornecedor;
+        FornecedorModelo Fornecedor;
         #region "Metodos"
         public FrmCadastroPagamentoContas()
         {
@@ -77,5 +79,20 @@ namespace Views
         {
             Help.ShowHelp(this, "C:\\Users\\Nicolas\\Documents\\Projetos\\OphellSB\\OPS_OphellSystem\\OPS_OphellSystem\\Resources\\Help.chm");
         }
+
+        private void btnFornecedor_Click(object sender, EventArgs e)
+        {
+            if (formBuscaFornecedor == null) formBuscaFornecedor = new FrmBuscaFornecedor();
+            formBuscaFornecedor.ShowDialog();
+            Fornecedor = formBuscaFornecedor.Fornecedor;
+            if (Fornecedor == null)
+            {
+                // MessageBox.Show("Erro ao obter Fornecedor, Verifique o Cadastro!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            txtId.Text = Fornecedor.FornecedorId.ToString();
+            txtFornecedor.Text = Fornecedor.Fantasia;
+        }
     }
-}
+    }
+

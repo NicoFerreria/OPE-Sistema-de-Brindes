@@ -10,7 +10,7 @@ namespace Financeiro.Modelos
     public class ContasReceberModelo
     {
         public long ContasAReceberID { get; set; }
-        public FornecedorModelo Fornecedor { get; set; }
+        public ClienteModelo Cliente { get; set; }
         public string  FormaPagamento { get; set; }
         public double Valor { get; set; }        
         public int Duplicata { get; set; }

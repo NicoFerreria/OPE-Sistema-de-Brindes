@@ -101,10 +101,15 @@
     <Compile Include="Controles\Cadastros\FornecedorControle.cs" />
     <Compile Include="Controles\Cadastros\OperadorControle.cs" />
     <Compile Include="Controles\Cadastros\PerfilControle.cs" />
+    <Compile Include="Controles\Cadastros\PlanoDeContasControle.cs" />
     <Compile Include="Controles\Cadastros\ProdutoControle.cs" />
     <Compile Include="Controles\Financeiro\ContasPagarControle.cs" />
     <Compile Include="Controles\Cadastros\FormasPagamentoControle.cs" />
     <Compile Include="Controles\Financeiro\ContasReceberControle.cs" />
+    <Compile Include="Dao\FornecedorDao.cs" />
+    <Compile Include="Dao\PlanoDeContasDao.cs" />
+    <Compile Include="Modelos\Cadastros\Fornecedores\GrupoFornecedorModelo.cs" />
+    <Compile Include="Modelos\Cadastros\PlanoDeContasModelo.cs" />
     <Compile Include="Modelos\Models.cs" />
     <Compile Include="Dao\ClienteDao.cs" />
     <Compile Include="Interfaces\IDao.cs" />
@@ -118,7 +123,7 @@
     <Compile Include="Modelos\Financeiro\ContasPagarModelo.cs" />
     <Compile Include="Modelos\Financeiro\ContasReceberModelo.cs" />
     <Compile Include="Modelos\Cadastros\FormaPagamentoModelo.cs" />
-    <Compile Include="Modelos\Cadastros\FornecedorModelo.cs" />
+    <Compile Include="Modelos\Cadastros\Fornecedores\FornecedorModelo.cs" />
     <Compile Include="Modelos\Cadastros\PerfilModelo.cs" />
     <Compile Include="Modelos\Vendas\OrcamentoModelo.cs" />
     <Compile Include="Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.cs">

@@ -3,6 +3,7 @@ using Modelos;
 using Cadastros.Controles;
 using System.Windows.Forms;
 using OPS_OphellSystem;
+using OPS_OphellSystem.Modelos;
 
 namespace Views
 {
@@ -14,14 +15,14 @@ namespace Views
 
         #region"Variaveis"
         public long IdCliente { get; set; } = 0;
-        public ClienteModelo  Cliente { get; set; }
+        public ClienteModelo Cliente { get; set; }
         #endregion
 
         #region "Metodos"
         public FrmCadastroDeClientes()
         {
             InitializeComponent();
-        }       
+        }
         private void Fechar()
         {
             try
@@ -42,27 +43,25 @@ namespace Views
             {
                 //utilitarios.ValidaCnpj("114447770001","00"); 
                 if (ValidaCampos() == false) return;
-                ClienteModelo cliente = new ClienteModelo()
-                {
-                    ClienteId = long.Parse(txtIdCliente.Text),
-                    CNPJ = txtCnpj.Text,
-                    DigitoVerificadorCnpj = txtDigitoVerificador.Text,
-                    Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text),
-                    Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text),
-                    CEP = int.Parse(txtCep.Text),
-                    Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text),
-                    Numero = int.Parse(txtNumero.Text),
-                    Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text),
-                    Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text),
-                    NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text),
-                    Email = txtEmail.Text,
-                    Telefone = int.Parse(txtTelefone.Text),
-                    Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text),
-                    Status = (tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active),
-                    Observacao = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text),
-                    OperadorId = SessaoUsuario.ID,
-                    OperadorNome = SessaoUsuario.Nome
-                };
+                ClienteModelo cliente = new ClienteModelo();
+                cliente.ClienteId = long.TryParse(txtIdCliente.Text,out long id)? id:0;
+                cliente.CNPJ = txtCnpj.Text;
+                cliente.DigitoVerificadorCnpj = txtDigitoVerificador.Text;
+                cliente.Fantasia = utilitarios.RemoveCaracteresEspeciais(txtNomeFantaisa.Text);
+                cliente.Razao = utilitarios.RemoveCaracteresEspeciais(txtRazaoSocial.Text);
+                cliente.CEP = int.Parse(txtCep.Text);
+                cliente.Endereco = utilitarios.RemoveCaracteresEspeciais(txtEndereco.Text);
+                cliente.Numero = int.Parse(txtNumero.Text);
+                cliente.Bairro = utilitarios.RemoveCaracteresEspeciais(txtBairro.Text);
+                cliente.Cidade = utilitarios.RemoveCaracteresEspeciais(txtCidade.Text);
+                cliente.NomeContato = utilitarios.RemoveCaracteresEspeciais(txtNomeContato.Text);
+                cliente.Email = txtEmail.Text;
+                cliente.Telefone = int.Parse(txtTelefone.Text);
+                cliente.Complemento = utilitarios.RemoveCaracteresEspeciais(txtComplemento.Text);
+                cliente.Status = (tgBtnAtivarDesativarCliente.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
+                cliente.Observacao = utilitarios.RemoveCaracteresEspeciais(txtObservacao.Text);
+                cliente.OperadorId = SessaoUsuario.ID;
+                cliente.OperadorNome = SessaoUsuario.Nome;
 
                 cadastroCLiente.GravarCliente(cliente);
 
@@ -132,7 +131,7 @@ namespace Views
                 if (Cliente != null)
                 {
                     txtIdCliente.Text = Cliente.ClienteId.ToString();
-                    txtCnpj.Text = Cliente.CNPJ.Substring(0,12);
+                    txtCnpj.Text = Cliente.CNPJ.Substring(0, 12);
                     txtDigitoVerificador.Text = Cliente.DigitoVerificadorCnpj;
                     txtNomeFantaisa.Text = Cliente.Fantasia;
                     txtRazaoSocial.Text = Cliente.Razao;
@@ -152,12 +151,38 @@ namespace Views
                 {
                     NovoCliente();
                 }
-                if (Cliente.ClienteId == 0)
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ObterDadosEndereco()
+        {
+            try
+            {
+                if (txtCep.Text != "")
                 {
-                    tgBtnAtivarDesativarCliente.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+                    if (txtCep.Text.Length == 8)
+                    {
+                        Cep cep = utilitarios.ObterCep(txtCep.Text);
+                        txtCep.Text = cep.CEP == null ? txtCep.Text : utilitarios.RemoveCaracteresEspeciais(cep.CEP);
+                        txtEndereco.Text = cep.Logradouro;
+                        txtBairro.Text = cep.Bairro;
+                        txtComplemento.Text = cep.Complemento;
+                        txtCidade.Text = cep.Localidade;
+                        if (cep.CEP != null)
+                        {
+                            txtNumero.Focus();
+                        }
+                        else
+                        {
+                            txtEndereco.Focus();
+                        }
+                        return;
+                    }
                 }
-                //VerificaStatusCliente();
-
+                txtEndereco.Focus();
             }
             catch (Exception ex)
             {
@@ -331,12 +356,17 @@ namespace Views
         {
             PreencheCamposFormulario();
         }
-
+        private void txtCep_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) ObterDadosEndereco();
+        }
         #endregion
 
         private void button1_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "C:\\Users\\Nicolas\\Documents\\Projetos\\OphellSB\\OPS_OphellSystem\\OPS_OphellSystem\\Resources\\Help.chm");
         }
+
+        
     }
 }

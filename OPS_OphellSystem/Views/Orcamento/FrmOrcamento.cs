@@ -48,6 +48,8 @@ namespace Views
                 if(cliente != null)
                 {
                     Orcamento.Cliente = cliente;
+                    txtCodigoCliente.Text = cliente.ClienteId.ToString();
+                    txtCliente.Text = cliente.Fantasia;
                 }
 
             }
@@ -68,13 +70,13 @@ namespace Views
                 FornecedorModelo fornecedor = formBuscaFornecedor.Fornecedor;
                 if(fornecedor != null)
                 {
-                    var forn = Fornecedores.Where(f => f.TipoFornecedor == tipoFornecedor).First();
-                    if(forn != null)
-                    {
-                        Fornecedores.Remove(forn);
-                    }
+                    //var forn = Fornecedores.Where(f => f.TipoFornecedor == tipoFornecedor).First();
+                    //if(forn != null)
+                    //{
+                    //    Fornecedores.Remove(forn);
+                    //}
 
-                    Fornecedores.Add(forn);
+                    //Fornecedores.Add(forn);
                 }
             }
             catch (Exception ex)

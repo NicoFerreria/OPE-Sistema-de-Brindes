@@ -73,8 +73,8 @@
             this.txtObservacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.btnAdicionarNovoCliente = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnGravarCliente = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
             this.button1 = new System.Windows.Forms.Button();
+            this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
             ((System.ComponentModel.ISupportInitialize)(this.grdLayoutBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tgBtnAtivarDesativarCliente)).BeginInit();
             this.grpDadosCliente.SuspendLayout();
@@ -146,7 +146,7 @@
             // 
             // grpDadosCliente
             // 
-            this.grpDadosCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.grpDadosCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDadosCliente.BackColor = System.Drawing.Color.White;
             this.grpDadosCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -441,6 +441,7 @@
             this.txtCep.Size = new System.Drawing.Size(120, 26);
             this.txtCep.TabIndex = 6;
             this.txtCep.UseBorderColorOnFocus = true;
+            this.txtCep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCep_KeyDown);
             this.txtCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCep_KeyPress);
             // 
             // lblTxtRazaoSocial
@@ -553,8 +554,8 @@
             // 
             // txtObservacao
             // 
-            this.txtObservacao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.txtObservacao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtObservacao.BeforeTouchSize = new System.Drawing.Size(100, 26);
             this.txtObservacao.BorderColor = System.Drawing.Color.Gray;
@@ -646,10 +647,6 @@
             this.superToolTip1.SetToolTip(this.btnGravarCliente, toolTipInfo2);
             this.btnGravarCliente.Click += new System.EventHandler(this.btnGravarCliente_Click);
             // 
-            // superToolTip1
-            // 
-            this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
-            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
@@ -662,6 +659,10 @@
             this.button1.TabIndex = 19;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // superToolTip1
+            // 
+            this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             // 
             // FrmCadastroDeClientes
             // 

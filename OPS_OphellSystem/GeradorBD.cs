@@ -93,28 +93,31 @@ namespace OPS_OphellSystem
                             {
                             {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
                             {"cnpj","TEXT" },
+                            {"digito_verificador","TEXT" },
                             {"ie","TEXT" },
+                            {"plano_de_contas","INTEGER" },
                             {"fantasia","TEXT NOT NULL" },
                             {"razao","TEXT NOT NULL" },
-                            {"status","INTEGER NOT NULL DEFAULT 1" },
+                            {"status","TEXT" },
+                            {"terceiro","TEXT NOT NULL DEFAULT 'false'" },
+                            {"grupo_id","INTEGER NOT NULL DEFAULT 1" },
                             {"endereco","TEXT" },
                             {"numero","INTEGER" },
                             {"complemento","TEXT" },
                             {"cidade","TEXT" },
                             {"bairro","TEXT" },
                             {"cep","TEXT" },
-                            {"telefone","INTEGER" },
+                            {"telefone","INTEGER" },                            
                             {"contato","TEXT" },
                             {"email","TEXT" },
-                            {"observacao","TEXT" },
-                            {"digito_verificador","TEXT" },
+                            {"observacao","TEXT" },                                                        
                             {"operador_cadastro_id","INTEGER" },
                             {"operador_cadastro_nome","TEXT" },
                             {"operador_alteracao_id","INTEGER" },
                             {"operador_alteracao_nome","TEXT" },
                             {"datahora_cadastro","TEXT" },
                             {"datahora_alteracao","TEXT" },
-                            {"excluido","INTEGER NOT NULL DEFAULT 0" }
+                            {"excluido","INTEGER NOT NULL DEFAULT 0" }                            
                             };
                         }
                         break;
@@ -153,7 +156,20 @@ namespace OPS_OphellSystem
                             };
                         }
                         break;
-
+                    case "GrupoFornecedor":
+                        campos = new string[,]
+                        {
+                            {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
+                            {"descricao","TEXT NOT NULL" },
+                            {"operador_cadastro_id","INTEGER" },
+                            {"operador_cadastro_nome","TEXT" },
+                            {"operador_alteracao_id","INTEGER" },
+                            {"operador_alteracao_nome","TEXT" },
+                            {"datahora_cadastro","TEXT" },
+                            {"datahora_alteracao","TEXT" },
+                            {"excluido","INTEGER NOT NULL DEFAULT 0" }
+                        };
+                        break;
                 }
 
                 return campos;
@@ -172,6 +188,7 @@ namespace OPS_OphellSystem
                     "Usuario",
                     "Cliente",
                     "Produto",
+                    "GrupoFornecedor",
                     "Fornecedor",
                     "Pagamento",
                     "PagamentoConta",
@@ -214,9 +231,12 @@ namespace OPS_OphellSystem
             try
             {
                 string[] retorno = new string[] {
+                    "INSERT INTO GrupoFornecedor(descricao)VALUES('FORNECEDORES')",
                     "ALTER TABLE PagamentoConta ADD COLUMN id_pagamento INTEGER REFERENCES Pagamento(id)",                    
                     "ALTER TABLE Pagamento ADD COLUMN id_forma_pagamento INTEGER REFERENCES FormasPagamento(id)",
-                    "ALTER TABLE Usuario ADD COLUMN perfil_id INTEGER REFERENCES Perfil(id)"
+                    "ALTER TABLE Usuario ADD COLUMN perfil_id INTEGER REFERENCES Perfil(id)",
+                    "ALTER TABLE Fornecedor ADD FOREIGN KEY(grupo_id) REFERENCES GrupoFornecedor(id)",
+                    "ALTER TABLE Fornecedor ADD CHECK(terceiro=true OR terceiro=false)"                    
                 };
                 //"ALTER TABLE Pagamento ADD COLUMN id_fornecedor INTEGER REFERENCES Fornecedor(id_forn)",
                 return retorno;

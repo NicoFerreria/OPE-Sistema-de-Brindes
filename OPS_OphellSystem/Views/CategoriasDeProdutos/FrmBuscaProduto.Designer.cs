@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ((System.ComponentModel.ISupportInitialize)(this.cmbFiltro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCriterio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdResultados)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmbFiltro
-            // 
-            this.cmbFiltro.Size = new System.Drawing.Size(249, 23);
             // 
             // btnConfirma
             // 
@@ -50,7 +46,6 @@
             this.Text = "FrmBuscaProduto";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmBuscaProduto_FormClosing);
             this.Shown += new System.EventHandler(this.FrmBuscaProduto_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.cmbFiltro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCriterio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdResultados)).EndInit();
             this.ResumeLayout(false);

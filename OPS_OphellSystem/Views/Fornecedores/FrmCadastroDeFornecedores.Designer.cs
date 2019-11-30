@@ -102,7 +102,7 @@
             // 
             // pnlDadosGerais
             // 
-            this.pnlDadosGerais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pnlDadosGerais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDadosGerais.BackColor = System.Drawing.Color.White;
             this.pnlDadosGerais.Controls.Add(this.txtNomeFantasia);
@@ -549,6 +549,7 @@
             // 
             this.lblCep.DY = -22;
             this.lblCep.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCep.LabeledControl = this.txtCep;
             this.lblCep.Location = new System.Drawing.Point(16, 103);
             this.lblCep.Name = "lblCep";

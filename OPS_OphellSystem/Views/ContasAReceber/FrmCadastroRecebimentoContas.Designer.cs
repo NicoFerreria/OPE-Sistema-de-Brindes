@@ -227,9 +227,9 @@
             this.lblFornecedor.Location = new System.Drawing.Point(112, 33);
             this.lblFornecedor.Name = "lblFornecedor";
             this.lblFornecedor.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblFornecedor.Size = new System.Drawing.Size(61, 13);
+            this.lblFornecedor.Size = new System.Drawing.Size(39, 13);
             this.lblFornecedor.TabIndex = 3;
-            this.lblFornecedor.Text = "Fornecedor";
+            this.lblFornecedor.Text = "Cliente";
             // 
             // txtFornecedor
             // 

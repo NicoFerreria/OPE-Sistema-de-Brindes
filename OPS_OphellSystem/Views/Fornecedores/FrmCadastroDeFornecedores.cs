@@ -228,19 +228,7 @@ namespace Views
         private bool ValidaCampos()
         {
             try
-            {
-                //if (txtCnpj.Text == "")
-                //{
-                //    MessageBox.Show("Por favor preencha o campo CNPJ!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                //    txtCnpj.Focus();
-                //    return false;
-                //}
-                //if (txtDv.Text == "")
-                //{
-                //    MessageBox.Show("Por favor preencha o campo dígito verificador do CNPJ!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                //    txtDv.Focus();
-                //    return false;
-                //}
+            {               
                 if (txtCnpj.Text != "")
                 {
                     if (long.TryParse(txtCnpj.Text, out long cnpj) == false)
@@ -248,6 +236,15 @@ namespace Views
                         MessageBox.Show("O CNPJ está em um formato incorreto!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         txtCnpj.Focus();
                         return false;
+                    }
+                    else
+                    {
+                        if(txtCnpj.Text.Length < 12)
+                        {
+                            MessageBox.Show("O CNPJ está faltando dígitos!", "OPH", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            txtCnpj.Focus();
+                            return false;
+                        }
                     }
 
                     if (txtDv.Text == "")

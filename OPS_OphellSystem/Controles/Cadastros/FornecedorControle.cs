@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Data;
 using Modelos;
 using OPS_OphellSystem;
+using Dao;
+using System.Linq;
+using Interfaces;
 
 namespace Cadastros.Controles
 {
-   public class FornecedorControle
+    public class FornecedorControle
     {
         #region "Classes"
-        
+        FornecedorDao _dao = new FornecedorDao();
         #endregion
 
         #region "Variaveis"
@@ -21,17 +24,18 @@ namespace Cadastros.Controles
         #region "Metodos"
         public FornecedorControle()
         {
-            
+
         }
         public bool DeleteFornecedor(long id)
         {
             try
             {
                 if (id <= 0) throw new System.Exception("Nenhum fornecedor passado como parâmetro!");
-                List<SqlParametro> parametros = new List<SqlParametro>();
-                parametros.Add(new SqlParametro { Nome = "@id", Valor = id });
-                utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET excluido=1 WHERE id=@id",parametros);
-            }catch(Exception ex)
+                FornecedorModelo fornecedor = _dao.GetById(id);
+                if (fornecedor == null) throw new System.Exception("Fornecedor não encontrado!");
+                _dao.Delete(fornecedor);
+            }
+            catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }
@@ -43,20 +47,13 @@ namespace Cadastros.Controles
             try
             {
                 if (fornecedor == null) throw new System.Exception("Nenhum fornecedor passa como parâmetro!");
-                dtDados = utilitarios.RealizaConexaoBd("SELECT id FROM Fornecedor WHERE id=@id", RetornaParametros(fornecedor));
-                if (dtDados.Rows.Count <= 0)
+                if (_dao.GetById(fornecedor.FornecedorId) == null)
                 {
-                    utilitarios.RealizaConexaoBd("INSERT INTO Fornecedor(cnpj,fantasia,razao,status,endereco,numero,complemento,cidade,bairro,cep,telefone,contato,email" +
-                ",observacao,digito_verificador,operador_cadastro_id,operador_cadastro_nome,datahora_cadastro,datahora_alteracao,ie)VALUES(@cnpj,@fantasia,@razao,@status" +
-                ",@endereco,@numero,@complemento,@cidade,@bairro,@cep,@telefone,@contato,@email,@observacao,@digitoVerificador,@operadorId,@operadorNome,@dataAlteracao" +
-                ",@dataAlteracao,@IE)",RetornaParametros(fornecedor));
+                    _dao.Create(fornecedor);
                 }
                 else
                 {
-                    utilitarios.RealizaConexaoBd("UPDATE Fornecedor SET cnpj=@cnpj,fantasia=@fantasia,razao=@razao,status=@status,endereco=@endereco,numero=@numero" +
-                ",complemento=@complemento,cidade=@cidade,bairro=@bairro,cep=@cep,telefone=@telefone,contato=@contato,email=@email,observacao=@observacao" +
-                ",digito_verificador=@digitoVerificador,operador_alteracao_id=@operadorId,operador_alteracao_nome=@operadorNome,datahora_alteracao=@dataAlteracao" +
-                ",ie=@IE WHERE id=@id", RetornaParametros(fornecedor));
+                    _dao.Update(fornecedor);
                 }
             }
             catch (Exception ex)
@@ -64,76 +61,43 @@ namespace Cadastros.Controles
                 throw new System.Exception(ex.Message);
             }
             return true;
-        }        
+        }
         #endregion
 
         #region "Funções"
-        public DataTable GetListaFornecedores(string criterio = "")
+        public List<FornecedorModelo> GetListaFornecedores(string criterio = "")
         {
             try
             {
-                List<SqlParametro> parametros = new List<SqlParametro>();                
-                
-                if(long.TryParse(criterio, out long result) == false && criterio != "")
+                List<FornecedorModelo> Fornecedores = new List<FornecedorModelo>();
+                Fornecedores = _dao.SelectAll();
+                long idCriterio = 0;
+                if(long.TryParse(criterio, out long id) == true)
                 {
-                    criterio = '%' + criterio + '%';
+                    idCriterio = id;
                 }
-
-                parametros.Add(new SqlParametro { Nome = "@criterio", Valor = criterio });
-
-                if (criterio == "")
-                {
-                    return utilitarios.RealizaConexaoBd("SELECT id,ie,cnpj,fantasia,razao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status,endereco,numero" +
-                ",complemento,cidade,bairro,cep,telefone,contato,email,observacao,digito_verificador,operador_alteracao_id,operador_alteracao_nome,datahora_alteracao" +
-                " FROM Fornecedor WHERE excluido=0 ORDER BY id DESC");
-                }
-                else
-                {
-                    return utilitarios.RealizaConexaoBd("SELECT id,ie,cnpj,fantasia,razao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status,endereco,numero" +
-                ",complemento,cidade,bairro,cep,telefone,contato,email,observacao,digito_verificador,operador_alteracao_id,operador_alteracao_nome,datahora_alteracao" +
-                " FROM Fornecedor WHERE (ie=@IE OR cnpj=@criterio OR razao LIKE @criterio OR fantasia LIKE @criterio) AND excluido=0 ORDER BY id DESC",parametros);
-                }
-                
-            }catch(Exception ex)
+                return Fornecedores.FindAll(f => f.FornecedorId == idCriterio ||f.InscricaoEstadual == criterio || f.CNPJ == criterio ||
+                f.Razao.Contains(criterio) || f.Fantasia.Contains(criterio));
+            }
+            catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }
         }
         public FornecedorModelo GetFornecedorById(long id)
-        {
-            DataTable dtFornecedor = new DataTable();
-            FornecedorModelo fornecedor = new FornecedorModelo();
+        {            
+            FornecedorModelo fornecedor;
             try
             {                
-                fornecedor.FornecedorId  = id;
-                dtFornecedor = utilitarios.RealizaConexaoBd("SELECT * FROM Fornecedor WHERE id=@id",RetornaParametros(fornecedor));
-                if(dtFornecedor.Rows.Count > 0)
+                fornecedor = _dao.GetById(id);
+                if (fornecedor == null)
                 {
-                    fornecedor.FornecedorId = long.Parse(dtFornecedor.Rows[0]["id"].ToString());
-                    fornecedor.CNPJ = dtFornecedor.Rows[0]["cnpj"].ToString();
-                    fornecedor.Fantasia = dtFornecedor.Rows[0]["fantasia"].ToString();
-                    fornecedor.Razao = dtFornecedor.Rows[0]["razao"].ToString();
-                    fornecedor.Status = dtFornecedor.Rows[0]["status"].ToString() == "1" ? true : false;
-                    fornecedor.Endereco = dtFornecedor.Rows[0]["endereco"].ToString();
-                    fornecedor.Numero = int.Parse(dtFornecedor.Rows[0]["numero"].ToString());
-                    fornecedor.Complemento = dtFornecedor.Rows[0]["complemento"].ToString();
-                    fornecedor.Cidade = dtFornecedor.Rows[0]["cidade"].ToString();
-                    fornecedor.Bairro = dtFornecedor.Rows[0]["bairro"].ToString();
-                    fornecedor.CEP = dtFornecedor.Rows[0]["cep"].ToString();
-                    fornecedor.Telefone = int.Parse(dtFornecedor.Rows[0]["telefone"].ToString());
-                    fornecedor.NomeContato = dtFornecedor.Rows[0]["contato"].ToString();
-                    fornecedor.Email = dtFornecedor.Rows[0]["email"].ToString();
-                    fornecedor.Observacao = dtFornecedor.Rows[0]["observacao"].ToString();
-                    fornecedor.DigitoVerificadorCnpj = dtFornecedor.Rows[0]["digito_verificador"].ToString();
-                    fornecedor.InscricaoEstadual = dtFornecedor.Rows[0]["ie"].ToString();
+                    return new FornecedorModelo();
                 }
-                else
-                {
-                    fornecedor.FornecedorId = 0;
-                }
-                
+
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 throw new System.Exception(ex.Message);
             }
             return fornecedor;

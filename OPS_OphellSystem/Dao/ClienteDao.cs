@@ -37,7 +37,6 @@ namespace Dao
                 throw new SQLiteException(ex.Message);
             }
         }
-
         public void Delete(ClienteModelo cliente)
         {
             try
@@ -53,7 +52,6 @@ namespace Dao
                 throw new SQLiteException(ex.Message);
             }
         }
-
         public void Update(ClienteModelo cliente)
         {
             try
@@ -70,7 +68,6 @@ namespace Dao
                 throw new SQLiteException(ex.Message);
             }
         }
-
         public List<ClienteModelo> SelectAll()
         {
             try
@@ -85,6 +82,19 @@ namespace Dao
                 throw new Exception(ex.Message);
             }
 
+        }
+        public List<ClienteModelo> SelectCliente(string Criterio)
+        {
+            try
+            {                
+                string sqlQuery = "SELECT * FROM Cliente WHERE excluido = 0 OR cnpj=@criterio OR fantasia LIKE '% @criterio %' OR razao LIKE'% @criterio %'";
+                ExecutaLeitura(sqlQuery, new SQLiteParameter("@criterio",Criterio));
+                return Clientes;
+
+            }catch(Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
         }
         public ClienteModelo SelectClietePorId(long id)
         {
@@ -125,7 +135,6 @@ namespace Dao
             }
 
         }
-
         private SQLiteParameter[] Parametros()
         {
             try
@@ -186,7 +195,7 @@ namespace Dao
             }
 
         }
-        private void ExecutaLeitura(string sqlQuery)
+        private void ExecutaLeitura(string sqlQuery, SQLiteParameter parametro = null)
         {
 
             try
@@ -198,7 +207,13 @@ namespace Dao
                     if(Parametros().Length > 0)
                     {
                         command.Parameters.AddRange(Parametros());
-                    }                    
+                    }
+                    
+                    if(parametro != null)
+                    {
+                        command.Parameters.Add(parametro);
+                    }
+
                     connection.Open();
                     using (var reader = command.ExecuteReader())
                     {
