@@ -11,9 +11,10 @@ namespace Financeiro.Modelos
     {
         public long ContasAReceberID { get; set; }
         public ClienteModelo Cliente { get; set; }
-        public string  FormaPagamento { get; set; }
-        public double Valor { get; set; }        
+        public FormaPagamentoModelo  FormaPagamento { get; set; }
+        public double Total { get; set; }        
         public int Duplicata { get; set; }
         public DateTime DataVencimento { get; set; }
+        public List<ContaModelo> Contas { get; set; }
     }
 }

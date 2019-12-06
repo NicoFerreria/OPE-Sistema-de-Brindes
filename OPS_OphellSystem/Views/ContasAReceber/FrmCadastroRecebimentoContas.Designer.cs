@@ -47,6 +47,8 @@
             this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnNovoPagamento = new Syncfusion.Windows.Forms.ButtonAdv();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblTituloTotal = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblTotal = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.grpDadosConta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdContas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValorConta)).BeginInit();
@@ -62,7 +64,9 @@
             this.grpDadosConta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpDadosConta.Controls.Add(this.lblTituloTotal);
             this.grpDadosConta.Controls.Add(this.grdContas);
+            this.grpDadosConta.Controls.Add(this.lblTotal);
             this.grpDadosConta.Controls.Add(this.btnAdicionarConta);
             this.grpDadosConta.Controls.Add(this.lblValor);
             this.grpDadosConta.Controls.Add(this.lblDataVencimento);
@@ -83,10 +87,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdContas.Location = new System.Drawing.Point(6, 116);
             this.grdContas.Name = "grdContas";
-            this.grdContas.Size = new System.Drawing.Size(972, 293);
+            this.grdContas.Size = new System.Drawing.Size(972, 283);
             this.grdContas.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
             this.grdContas.TabIndex = 8;
             this.grdContas.Text = "sfDataGrid1";
+            this.grdContas.CurrentCellKeyDown += new Syncfusion.WinForms.DataGrid.Events.CurrentCellKeyEventHandler(this.grdContas_CurrentCellKeyDown);
             // 
             // btnAdicionarConta
             // 
@@ -262,6 +267,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 0;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // btnGravar
             // 
@@ -322,6 +328,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblTituloTotal
+            // 
+            this.lblTituloTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTituloTotal.DX = -35;
+            this.lblTituloTotal.DY = 5;
+            this.lblTituloTotal.LabeledControl = this.lblTotal;
+            this.lblTituloTotal.Location = new System.Drawing.Point(776, 407);
+            this.lblTituloTotal.Name = "lblTituloTotal";
+            this.lblTituloTotal.Size = new System.Drawing.Size(31, 13);
+            this.lblTituloTotal.TabIndex = 28;
+            this.lblTituloTotal.Text = "Total";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotal.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Horizontal, System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43))))), System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29))))));
+            this.lblTotal.BeforeTouchSize = new System.Drawing.Size(167, 23);
+            this.lblTotal.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
+            | System.Windows.Forms.Border3DSide.Bottom)));
+            this.lblTotal.Location = new System.Drawing.Point(811, 402);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(167, 23);
+            this.lblTotal.TabIndex = 27;
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FrmCadastroRecebimentoContas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,5 +404,7 @@
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtId;
         private Syncfusion.Windows.Forms.ButtonAdv btnNovoPagamento;
         private System.Windows.Forms.Button button1;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblTituloTotal;
+        private Syncfusion.Windows.Forms.Tools.GradientLabel lblTotal;
     }
 }

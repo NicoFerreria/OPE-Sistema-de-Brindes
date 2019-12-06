@@ -39,6 +39,8 @@
             this.lblId = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtId = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.grpDadosConta = new System.Windows.Forms.GroupBox();
+            this.lblTituloTotal = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            this.lblTotal = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.grdContas = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.btnAdicionarConta = new Syncfusion.Windows.Forms.ButtonAdv();
             this.lblValor = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -131,7 +133,7 @@
             // 
             // txtFornecedor
             // 
-            this.txtFornecedor.BeforeTouchSize = new System.Drawing.Size(490, 40);
+            this.txtFornecedor.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtFornecedor.Enabled = false;
             this.txtFornecedor.Location = new System.Drawing.Point(112, 38);
             this.txtFornecedor.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -153,19 +155,22 @@
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.Control;
-            this.txtId.BeforeTouchSize = new System.Drawing.Size(490, 40);
+            this.txtId.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(6, 38);
             this.txtId.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 0;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // grpDadosConta
             // 
             this.grpDadosConta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpDadosConta.Controls.Add(this.lblTituloTotal);
+            this.grpDadosConta.Controls.Add(this.lblTotal);
             this.grpDadosConta.Controls.Add(this.grdContas);
             this.grpDadosConta.Controls.Add(this.btnAdicionarConta);
             this.grpDadosConta.Controls.Add(this.lblValor);
@@ -179,6 +184,32 @@
             this.grpDadosConta.TabStop = false;
             this.grpDadosConta.Text = "Dados da Conta";
             // 
+            // lblTituloTotal
+            // 
+            this.lblTituloTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTituloTotal.DX = -35;
+            this.lblTituloTotal.DY = 5;
+            this.lblTituloTotal.LabeledControl = this.lblTotal;
+            this.lblTituloTotal.Location = new System.Drawing.Point(776, 407);
+            this.lblTituloTotal.Name = "lblTituloTotal";
+            this.lblTituloTotal.Size = new System.Drawing.Size(31, 13);
+            this.lblTituloTotal.TabIndex = 26;
+            this.lblTituloTotal.Text = "Total";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotal.BackgroundColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Horizontal, System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43))))), System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29))))));
+            this.lblTotal.BeforeTouchSize = new System.Drawing.Size(167, 23);
+            this.lblTotal.BorderSides = ((System.Windows.Forms.Border3DSide)((((System.Windows.Forms.Border3DSide.Left | System.Windows.Forms.Border3DSide.Top) 
+            | System.Windows.Forms.Border3DSide.Right) 
+            | System.Windows.Forms.Border3DSide.Bottom)));
+            this.lblTotal.Location = new System.Drawing.Point(811, 402);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(167, 23);
+            this.lblTotal.TabIndex = 25;
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // grdContas
             // 
             this.grdContas.AccessibleName = "Table";
@@ -191,6 +222,8 @@
             this.grdContas.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
             this.grdContas.TabIndex = 8;
             this.grdContas.Text = "sfDataGrid1";
+            this.grdContas.CurrentCellKeyDown += new Syncfusion.WinForms.DataGrid.Events.CurrentCellKeyEventHandler(this.grdContas_CurrentCellKeyDown);
+            this.grdContas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdContas_KeyDown);
             // 
             // btnAdicionarConta
             // 
@@ -208,6 +241,7 @@
             this.btnAdicionarConta.Name = "btnAdicionarConta";
             this.btnAdicionarConta.Size = new System.Drawing.Size(30, 30);
             this.btnAdicionarConta.TabIndex = 7;
+            this.btnAdicionarConta.Click += new System.EventHandler(this.btnAdicionarConta_Click);
             // 
             // lblValor
             // 
@@ -222,12 +256,13 @@
             // 
             // txtValorConta
             // 
-            this.txtValorConta.BeforeTouchSize = new System.Drawing.Size(490, 40);
+            this.txtValorConta.BeforeTouchSize = new System.Drawing.Size(80, 20);
             this.txtValorConta.Location = new System.Drawing.Point(268, 50);
             this.txtValorConta.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtValorConta.Name = "txtValorConta";
             this.txtValorConta.Size = new System.Drawing.Size(100, 20);
             this.txtValorConta.TabIndex = 2;
+            this.txtValorConta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtValorConta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorConta_KeyPress);
             // 
             // lblDataVencimento
@@ -299,6 +334,7 @@
             this.btnGravar.TabIndex = 3;
             this.btnGravar.Text = "Salvar (Ctrl + S)";
             this.btnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnNovoPagamento
             // 
@@ -322,6 +358,7 @@
             this.btnNovoPagamento.TabIndex = 2;
             this.btnNovoPagamento.Text = "Novo (Ctrl + N)";
             this.btnNovoPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNovoPagamento.Click += new System.EventHandler(this.btnNovoPagamento_Click);
             // 
             // FrmCadastroPagamentoContas
             // 
@@ -336,6 +373,7 @@
             this.Controls.Add(this.btnNovoPagamento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCadastroPagamentoContas";
@@ -343,6 +381,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Contas a Pagar";
             this.Shown += new System.EventHandler(this.FrmCadastroPagamentoContas_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCadastroPagamentoContas_KeyDown);
             this.grpDadosPagamento.ResumeLayout(false);
             this.grpDadosPagamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbFormasPagamento)).EndInit();
@@ -377,5 +416,7 @@
         private Syncfusion.Windows.Forms.ButtonAdv btnNovoPagamento;
         private Syncfusion.Windows.Forms.ButtonAdv btnGravar;
         private System.Windows.Forms.Button button1;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblTituloTotal;
+        private Syncfusion.Windows.Forms.Tools.GradientLabel lblTotal;
     }
 }

@@ -13,5 +13,6 @@ namespace Modelos
         public string Plano2 { get; set; }
         public string Plano3 { get; set; }
         public string Plano4 { get; set; }
+        public bool Excluido { get; set; }
     }
 }

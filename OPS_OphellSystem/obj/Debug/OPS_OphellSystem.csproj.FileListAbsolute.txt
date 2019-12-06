@@ -51,3 +51,10 @@ C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\o
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.exe
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.pdb
 C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\OPS_OphellSystem.csprojAssemblyReference.cache
+C:\OphellSB\SqlServerTypes\x64\msvcr120.dll
+C:\OphellSB\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\OphellSB\SqlServerTypes\x86\msvcr120.dll
+C:\OphellSB\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\Views.FrmRtlOrcamento.resources
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\RdlCompile.cache
+C:\Users\Nicolas\Documents\Projetos\OphellSB\OPS_OphellSystem\OPS_OphellSystem\obj\Debug\RdlCompile.compiled

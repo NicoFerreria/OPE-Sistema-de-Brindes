@@ -32,23 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOrcamento));
             this.txtCliente = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblCliente = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.btnBuscaCliente = new Syncfusion.Windows.Forms.ButtonAdv();
-            this.btnBuscaGravacao = new Syncfusion.Windows.Forms.ButtonAdv();
             this.lblGravacao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtGravacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.btnBuscaTransporte = new Syncfusion.Windows.Forms.ButtonAdv();
             this.lblTransporte = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtTrasnporte = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.txtFornecedor = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblFornecedor = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.btnBuscaFornecedor = new Syncfusion.Windows.Forms.ButtonAdv();
             this.txtProduto = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblProduto = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtQuantidade = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.lblQuantidade = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.lblValorProduto = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.textBoxExt1 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
-            this.btnNovo = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.txtValorProduto = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.pnlGravcao = new System.Windows.Forms.Panel();
             this.lblCodigoGravacao = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.txtCodigoGravacao = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -80,7 +75,6 @@
             this.lblTotal = new Syncfusion.Windows.Forms.Tools.GradientLabel();
             this.grpDadosOrcamento = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBuscaProduto = new Syncfusion.Windows.Forms.ButtonAdv();
             this.textBoxExt6 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             this.autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.textBoxExt5 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
@@ -93,15 +87,24 @@
             this.lblPorcentagemImposto = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             this.grdOrcamentos = new Syncfusion.WinForms.DataGrid.SfDataGrid();
             this.lblListagem = new Syncfusion.Windows.Forms.Tools.AutoLabel();
-            this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
             this.btnFechar = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnGravar = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnNovo = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnBuscaProduto = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnBuscaGravacao = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnBuscaTransporte = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnBuscaCliente = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnBuscaFornecedor = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.btnRelatorio = new Syncfusion.Windows.Forms.ButtonAdv();
+            this.txtValorVendaUnd = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            this.lblValorVendaUnd = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             ((System.ComponentModel.ISupportInitialize)(this.txtCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGravacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTrasnporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFornecedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorProduto)).BeginInit();
             this.pnlGravcao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoGravacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalGravacao)).BeginInit();
@@ -123,13 +126,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrcamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorVendaUnd)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCliente
             // 
             this.txtCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCliente.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtCliente.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtCliente.Enabled = false;
             this.txtCliente.Location = new System.Drawing.Point(100, 36);
             this.txtCliente.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -148,42 +152,6 @@
             this.lblCliente.TabIndex = 1;
             this.lblCliente.Text = "Cliente";
             // 
-            // btnBuscaCliente
-            // 
-            this.btnBuscaCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscaCliente.BeforeTouchSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscaCliente.FlatAppearance.BorderSize = 0;
-            this.btnBuscaCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnBuscaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaCliente.Image")));
-            this.btnBuscaCliente.IsBackStageButton = false;
-            this.btnBuscaCliente.Location = new System.Drawing.Point(509, 26);
-            this.btnBuscaCliente.MaximumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaCliente.MinimumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaCliente.Name = "btnBuscaCliente";
-            this.btnBuscaCliente.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscaCliente.TabIndex = 2;
-            this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
-            // 
-            // btnBuscaGravacao
-            // 
-            this.btnBuscaGravacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscaGravacao.BeforeTouchSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaGravacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscaGravacao.FlatAppearance.BorderSize = 0;
-            this.btnBuscaGravacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnBuscaGravacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaGravacao.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaGravacao.Image")));
-            this.btnBuscaGravacao.IsBackStageButton = false;
-            this.btnBuscaGravacao.Location = new System.Drawing.Point(498, 13);
-            this.btnBuscaGravacao.MaximumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaGravacao.MinimumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaGravacao.Name = "btnBuscaGravacao";
-            this.btnBuscaGravacao.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscaGravacao.TabIndex = 5;
-            this.btnBuscaGravacao.Click += new System.EventHandler(this.btnBuscaGravacao_Click);
-            // 
             // lblGravacao
             // 
             this.lblGravacao.DY = -17;
@@ -199,31 +167,13 @@
             // 
             this.txtGravacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGravacao.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtGravacao.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtGravacao.Enabled = false;
             this.txtGravacao.Location = new System.Drawing.Point(96, 23);
             this.txtGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtGravacao.Name = "txtGravacao";
             this.txtGravacao.Size = new System.Drawing.Size(396, 20);
             this.txtGravacao.TabIndex = 3;
-            // 
-            // btnBuscaTransporte
-            // 
-            this.btnBuscaTransporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscaTransporte.BeforeTouchSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaTransporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscaTransporte.FlatAppearance.BorderSize = 0;
-            this.btnBuscaTransporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnBuscaTransporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaTransporte.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaTransporte.Image")));
-            this.btnBuscaTransporte.IsBackStageButton = false;
-            this.btnBuscaTransporte.Location = new System.Drawing.Point(498, 17);
-            this.btnBuscaTransporte.MaximumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaTransporte.MinimumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaTransporte.Name = "btnBuscaTransporte";
-            this.btnBuscaTransporte.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscaTransporte.TabIndex = 8;
-            this.btnBuscaTransporte.Click += new System.EventHandler(this.btnBuscaTransporte_Click);
             // 
             // lblTransporte
             // 
@@ -240,7 +190,7 @@
             // 
             this.txtTrasnporte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTrasnporte.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtTrasnporte.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtTrasnporte.Enabled = false;
             this.txtTrasnporte.Location = new System.Drawing.Point(96, 27);
             this.txtTrasnporte.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -252,7 +202,7 @@
             // 
             this.txtFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFornecedor.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtFornecedor.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtFornecedor.Enabled = false;
             this.txtFornecedor.Location = new System.Drawing.Point(100, 83);
             this.txtFornecedor.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -271,29 +221,11 @@
             this.lblFornecedor.TabIndex = 4;
             this.lblFornecedor.Text = "Fornecedor";
             // 
-            // btnBuscaFornecedor
-            // 
-            this.btnBuscaFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscaFornecedor.BeforeTouchSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscaFornecedor.FlatAppearance.BorderSize = 0;
-            this.btnBuscaFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnBuscaFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaFornecedor.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaFornecedor.Image")));
-            this.btnBuscaFornecedor.IsBackStageButton = false;
-            this.btnBuscaFornecedor.Location = new System.Drawing.Point(509, 73);
-            this.btnBuscaFornecedor.MaximumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaFornecedor.MinimumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaFornecedor.Name = "btnBuscaFornecedor";
-            this.btnBuscaFornecedor.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscaFornecedor.TabIndex = 5;
-            this.btnBuscaFornecedor.Click += new System.EventHandler(this.btnBuscaFornecedor_Click);
-            // 
             // txtProduto
             // 
             this.txtProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtProduto.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtProduto.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtProduto.Enabled = false;
             this.txtProduto.Location = new System.Drawing.Point(107, 27);
             this.txtProduto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -314,13 +246,14 @@
             // 
             // txtQuantidade
             // 
-            this.txtQuantidade.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtQuantidade.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtQuantidade.Location = new System.Drawing.Point(13, 70);
             this.txtQuantidade.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(78, 20);
             this.txtQuantidade.TabIndex = 9;
             this.txtQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtQuantidade.TextChanged += new System.EventHandler(this.txtQuantidade_TextChanged);
             // 
             // lblQuantidade
             // 
@@ -330,15 +263,15 @@
             this.lblQuantidade.Location = new System.Drawing.Point(13, 53);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblQuantidade.Size = new System.Drawing.Size(27, 13);
+            this.lblQuantidade.Size = new System.Drawing.Size(66, 13);
             this.lblQuantidade.TabIndex = 10;
-            this.lblQuantidade.Text = "Qtd.";
+            this.lblQuantidade.Text = "Qtd. Compra";
             // 
             // lblValorProduto
             // 
             this.lblValorProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblValorProduto.DY = -17;
-            this.lblValorProduto.LabeledControl = this.textBoxExt1;
+            this.lblValorProduto.LabeledControl = this.txtValorProduto;
             this.lblValorProduto.Location = new System.Drawing.Point(97, 53);
             this.lblValorProduto.Name = "lblValorProduto";
             this.lblValorProduto.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
@@ -346,45 +279,24 @@
             this.lblValorProduto.TabIndex = 12;
             this.lblValorProduto.Text = "Valor Und.";
             // 
-            // textBoxExt1
+            // txtValorProduto
             // 
-            this.textBoxExt1.BeforeTouchSize = new System.Drawing.Size(80, 20);
-            this.textBoxExt1.Location = new System.Drawing.Point(97, 70);
-            this.textBoxExt1.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.textBoxExt1.Name = "textBoxExt1";
-            this.textBoxExt1.Size = new System.Drawing.Size(69, 20);
-            this.textBoxExt1.TabIndex = 11;
-            this.textBoxExt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.btnNovo.BeforeTouchSize = new System.Drawing.Size(130, 40);
-            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNovo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
-            this.btnNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.ForeColor = System.Drawing.Color.White;
-            this.btnNovo.Image = global::OPS_OphellSystem.Properties.Resources.LimparBrancoPadrao28x28;
-            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.IsBackStageButton = false;
-            this.btnNovo.KeepFocusRectangle = false;
-            this.btnNovo.Location = new System.Drawing.Point(517, 608);
-            this.btnNovo.MaximumSize = new System.Drawing.Size(130, 40);
-            this.btnNovo.MinimumSize = new System.Drawing.Size(130, 40);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(130, 40);
-            this.btnNovo.TabIndex = 4;
-            this.btnNovo.Text = "Novo (Ctrl + N)";
-            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtValorProduto.BeforeTouchSize = new System.Drawing.Size(70, 20);
+            this.txtValorProduto.Location = new System.Drawing.Point(97, 70);
+            this.txtValorProduto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtValorProduto.Name = "txtValorProduto";
+            this.txtValorProduto.Size = new System.Drawing.Size(69, 20);
+            this.txtValorProduto.TabIndex = 11;
+            this.txtValorProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtValorProduto.TextChanged += new System.EventHandler(this.txtValorProduto_TextChanged);
             // 
             // pnlGravcao
             // 
             this.pnlGravcao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlGravcao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlGravcao.Controls.Add(this.lblValorVendaUnd);
+            this.pnlGravcao.Controls.Add(this.txtValorVendaUnd);
             this.pnlGravcao.Controls.Add(this.lblCodigoGravacao);
             this.pnlGravcao.Controls.Add(this.txtCodigoGravacao);
             this.pnlGravcao.Controls.Add(this.lblTotalGravacao);
@@ -414,7 +326,7 @@
             // 
             // txtCodigoGravacao
             // 
-            this.txtCodigoGravacao.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtCodigoGravacao.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtCodigoGravacao.Enabled = false;
             this.txtCodigoGravacao.Location = new System.Drawing.Point(21, 23);
             this.txtCodigoGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -436,7 +348,7 @@
             // 
             // txtTotalGravacao
             // 
-            this.txtTotalGravacao.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtTotalGravacao.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtTotalGravacao.Enabled = false;
             this.txtTotalGravacao.Location = new System.Drawing.Point(257, 70);
             this.txtTotalGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -458,13 +370,14 @@
             // 
             // txtValorGravacao
             // 
-            this.txtValorGravacao.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtValorGravacao.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtValorGravacao.Location = new System.Drawing.Point(182, 70);
             this.txtValorGravacao.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtValorGravacao.Name = "txtValorGravacao";
             this.txtValorGravacao.Size = new System.Drawing.Size(69, 20);
             this.txtValorGravacao.TabIndex = 13;
             this.txtValorGravacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtValorGravacao.TextChanged += new System.EventHandler(this.txtValorGravacao_TextChanged);
             // 
             // lblTipoGravacao
             // 
@@ -517,7 +430,7 @@
             // 
             // txtCodigoTransporte
             // 
-            this.txtCodigoTransporte.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtCodigoTransporte.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtCodigoTransporte.Enabled = false;
             this.txtCodigoTransporte.Location = new System.Drawing.Point(21, 27);
             this.txtCodigoTransporte.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -539,7 +452,7 @@
             // 
             // txtValorTransporte
             // 
-            this.txtValorTransporte.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtValorTransporte.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtValorTransporte.Location = new System.Drawing.Point(21, 74);
             this.txtValorTransporte.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtValorTransporte.Name = "txtValorTransporte";
@@ -560,7 +473,7 @@
             // 
             // txtCodigoCliente
             // 
-            this.txtCodigoCliente.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtCodigoCliente.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtCodigoCliente.Enabled = false;
             this.txtCodigoCliente.Location = new System.Drawing.Point(6, 36);
             this.txtCodigoCliente.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -582,7 +495,7 @@
             // 
             // txtCodigoFornecedor
             // 
-            this.txtCodigoFornecedor.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtCodigoFornecedor.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtCodigoFornecedor.Enabled = false;
             this.txtCodigoFornecedor.Location = new System.Drawing.Point(6, 83);
             this.txtCodigoFornecedor.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -604,7 +517,7 @@
             // 
             // txtCodigoProduto
             // 
-            this.txtCodigoProduto.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtCodigoProduto.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtCodigoProduto.Enabled = false;
             this.txtCodigoProduto.Location = new System.Drawing.Point(13, 26);
             this.txtCodigoProduto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -616,7 +529,7 @@
             // txtPorcentagemImposto
             // 
             this.txtPorcentagemImposto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPorcentagemImposto.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtPorcentagemImposto.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtPorcentagemImposto.Location = new System.Drawing.Point(8, 462);
             this.txtPorcentagemImposto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtPorcentagemImposto.Name = "txtPorcentagemImposto";
@@ -632,14 +545,14 @@
             this.lblBv.Location = new System.Drawing.Point(245, 445);
             this.lblBv.Name = "lblBv";
             this.lblBv.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblBv.Size = new System.Drawing.Size(21, 13);
+            this.lblBv.Size = new System.Drawing.Size(29, 13);
             this.lblBv.TabIndex = 16;
-            this.lblBv.Text = "BV";
+            this.lblBv.Text = "%BV";
             // 
             // txtBv
             // 
             this.txtBv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBv.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtBv.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtBv.Location = new System.Drawing.Point(245, 462);
             this.txtBv.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtBv.Name = "txtBv";
@@ -662,10 +575,11 @@
             // txtPorcentagemLucro
             // 
             this.txtPorcentagemLucro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPorcentagemLucro.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtPorcentagemLucro.BeforeTouchSize = new System.Drawing.Size(91, 20);
             this.txtPorcentagemLucro.Location = new System.Drawing.Point(8, 502);
             this.txtPorcentagemLucro.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.txtPorcentagemLucro.Name = "txtPorcentagemLucro";
+            this.txtPorcentagemLucro.ReadOnly = true;
             this.txtPorcentagemLucro.Size = new System.Drawing.Size(69, 20);
             this.txtPorcentagemLucro.TabIndex = 17;
             this.txtPorcentagemLucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -775,7 +689,7 @@
             this.panel1.Controls.Add(this.textBoxExt5);
             this.panel1.Controls.Add(this.lblQuantidade);
             this.panel1.Controls.Add(this.autoLabel3);
-            this.panel1.Controls.Add(this.textBoxExt1);
+            this.panel1.Controls.Add(this.txtValorProduto);
             this.panel1.Controls.Add(this.autoLabel2);
             this.panel1.Controls.Add(this.lblValorProduto);
             this.panel1.Controls.Add(this.txtTotalProduto);
@@ -788,27 +702,9 @@
             this.panel1.Size = new System.Drawing.Size(533, 103);
             this.panel1.TabIndex = 11;
             // 
-            // btnBuscaProduto
-            // 
-            this.btnBuscaProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscaProduto.BeforeTouchSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscaProduto.FlatAppearance.BorderSize = 0;
-            this.btnBuscaProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
-            this.btnBuscaProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaProduto.Image")));
-            this.btnBuscaProduto.IsBackStageButton = false;
-            this.btnBuscaProduto.Location = new System.Drawing.Point(498, 17);
-            this.btnBuscaProduto.MaximumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaProduto.MinimumSize = new System.Drawing.Size(30, 30);
-            this.btnBuscaProduto.Name = "btnBuscaProduto";
-            this.btnBuscaProduto.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscaProduto.TabIndex = 8;
-            this.btnBuscaProduto.Click += new System.EventHandler(this.btnBuscaProduto_Click);
-            // 
             // textBoxExt6
             // 
-            this.textBoxExt6.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.textBoxExt6.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.textBoxExt6.Location = new System.Drawing.Point(-161, 82);
             this.textBoxExt6.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.textBoxExt6.Name = "textBoxExt6";
@@ -830,7 +726,7 @@
             // 
             // textBoxExt5
             // 
-            this.textBoxExt5.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.textBoxExt5.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.textBoxExt5.Location = new System.Drawing.Point(-77, 82);
             this.textBoxExt5.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.textBoxExt5.Name = "textBoxExt5";
@@ -863,7 +759,7 @@
             // 
             // textBoxExt3
             // 
-            this.textBoxExt3.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.textBoxExt3.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.textBoxExt3.Enabled = false;
             this.textBoxExt3.Location = new System.Drawing.Point(-161, 37);
             this.textBoxExt3.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -874,7 +770,7 @@
             // 
             // txtTotalProduto
             // 
-            this.txtTotalProduto.BeforeTouchSize = new System.Drawing.Size(80, 20);
+            this.txtTotalProduto.BeforeTouchSize = new System.Drawing.Size(70, 20);
             this.txtTotalProduto.Enabled = false;
             this.txtTotalProduto.Location = new System.Drawing.Point(172, 70);
             this.txtTotalProduto.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
@@ -891,9 +787,9 @@
             this.lblTotalProduto.Location = new System.Drawing.Point(172, 53);
             this.lblTotalProduto.Name = "lblTotalProduto";
             this.lblTotalProduto.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
-            this.lblTotalProduto.Size = new System.Drawing.Size(31, 13);
+            this.lblTotalProduto.Size = new System.Drawing.Size(70, 13);
             this.lblTotalProduto.TabIndex = 14;
-            this.lblTotalProduto.Text = "Total";
+            this.lblTotalProduto.Text = "Total Compra";
             // 
             // lblTituloTotal
             // 
@@ -941,6 +837,24 @@
             this.lblListagem.TabIndex = 8;
             this.lblListagem.Text = "Listagem";
             // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BeforeTouchSize = new System.Drawing.Size(40, 40);
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Image = global::OPS_OphellSystem.Properties.Resources.FecharPadrao32x32;
+            this.btnFechar.IsBackStageButton = false;
+            this.btnFechar.Location = new System.Drawing.Point(972, 12);
+            this.btnFechar.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btnFechar.MinimumSize = new System.Drawing.Size(40, 40);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(40, 40);
+            this.btnFechar.TabIndex = 10;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // btnGravar
             // 
             this.btnGravar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -965,23 +879,157 @@
             this.btnGravar.Text = "Salvar (Ctrl + S)";
             this.btnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnFechar
+            // btnNovo
             // 
-            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFechar.BeforeTouchSize = new System.Drawing.Size(40, 40);
-            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Image = global::OPS_OphellSystem.Properties.Resources.FecharPadrao32x32;
-            this.btnFechar.IsBackStageButton = false;
-            this.btnFechar.Location = new System.Drawing.Point(972, 12);
-            this.btnFechar.MaximumSize = new System.Drawing.Size(40, 40);
-            this.btnFechar.MinimumSize = new System.Drawing.Size(40, 40);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(40, 40);
-            this.btnFechar.TabIndex = 10;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btnNovo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnNovo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnNovo.BeforeTouchSize = new System.Drawing.Size(130, 40);
+            this.btnNovo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNovo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(111)))));
+            this.btnNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.ForeColor = System.Drawing.Color.White;
+            this.btnNovo.Image = global::OPS_OphellSystem.Properties.Resources.LimparBrancoPadrao28x28;
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovo.IsBackStageButton = false;
+            this.btnNovo.KeepFocusRectangle = false;
+            this.btnNovo.Location = new System.Drawing.Point(517, 608);
+            this.btnNovo.MaximumSize = new System.Drawing.Size(130, 40);
+            this.btnNovo.MinimumSize = new System.Drawing.Size(130, 40);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(130, 40);
+            this.btnNovo.TabIndex = 4;
+            this.btnNovo.Text = "Novo (Ctrl + N)";
+            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnBuscaProduto
+            // 
+            this.btnBuscaProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscaProduto.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscaProduto.FlatAppearance.BorderSize = 0;
+            this.btnBuscaProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnBuscaProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaProduto.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaProduto.Image")));
+            this.btnBuscaProduto.IsBackStageButton = false;
+            this.btnBuscaProduto.Location = new System.Drawing.Point(498, 17);
+            this.btnBuscaProduto.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaProduto.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaProduto.Name = "btnBuscaProduto";
+            this.btnBuscaProduto.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscaProduto.TabIndex = 8;
+            this.btnBuscaProduto.Click += new System.EventHandler(this.btnBuscaProduto_Click);
+            // 
+            // btnBuscaGravacao
+            // 
+            this.btnBuscaGravacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscaGravacao.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaGravacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscaGravacao.FlatAppearance.BorderSize = 0;
+            this.btnBuscaGravacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnBuscaGravacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaGravacao.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaGravacao.Image")));
+            this.btnBuscaGravacao.IsBackStageButton = false;
+            this.btnBuscaGravacao.Location = new System.Drawing.Point(498, 13);
+            this.btnBuscaGravacao.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaGravacao.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaGravacao.Name = "btnBuscaGravacao";
+            this.btnBuscaGravacao.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscaGravacao.TabIndex = 5;
+            this.btnBuscaGravacao.Click += new System.EventHandler(this.btnBuscaGravacao_Click);
+            // 
+            // btnBuscaTransporte
+            // 
+            this.btnBuscaTransporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscaTransporte.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaTransporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscaTransporte.FlatAppearance.BorderSize = 0;
+            this.btnBuscaTransporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnBuscaTransporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaTransporte.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaTransporte.Image")));
+            this.btnBuscaTransporte.IsBackStageButton = false;
+            this.btnBuscaTransporte.Location = new System.Drawing.Point(498, 17);
+            this.btnBuscaTransporte.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaTransporte.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaTransporte.Name = "btnBuscaTransporte";
+            this.btnBuscaTransporte.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscaTransporte.TabIndex = 8;
+            this.btnBuscaTransporte.Click += new System.EventHandler(this.btnBuscaTransporte_Click);
+            // 
+            // btnBuscaCliente
+            // 
+            this.btnBuscaCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscaCliente.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscaCliente.FlatAppearance.BorderSize = 0;
+            this.btnBuscaCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnBuscaCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaCliente.Image")));
+            this.btnBuscaCliente.IsBackStageButton = false;
+            this.btnBuscaCliente.Location = new System.Drawing.Point(509, 26);
+            this.btnBuscaCliente.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaCliente.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaCliente.Name = "btnBuscaCliente";
+            this.btnBuscaCliente.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscaCliente.TabIndex = 2;
+            this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
+            // 
+            // btnBuscaFornecedor
+            // 
+            this.btnBuscaFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscaFornecedor.BeforeTouchSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscaFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnBuscaFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(43)))));
+            this.btnBuscaFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaFornecedor.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscaFornecedor.Image")));
+            this.btnBuscaFornecedor.IsBackStageButton = false;
+            this.btnBuscaFornecedor.Location = new System.Drawing.Point(509, 73);
+            this.btnBuscaFornecedor.MaximumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaFornecedor.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btnBuscaFornecedor.Name = "btnBuscaFornecedor";
+            this.btnBuscaFornecedor.Size = new System.Drawing.Size(30, 30);
+            this.btnBuscaFornecedor.TabIndex = 5;
+            this.btnBuscaFornecedor.Click += new System.EventHandler(this.btnBuscaFornecedor_Click);
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRelatorio.BeforeTouchSize = new System.Drawing.Size(40, 40);
+            this.btnRelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRelatorio.FlatAppearance.BorderSize = 0;
+            this.btnRelatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(148)))), ((int)(((byte)(29)))));
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Image = global::OPS_OphellSystem.Properties.Resources.icons8_new_company_32px_2;
+            this.btnRelatorio.IsBackStageButton = false;
+            this.btnRelatorio.Location = new System.Drawing.Point(926, 12);
+            this.btnRelatorio.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btnRelatorio.MinimumSize = new System.Drawing.Size(40, 40);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(40, 40);
+            this.btnRelatorio.TabIndex = 11;
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
+            // 
+            // txtValorVendaUnd
+            // 
+            this.txtValorVendaUnd.BeforeTouchSize = new System.Drawing.Size(91, 20);
+            this.txtValorVendaUnd.Location = new System.Drawing.Point(343, 70);
+            this.txtValorVendaUnd.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.txtValorVendaUnd.Name = "txtValorVendaUnd";
+            this.txtValorVendaUnd.Size = new System.Drawing.Size(91, 20);
+            this.txtValorVendaUnd.TabIndex = 19;
+            // 
+            // lblValorVendaUnd
+            // 
+            this.lblValorVendaUnd.DY = -17;
+            this.lblValorVendaUnd.LabeledControl = this.txtValorVendaUnd;
+            this.lblValorVendaUnd.Location = new System.Drawing.Point(343, 53);
+            this.lblValorVendaUnd.Name = "lblValorVendaUnd";
+            this.lblValorVendaUnd.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Top;
+            this.lblValorVendaUnd.Size = new System.Drawing.Size(91, 13);
+            this.lblValorVendaUnd.TabIndex = 20;
+            this.lblValorVendaUnd.Text = "Valor Venda Und.";
             // 
             // FrmOrcamento
             // 
@@ -989,6 +1037,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 660);
+            this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnGravar);
             this.Controls.Add(this.lblListagem);
@@ -1004,7 +1053,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFornecedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxExt1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorProduto)).EndInit();
             this.pnlGravcao.ResumeLayout(false);
             this.pnlGravcao.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoGravacao)).EndInit();
@@ -1030,6 +1079,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBoxExt3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrcamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorVendaUnd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1051,7 +1101,7 @@
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtProduto;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblProduto;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblValorProduto;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt1;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtValorProduto;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblQuantidade;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtQuantidade;
         private Syncfusion.Windows.Forms.ButtonAdv btnNovo;
@@ -1101,5 +1151,8 @@
         private Syncfusion.Windows.Forms.Tools.TextBoxExt textBoxExt3;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt txtTotalProduto;
         private Syncfusion.Windows.Forms.Tools.AutoLabel lblTotalProduto;
+        private Syncfusion.Windows.Forms.ButtonAdv btnRelatorio;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt txtValorVendaUnd;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel lblValorVendaUnd;
     }
 }

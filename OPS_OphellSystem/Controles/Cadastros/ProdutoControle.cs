@@ -141,17 +141,47 @@ namespace Cadastros.Controles
 
             return produto;
         }
+        public ProdutoModelo GetProdutoById(long id)
+        {
+            ProdutoModelo produto = new ProdutoModelo();
+            try
+            {
+                DataTable dtDados = new DataTable();
+                produto.ProdutoID = id;
+                dtDados = utilitarios.RealizaConexaoBd("SELECT * FROM Produto WHERE id=@id AND excluido=0", parametros(produto));
+                if (dtDados.Rows.Count > 0)
+                {
+                    produto.ProdutoID = long.Parse(dtDados.Rows[0]["id"].ToString());
+                    produto.Codigo = long.Parse(dtDados.Rows[0]["codigo"].ToString());
+                    produto.Nome = dtDados.Rows[0]["nome"].ToString();
+                    produto.Descricao = dtDados.Rows[0]["descricao"].ToString();
+                    produto.Cor = dtDados.Rows[0]["cor"].ToString();
+                    produto.Observacao = dtDados.Rows[0]["observacao"].ToString();
+                    produto.Status = (dtDados.Rows[0]["status"].ToString() == "1");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+
+            return produto;
+        }
         public DataTable RetornaDataTableTodosProdutos()
         {
             try
-            {                
-                return utilitarios.RealizaConexaoBd("SELECT id,codigo,nome,descricao,cor,excluido,observacao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status" +
-                    " FROM Produto WHERE excluido=0");                
+            {
+                DataTable dtDados = new DataTable();                
+                dtDados =  utilitarios.RealizaConexaoBd("SELECT id,codigo,nome,descricao,cor,excluido,observacao,CASE status WHEN 1 THEN 'true' ELSE 'false' END status" +
+                    " FROM Produto WHERE excluido=0");
+                return dtDados;
+                
             }catch(Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }
         }
+
         public bool ExcluirProduto(ProdutoModelo produto)
         {
             try

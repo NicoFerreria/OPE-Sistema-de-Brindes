@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OPS_OphellSystem;
 using Modelos;
+using Vendas.Controles;
+using Cadastros.Controles;
 
 namespace Views
 {
@@ -19,6 +21,8 @@ namespace Views
         FrmBuscaProduto formBuscaProduto;
         List<FornecedorModelo> Fornecedores = new List<FornecedorModelo>();
         OrcamentoModelo Orcamento = new OrcamentoModelo();
+        OrcamentoControle controle = new OrcamentoControle();        
+
         #region "Metodos"
         public FrmOrcamento()
         {
@@ -70,13 +74,21 @@ namespace Views
                 FornecedorModelo fornecedor = formBuscaFornecedor.Fornecedor;
                 if(fornecedor != null)
                 {
-                    //var forn = Fornecedores.Where(f => f.TipoFornecedor == tipoFornecedor).First();
-                    //if(forn != null)
-                    //{
-                    //    Fornecedores.Remove(forn);
-                    //}
-
-                    //Fornecedores.Add(forn);
+                    Fornecedores.Add(fornecedor);
+                    if(tipoFornecedor == TiposFornecedores.MERCADORIA)
+                    {
+                        txtCodigoFornecedor.Text = fornecedor.FornecedorId.ToString();
+                        txtFornecedor.Text = fornecedor.Fantasia;
+                    }else if(tipoFornecedor == TiposFornecedores.TRANSPORTADOR)
+                    {
+                        txtCodigoTransporte.Text = fornecedor.FornecedorId.ToString();
+                        txtTrasnporte.Text = fornecedor.Fantasia;
+                    }else if(tipoFornecedor == TiposFornecedores.GRAFICA)
+                    {
+                        txtCodigoGravacao.Text = fornecedor.FornecedorId.ToString();
+                        txtGravacao.Text = fornecedor.Fantasia;
+                    }
+                    
                 }
             }
             catch (Exception ex)
@@ -98,6 +110,8 @@ namespace Views
                 if(produto != null)
                 {
                     Orcamento.Produto = produto;
+                    txtCodigoProduto.Text = produto.ProdutoID.ToString();
+                    txtProduto.Text = produto.Nome;
                 }
             }
             catch (Exception ex)
@@ -106,6 +120,72 @@ namespace Views
                 MessageBox.Show(ex.Message,"OPH",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }       
+        private void CalculaGravacao()
+        {
+            if (txtQuantidade.Text == "" || txtValorGravacao.Text == "")
+            {
+                txtTotalGravacao.Text = "";
+                return;
+            };
+            txtTotalGravacao.Text = (decimal.Parse(txtQuantidade.Text) * decimal.Parse(txtValorGravacao.Text)).ToString("C2");
+        }
+        private void CalculaTransporte()
+        {
+
+        }
+        private void CalculaProduto()
+        {
+            if (txtValorProduto.Text == ""|| txtQuantidade.Text == "")
+            {
+                txtTotalProduto.Text = "";
+                return;
+            };
+            txtTotalProduto.Text = (decimal.Parse(txtQuantidade.Text) * decimal.Parse(txtValorProduto.Text)).ToString("C2");
+        }
+        private void CalculaVenda()
+        {
+            if (txtValorVendaUnd.Text == "") return;
+            lblTotal.Text = (decimal.Parse(txtValorProduto.Text) * decimal.Parse(txtQuantidade.Text)).ToString("C2");
+            lblTotalImposto.Text = (double.Parse(lblTotal.Text.Replace("R$","")) * double.Parse(txtPorcentagemImposto.Text)).ToString("C2");
+            lblTotalBv.Text = (double.Parse(lblTotal.Text.Replace("R$","")) * double.Parse(txtBv.Text)).ToString("C2");
+            lblTotalLucro.Text = (decimal.Parse(lblTotal.Text.Replace("R$","")) - 
+                decimal.Parse(txtTotalProduto.Text.Replace("R$", "")) - 
+                decimal.Parse(txtValorGravacao.Text.Replace("R$","")) -
+                decimal.Parse(txtValorTransporte.Text.Replace("R$","")) - 
+                decimal.Parse(lblTotalImposto.Text.Replace("R$","")) - 
+                decimal.Parse(lblTotalBv.Text.Replace("R$",""))).ToString("C2");
+            txtPorcentagemLucro.Text = (decimal.Parse(lblTotalLucro.Text.Replace("R$", "")) / decimal.Parse(lblTotal.Text.Replace("R$", ""))).ToString();
+        }
+        private void GravarOrcamento()
+        {
+            Orcamento.DataEmissao = DateTime.Now;
+            Orcamento.Fornecedores = Fornecedores;
+            Orcamento.FornecedorGravacaoId = long.Parse(txtCodigoGravacao.Text);
+            Orcamento.FornecedorId = long.Parse(txtCodigoFornecedor.Text);
+            Orcamento.FornecedorTransporteId = long.Parse(txtCodigoTransporte.Text);
+            Orcamento.Operador = new OperadorModelo() {OperadroId = SessaoUsuario.ID, Nome = SessaoUsuario.Nome};
+            Orcamento.PorcentagemBV = double.Parse(txtBv.Text);
+            Orcamento.PorcentagemImposto = double.Parse(txtPorcentagemImposto.Text);
+            Orcamento.PorcentagemLucro = double.Parse(txtPorcentagemLucro.Text);
+            Orcamento.Qtd = double.Parse(txtQuantidade.Text);
+            Orcamento.TotalCompra = decimal.Parse(txtTotalProduto.Text.Replace("R$", ""));
+            Orcamento.TotalGravacao = decimal.Parse(txtTotalGravacao.Text.Replace("R$", ""));
+            Orcamento.TotalImposto = decimal.Parse(lblTotalImposto.Text.Replace("R$", ""));
+            Orcamento.TotalLucro = decimal.Parse(lblTotalLucro.Text.Replace("R$", ""));
+            Orcamento.TotalTransporte = decimal.Parse(txtTrasnporte.Text);
+            Orcamento.TotalVenda = decimal.Parse(lblTotal.Text.Replace("R$", ""));
+            Orcamento.ValorGravacao = decimal.Parse(lblTotalGravacao.Text.Replace("R$",""));
+            Orcamento.ValorUnd = decimal.Parse(txtValorVendaUnd.Text);
+            Orcamento.ValorUndCompra = decimal.Parse(txtValorProduto.Text);
+
+            controle.GravaOrcamento(Orcamento);
+            CarregaListagem();
+        }
+        private void CarregaListagem()
+        {
+            grdOrcamentos.DataSource = null;
+            grdOrcamentos.DataSource = controle.SelectAll();
+        }
         #endregion
 
         #region "Eventos"
@@ -132,6 +212,25 @@ namespace Views
         private void btnBuscaTransporte_Click(object sender, EventArgs e)
         {
             AbreBuscaFornecedor(TiposFornecedores.TRANSPORTADOR);
+        }
+        private void txtValorProduto_TextChanged(object sender, EventArgs e)
+        {
+            CalculaProduto();
+        }
+        private void txtValorGravacao_TextChanged(object sender, EventArgs e)
+        {
+            CalculaGravacao();
+        }
+        private void txtQuantidade_TextChanged(object sender, EventArgs e)
+        {
+            CalculaProduto();
+            CalculaGravacao();
+        }
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            FrmRtlOrcamento relatorio = new FrmRtlOrcamento();
+            relatorio.Orcamento = Orcamento;
+            relatorio.ShowDialog();
         }
         #endregion
 

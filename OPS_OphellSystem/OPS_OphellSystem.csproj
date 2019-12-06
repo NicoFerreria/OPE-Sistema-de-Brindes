@@ -47,6 +47,18 @@
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -106,7 +118,14 @@
     <Compile Include="Controles\Financeiro\ContasPagarControle.cs" />
     <Compile Include="Controles\Cadastros\FormasPagamentoControle.cs" />
     <Compile Include="Controles\Financeiro\ContasReceberControle.cs" />
+    <Compile Include="Controles\Relatorios\RelatorioOrcamentoControle.cs" />
+    <Compile Include="Controles\Vendas\OrcamentoControle.cs" />
+    <Compile Include="Dao\ContaDao.cs" />
+    <Compile Include="Dao\ContasAPagarDao.cs" />
+    <Compile Include="Dao\ContasAReceberDao.cs" />
     <Compile Include="Dao\FornecedorDao.cs" />
+    <Compile Include="Dao\GrupoFornecedorDao.cs" />
+    <Compile Include="Dao\OrcamentoDao.cs" />
     <Compile Include="Dao\PlanoDeContasDao.cs" />
     <Compile Include="Modelos\Cadastros\Fornecedores\GrupoFornecedorModelo.cs" />
     <Compile Include="Modelos\Cadastros\PlanoDeContasModelo.cs" />
@@ -125,7 +144,9 @@
     <Compile Include="Modelos\Cadastros\FormaPagamentoModelo.cs" />
     <Compile Include="Modelos\Cadastros\Fornecedores\FornecedorModelo.cs" />
     <Compile Include="Modelos\Cadastros\PerfilModelo.cs" />
+    <Compile Include="Modelos\Relatorios\RelatorioOrcamentoModelo.cs" />
     <Compile Include="Modelos\Vendas\OrcamentoModelo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,12 +262,20 @@
     <Compile Include="SessaoUsuario.cs" />
     <Compile Include="SqlParametro.cs" />
     <Compile Include="utilitarios.cs" />
+    <Compile Include="Views\Orcamento\FrmRtlOrcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Orcamento\FrmRtlOrcamento.Designer.cs">
+      <DependentUpon>FrmRtlOrcamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Perfil\FrmCadastroPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Perfil\FrmCadastroPerfil.Designer.cs">
       <DependentUpon>FrmCadastroPerfil.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Relatorios\RelatorioOrcamento.rdlc" />
+    <EmbeddedResource Include="Relatorios\RtlOrcamento.rdlc" />
     <EmbeddedResource Include="Views\CategoriasDeProdutos\FrmBuscaCategoriaProduto.resx">
       <DependentUpon>FrmBuscaCategoriaProduto.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,10 +340,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Orcamento\FrmRtlOrcamento.resx">
+      <DependentUpon>FrmRtlOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Perfil\FrmCadastroPerfil.resx">
       <DependentUpon>FrmCadastroPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Modelos.ClienteModelo.datasource" />
+    <None Include="Properties\DataSources\Modelos.FornecedorModelo.datasource" />
+    <None Include="Properties\DataSources\Modelos.OperadorModelo.datasource" />
+    <None Include="Properties\DataSources\Modelos.OrcamentoModelo.datasource" />
+    <None Include="Properties\DataSources\Modelos.ProdutoModelo.datasource" />
+    <None Include="Properties\DataSources\Modelos.RelatorioOrcamentoModelo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -334,6 +372,19 @@
     <Content Include="icons8_user_shield.ico" />
     <Content Include="LogoOphell-32.ico" />
     <Content Include="LogoOphell-48.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Ajuda.png" />
     <None Include="Resources\Help.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

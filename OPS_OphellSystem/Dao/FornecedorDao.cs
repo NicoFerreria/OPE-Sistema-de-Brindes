@@ -18,15 +18,17 @@ namespace Dao
         private FornecedorModelo _fornecedor;
         private string connectionString = ConfigurationManager.ConnectionStrings["OPHBD"].ConnectionString;
         public List<FornecedorModelo> Fornecedores { get; private set; } = new List<FornecedorModelo>();
+        private PlanoDeContasDao plnaoDao = new PlanoDeContasDao();
+        private GrupoFornecedorDao Grupo = new GrupoFornecedorDao();
 
         public void Create(FornecedorModelo modelo)
 
         {
             _fornecedor = modelo;
-            string stringSql = "INSERT INTO Fornecedor(cnpj,digito_verificador,ie,plano_de_contas,fantasia,razao,status,endereco,numero,complemento,cidade,bairro,cep,telefone," +
-                "contato,email,observacao,operador_cadastro_id,operador_cadastro_nome,operador_alteracao_id,operador_alteracao_nome,datahora_cadastro,datahora_alteracao" +
-                ")VALUES(@cnpj,@dv,@ie,@PlanoDeContas,@fantasia,@razao,@status,@endereco,@numero,@complemento,@cidade,@bairro,@cep,@telefone,@contato,@email,@observacao," +
-                "@operadorId,@OperadorNome,@OperadorId,@OperadorNome,@datahora,@datahora)";
+            string stringSql = "INSERT INTO Fornecedor(cnpj,digito_verificador,ie,plano_id,fantasia,razao,status,endereco,numero,complemento,cidade,bairro,cep,telefone," +
+                "contato,email,observacao,operador_cadastro_id,operador_cadastro_nome,operador_alteracao_id,operador_alteracao_nome,datahora_cadastro,datahora_alteracao," +
+                "terceiro)VALUES(@cnpj,@dv,@ie,@PlanoDeContas,@fantasia,@razao,@status,@endereco,@numero,@complemento,@cidade,@bairro,@cep,@telefone,@contato,@email,@observacao," +
+                "@operadorId,@operadorNome,@operadorId,@operadorNome,datetime('now','localtime'),datetime('now','localtime'),@Terceiro)";
             ExecutaComando(stringSql);
         }
         public void Delete(FornecedorModelo modelo)
@@ -38,10 +40,10 @@ namespace Dao
         public void Update(FornecedorModelo modelo)
         {
             _fornecedor = modelo;
-            string stringSql = "UPDATE Fornecedor SET cnpj=@cnpj,digito_verificador=@dv,ie=@ie,plano_de_contas=@PlanoDeContas,fantasia=@fantasia,razao=@razao,status=@status" +
+            string stringSql = "UPDATE Fornecedor SET cnpj=@cnpj,digito_verificador=@dv,ie=@ie,fantasia=@fantasia,razao=@razao,status=@status" +
                 ",endereco=@endereco,numero=@numero,complemento=@complemento,cidade=@cidade,bairro=@bairro,cep=@cep,telefone=@telefone," +
                 "contato=@contato,email=@email,observacao=@observacao,operador_alteracao_id=@operadorId,operador_alteracao_nome=@operadorNome," +
-                "datahora_alteracao=@datahora";
+                "datahora_alteracao=datetime('now','localtime'),terceiro=@Terceiro";
             ExecutaComando(stringSql);
         }
         public List<FornecedorModelo> SelectAll()
@@ -53,7 +55,7 @@ namespace Dao
         public FornecedorModelo GetById(long id)
         {
             _fornecedor = new FornecedorModelo() { FornecedorId = id };
-            string stringSql = "SELECT * FROM Fornecedor WHERE id=@id AND excluido=0";
+            string stringSql = "SELECT * FROM Fornecedor WHERE id=@id AND excluido='false'";
             ExecutaLeitura(stringSql);
             return Fornecedores.SingleOrDefault<FornecedorModelo>(f => f.FornecedorId == id);
         }
@@ -79,14 +81,16 @@ namespace Dao
                 new SQLiteParameter(){ParameterName = "@numero", Value= _fornecedor.Numero},
                 new SQLiteParameter(){ParameterName = "@observacao", Value= _fornecedor.Observacao},
                 new SQLiteParameter(){ParameterName = "@razao", Value= _fornecedor.Razao},
-                new SQLiteParameter(){ParameterName = "@status", Value= _fornecedor.Status?1:0},
+                new SQLiteParameter(){ParameterName = "@status", Value= _fornecedor.Status.ToString()},
                 new SQLiteParameter(){ParameterName = "@telefone", Value= _fornecedor.Telefone},
-                new SQLiteParameter(){ParameterName = "@excluido", Value= _fornecedor.Excluido?1:0},
+                new SQLiteParameter(){ParameterName = "@excluido", Value= _fornecedor.Excluido.ToString()},
                 new SQLiteParameter(){ParameterName = "@operadorId", Value= _fornecedor.OperadorId},
                 new SQLiteParameter(){ParameterName = "@operadorNome", Value= _fornecedor.OperadorNome},
-                new SQLiteParameter(){ParameterName = "@datahora", Value= _fornecedor.Datahora},
-                new SQLiteParameter(){ParameterName = "@PlanoDeContas", Value= _fornecedor.PlanoDeContas.Id},
-                new SQLiteParameter(){ParameterName = "@ie", Value= _fornecedor.InscricaoEstadual}};
+                new SQLiteParameter(){ParameterName = "@datahora", Value= DateTime.Now.ToShortDateString()},
+                new SQLiteParameter(){ParameterName = "@PlanoDeContas", Value= _fornecedor.PlanoDeContasId},
+                new SQLiteParameter(){ParameterName = "@ie", Value= _fornecedor.InscricaoEstadual},
+                new SQLiteParameter(){ParameterName = "@Grupo", Value= _fornecedor.GrupoFornecedorId},
+                new SQLiteParameter(){ParameterName = "@Terceiro", Value= _fornecedor.Terceiro.ToString()}};
                 }
 
                 return new SQLiteParameter[] { };
@@ -134,7 +138,7 @@ namespace Dao
                         command.Parameters.AddRange(Parametros());
                     }
 
-                    if(parametro != null)
+                    if (parametro != null)
                     {
                         command.Parameters.Add(parametro);
                     }
@@ -147,27 +151,28 @@ namespace Dao
                             {
                                 Fornecedores.Add(new FornecedorModelo()
                                 {
-                                    FornecedorId = long.TryParse(reader["id"].ToString(), out long id) ? id : 0,
+                                    FornecedorId = long.Parse(reader["id"].ToString()),
                                     CNPJ = reader["cnpj"].ToString(),
+                                    InscricaoEstadual = reader["ie"].ToString(),
                                     Fantasia = reader["fantasia"].ToString(),
                                     Razao = reader["razao"].ToString(),
-                                    Status = (reader["status"].ToString() == "1"),
+                                    Status = bool.Parse(reader["status"].ToString()),
                                     Endereco = reader["endereco"].ToString(),
-                                    Numero = int.TryParse(reader["numero"].ToString(), out int numero) ? numero : 0,
+                                    Numero = int.Parse(reader["numero"].ToString()),
                                     Complemento = reader["complemento"].ToString(),
                                     Cidade = reader["cidade"].ToString(),
                                     Bairro = reader["bairro"].ToString(),
                                     CEP = reader["cep"].ToString(),
-                                    Telefone = int.TryParse(reader["telefone"].ToString(), out int telefone) ? telefone : 0,
+                                    Telefone = int.Parse(reader["telefone"].ToString()),
                                     NomeContato = reader["contato"].ToString(),
                                     Email = reader["email"].ToString(),
+                                    Terceiro = bool.Parse(reader["terceiro"].ToString()),
                                     Observacao = reader["observacao"].ToString(),
-                                    DigitoVerificadorCnpj = reader["digito_verificador"].ToString(),
-                                    OperadorId = long.TryParse(reader["operador_atualizacao_id"].ToString(), out long opId) ? opId : 0,
-                                    OperadorNome = reader["operador_atualizacao_nome"].ToString(),
-                                    Excluido = (reader["excluido"].ToString() == "1"),
-                                    Datahora = DateTime.ParseExact(reader["datahora_atualizacao"].ToString(), "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
-                                    //TipoFornecedor = (TiposFornecedores)Enum.Parse(typeof(TiposFornecedores), reader["tipo"].ToString())
+                                    OperadorId = long.Parse(reader["operador_alteracao_id"].ToString()),
+                                    OperadorNome = reader["operador_alteracao_nome"].ToString(),
+                                    Datahora = DateTime.ParseExact(reader["datahora_alteracao"].ToString(), "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture),
+                                    Excluido = bool.Parse(reader["excluido"].ToString()),
+                                    DigitoVerificadorCnpj = reader["digito_verificador"].ToString()
                                 });
                             }
                         }
@@ -183,6 +188,6 @@ namespace Dao
                 throw new Exception(e.Message);
             }
         }
-        
+
     }
 }

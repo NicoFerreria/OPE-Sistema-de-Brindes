@@ -10,6 +10,8 @@ namespace Modelos
    public class FornecedorModelo
     {
         public long FornecedorId { get; set; }
+        public long GrupoFornecedorId { get; set; }
+        public long PlanoDeContasId { get; set; }
         public string CNPJ { get; set; }
         public string DigitoVerificadorCnpj { get; set; }
         public string Fantasia { get; set; }
@@ -27,9 +29,7 @@ namespace Modelos
         public string Bairro { get; set; }
         public string CEP { get; set; }
         public bool Excluido { get; set; }
-        public string InscricaoEstadual { get; set; }
-        public GrupoFornecedorModelo GrupoFornecedor { get; set; }
-        public PlanoDeContasModelo PlanoDeContas { get; set; }
+        public string InscricaoEstadual { get; set; }       
         public long OperadorId { get; set; }
         public string OperadorNome { get; set; }
         public DateTime Datahora { get; set; }

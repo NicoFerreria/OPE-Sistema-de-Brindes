@@ -72,7 +72,7 @@ namespace Views
             try
             {
                 grdResultados.DataSource = null;
-                grdResultados.DataSource = _controle.GetListaFornecedores();
+                grdResultados.DataSource = _controle.GetListaFornecedores(txtCriterio.Text);
             }
             catch (Exception ex)
             {
@@ -80,7 +80,6 @@ namespace Views
                 MessageBox.Show(ex.Message,"OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void FrmBuscaFornecedor_FormClosing(object sender, FormClosingEventArgs e)
         {
             Fechar();
@@ -89,6 +88,16 @@ namespace Views
         private void btnConfirma_Click(object sender, EventArgs e)
         {
             Fechar(true);
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            CarregaListagem();
+        }
+
+        private void txtCriterio_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) CarregaListagem();
         }
     }
 }

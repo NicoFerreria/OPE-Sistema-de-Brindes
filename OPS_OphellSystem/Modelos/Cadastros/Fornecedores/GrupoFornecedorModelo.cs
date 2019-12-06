@@ -13,6 +13,6 @@ namespace Modelos
         public long OperadorId { get; set; }
         public string OperadorNome { get; set; }
         public DateTime Datahora { get; set; }
-        public int Excluido { get; set; }
+        public bool Excluido { get; set; }
     }
 }

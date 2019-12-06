@@ -81,9 +81,16 @@ namespace Views
             }
         }
         private void CarregaListagem()
-        {            
+        {
+            try
+            {
                 grdFornecedorListagem.DataSource = null;
-                grdFornecedorListagem.DataSource = controle.GetListaFornecedores(txtPesquisa.Text);            
+                grdFornecedorListagem.DataSource = controle.GetListaFornecedores(txtPesquisa.Text);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "OPH", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                
         }
         private void NovoFornecedor()
         {
@@ -136,10 +143,10 @@ namespace Views
                     cadastroFornecedores = new FrmCadastroDeFornecedores();
                 }
 
-                DataRowView drLinha = grdFornecedorListagem.SelectedItem as DataRowView;                
+                FornecedorModelo drLinha = (FornecedorModelo)grdFornecedorListagem.SelectedItem;
                 if(drLinha != null)
                 {
-                    cadastroFornecedores.FornecedorID = long.Parse(drLinha["id"].ToString());
+                    cadastroFornecedores.FornecedorID = drLinha.FornecedorId;
                 }
                 cadastroFornecedores.ShowDialog();
 

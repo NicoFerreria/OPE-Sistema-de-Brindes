@@ -74,6 +74,8 @@ namespace Views
                 fornecedor.Status = (tgBtnStatus.ToggleState == Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active);
                 fornecedor.Terceiro = (chkTerceiro.CheckState == CheckState.Checked);
                 fornecedor.InscricaoEstadual = txtInscricaoEstadual.Text;
+                fornecedor.OperadorId = SessaoUsuario.ID;
+                fornecedor.OperadorNome = SessaoUsuario.Nome;
                 if (controle.GravarFornecedor(fornecedor))
                 {
                     NovoFornecedor();

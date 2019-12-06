@@ -94,13 +94,11 @@ namespace OPS_OphellSystem
                             {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
                             {"cnpj","TEXT" },
                             {"digito_verificador","TEXT" },
-                            {"ie","TEXT" },
-                            {"plano_de_contas","INTEGER" },
+                            {"ie","TEXT" },                            
                             {"fantasia","TEXT NOT NULL" },
                             {"razao","TEXT NOT NULL" },
-                            {"status","TEXT" },
-                            {"terceiro","TEXT NOT NULL DEFAULT 'false'" },
-                            {"grupo_id","INTEGER NOT NULL DEFAULT 1" },
+                            {"status","TEXT NOT NULL DEFAULT 'false'" },
+                            {"terceiro","TEXT NOT NULL DEFAULT 'false'" },                            
                             {"endereco","TEXT" },
                             {"numero","INTEGER" },
                             {"complemento","TEXT" },
@@ -117,7 +115,7 @@ namespace OPS_OphellSystem
                             {"operador_alteracao_nome","TEXT" },
                             {"datahora_cadastro","TEXT" },
                             {"datahora_alteracao","TEXT" },
-                            {"excluido","INTEGER NOT NULL DEFAULT 0" }                            
+                            {"excluido","TEXT NOT NULL DEFAULT 'false'" }                            
                             };
                         }
                         break;
@@ -130,6 +128,7 @@ namespace OPS_OphellSystem
                                 {"data_lancamento","TEXT" },
                                 {"total","DOUBLE" },
                                 {"id_fornecedor","INTEGER" },
+                                {"id_cliente","INTEGER" },
                                 {"forma_pagamento","TEXT" }
                             };
                         }
@@ -170,6 +169,41 @@ namespace OPS_OphellSystem
                             {"excluido","INTEGER NOT NULL DEFAULT 0" }
                         };
                         break;
+                    case "PlanoContas":
+                        campos = new string[,]
+                        {
+                            {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
+                            {"plano1","TEXT" },
+                            {"plano2","TEXT" },
+                            {"plano3","TEXT" },
+                            {"plano4","TEXT" }
+                        };
+                        break;
+                    case "Orcamento":
+                        campos = new string[,]
+                        {
+                            {"id","INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE" },
+                            {"qtd_compra","DOUBLE" },
+                            {"und_compra_valor","DOUBLE"},
+                            {"valor_total_compra","DOUBLE" },
+                            {"und_gravacao_valor","DOUBLE" },
+                            {"valor_total_gravacao","DOUBLE" },
+                            {"valor_total_transporte","DOUBLE" },
+                            {"porcentagem_imposto","DOUBLE" },
+                            {"porcentagem_bv","DUBLE" },
+                            {"und_venda_valor","DOUBLE" },
+                            {"valor_total_venda","DOUBLE" },
+                            {"valor_imposto","DOUBLE" },
+                            {"porcentagem_lucro","DOUBLE" },
+                            {"valor_total_lucro","DOUBLE" },
+                            {"operador_codigo","INTEGER" },
+                            {"operador_nome","TEXT" },
+                            {"datahora_lancamento","TEXT" },
+                            {"status","TEXT" },
+                            {"Observacao","TEXT" },
+                            {"excluido","INTEGER NOT NULL DEFAULT 0" }
+                        };
+                        break;
                 }
 
                 return campos;
@@ -193,7 +227,9 @@ namespace OPS_OphellSystem
                     "Pagamento",
                     "PagamentoConta",
                     "FormasPagamento",
-                    "Perfil"
+                    "Perfil",
+                    "PlanoContas",
+                    "Orcamento"
                 };
 
                 return tabelas;
@@ -235,8 +271,13 @@ namespace OPS_OphellSystem
                     "ALTER TABLE PagamentoConta ADD COLUMN id_pagamento INTEGER REFERENCES Pagamento(id)",                    
                     "ALTER TABLE Pagamento ADD COLUMN id_forma_pagamento INTEGER REFERENCES FormasPagamento(id)",
                     "ALTER TABLE Usuario ADD COLUMN perfil_id INTEGER REFERENCES Perfil(id)",
-                    "ALTER TABLE Fornecedor ADD FOREIGN KEY(grupo_id) REFERENCES GrupoFornecedor(id)",
-                    "ALTER TABLE Fornecedor ADD CHECK(terceiro=true OR terceiro=false)"                    
+                    "ALTER TABLE Fornecedor ADD COLUMN grupo_id REFERENCES GrupoFornecedor(id)",
+                    "ALTER TABLE Fornecedor ADD COLUMN plano_id REFERENCES PlanoContas(id)",
+                    "ALTER TABLE Orcamento ADD COLUMN fornecedor_id REFERENCES Fornecedor(id)",
+                    "ALTER TABLE Orcamento ADD COLUMN cliente_id REFERENCES Cliente(id)",
+                    "ALTER TABLE Orcamento ADD COLUMN produto_id REFERENCES Produto(id)",
+                    "ALTER TABLE Orcamento ADD COLUMN fornGravacao_id REFERENCES Fornecedor(id)",
+                    "ALTER TABLE Orcamento ADD COLUMN fornTransporte_id REFERENCES Fornecedor(id)"
                 };
                 //"ALTER TABLE Pagamento ADD COLUMN id_fornecedor INTEGER REFERENCES Fornecedor(id_forn)",
                 return retorno;

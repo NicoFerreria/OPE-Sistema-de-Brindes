@@ -14,7 +14,7 @@ namespace Dao
     {
         private PlanoDeContasModelo _planoDeContas;
         private string connectionString = ConfigurationManager.ConnectionStrings["OPHBD"].ConnectionString;
-        public List<PlanoDeContasModelo> Fornecedores { get; private set; } = new List<PlanoDeContasModelo>();
+        public List<PlanoDeContasModelo> Planos { get; private set; } = new List<PlanoDeContasModelo>();
 
         public PlanoDeContasDao()
         {
@@ -30,17 +30,34 @@ namespace Dao
 
         public void Delete(PlanoDeContasModelo modelo)
         {
-            throw new NotImplementedException();
+            if (modelo.Id == 0) throw new System.Exception("Plano de contas inválido para atualização");
+            _planoDeContas = modelo;
+            ExecutaComando("DELETE FROM PlanoContas WHERE id=@id");
         }
 
         public List<PlanoDeContasModelo> SelectAll()
         {
-            throw new NotImplementedException();
+            Planos.Clear();
+            ExecutaComando("SELECT * FROM PlanoContas");
+            return Planos;
         }
 
         public void Update(PlanoDeContasModelo modelo)
         {
-            throw new NotImplementedException();
+            if (modelo.Id == 0) throw new System.Exception("Plano de contas inválido para atualização");
+            _planoDeContas = modelo;
+            ExecutaComando("UPDATE SET plano1=@Plano1,Plano2=@Plano2,Plano3=@Plano3,Plano4=@Plano2 WHERE id=@id");
+        }
+
+        public PlanoDeContasModelo GetPlanoById(long id)
+        {
+            Planos.Clear();
+            ExecutaLeitura("SELECT * FROM PlanoContas WHERE id=@id", new SQLiteParameter("@id",id));
+            if(Planos.Count > 0)
+            {
+                return Planos[0];
+            }
+            return new PlanoDeContasModelo();
         }
 
         private SQLiteParameter[] Parametros()
@@ -54,7 +71,8 @@ namespace Dao
                 new SQLiteParameter(){ParameterName = "@Plano1", Value= _planoDeContas.Plano1},
                 new SQLiteParameter(){ParameterName = "@Plano2", Value= _planoDeContas.Plano1},
                 new SQLiteParameter(){ParameterName = "@Plano2", Value= _planoDeContas.Plano1},
-                new SQLiteParameter(){ParameterName = "@Plano4", Value= _planoDeContas.Plano1}};
+                new SQLiteParameter(){ParameterName = "@Plano4", Value= _planoDeContas.Plano1},
+                new SQLiteParameter(){ParameterName = "@excluido", Value= _planoDeContas.Excluido}};
                 }
 
                 return new SQLiteParameter[] { };
@@ -88,18 +106,23 @@ namespace Dao
             }
 
         }
-        private void ExecutaLeitura(string sqlQuery)
+        private void ExecutaLeitura(string sqlQuery,SQLiteParameter parametro = null)
         {
 
             try
             {
                 using (var connection = new SQLiteConnection(connectionString))
                 {
-                    Fornecedores.Clear();
+                    Planos.Clear();
                     var command = new SQLiteCommand(sqlQuery, connection);
                     if (Parametros().Length > 0)
                     {
                         command.Parameters.AddRange(Parametros());
+                    }
+
+                    if(parametro != null)
+                    {
+                        command.Parameters.Add(parametro);
                     }
                     connection.Open();
                     using (var reader = command.ExecuteReader())
@@ -108,7 +131,7 @@ namespace Dao
                         {
                             while (reader.Read())
                             {
-                                Fornecedores.Add(new PlanoDeContasModelo()
+                                Planos.Add(new PlanoDeContasModelo()
                                 {
                                     Id = long.TryParse(reader["id"].ToString(), out long id) ? id : 0,
                                     Plano1 = reader["plano1"].ToString(),

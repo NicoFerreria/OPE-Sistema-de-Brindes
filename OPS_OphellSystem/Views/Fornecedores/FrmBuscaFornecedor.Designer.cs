@@ -32,6 +32,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdResultados)).BeginInit();
             this.SuspendLayout();
             // 
+            // txtCriterio
+            // 
+            this.txtCriterio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCriterio_KeyDown);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // grdResultados
+            // 
+            this.grdResultados.Style.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(214)))), ((int)(((byte)(214)))));
             // 
             // btnConfirma
             // 
